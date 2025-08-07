@@ -1,60 +1,140 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Entre Físicos</title>
-  <link rel="stylesheet" href="index2.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entre Físicos 2025</title>
+  <link rel="stylesheet" href="index2.css">
+  <link rel="stylesheet" href="entre-fisicos.css">
+  <script src="https://kit.fontawesome.com/45430dc581.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+  <!-- 🔹 Header reutilizado -->
   <header>
-    <!-- Puedes reutilizar tu mismo nav con logo y enlaces aquí -->
-    <nav class="nav1">
-      <!-- ... tu nav ... -->
+    <nav id="nav" class="nav1">
+      <div class="contenedor-nav">
+        <div class="logo">
+          <a href="index.html">
+            <img src="MEDIA/logo_long.webp" alt="LogoDerivate">
+          </a>
+        </div>
+        <ul class="enlaces" id="enlaces">
+          <li><a href="index.html" class="btn-header">Inicio</a></li>
+          <li><a href="equipo.html" class="btn-header">Equipo</a></li>
+          <li><a href="conócenos.html" class="btn-header">Conócenos</a></li>
+          <li><a href="#Eventos" class="btn-header">Eventos</a></li>
+          <li><a href="#Contacto" class="btn-header">Contacto</a></li>
+        </ul>
+        <div class="icono" id="open">
+          <span>&#9776;</span>
+        </div>
+      </div>
     </nav>
+    <div class="logo-central">
+      <img src="MEDIA/logo-blanco.webp" alt="Logo Central">
+    </div>
   </header>
 
-  <main>
-    <section class="evento-hero">
-      <img src="MEDIA/entre-fisicos-2025.webp" alt="Entre Físicos 2025" />
-      <div class="evento-hero-texto">
-        <h1>Entre Físicos 2025</h1>
-        <p>
-          Bienvenido a una nueva edición de Entre Físicos, un evento dedicado
-          a conectar estudiantes, investigadores y entusiastas de la física en
-          un espacio de aprendizaje, colaboración e inspiración.
-        </p>
+  <!-- 🔸 Portada editorial -->
+  <section class="revista-portada">
+    <div class="portada-texto">
+      <h1>Entre Físicos 2025</h1>
+      <p>Una mirada moderna a la ciencia peruana en el mundo</p>
+    </div>
+  </section>
+
+  <!-- 🔸 Editorial -->
+  <section class="revista-editorial">
+    <h2>Editorial</h2>
+    <p>Como organizador de este encuentro, me llena de orgullo ver cómo la física peruana se proyecta internacionalmente. Este evento no solo conecta mentes brillantes, sino que inspira a las nuevas generaciones a mirar más allá de nuestras fronteras.  
+    <br><br><em>— nombre, Coordinador de DERIVATE.STEAM</em></p>
+  </section>
+
+  <!-- 🔸 Artículos tipo revista -->
+  <section class="revista-articulos">
+    <article class="ponente">
+      <h3>🔬 Neutrinos en Japón</h3>
+      <p><strong>María Quispe</strong> compartió su trabajo en el experimento T2K, donde estudia oscilaciones de neutrinos en el laboratorio J-PARC.</p>
+    </article>
+
+    <article class="ponente">
+      <h3>🌌 Rayos gamma desde Alemania</h3>
+      <p><strong>Luis Paredes</strong> presentó avances en detección de rayos gamma de alta energía usando telescopios Cherenkov en DESY.</p>
+    </article>
+
+    <article class="ponente">
+      <h3>🧪 Física de materiales en Francia</h3>
+      <p><strong>Carla Ramos</strong> explicó cómo investiga propiedades cuánticas de materiales superconductores en Grenoble.</p>
+    </article>
+  </section>
+
+  <!-- 🔸 Galería de fotos -->
+  <section class="revista-galeria">
+    <h2>Galería del evento</h2>
+    <div class="galeria-grid">
+      <img src="https://images.unsplash.com/photo-1581090700227-1e7e4c9c9a3c?auto=format&fit=crop&w=800&q=80" alt="Ponente 1">
+      <img src="https://images.unsplash.com/photo-1581093588401-7e8f7c4f9c8e?auto=format&fit=crop&w=800&q=80" alt="Ponente 2">
+      <img src="https://images.unsplash.com/photo-1581092334421-9c1c9c9c9c9c?auto=format&fit=crop&w=800&q=80" alt="Audiencia">
+      <img src="https://images.unsplash.com/photo-1581090700227-1e7e4c9c9a3c?auto=format&fit=crop&w=800&q=80" alt="Panel de discusión">
+    </div>
+  </section>
+
+  <!-- 🔸 Testimonios en carrusel -->
+  <section class="revista-testimonios">
+    <h2>Testimonios</h2>
+    <div class="testimonios-slider">
+      <div class="testimonio">
+        <p>“Fue inspirador conocer a físicos peruanos que están haciendo ciencia de frontera.”</p>
+        <span>— Estudiante UNMSM</span>
       </div>
-    </section>
+      <div class="testimonio">
+        <p>“Me motivó a postular a un posgrado en el extranjero.”</p>
+        <span>— Estudiante PUCP</span>
+      </div>
+      <div class="testimonio">
+        <p>“La calidad de las presentaciones fue excelente.”</p>
+        <span>— Docente UNI</span>
+      </div>
+    </div>
+  </section>
 
-    <section class="evento-detalles">
-      <h2>¿Qué encontrarás en esta edición?</h2>
-      <ul>
-        <li>🔬 Conferencias magistrales con invitados internacionales</li>
-        <li>👨‍🏫 Talleres interactivos</li>
-        <li>🧪 Presentación de proyectos científicos</li>
-        <li>🎓 Espacios de networking académico</li>
-      </ul>
-    </section>
+  <!-- 🔸 Línea de tiempo -->
+  <section class="revista-timeline">
+    <h2>Línea de tiempo</h2>
+    <ul class="timeline">
+      <li><strong>10:00 AM</strong> — Apertura y bienvenida</li>
+      <li><strong>10:30 AM</strong> — Ponencia: Neutrinos en Japón</li>
+      <li><strong>11:15 AM</strong> — Ponencia: Rayos gamma desde Alemania</li>
+      <li><strong>12:00 PM</strong> — Coffee break</li>
+      <li><strong>12:30 PM</strong> — Ponencia: Física de materiales en Francia</li>
+      <li><strong>1:15 PM</strong> — Panel de discusión</li>
+      <li><strong>2:00 PM</strong> — Cierre</li>
+    </ul>
+  </section>
 
-    <section class="evento-programa">
-      <h2>Programa Tentativo</h2>
-      <p>Puedes descargar el cronograma completo aquí:</p>
-      <a class="btn-header" href="docs/ProgramaEntreFisicos2025.pdf" target="_blank">Descargar PDF</a>
-    </section>
-
-    <section class="evento-inscripcion">
-      <h2>Inscríbete</h2>
-      <p>
-        Las inscripciones están abiertas. Reserva tu lugar y forma parte de
-        esta experiencia científica única.
-      </p>
-      <a class="btn-header" href="https://forms.gle/tuFormulario" target="_blank">Formulario de inscripción</a>
-    </section>
-  </main>
-
-  <footer>
-    <!-- Puedes reutilizar el mismo footer con redes sociales -->
+  <!-- 🔹 Footer reutilizado -->
+  <footer id="Contacto">
+    <div class="footer-contenedor">
+      <hr class="footer-line">
+      <div class="marca-logo">
+        <img src="MEDIA/logo-blanco.webp" alt="logo">
+      </div>
+      <p>Síguenos para más información</p>
+      <div class="iconos">    
+        <a href="https://www.instagram.com/derivate.stem/" target="_blank">
+          <i class="fa-brands fa-square-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/derivatestem" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61555020923912" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+        </a>    
+      </div>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
