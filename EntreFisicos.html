@@ -1,16 +1,271 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Entre Físicos 2025</title>
-  <link rel="stylesheet" href="index2.css">
-  <link rel="stylesheet" href="entre-fisicos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entre Físicos 2025 | DERIVATE.STEAM</title>
+  <link rel="stylesheet" href="index2.css" />
   <script src="https://kit.fontawesome.com/45430dc581.js" crossorigin="anonymous"></script>
+
+  <!-- 🎨 Estilos específicos para el main claro -->
+  <style>
+    .entre-main {
+      background-color: #f9f9f9;
+      color: #333;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      padding: 2rem;
+    }
+
+    .entre-main .hero {
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      padding: 4rem 2rem;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .entre-main .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #0077cc;
+    }
+
+    .entre-main .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    .entre-main .btn-primary {
+      background-color: #0077cc;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .entre-main .btn-primary:hover {
+      background-color: #005fa3;
+    }
+
+    .entre-main .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .entre-main .feature-item {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .entre-main .feature-item h2 {
+      margin-bottom: 0.5rem;
+      color: #0077cc;
+    }
+
+    .entre-main .feature-item p {
+      color: #444;
+    }
+
+    .entre-main .testimonios {
+      background-color: #eef2f3;
+      padding: 3rem 2rem;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .entre-main .testimonios h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #0077cc;
+    }
+
+    .entre-main blockquote {
+      font-style: italic;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .entre-main footer {
+      font-weight: bold;
+      color: #555;
+    }
+
+    .entre-main .cta-final {
+      background-color: #0077cc;
+      color: #fff;
+      padding: 3rem 2rem;
+      text-align: center;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+
+    .entre-main .cta-final h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .entre-main .btn-secondary {
+      background-color: #fff;
+      color: #0077cc;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .entre-main .btn-secondary:hover {
+      background-color: #e0f7fa;
+    }
+    .testimonios {
+      background-color: #eef2f3;
+      padding: 3rem 2rem;
+      border-radius: 8px;
+    }
+
+    .testimonios h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #0077cc;
+      text-align: center;
+    }
+
+    .testimonios-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1.5rem;
+      padding-bottom: 1rem;
+    }
+
+    .testimonio {
+      flex: 0 0 300px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      scroll-snap-align: start;
+    }
+
+    .testimonio img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 1rem;
+    }
+
+    .testimonio .texto p {
+      font-size: 0.95rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .testimonio .texto span {
+      font-size: 0.85rem;
+      color: #555;
+      font-style: italic;
+    }
+    .speaker-section {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      padding: 2rem;
+    }
+
+    .speaker-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .speaker-block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .speaker-text {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    .speaker-text h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .speaker-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .speaker-text a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #0078D4;
+      text-decoration: none;
+    }
+
+    .speaker-image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+      /* Animación */
+    @keyframes fadeSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Aplicar animación a los bloques */
+    .speaker-block {
+      opacity: 0;
+      animation: fadeSlideUp 0.8s ease-out forwards;
+    }
+
+    /* Para que aparezcan escalonados */
+    .speaker-block:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+    .speaker-block:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    /* Puedes seguir con más bloques si los agregas */
+    /* Estado inicial */
+    .speaker-block {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    /* Cuando entra en pantalla */
+    .speaker-block.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+  </style>
 </head>
 <body>
 
-  <!-- 🔹 Header reutilizado -->
+  <!-- 🔷 Header reutilizado -->
   <header>
     <nav id="nav" class="nav1">
       <div class="contenedor-nav">
@@ -36,84 +291,104 @@
     </div>
   </header>
 
-  <!-- 🔸 Portada editorial -->
-  <section class="revista-portada">
-    <div class="portada-texto">
-      <h1>Entre Físicos 2025</h1>
-      <p>Una mirada moderna a la ciencia peruana en el mundo</p>
-    </div>
-  </section>
-
-  <!-- 🔸 Editorial -->
-  <section class="revista-editorial">
-    <h2>Editorial</h2>
-    <p>Como organizador de este encuentro, me llena de orgullo ver cómo la física peruana se proyecta internacionalmente. Este evento no solo conecta mentes brillantes, sino que inspira a las nuevas generaciones a mirar más allá de nuestras fronteras.  
-    <br><br><em>— nombre, Coordinador de DERIVATE.STEAM</em></p>
-  </section>
-
-  <!-- 🔸 Artículos tipo revista -->
-  <section class="revista-articulos">
-    <article class="ponente">
-      <h3>🔬 Neutrinos en Japón</h3>
-      <p><strong>María Quispe</strong> compartió su trabajo en el experimento T2K, donde estudia oscilaciones de neutrinos en el laboratorio J-PARC.</p>
-    </article>
-
-    <article class="ponente">
-      <h3>🌌 Rayos gamma desde Alemania</h3>
-      <p><strong>Luis Paredes</strong> presentó avances en detección de rayos gamma de alta energía usando telescopios Cherenkov en DESY.</p>
-    </article>
-
-    <article class="ponente">
-      <h3>🧪 Física de materiales en Francia</h3>
-      <p><strong>Carla Ramos</strong> explicó cómo investiga propiedades cuánticas de materiales superconductores en Grenoble.</p>
-    </article>
-  </section>
-
-  <!-- 🔸 Galería de fotos -->
-  <section class="revista-galeria">
-    <h2>Galería del evento</h2>
-    <div class="galeria-grid">
-      <img src="https://images.unsplash.com/photo-1581090700227-1e7e4c9c9a3c?auto=format&fit=crop&w=800&q=80" alt="Ponente 1">
-      <img src="https://images.unsplash.com/photo-1581093588401-7e8f7c4f9c8e?auto=format&fit=crop&w=800&q=80" alt="Ponente 2">
-      <img src="https://images.unsplash.com/photo-1581092334421-9c1c9c9c9c9c?auto=format&fit=crop&w=800&q=80" alt="Audiencia">
-      <img src="https://images.unsplash.com/photo-1581090700227-1e7e4c9c9a3c?auto=format&fit=crop&w=800&q=80" alt="Panel de discusión">
-    </div>
-  </section>
-
-  <!-- 🔸 Testimonios en carrusel -->
-  <section class="revista-testimonios">
-    <h2>Testimonios</h2>
-    <div class="testimonios-slider">
-      <div class="testimonio">
-        <p>“Fue inspirador conocer a físicos peruanos que están haciendo ciencia de frontera.”</p>
-        <span>— Estudiante UNMSM</span>
+  <!-- 🎓 Main claro para Entre Físicos -->
+  <main class="entre-main">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Entre Físicos 2025</h1>
+        <p>Evento académico para estudiantes de física.</p>
       </div>
-      <div class="testimonio">
-        <p>“Me motivó a postular a un posgrado en el extranjero.”</p>
-        <span>— Estudiante PUCP</span>
-      </div>
-      <div class="testimonio">
-        <p>“La calidad de las presentaciones fue excelente.”</p>
-        <span>— Docente UNI</span>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 🔸 Línea de tiempo -->
-  <section class="revista-timeline">
-    <h2>Línea de tiempo</h2>
-    <ul class="timeline">
-      <li><strong>10:00 AM</strong> — Apertura y bienvenida</li>
-      <li><strong>10:30 AM</strong> — Ponencia: Neutrinos en Japón</li>
-      <li><strong>11:15 AM</strong> — Ponencia: Rayos gamma desde Alemania</li>
-      <li><strong>12:00 PM</strong> — Coffee break</li>
-      <li><strong>12:30 PM</strong> — Ponencia: Física de materiales en Francia</li>
-      <li><strong>1:15 PM</strong> — Panel de discusión</li>
-      <li><strong>2:00 PM</strong> — Cierre</li>
-    </ul>
-  </section>
+    <section class="features">
+      <div class="feature-item">
+        <h2>Experimentos</h2>
+        <p>Conferencias impartidas por físicos destacados en áreas como neutrinos, astropartículas y física teórica.</p>
+      </div>
+      <div class="feature-item">
+        <h2>Mesas Redondas</h2>
+        <p>Espacios colaborativos para debatir sobre el futuro de la investigación científica en Latinoamérica.</p>
+      </div>
+      <div class="feature-item">
+        <h2>Algo más</h2>
+        <p>Participa como expositor y comparte tus avances con la comunidad académica.</p>
+      </div>
+    </section>
+    <section class="speaker-section">
+      <div class="speaker-block">
+        <div class="speaker-text">
+          <h3>Dr. Ana Rodríguez</h3>
+          <p>Exploró los desafíos actuales en la detección de neutrinos de alta energía, destacando avances en instrumentación y análisis de datos.</p>
+          <a href="#">Ver más detalles</a>
+        </div>
+        <div class="speaker-image">
+          <img src="ana-rodriguez.jpg" alt="Foto de la Dra. Ana Rodríguez">
+        </div>
+      </div>
 
-  <!-- 🔹 Footer reutilizado -->
+      <div class="speaker-block reverse">
+        <div class="speaker-text">
+          <h3>Dr. Carlos Méndez</h3>
+          <p>Presentó un enfoque innovador para el modelado de rayos gamma en entornos astrofísicos extremos, con simulaciones de alta precisión.</p>
+          <a href="#">Ver más detalles</a>
+        </div>        
+        <div class="speaker-image">
+          <img src="carlos-mendez.jpg" alt="Foto del Dr. Carlos Méndez">
+        </div>
+
+      </div>
+    </section>
+
+
+      <section class="testimonios">
+        <h2>Lo que dicen los asistentes</h2>
+        <div class="testimonios-slider">
+          <div class="testimonio">
+            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=100&q=80" alt="Estudiante 1">
+            <div class="texto">
+              <p>“Entre Físicos fue una experiencia enriquecedora. Pude presentar mi trabajo y conectarme con investigadores de todo el país.”</p>
+              <span>— Sergio, UNMSM</span>
+            </div>
+          </div>
+          <div class="testimonio">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Estudiante 2">
+            <div class="texto">
+              <p>“Me motivó a postular a un posgrado en el extranjero. Escuchar a físicos peruanos en el extranjero fue inspirador.”</p>
+              <span>— Carla, PUCP</span>
+            </div>
+          </div>
+          <div class="testimonio">
+            <img src="https://images.unsplash.com/photo-1502767089025-6572583495b4?auto=format&fit=crop&w=100&q=80" alt="Estudiante 3">
+            <div class="texto">
+              <p>“La calidad de las presentaciones fue excelente. Aprendí sobre física de partículas y astrofísica.”</p>
+              <span>— Luis, UNI</span>
+            </div>
+          </div>
+          <div class="testimonio">
+            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=100&q=80" alt="Estudiante 4">
+            <div class="texto">
+              <p>“Nunca había asistido a un evento tan bien organizado. Me encantó la interacción con los ponentes.”</p>
+              <span>— Andrea, UNAC</span>
+            </div>
+          </div>
+          <div class="testimonio">
+            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=100&q=80" alt="Estudiante 5">
+            <div class="texto">
+              <p>“Espero que haya una edición cada año. Es una oportunidad única para aprender y conectar.”</p>
+              <span>— Diego, UNMSM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    <section class="cta-final">
+      <h2>¿Quieres ser parte de la próxima edición?</h2>
+      <a href="#Contacto" class="btn-secondary">Contáctanos</a>
+    </section>
+  </main>
+
+  <!-- 🔻 Footer reutilizado -->
   <footer id="Contacto">
     <div class="footer-contenedor">
       <hr class="footer-line">
@@ -136,5 +411,23 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // document.addEventListener("DOMContentLoaded", () => {
+    //   const blocks = document.querySelectorAll(".speaker-block");
+
+    //   const observer = new IntersectionObserver((entries) => {
+    //     entries.forEach(entry => {
+    //       if (entry.isIntersecting) {
+    //         entry.target.classList.add("visible");
+    //         observer.unobserve(entry.target); // Evita que se repita
+    //       }
+    //     });
+    //   }, {
+    //       threshold: 0.2 // Ajusta según cuándo quieres que se active
+    //     });
+
+    //     blocks.forEach(block => observer.observe(block));
+    // });
+  </script>
 </body>
 </html>
