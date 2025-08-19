@@ -1,60 +1,188 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Entre Físicos</title>
-  <link rel="stylesheet" href="index2.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DERIVATE</title>
+    <link rel="stylesheet" href="index2.css">
+    <link rel="stylesheet" href="RIFP.css">
+    <script src="https://kit.fontawesome.com/45430dc581.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <!-- Puedes reutilizar tu mismo nav con logo y enlaces aquí -->
-    <nav class="nav1">
-      <!-- ... tu nav ... -->
-    </nav>
-  </header>
+    <header>
+        <nav id="nav" class="nav1">
+            <div class="contenedor-nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="MEDIA/logo_long.webp" alt="LogoDerivate">
+                    </a>
+                </div>
+                <ul class="enlaces" id="enlaces">
+                    <li><a href="index.html" class="btn-header">Inicio</a></li>
+                    <li><a href="equipo.html" class="btn-header">Equipo</a></li>
+                    <li><a href="conocenos.html" class="btn-header">Conócenos</a></li>
+                    <li><a href="#Eventos" class="btn-header">Eventos</a></li>
+                    <li><a href="#Contacto" class="btn-header">Contacto</a></li>
+                </ul>
+                <div class="icono" id="open">
+                    <span>&#9776;</span>
+                </div>
+            </div>
+        </nav>
+        <div class="noticias-hero-img">
+          <img src="MEDIA/RIFP 2.jpg" alt="Portada de la Reunión Internacional de Físicos en Posgrado 2024">
+          <div class="noticias-hero-titulo">
+            Reunión Internacional de Físicos en Posgrado
+            <span class="subtitulo-evento">RIFP 2024</span>
+          </div>
+        </div>
+    </header>
 
-  <main>
-    <section class="evento-hero">
-      <img src="MEDIA/entre-fisicos-2025.webp" alt="Entre Físicos 2025" />
-      <div class="evento-hero-texto">
-        <h1>RIFP 2024</h1>
-        <p>
-          Bienvenido a una nueva edición de Entre Físicos, un evento dedicado
-          a conectar estudiantes, investigadores y entusiastas de la física en
-          un espacio de aprendizaje, colaboración e inspiración.
-        </p>
-      </div>
-    </section>
+    <main>
+      <section class="evento-intro contenedor">
+          <h2 class="after">Un Encuentro para la Ciencia y el Futuro</h2>
+          <p>La Reunión Internacional de Físicos en Posgrado (RIFP) es el principal punto de encuentro para la comunidad científica peruana. Conectamos a estudiantes, académicos e investigadores de todo el mundo para compartir los últimos avances, fomentar la colaboración y inspirar a las nuevas generaciones de físicos.</p>
+      </section>
 
-    <section class="evento-detalles">
-      <h2>¿Qué encontrarás en esta edición?</h2>
-      <ul>
-        <li>🔬 Conferencias magistrales con invitados internacionales</li>
-        <li>👨‍🏫 Talleres interactivos</li>
-        <li>🧪 Presentación de proyectos científicos</li>
-        <li>🎓 Espacios de networking académico</li>
-      </ul>
-    </section>
+      <section class="evento-galeria contenedor">
+        <h2 class="after">Galería del Evento</h2>
+        <div class="slider-box rifp-gallery-slider">
+            <button class="slider-button prev">❮</button>
+            <button class="slider-button next">❯</button>
+            <ul>
+                <li>
+                    <img src="MEDIA/RIFP-2.jpg" alt="Foto del evento RIFP">
+                </li>
+                <li>
+                    <img src="MEDIA/Adrian RIFP 2.jpg" alt="Ponente Adrian Diaz en RIFP">
+                </li>
+                <li>
+                    <img src="MEDIA/Andres Argandoña 1.jpg" alt="Ponente Andrés Argandoña en RIFP">
+                </li>
+                <li>
+                    <img src="MEDIA/Fernando Temoche 1.jpg" alt="Ponente Fernando Temoche en RIFP">
+                </li>
+                <li>
+                    <img src="MEDIA/David Cespedes 1.jpg" alt="Ponente David Céspedes en RIFP">
+                </li>
+            </ul>
+        </div>
+      </section>
 
-    <section class="evento-programa">
-      <h2>Programa Tentativo</h2>
-      <p>Puedes descargar el cronograma completo aquí:</p>
-      <a class="btn-header" href="docs/ProgramaEntreFisicos2025.pdf" target="_blank">Descargar PDF</a>
-    </section>
+      <section class="ponentes-seccion contenedor">
+          <h2 class="after">Nuestros Ponentes</h2>
+          <div class="ponentes-grid">
+              <article class="ponente-card">
+                  <div class="ponente-img-container"><img src="MEDIA/ponente-david-cespedes.jpg" alt="Foto de David Céspedes"></div>
+                  <div class="ponente-info">
+                      <h3 class="ponente-nombre">David Céspedes</h3>
+                      <p class="ponente-afiliacion">Estudiante de Doctorado, University of Houston</p>
+                      <p class="ponente-charla">"Introducción a ETH (Eigenstate Thermalization Hypothesis)"</p>
+                  </div>
+              </article>
+              <article class="ponente-card">
+                  <div class="ponente-img-container"><img src="MEDIA/ponente-fernando-temoche.jpg" alt="Foto de Fernando Temoche"></div>
+                  <div class="ponente-info">
+                      <h3 class="ponente-nombre">Fernando Temoche</h3>
+                      <p class="ponente-afiliacion">Estudiante de Doctorado, Utah State University</p>
+                      <p class="ponente-charla">"Love Numbers y Agujeros Negros en 5 Dimensiones"</p>
+                  </div>
+              </article>
+              <article class="ponente-card">
+                  <div class="ponente-img-container"><img src="MEDIA/ponente-adrian-diaz.jpg" alt="Foto de Adrian Diaz"></div>
+                  <div class="ponente-info">
+                      <h3 class="ponente-nombre">Adrian Diaz</h3>
+                      <p class="ponente-afiliacion">Estudiante de Doctorado, University of Wisconsin</p>
+                      <p class="ponente-charla">"¿De verdad conocemos el Universo Lejano? Redefiniendo Nuestra Comprensión de las Galaxias desde el Infrarrojo"</p>
+                  </div>
+              </article>
+              <article class="ponente-card">
+                  <div class="ponente-img-container"><img src="MEDIA/ponente-andres-argandona.jpg" alt="Foto de Andrés Argandoña"></div>
+                  <div class="ponente-info">
+                      <h3 class="ponente-nombre">Andrés Argandoña</h3>
+                      <p class="ponente-afiliacion">Estudiante de Doctorado, Universidad Autónoma de México</p>
+                      <p class="ponente-charla">"Entropía de Entrelazamiento Holográfico para Branas de Prueba: Un ejemplo concreto"</p>
+                  </div>
+              </article>
+              <article class="ponente-card">
+                  <div class="ponente-img-container"><img src="MEDIA/ponente-renzo-franco.jpg" alt="Foto de Renzo Franco"></div>
+                  <div class="ponente-info">
+                      <h3 class="ponente-nombre">Renzo Franco</h3>
+                      <p class="ponente-afiliacion">Estudiante de Maestría, Universidad de Sao Paulo</p>
+                      <p class="ponente-charla">"Entre Aislantes y Conductores: El Papel de la Topología en la Física de la Materia Condensada"</p>
+                  </div>
+              </article>
+              <article class="ponente-card">
+                  <div class="ponente-img-container"><img src="MEDIA/ponente-david-hinostroza.jpg" alt="Foto de David Hinostroza"></div>
+                  <div class="ponente-info">
+                      <h3 class="ponente-nombre">David Hinostroza</h3>
+                      <p class="ponente-afiliacion">Estudiante de Maestría, Universidad de Sao Paulo</p>
+                      <p class="ponente-charla">"Defectos y el Transporte en Materiales Topológicos"</p>
+                  </div>
+              </article>
+              <article class="ponente-card">
+                  <div class="ponente-img-container"><img src="MEDIA/ponente-lisseth-gonzales.jpg" alt="Foto de Lisseth Gonzales"></div>
+                  <div class="ponente-info">
+                      <h3 class="ponente-nombre">Lisseth Gonzales</h3>
+                      <p class="ponente-afiliacion">Estudiante de Maestría, Wesleyan University</p>
+                      <p class="ponente-charla">"Búsqueda de la Línea de Absorción de Hα en la Atmósfera Extendida de TOI 1288b"</p>
+                  </div>
+              </article>
+              <article class="ponente-card">
+                  <div class="ponente-img-container"><img src="MEDIA/ponente-lucia-coll.jpg" alt="Foto de Lucia Coll"></div>
+                  <div class="ponente-info">
+                      <h3 class="ponente-nombre">Lucia Coll</h3>
+                      <p class="ponente-afiliacion">Estudiante de Doctorado, Desy Uni Hamburg</p>
+                      <p class="ponente-charla">"Búsqueda de Partículas de Larga Vida en el LHC"</p>
+                  </div>
+              </article>
+              <article class="ponente-card">
+                  <div class="ponente-img-container"><img src="MEDIA/ponente-mario-solis.jpg" alt="Foto de Mario Solis"></div>
+                  <div class="ponente-info">
+                      <h3 class="ponente-nombre">Mario Solis</h3>
+                      <p class="ponente-afiliacion">Estudiante de Doctorado, Instituto Balseiro</p>
+                      <p class="ponente-charla">"Los Non-Fermi Liquids y la Superconductividad: Persiguiendo a los Superconductores de altas temperaturas"</p>
+                  </div>
+              </article>
+              <article class="ponente-card">
+                  <div class="ponente-img-container"><img src="MEDIA/ponente-rivaldo-duran.jpg" alt="Foto de Rivaldo Duran"></div>
+                  <div class="ponente-info">
+                      <h3 class="ponente-nombre">Rivaldo Duran</h3>
+                      <p class="ponente-afiliacion">Astronauta Análogo, Instituto Politécnico Nacional</p>
+                      <p class="ponente-charla">"Vámonos a Marte para salvar la Tierra: Un enfoque desde la Dinámica de Fluidos Computacionales"</p>
+                  </div>
+              </article>
+          </div>
+      </section>
+    </main>
+    
 
-    <section class="evento-inscripcion">
-      <h2>Inscríbete</h2>
-      <p>
-        Las inscripciones están abiertas. Reserva tu lugar y forma parte de
-        esta experiencia científica única.
-      </p>
-      <a class="btn-header" href="https://forms.gle/tuFormulario" target="_blank">Formulario de inscripción</a>
-    </section>
-  </main>
+    <footer id="Contacto">
+        <div class="footer-contenedor">
+            <hr class="footer-line">
+            <div class="marca-logo">
 
-  <footer>
-    <!-- Puedes reutilizar el mismo footer con redes sociales -->
-  </footer>
+                <img src="MEDIA/logo-blanco.webp" alt="logo">
+
+            </div>
+            <p> Síguenos para más información</p>
+            <div class="iconos">    
+                <a href="https://www.instagram.com/derivate.stem/" target="_blank">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/derivatestem" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61555020923912" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>    
+            </div>
+        
+
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
