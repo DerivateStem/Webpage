@@ -471,3 +471,16 @@ footer p{
   margin: 5px 0;
 }
 
+/*para que las imagenes se muestren en linea*/
+#Novedades {
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
+    gap: 20px; /* espacio entre imágenes */
+    flex-wrap: wrap; /* permite que bajen si no hay espacio */
+}
+
+#Novedades .novedad-img-box img {
+    width: 200px; /* ajusta tamaño */
+    height: auto;
+    border-radius: 10px; /* opcional, bordes redondeados */
+}
