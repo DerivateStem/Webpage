@@ -1,60 +1,216 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DERIVATE.STEAM</title>
-    <link rel="stylesheet" href="index2.css">
-    <script src="https://kit.fontawesome.com/45430dc581.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DERIVATE.STEAM | Equipo</title>
+  <link rel="stylesheet" href="index2.css" />
+  <script src="https://kit.fontawesome.com/45430dc581.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav id="nav" class="nav1">
-            <div class="contenedor-nav">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="MEDIA/logo-blanco.webp" alt="LogoDerivate">
-                    </a>
-                </div>
-                <ul class="enlaces" id="enlaces">
-                    <li><a href="index.html" class="btn-header">Inicio</a></li>
-                    <li><a href="equipo.html" class="btn-header">Equipo</a></li>
-                    <li><a href="conócenos.html" class="btn-header">Conócenos</a></li>
-                    <li><a href="eventos.html" class="btn-header">Eventos</a></li>
-                    <li><a href="#Contacto" class="btn-header">Contacto</a></li>
-                </ul>
-                <div class="icono" id="open">
-                    <span>&#9776;</span>
-                </div>
-            </div>
-        </nav>
-        <div class="logo-central">
-            <img src="MEDIA/logo_long.webp" alt="Logo Central">
+
+  <header>
+    <nav id="nav" class="nav1">
+      <div class="contenedor-nav">
+        <div class="logo">
+          <a href="index.html"><img src="MEDIA/logo_long.webp" alt="LogoDerivate" /></a>
         </div>
-    </header>
-    <main>
-    </main>
+          
+        <ul class="enlaces" id="enlaces">
+          <li><a href="index.html" class="btn-header">Inicio</a></li>
+          <li><a href="equipo.html" class="btn-header activo">Equipo</a></li>
+          <li><a href="conócenos.html" class="btn-header">Conócenos</a></li>
+          <li><a href="eventos.html" class="btn-header">Eventos</a></li>
+          <li><a href="#Contacto" class="btn-header">Contacto</a></li>
+        </ul>
+        <div class="icono" id="open"><span>&#9776;</span></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hoja-blanca">
+
+
+        
+        
+      <section id="filtros">
+        <div class="filtro-contenedor">
+          <h2>Filtrar por</h2>
+
+          <div class="filtro-bloque input-busqueda">
+            <label for="busqueda">Buscar por nombre:</label>
+            <div class="busqueda-con-icono">
+              <input type="text" id="busqueda" placeholder="Escribe un nombre..." />
+              <i class="fa fa-search"></i>
+            </div>
+          </div>
+
+          <div class="filtro-bloque">
+            <label for="area">Área de estudio:</label>
+            <select id="area">
+              <option value="" selected>Todos</option>
+              <option value="fisica">Física</option>
+              <option value="mecanica">Ing. Mecánica de Fluidos</option>
+            </select>
+          </div>
+
+          <div class="filtro-bloque">
+            <label for="integrantes">Integrantes:</label>
+            <select id="integrantes">
+              <option value="" selected>Todos</option>
+              <option value="estudiante">Estudiante de pregrado</option>
+              <option value="egresado">Egresado</option>
+              <option value="asesor">Asesor(a) académico</option>
+            </select>
+          </div>
+
+          <div class="filtro-bloque">
+            <label for="universidad">Universidad:</label>
+            <select id="universidad">
+              <option value="" selected>Todos</option>
+              <option value="sanmarcos">UNMSM</option>
+              <option value="pucp">PUCP</option>
+              <option value="uni">UNI</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+
+
+
+        
+      <section id="perfiles">
+        <h2>Nosotros</h2>
+        <div class="grid-perfiles">
+        
+          <div class="tarjeta" data-area="fisica" data-integrantes="estudiante" data-universidad="sanmarcos">
+            <img src="MEDIA/foto-leo.jpg" alt="Nombre" />
+            <h3>Leonardo Huaira Lopez</h3>
+            <p>Estudiante de Física<br>UNMSM</p>
+          </div>
+
+          <div class="tarjeta" data-area="física" data-integrantes="estudiante" data-universidad="sanmarcos">
+            <img src="MEDIA/Foto-Jairo-Nuñez.jpg" alt="Nombre" />
+            <h3>Adrian Diaz Espinoza</h3>
+            <p>Estudiante de Física<br>UNMSM</p>
+          </div>
+
+          <div class="tarjeta" data-area="fisica" data-integrantes="estudiante" data-universidad="sanmarcos">
+            <img src="MEDIA/Marcelo-Huarcaya.jpg" alt="Nombre" />
+            <h3>Marcelo Huarcaya</h3>
+            <p>Estudiante de Física<br>UNMSM</p>
+          </div>
+
+          <div class="tarjeta" data-area="fisica" data-integrantes="estudiante" data-universidad="pucp">
+            <img src="MEDIA/Daniel-Navarro.JPG" alt="Nombre" />
+            <h3>Daniel Navarro Ramirez</h3>
+            <p>Estudiante de Física<br>PUCP</p>
+          </div>
+
+          <div class="tarjeta" data-area="mecanica de Fluidos" data-integrantes="estudiante" data-universidad="unmsm">
+            <img src="MEDIA/Juan-Diego.jpg" alt="Nombre" />
+            <h3>Juan Diego Mendoza Huillca</h3>
+            <p>Estudiante de Ingeniería Mecánica de Fluidos<br>UNMSM</p>
+          </div>
+
+         <div class="tarjeta" data-area="mecanica de Fluidos" data-integrantes="estudiante" data-universidad="unmsm">
+            <img src="MEDIA/Diego-Haro.jpg" alt="Nombre" />
+            <h3>Diego Haro Rosales</h3>
+            <p>Estudiante de<br>UNMSM</p>
+          </div>
+          
+          <div class="tarjeta" data-area="física" data-integrantes="estudiante" data-universidad="uni">
+            <img src="MEDIA/Enrique.jpg" alt="Nombre" />
+            <h3>Enrique Isaac Huaira Lopez</h3>
+            <p>Estudiante de Física<br>UNI</p>
+          </div>
+
+          <div class="tarjeta" data-area="física" data-integrantes="estudiante" data-universidad="uni">
+            <img src="MEDIA/Hipolito.jpg" alt="Nombre" />
+            <h3>Hipolito</h3>
+            <p>Estudiante de Física<br>UNI</p>
+          </div>
+
+          <div class="tarjeta" data-area="física" data-integrantes="estudiante" data-universidad="uni">
+            <img src="MEDIA/Mariano-Effio.jpg" alt="Nombre" />
+            <h3>Mariano Effio Cueva</h3>
+            <p>Estudiante de Física<br>UNI</p>
+          </div>
+
+          <div class="tarjeta" data-area="física" data-integrantes="estudiante" data-universidad="uni">
+            <img src="MEDIA/Foto-Gretta.HEIC" alt="Nombre" />
+            <h3>Gretta Oro Bravo</h3>
+            <p>Estudiante de Física<br>UNI</p>
+          </div>
+          
+          <div class="tarjeta" data-area="física" data-integrantes="estudiante" data-universidad="uni">
+            <img src="MEDIA/" alt="Nombre" />
+            <h3>Betty Liuba Llantirhuay Ramos</h3>
+            <p>Estudiante de Física<br>UNI</p>
+          </div>
+
+
+
+
+
+
+          <div class="tarjeta" data-area="física" data-integrantes="estudiante" data-universidad="uni">
+            <img src="MEDIA/" alt="Nombre" />
+            <h3>Betty Liuba Llantirhuay Ramos</h3>
+            <p>Estudiante de Física<br>UNI</p>
+          </div>
+
+          <div class="tarjeta" data-area="física" data-integrantes="estudiante" data-universidad="uni">
+            <img src="MEDIA/" alt="Nombre" />
+            <h3>Betty Liuba Llantirhuay Ramos</h3>
+            <p>Estudiante de Física<br>UNI</p>
+          </div>
+
+          <div class="tarjeta" data-area="física" data-integrantes="estudiante" data-universidad="uni">
+            <img src="MEDIA/" alt="Nombre" />
+            <h3>Betty Liuba Llantirhuay Ramos</h3>
+            <p>Estudiante de Física<br>UNI</p>
+          </div>
+
+          <div class="tarjeta" data-area="física" data-integrantes="estudiante" data-universidad="uni">
+            <img src="MEDIA/" alt="Nombre" />
+            <h3>Betty Liuba Llantirhuay Ramos</h3>
+            <p>Estudiante de Física<br>UNI</p>
+          </div>
+
+          <div class="tarjeta" data-area="física" data-integrantes="estudiante" data-universidad="uni">
+            <img src="MEDIA/" alt="Nombre" />
+            <h3>Betty Liuba Llantirhuay Ramos</h3>
+            <p>Estudiante de Física<br>UNI</p>
+          </div>
+
+
+        </div>
+      </section>
+
+    </section>
+  </main>
+
+
+
     
-    <footer id="Contacto">
-        <div class="footer-contenedor">
-            <div class="marca-logo">
-                <img src="MEDIA/logo-blanco.webp" alt="logo">
-            </div>
-            <div class="iconos">    
-                <a href="https://www.instagram.com/derivate.stem/" target="_blank">
-                    <i class="fa-brands fa-square-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/derivatestem" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61555020923912" target="_blank">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-            </div>
-            <p> Síguenos para más información</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+  <!-- Final -->        
+  <footer id="Contacto">
+    <div class="footer-contenedor">
+      <div class="marca-logo">
+        <img src="MEDIA/logo-blanco.webp" alt="Logo" />
+      </div>
+      <div class="iconos">
+        <a href="https://www.instagram.com/derivate.stem/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/derivatestem" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61555020923912" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+      <p>Síguenos para más información</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
