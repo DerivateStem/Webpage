@@ -61,4 +61,10 @@ document.addEventListener('DOMContentLoaded', function () {
         updateSlider();
     });
 
+    document.querySelectorAll('.ponente-card').forEach(card => {
+        card.addEventListener('click', function() {
+            card.classList.toggle('flipped');
+        });
+    });
+
 });
