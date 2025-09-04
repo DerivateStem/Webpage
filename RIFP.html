@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="index2.css">
     <link rel="stylesheet" href="RIFP.css">
     <script src="https://kit.fontawesome.com/45430dc581.js" crossorigin="anonymous"></script>
+    <style>
+        .contenedor > h2.after {
+            /* Hace que el título ocupe solo el ancho de su texto. */
+            display: inline-block;
+        }
+
+        .contenedor > h2.after::after {
+            /* Asegura que la línea de subrayado ocupe el 100% del ancho del título. */
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -33,7 +46,7 @@
         <div class="noticias-hero-img">
           <img src="MEDIA/RIFP 2.jpg" alt="Portada de la Reunión Internacional de Físicos en Posgrado 2024">
           <div class="noticias-hero-titulo">
-            Reunión Internacional de Físicos en Posgrado
+            REUNIÓN INTERNACIONAL DE FÍSICOS EN POSGRADO
             <span class="subtitulo-evento">RIFP 2024</span>
           </div>
         </div>
@@ -45,15 +58,12 @@
           <p>La Reunión Internacional de Físicos en Posgrado (RIFP) es el principal punto de encuentro para la comunidad científica peruana. Conectamos a estudiantes, académicos e investigadores de todo el mundo para compartir los últimos avances, fomentar la colaboración y inspirar a las nuevas generaciones de físicos.</p>
       </section>
 
-      <section class="evento-galeria contenedor">
+            <section class="evento-galeria contenedor">
         <h2 class="after">Galería del Evento</h2>
         <div class="slider-box rifp-gallery-slider">
             <button class="slider-button prev">❮</button>
             <button class="slider-button next">❯</button>
             <ul>
-                <li>
-                    <img src="MEDIA/RIFP-2.jpg" alt="Foto del evento RIFP">
-                </li>
                 <li>
                     <img src="MEDIA/Adrian RIFP 2.jpg" alt="Ponente Adrian Diaz en RIFP">
                 </li>
@@ -66,15 +76,18 @@
                 <li>
                     <img src="MEDIA/David Cespedes 1.jpg" alt="Ponente David Céspedes en RIFP">
                 </li>
+                <li>
+                    <img src="MEDIA/RIFP-2.jpg" alt="Foto del evento RIFP">
+                </li>
             </ul>
         </div>
       </section>
+
 
       <section class="ponentes-seccion contenedor">
           <h2 class="after">Nuestros Ponentes</h2>
           <div class="ponentes-grid">
               <article class="ponente-card">
-                  <div class="ponente-img-container"><img src="MEDIA/ponente-david-cespedes.jpg" alt="Foto de David Céspedes"></div>
                   <div class="ponente-info">
                       <h3 class="ponente-nombre">David Céspedes</h3>
                       <p class="ponente-afiliacion">Estudiante de Doctorado, University of Houston</p>
@@ -82,7 +95,6 @@
                   </div>
               </article>
               <article class="ponente-card">
-                  <div class="ponente-img-container"><img src="MEDIA/ponente-fernando-temoche.jpg" alt="Foto de Fernando Temoche"></div>
                   <div class="ponente-info">
                       <h3 class="ponente-nombre">Fernando Temoche</h3>
                       <p class="ponente-afiliacion">Estudiante de Doctorado, Utah State University</p>
@@ -90,7 +102,6 @@
                   </div>
               </article>
               <article class="ponente-card">
-                  <div class="ponente-img-container"><img src="MEDIA/ponente-adrian-diaz.jpg" alt="Foto de Adrian Diaz"></div>
                   <div class="ponente-info">
                       <h3 class="ponente-nombre">Adrian Diaz</h3>
                       <p class="ponente-afiliacion">Estudiante de Doctorado, University of Wisconsin</p>
@@ -98,7 +109,6 @@
                   </div>
               </article>
               <article class="ponente-card">
-                  <div class="ponente-img-container"><img src="MEDIA/ponente-andres-argandona.jpg" alt="Foto de Andrés Argandoña"></div>
                   <div class="ponente-info">
                       <h3 class="ponente-nombre">Andrés Argandoña</h3>
                       <p class="ponente-afiliacion">Estudiante de Doctorado, Universidad Autónoma de México</p>
@@ -106,7 +116,6 @@
                   </div>
               </article>
               <article class="ponente-card">
-                  <div class="ponente-img-container"><img src="MEDIA/ponente-renzo-franco.jpg" alt="Foto de Renzo Franco"></div>
                   <div class="ponente-info">
                       <h3 class="ponente-nombre">Renzo Franco</h3>
                       <p class="ponente-afiliacion">Estudiante de Maestría, Universidad de Sao Paulo</p>
@@ -114,7 +123,6 @@
                   </div>
               </article>
               <article class="ponente-card">
-                  <div class="ponente-img-container"><img src="MEDIA/ponente-david-hinostroza.jpg" alt="Foto de David Hinostroza"></div>
                   <div class="ponente-info">
                       <h3 class="ponente-nombre">David Hinostroza</h3>
                       <p class="ponente-afiliacion">Estudiante de Maestría, Universidad de Sao Paulo</p>
@@ -122,7 +130,6 @@
                   </div>
               </article>
               <article class="ponente-card">
-                  <div class="ponente-img-container"><img src="MEDIA/ponente-lisseth-gonzales.jpg" alt="Foto de Lisseth Gonzales"></div>
                   <div class="ponente-info">
                       <h3 class="ponente-nombre">Lisseth Gonzales</h3>
                       <p class="ponente-afiliacion">Estudiante de Maestría, Wesleyan University</p>
@@ -130,7 +137,6 @@
                   </div>
               </article>
               <article class="ponente-card">
-                  <div class="ponente-img-container"><img src="MEDIA/ponente-lucia-coll.jpg" alt="Foto de Lucia Coll"></div>
                   <div class="ponente-info">
                       <h3 class="ponente-nombre">Lucia Coll</h3>
                       <p class="ponente-afiliacion">Estudiante de Doctorado, Desy Uni Hamburg</p>
@@ -138,7 +144,6 @@
                   </div>
               </article>
               <article class="ponente-card">
-                  <div class="ponente-img-container"><img src="MEDIA/ponente-mario-solis.jpg" alt="Foto de Mario Solis"></div>
                   <div class="ponente-info">
                       <h3 class="ponente-nombre">Mario Solis</h3>
                       <p class="ponente-afiliacion">Estudiante de Doctorado, Instituto Balseiro</p>
@@ -146,7 +151,6 @@
                   </div>
               </article>
               <article class="ponente-card">
-                  <div class="ponente-img-container"><img src="MEDIA/ponente-rivaldo-duran.jpg" alt="Foto de Rivaldo Duran"></div>
                   <div class="ponente-info">
                       <h3 class="ponente-nombre">Rivaldo Duran</h3>
                       <p class="ponente-afiliacion">Astronauta Análogo, Instituto Politécnico Nacional</p>
@@ -183,6 +187,6 @@
         </div>
 
     </footer>
-    <script src="script.js"></script>
+    <script src="RIFP.js"></script>
 </body>
 </html>
