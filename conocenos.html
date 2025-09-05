@@ -1,72 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>DERIVATE.STEAM</title>
-  <link rel="stylesheet" href="index2.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>DERÍVATE • Conócenos</title>
+  <link rel="stylesheet" href="index2.css" />
   <script src="https://kit.fontawesome.com/45430dc581.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <nav id="nav" class="nav1">
+
+  <!-- Header / Nav igual que en equipo.html -->
+  <header class="site-header">
+    <nav id="nav" class="nav">
       <div class="contenedor-nav">
         <div class="logo">
-          <a href="index.html">
-            <img src="MEDIA/logo-blanco.webp" alt="LogoDerivate">
-          </a>
+          <a href="index.html"><img src="MEDIA/logo_long.webp" alt="Logo Derívate" /></a>
         </div>
-        <ul class="enlaces" id="enlaces">
-          <li><a href="index.html" class="btn-header activo">Inicio</a></li>
-          <li><a href="equipo.html" class="btn-header">Equipo</a></li>
-          <!-- href SIN tilde -->
-          <li><a href="conocenos.html" class="btn-header">Conócenos</a></li>
-          <!-- Como estás en index, apunta a la sección de esta misma página -->
-          <li><a href="#Eventos" class="btn-header">Eventos</a></li>
-          <li><a href="#Contacto" class="btn-header">Contacto</a></li>
-        </ul>
-        <div class="icono" id="open">
+
+        <button class="icono" id="open" aria-label="Abrir menú" aria-expanded="false" aria-controls="enlaces">
           <span>&#9776;</span>
-        </div>
+        </button>
+
+        <ul class="enlaces" id="enlaces">
+          <li><a href="index.html" class="btn-header">Inicio</a></li>
+          <li><a href="equipo.html" class="btn-header">Equipo</a></li>
+          <li><a href="conócenos.html" class="btn-header activo">Conócenos</a></li>
+          <li><a href="eventos.html" class="btn-header">Eventos</a></li>
+          <li><a href="index.html#contacto" class="btn-header">Contacto</a></li>
+        </ul>
       </div>
     </nav>
-
-    <div class="logo-central">
-      <img src="MEDIA/logo_long.webp" alt="Logo Central">
-    </div>
   </header>
 
-  <main>
-    <!-- Tu contenido aquí. Si usas la sección Eventos, asegúrate de que el id coincida -->
-    <!--
-    <section id="Eventos">
-      ...
+  <main class="container" style="padding:32px 16px 64px">
+    <!-- Título principal al centro como “Eventos pasados” -->
+    <h1 class="section-title" style="text-align:center">Conócenos</h1>
+
+    <!-- Quiénes somos -->
+    <section class="panel" style="margin-top:24px">
+      <h2 class="section-title">Quiénes somos</h2>
+      <p>
+        <strong>Derívate</strong> es la asociación de estudiantes de física en Perú que se apoya, se forma y crece unida.
+        Un espacio donde nadie avanza solo y el talento encuentra red, oportunidades y acompañamiento real.
+      </p>
     </section>
-    -->
+
+    <!-- Misión y Visión en dos columnas -->
+    <section class="mv" style="padding-top:24px">
+      <div class="grid-2">
+        <article class="panel">
+          <h2 class="section-title">Nuestra Misión</h2>
+          <p>
+            Acompañar y potenciar a los futuros físicos del Perú a través de apoyo mutuo, mentoría entre pares
+            y formación aplicada, construyendo una cultura académica más colaborativa y global.
+          </p>
+        </article>
+
+        <article class="panel">
+          <h2 class="section-title">Nuestra Visión</h2>
+          <p>
+            Ser la comunidad de referencia en física peruana, capaz de transformar la manera en que los estudiantes
+            se forman y conectan, para que el talento científico peruano tenga impacto en el mundo.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- (Opcional) Valores o qué hacemos: deja preparado por si quieres completar -->
+    <section class="panel" style="margin-top:16px">
+      <h2 class="section-title">Qué hacemos</h2>
+      <p>
+        Mentorías entre pares, talleres aplicados, círculos de estudio, charlas con investigadoras/es y
+        una red de apoyo para conectar oportunidades académicas dentro y fuera del Perú.
+      </p>
+    </section>
   </main>
 
-  <footer id="Contacto">
+  <!-- Footer igual que en equipo.html -->
+  <footer id="contacto" class="site-footer">
     <div class="footer-contenedor">
       <div class="marca-logo">
-        <img src="MEDIA/logo-blanco.webp" alt="logo">
+        <img src="MEDIA/logo-blanco.webp" alt="Logo" />
       </div>
       <div class="iconos">
-        <a href="https://www.instagram.com/derivate.stem/" target="_blank" rel="noopener">
-          <i class="fa-brands fa-square-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/derivatestem" target="_blank" rel="noopener">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <!-- enlace de Facebook corregido -->
-        <a href="https://www.facebook.com/profile.php?id=61555020923912" target="_blank" rel="noopener">
-          <i class="fa-brands fa-facebook"></i>
-        </a>
+        <a href="https://www.instagram.com/derivate.stem/" target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/derivatestem" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61555020923912" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
       </div>
       <p>Síguenos para más información</p>
     </div>
   </footer>
 
+  <!-- Reusa el mismo script del sitio (menú móvil) -->
   <script src="script.js"></script>
 </body>
 </html>
