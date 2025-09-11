@@ -45,6 +45,8 @@ button{
 
 
 /* Header */
+
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -73,6 +75,7 @@ header {
     height: auto;
 }
 
+/* Barra de navegación */
 nav {
     width: 100%;
     position: fixed;
@@ -83,6 +86,7 @@ nav {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
+/*  Estilos de nav1 y nav2 */
 .nav1 {
     display: flex;
     background: rgba(245, 245, 245, 0.8);
@@ -107,11 +111,12 @@ nav {
     align-items: center;
 }
 
-
+/*  Estilos del logo */
 .logo img {
     height: 65px;
 }
 
+/*  Estilos de los enlaces */
 nav .enlaces {
     display: flex;
     gap: 40px;
@@ -133,22 +138,24 @@ nav .enlaces a:hover {
 
 
 nav .enlaces li {
-    list-style: none; 
+    list-style: none; /* Asegura que los puntos desaparecen */
 }
 
+/* 🔹 Icono del menú para móviles */
 .icono {
     display: none;
     font-size: 24px;
     padding: 23.5px 20px;
 }
 
+/* 🔹 Estilos responsive */
 @media screen and (max-width: 768px) {
     .enlaces {
-        display: none; 
+        display: none; /* Ocultar enlaces en pantallas pequeñas */
     }
 
     .icono {
-        display: block;
+        display: block; /* Mostrar icono del menú */
         cursor: pointer;
     }
 }
@@ -175,7 +182,7 @@ nav .enlaces li {
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
-
+/* Main */
 .contenedor{
     margin: auto;
     padding: 0 0;
@@ -226,7 +233,7 @@ nav .enlaces li {
     height: auto;
     margin: 10px 0px 0px 0;
     overflow: hidden;
-    position: relative; 
+    position: relative; /* Importante para posicionar los botones */
 }
 
 .slider-box ul {
@@ -234,11 +241,11 @@ nav .enlaces li {
     padding: 0;
     width: 200%;
     transition: transform 0.5s ease;
-    animation: none !important; 
-    transform: translateX(0); 
+    animation: none !important; /* Aseguramos que no haya animación automática */
+    transform: translateX(0); /* Posición inicial */
 }
 
-
+/* Eliminar o comentar completamente la animación @keyframes slide */
 .slider-button {
     position: absolute;
     top: 50%;
@@ -270,6 +277,7 @@ nav .enlaces li {
     right: 20px;
 }
 
+/* Eliminar la animación anterior */
 
 .slider-box li{
     width: 100%;
@@ -341,7 +349,7 @@ nav .enlaces li {
 
 @keyframes slide {
 
-    0%, 45% { transform: translateX(0); }  
+    0%, 45% { transform: translateX(0); }  /* Mantener la primera imagen 10s */
     50.0%, 95% { transform: translateX(-50%); } 
 
 }
@@ -378,7 +386,7 @@ footer {
 .marca-logo {
     width: 40%;
     margin: 60px auto ;
-    margin-bottom: var(--espacios, 20px); 
+    margin-bottom: var(--espacios, 20px); /* Usa 20px como valor por defecto */
 }
 
 .marca-logo img {
@@ -393,23 +401,23 @@ footer {
     width: 100%;
 }
 .iconos a {
-    text-decoration: none; 
-    margin: 0 10px; 
+    text-decoration: none; /* Quita el subrayado del enlace */
+    margin: 0 10px; /* Espaciado entre iconos */
 }
 
 .iconos i {
-    transition: color 0.3s ease, transform 0.3s ease; 
+    transition: color 0.3s ease, transform 0.3s ease; /* Suaviza la animación */
 }
 
 .iconos a:hover i {
-    color: rgb(255, 217, 0); 
-    transform: scale(1.2); 
+    color: rgb(255, 217, 0); /* Cambia de color al pasar el mouse */
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño */
 }
 
 .fa-brands {
     font-size: 60px;
     color: #fff;
-    margin-bottom: var(--espacios, 20px); 
+    margin-bottom: var(--espacios, 20px); /* Usa 20px como valor por defecto */
     display: inline-block;
 }
 footer p{
@@ -509,15 +517,16 @@ footer p{
 /* ════════════════════════════════════════
    SECCIÓN EQUIPO - FILTROS Y CONTENIDO
    ════════════════════════════════════════ */
-  
+   /* 🔲 Fondo tipo hoja blanca para todo el contenido del equipo*/
 .hoja-blanca {
   background-color: white;
   padding: 50px 20px;
   min-height: 100vh;
 }
 
+/* 🔍 Contenedor de filtros con fondo azul oscuro */
 .filtro-contenedor {
-  background-color: #1f1d31; 
+  background-color: #1f1d31; /* mismo azul del header */
   padding: 30px 20px;
   border-radius: 12px;
   color: white;
@@ -530,7 +539,7 @@ footer p{
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-
+/* 🧩 Cada bloque de filtro */
 .filtro-bloque {
   flex: 1 1 200px;
   display: flex;
@@ -550,7 +559,7 @@ footer p{
   font-size: 1rem;
 }
 
-
+/* Descripción y contenido debajo de los filtros */
 .contenido-equipo {
   max-width: 1200px;
   margin: 0 auto;
@@ -564,14 +573,14 @@ footer p{
   text-align: center;
 }
 
-
+/* Contenedor donde irán los resultados dinámicos */
 #contenido-dinamico {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
-
+/* Estilo base para futuras tarjetas de miembros o proyectos */
 .tarjeta-miembro {
   background-color: #f5f5f5;
   padding: 20px;
@@ -584,6 +593,7 @@ footer p{
   transform: translateY(-5px);
 }
 
+/*Estilos para la descripción con imagen*/
 .descripcion-con-imagen {
   display: flex;
   justify-content: space-between;
@@ -611,8 +621,9 @@ footer p{
   border-radius: 12px;
 }
 
+/* Estilos generales para filtros */
 .filtro-contenedor {
-  background-color: var(--fondo); 
+  background-color: var(--fondo); /* azul oscuro */
   padding: 2rem;
   border-radius: 12px;
   margin-bottom: 2rem;
@@ -629,7 +640,7 @@ footer p{
   font-weight: 600;
 }
 
-
+/* Campos de entrada y selección */
 .filtro-bloque select,
 .filtro-bloque input[type="text"] {
   width: 100%;
@@ -648,12 +659,13 @@ footer p{
   border-color: #3665ef;
 }
 
+/* Contenedor del input con lupa */
 .busqueda-con-icono {
   position: relative;
 }
 
 .busqueda-con-icono input {
-  padding-left: 2.5rem;
+  padding-left: 2.5rem; /* Espacio para el icono */
 }
 
 .lupa-icono {
@@ -673,8 +685,8 @@ footer p{
 
 .busqueda-con-icono input {
     width: 100%;
-    padding: 10px 40px 10px 1 px; 
-    padding-right: 40 px; 
+    padding: 10px 40px 10px 1 px; /* espacio regular */
+    padding-right: 40 px; /*espacio adicional a la derecha para la lupa */
     border: 1px solid#ccc;
     border-radius: 20px;
     font-size: 16px;
@@ -691,6 +703,7 @@ footer p{
     pointer-events: none;
 }
 
+/* Estilo del nuevo apartado equipo.interfas.html */
 #nuevo-contenido {
   display: flex;
   gap: 2rem;
@@ -736,7 +749,7 @@ footer p{
 .team-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 2rem; 
+  gap: 2rem; /* espacio entre tarjetas */
   justify-items: center;
   margin: 3rem auto;
   max-width: 1200px;
@@ -751,14 +764,14 @@ footer p{
 .team-member img {
   width: 200px;
   height: 200px;
-  object-fit: cover; 
-  border-radius: 4px; 
+  object-fit: cover; /* recorta la foto en cuadrado */
+  border-radius: 4px; /* bordes sutilmente redondeados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s ease;
 }
 
 .team-member img:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05); /* efecto suave al pasar el mouse */
 }
 
 .team-member h3 {
@@ -776,15 +789,15 @@ footer p{
 
 /* Ajuste de tamaño para las fotos del equipo */
 .team-member img {
-  width: 200px;      
-  height: 200px;     
-  object-fit: cover; 
-  border-radius: 50%; 
+  width: 200px;      /* ancho fijo */
+  height: 200px;     /* alto fijo */
+  object-fit: cover; /* recorta la foto sin deformarla */
+  border-radius: 50%; /* si quieres que sean circulares */
   display: block;
-  margin: 0 auto;    
+  margin: 0 auto;    /* centra la imagen */
 }
 
-
+/* Contenedor general del equipo */
 .team-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -792,7 +805,7 @@ footer p{
   padding: 2rem;
 }
 
-
+/* Cada tarjeta de persona */
 .team-member {
   text-align: center;
   background: #fff;
@@ -806,27 +819,30 @@ footer p{
   transform: translateY(-5px);
 }
 
-
+/* Imagen de cada persona */
 .team-member img {
-  width: 200px;       
-  height: 200px;      
-  object-fit: cover;  
-  border-radius: 50%; 
+  width: 200px;       /* tamaño fijo como en la referencia */
+  height: 200px;      /* cuadrada */
+  object-fit: cover;  /* recorta la imagen si no es cuadrada */
+  border-radius: 50%; /* la hace circular */
   margin-bottom: 1rem;
 }
 
+/* Nombre */
 .team-member h3 {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
+/* Descripción */
 .team-member p {
   font-size: 0.95rem;
   color: #555;
   margin: 0;
 }
 
+/* ====== SECCIÓN PERFILES ====== */
 #perfiles {
   padding: 2rem;
   text-align: center;
@@ -838,12 +854,14 @@ footer p{
   font-weight: 700;
 }
 
+/* Contenedor de tarjetas */
 .grid-perfiles {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
 }
 
+/* Cada tarjeta */
 .tarjeta {
   background: #fff;
   border-radius: 12px;
@@ -858,26 +876,32 @@ footer p{
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
+/* Imagen del perfil */
 .tarjeta img {
-  width: 200px;        
-  height: 200px;      
-  object-fit: cover;  
-  border-radius: 50%; 
+  width: 200px;        /* Tamaño fijo */
+  height: 200px;       /* Mantiene cuadrado */
+  object-fit: cover;   /* Recorta sin deformar */
+  border-radius: 50%;  /* Circular */
   margin-bottom: 1rem;
 }
 
+/* Nombre */
 .tarjeta h3 {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
+/* Descripción */
 .tarjeta p {
   font-size: 0.95rem;
   color: #555;
   line-height: 1.4;
 }
 
+
+
+/* ====== ESTILOS GENERALES ====== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -890,13 +914,14 @@ h2 {
   margin: 20px 0;
 }
 
+/* ====== FILTROS ====== */
 .filtro-container {
   text-align: center;
   margin-bottom: 20px;
 }
 
 .btn-filtro {
-  display: none; 
+  display: none; /* solo en móvil */
   background: #333;
   color: #fff;
   border: none;
@@ -911,7 +936,7 @@ h2 {
   justify-content: center;
   gap: 12px;
   margin: 15px 0;
-  background: #222;       
+  background: #222;       /* 🔹 color oscuro como antes */
   padding: 12px;
   border-radius: 10px;
 }
@@ -921,7 +946,7 @@ h2 {
   border: 2px solid #555;
   padding: 8px 15px;
   cursor: pointer;
-  border-radius: 20px;     
+  border-radius: 20px;     /* 🔹 estilo más redondeado */
   transition: 0.3s ease;
   color: #333;
   font-weight: bold;
@@ -932,6 +957,7 @@ h2 {
   color: #fff;
 }
 
+/* ====== GRID DE PERFILES ====== */
 .grid-perfiles {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -957,7 +983,7 @@ h2 {
   width: 140px;
   height: 140px;
   object-fit: cover;
-  border-radius: 50%;   
+  border-radius: 50%;   /* 🔹 foto circular */
   margin-bottom: 10px;
   border: 3px solid #ddd;
 }
@@ -973,6 +999,7 @@ h2 {
   color: #666;
 }
 
+/* ====== MODAL ====== */
 .modal {
   display: none; 
   position: fixed;
@@ -1009,14 +1036,14 @@ h2 {
   to { transform: scale(1); opacity: 1; }
 }
 
-
+/* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
   .btn-filtro {
     display: inline-block;
     margin-bottom: 10px;
   }
   .barra-filtro {
-    display: none;
+    display: none; /* en móvil oculta por defecto */
     flex-direction: column;
     gap: 8px;
     margin-top: 10px;
@@ -1026,21 +1053,22 @@ h2 {
   }
 }
 
+/* Fondo del modal */
 .modal {
-  display: none; 
+  display: none; /* Oculto por defecto */
   position: fixed;
   z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); 
-  backdrop-filter: blur(5px); 
+  background: rgba(0, 0, 0, 0.6); /* semitransparente */
+  backdrop-filter: blur(5px); /* difuminado */
   justify-content: center;
   align-items: center;
 }
 
-
+/* Contenido del modal */
 .modal-contenido {
   background: white;
   padding: 20px;
@@ -1052,6 +1080,7 @@ h2 {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
+/* Foto dentro del modal */
 .modal-contenido img {
   width: 120px;
   height: 120px;
@@ -1060,6 +1089,7 @@ h2 {
   margin-bottom: 15px;
 }
 
+/* Botón cerrar */
 .cerrar {
   position: absolute;
   top: 10px;
@@ -1070,8 +1100,9 @@ h2 {
   cursor: pointer;
 }
 
+/* Modal */
 .modal {
-  display: none; 
+  display: none; /* oculto por defecto */
   position: fixed;
   top: 0;
   left: 0;
@@ -1117,6 +1148,6 @@ h2 {
 #modal-foto {
   width: 100%;
   height: auto;
-  object-fit: contain; 
+  object-fit: contain; /* Se muestra entera */
   border-radius: 10px;
 }
