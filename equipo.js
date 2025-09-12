@@ -30,13 +30,47 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ====== FILTROS (placeholder) ======
+  // ====== FILTROS ======
   const busquedaInput = document.getElementById("busqueda");
-  if (busquedaInput) {
-    busquedaInput.addEventListener("input", () => {
-      console.log("Buscando:", busquedaInput.value);
+  const selectCarrera = document.getElementById("carrera");
+  const selectArea = document.getElementById("area");
+  const selectIntegrantes = document.getElementById("integrantes");
+  const selectUniversidad = document.getElementById("universidad");
+  const tarjetas = document.querySelectorAll(".tarjeta");
+
+  function filtrarTarjetas() {
+    const texto = busquedaInput ? busquedaInput.value.toLowerCase() : "";
+    const carrera = selectCarrera ? selectCarrera.value : "";
+    const area = selectArea ? selectArea.value : "";
+    const tipo = selectIntegrantes ? selectIntegrantes.value : "";
+    const universidad = selectUniversidad ? selectUniversidad.value : "";
+
+    tarjetas.forEach((tarjeta) => {
+      const nombre = tarjeta.dataset.nombre.toLowerCase();
+      const carreraTarjeta = tarjeta.dataset.carrera || "";
+      const areaTarjeta = tarjeta.dataset.area || "";
+      const tipoTarjeta = tarjeta.dataset.tipo || "";
+      const universidadTarjeta = tarjeta.dataset.universidad || "";
+
+      const coincideNombre = nombre.includes(texto);
+      const coincideCarrera = carrera === "" || carreraTarjeta === carrera;
+      const coincideArea = area === "" || areaTarjeta === area;
+      const coincideTipo = tipo === "" || tipoTarjeta === tipo;
+      const coincideUniversidad = universidad === "" || universidadTarjeta === universidad;
+
+      if (coincideNombre && coincideCarrera && coincideArea && coincideTipo && coincideUniversidad) {
+        tarjeta.style.display = "block";
+      } else {
+        tarjeta.style.display = "none";
+      }
     });
   }
+
+  if (busquedaInput) busquedaInput.addEventListener("input", filtrarTarjetas);
+  if (selectCarrera) selectCarrera.addEventListener("change", filtrarTarjetas);
+  if (selectArea) selectArea.addEventListener("change", filtrarTarjetas);
+  if (selectIntegrantes) selectIntegrantes.addEventListener("change", filtrarTarjetas);
+  if (selectUniversidad) selectUniversidad.addEventListener("change", filtrarTarjetas);
 
   // ====== MODAL DINÁMICO ======
   const modal = document.getElementById("modal");
@@ -45,8 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalInfo = document.getElementById("modal-info");
   const cerrarModal = document.querySelector(".cerrar");
 
-  // Evento en cada tarjeta
-  const tarjetas = document.querySelectorAll(".tarjeta");
   tarjetas.forEach((tarjeta) => {
     tarjeta.addEventListener("click", () => {
       const foto = tarjeta.getAttribute("data-foto");
@@ -61,7 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Cerrar modal
   cerrarModal.addEventListener("click", () => {
     modal.style.display = "none";
   });
