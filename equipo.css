@@ -1221,3 +1221,36 @@ h2 {
 .filtros select {
   cursor: pointer;
 }
+
+
+.tarjeta {
+  position: relative;
+  padding-bottom: 40px; /* espacio extra para el botón */
+}
+
+.linkedin-btn {
+  display: inline-block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.linkedin-btn img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.linkedin-btn img:hover {
+  transform: scale(1.2);
+}
+
+.linkedin-btn i {
+  font-size: 24px;
+  color: #0077b5; /* Azul oficial de LinkedIn */
+  transition: transform 0.2s ease;
+}
+
+.linkedin-btn i:hover {
+  transform: scale(1.2);
+  color: #005582;
+}
