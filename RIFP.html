@@ -4,34 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DERIVATE | RIFP 2024</title>
-
-  <!-- Hojas de estilo -->
-  <link rel="stylesheet" href="index2.css" />
-  <link rel="stylesheet" href="RIFP.css" />
-
-  <!-- Iconos -->
-  <script src="https://kit.fontawesome.com/45430dc581.js" crossorigin="anonymous" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DERIVATE</title>
+  <link rel="stylesheet" href="index2.css">
+  <link rel="stylesheet" href="css/RIFP.css">
+  <script src="https://kit.fontawesome.com/45430dc581.js" crossorigin="anonymous"></script>
+  <style>
+    .contenedor > h2.after::after {
+        /* Asegura que la línea de subrayado ocupe el 100% del ancho del título. */
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+  </style>
 </head>
 <body class="rifp-page">
   <header>
-    <nav id="nav" class="nav1" aria-label="Navegación principal">
-      <div class="contenedor-nav">
-        <div class="logo">
-          <a href="index.html"><img src="MEDIA/logo_long.webp" alt="Logo Derivate" /></a>
-        </div>
-        <ul class="enlaces" id="enlaces">
-          <li><a href="index.html" class="btn-header">Inicio</a></li>
-          <li><a href="equipo.html" class="btn-header">Equipo</a></li>
-          <li><a href="conocenos.html" class="btn-header">Conócenos</a></li>
-          <li><a href="#galeria" class="btn-header">Eventos</a></li>
-          <li><a href="#Contacto" class="btn-header">Contacto</a></li>
-        </ul>
-        <button class="icono" id="open" aria-label="Abrir menú" aria-expanded="false" aria-controls="enlaces">
-          <span aria-hidden="true">&#9776;</span>
-        </button>
-      </div>
-    </nav>
-
+    <div id="navbar"></div>
     <div class="noticias-hero-img">
       <img src="MEDIA/RIFP 2.jpg" alt="Portada RIFP 2024" />
       <div class="noticias-hero-titulo">
@@ -204,7 +195,7 @@
     </div>
   </footer>
 
-  <!-- Un único JS para evitar duplicados de listeners -->
-  <script src="RIFP.js" defer></script>
+    </footer>
+    <script src="js/RIFP.js"></script>
 </body>
 </html>
