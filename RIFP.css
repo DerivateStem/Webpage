@@ -2,237 +2,156 @@
    ESTILOS ESPECÍFICOS PARA LA PÁGINA RIFP.HTML
    ========================================================================== */
 
-/* --- ESTILOS DEL ENCABEZADO (HEADER) --- */
-
-/* Anula los estilos generales del header para esta página específica */
+/* --- Ajustes de header para esta página --- */
 header {
-  height: auto !important; /* Permite que la altura se ajuste al contenido, anulando cualquier altura fija. */
-  background: none !important; /* Elimina la imagen de fondo o color del header general. */
+  height: auto !important;
+  background: none !important;
 }
 
-/* --- SECCIÓN PRINCIPAL DEL EVENTO (HERO) --- */
-
-/* Contenedor de la imagen principal del evento */
+/* HERO */
 .noticias-hero-img {
-  position: relative; /* Necesario para posicionar el título encima de la imagen. */
-  background-color: #111; /* Color oscuro que se muestra si la imagen tarda en cargar o no carga. */
+  position: relative;
+  background-color: #111;
 }
-
-/* Estilos para la imagen principal del evento */
 .noticias-hero-img img {
-  width: 100%; /* La imagen ocupa todo el ancho disponible. */
-  max-height: 650px; /* Limita la altura máxima de la imagen para que no sea demasiado grande en pantallas altas. */
-  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin deformarse (puede recortarse). */
-  object-position: center 65%; /* Ajusta el encuadre de la imagen. 'center' en horizontal y '65%' en vertical (más hacia arriba). */
-  opacity: 0.7; /* Hace la imagen ligeramente transparente para que el texto encima sea más legible. */
+  width: 100%;
+  max-height: 650px;
+  object-fit: cover;
+  object-position: center 65%;
+  display: block;
 }
-
-/* Título principal superpuesto en la imagen */
+/* Overlay en lugar de bajar opacidad de la imagen */
+.noticias-hero-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.35));
+  pointer-events: none;
+}
 .noticias-hero-titulo {
-  position: absolute; /* Saca el título del flujo normal para poder posicionarlo sobre la imagen. */
-  bottom: 50px; /* Lo posiciona a 50px del borde inferior del contenedor. */
-  left: 50%; /* Lo mueve al 50% del ancho del contenedor. */
-  transform: translateX(-50%); /* Lo centra perfectamente en el eje horizontal. */
-  width: 90%; /* Limita el ancho del título para que no toque los bordes en pantallas anchas. */
-  color: #fff; /* Color del texto: blanco. */
-  font-size: 3.2rem; /* Tamaño de la fuente principal. */
-  font-weight: 800; /* Grosor de la fuente (muy negrita). */
-  text-align: center; /* Alineación del texto. */
-  letter-spacing: 1px; /* Espacio entre letras. */
-  text-shadow: 0px 4px 15px rgba(0,0,0,0.6); /* Sombra de texto para mejorar la legibilidad sobre la imagen. */
-  line-height: 1.3; /* Altura de línea para mejorar la separación vertical entre líneas. */
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  color: #fff;
+  font-size: 3.2rem;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  line-height: 1.3;
 }
-
-/* Estilos para el subtítulo dentro del título principal */
 .noticias-hero-titulo .subtitulo-evento {
-  display: block; /* Hace que el subtítulo ocupe su propia línea. */
-  font-size: 2.2rem; /* Tamaño de fuente para el subtítulo. */
-  font-weight: 600; /* Grosor de fuente (semi-negrita). */
-  color: #FFc30e; /* Color de acento para destacar. */
-  margin-top: 0.5rem; /* Espacio superior para separarlo del título principal. */
-  letter-spacing: 1.5px; /* Espacio entre letras. */
-  text-shadow: 0px 2px 10px rgba(0,0,0,0.5); /* Sombra de texto más sutil. */
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #FFC30E;
+  margin-top: .5rem;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
-/* --- SECCIÓN DE INTRODUCCIÓN --- */
+/* INTRO */
 .evento-intro {
-    padding: 4rem 2rem; /* Relleno interior (arriba/abajo, izquierda/derecha). */
-    text-align: center; /* Alineación del texto. */
-    max-width: 900px; /* Ancho máximo para mejorar la legibilidad del texto. */
-    margin: 0 auto; /* Centra el contenedor en la página. */
+  padding: 4rem 2rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 .evento-intro h2 {
-    font-size: 2.5rem; /* Tamaño del título de la sección. */
-    color: var(--color1); /* Usa una variable de color definida globalmente. */
-    margin-bottom: 1.5rem; /* Espacio inferior. */
+  font-size: 2.5rem;
+  color: var(--color1);
+  margin-bottom: 1.5rem;
 }
 .evento-intro p {
-    font-size: 1.1rem; /* Tamaño del texto de párrafo. */
-    line-height: 1.7; /* Altura de línea para que el texto sea más fácil de leer. */
-    color: var(--color2); /* Usa una variable de color. */
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color2);
 }
 
-/* --- SECCIÓN GALERÍA DE EVENTO --- */
+/* GALERÍA */
 .evento-galeria {
-    padding: 4rem 2rem; /* Relleno interior. */
-    text-align: center; /* Alineación del título. */
+  padding: 4rem 2rem;
+  text-align: center;
 }
-
 .evento-galeria h2 {
-    font-size: 2.5rem; /* Tamaño del título de la sección. */
-    color: var(--color1); /* Color del título. */
-    margin-bottom: 3rem; /* Espacio inferior para separar del slider. */
+  font-size: 2.5rem;
+  color: var(--color1);
+  margin-bottom: 3rem;
 }
 
-/* Contenedor principal del slider de la galería */
 .rifp-gallery-slider {
-    position: relative; /* Necesario para posicionar los botones de navegación 'prev' y 'next'. */
-    
-    /* --- AJUSTE DE ANCHO Y LARGO DEL SLIDER --- */
-    /* Puedes cambiar el ANCHO MÁXIMO del slider aquí */
-    max-width: 1400px; 
-    /* Puedes cambiar la PROPORCIÓN (LARGO vs ANCHO) aquí. 
-       16 / 9 es panorámico. 4 / 3 es más cuadrado. 2 / 1 es muy ancho. */
-    aspect-ratio: 2 / 1;
-
-    margin: 0 auto; /* Centra el slider en la página. */
-    overflow: hidden; /* ¡CLAVE! Oculta todas las imágenes que no están en el slide activo. */
-    border-radius: 10px; /* Bordes redondeados. */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra sutil para dar profundidad. */
+  position: relative;
+  max-width: 1400px;
+  aspect-ratio: 2 / 1;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
-
-/* Contenedor 'ul' que contiene todos los slides y se mueve */
 .rifp-gallery-slider ul {
-    display: flex; /* Coloca todos los 'li' (slides) en una fila horizontal. */
-    height: 100%; /* Ocupa toda la altura del contenedor padre. */
-    padding: 0%; /* Elimina el padding por defecto de las listas. */
-    margin: 0%; /* Elimina el margen por defecto de las listas. */
-    list-style: none; /* Elimina los puntos de la lista. */
-    transition: transform 0.5s ease-in-out; /* Crea una animación suave cuando el slider se mueve. */
+  display: flex;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transition: transform 0.5s ease-in-out;
 }
-
-/* Cada slide individual ('li') */
 .rifp-gallery-slider li {
-    min-width: 100%; /* ¡CLAVE! Cada slide ocupa el 100% del ancho del contenedor del slider. */
-    height: 100%; /* Ocupa el 100% de la altura. */
-    flex-shrink: 0; /* Evita que los slides se encojan si el contenedor es demasiado pequeño. */
-    box-sizing: content-box; /* Asegura que el padding y borde se incluyan en el ancho/alto total. */
+  min-width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  box-sizing: content-box;
 }
-
-/* --- ESTILOS PARA LAS IMÁGENES DEL SLIDER --- */
-
-/* Estilo base para TODAS las imágenes dentro del slider */
 .rifp-gallery-slider img {
-    width: 50%; /* La imagen ocupa el 100% del ancho de su contenedor 'li'. */
-    height: 120%; /* La imagen ocupa el 100% de la altura de su contenedor 'li'. */
-    display: block; /* Elimina espacios extra debajo de la imagen. */
-    object-fit: cover; /* Redimensiona la imagen para cubrir el contenedor sin perder la proporción (recorta si es necesario). */ 
-    transform: scale(1); /* Base para el zoom. 1 = tamaño normal. >1 acerca, <1 aleja. */
-    transition: transform 0.3s ease; /* Animación suave si el zoom cambia (ej. en hover). */
-} 
-
-/* --- ESTILOS INDIVIDUALES PARA CADA IMAGEN DEL SLIDER --- */
-/*
-   Aquí tienes el control total sobre cada imagen. Usa estas dos propiedades:
-
-   1. object-position: [eje X] [eje Y];
-      - Mueve la imagen DENTRO de su marco para controlar qué parte se ve.
-      - El primer valor es la posición horizontal (izquierda/derecha).
-      - El segundo valor es la posición vertical (arriba/abajo).
-      - Puedes usar porcentajes (0% a 100%) o palabras clave (left, center, right, top, bottom).
-      - EJEMPLO: `object-position: 75% 50%;` enfoca la parte DERECHA de la imagen.
-      - EJEMPLO: `object-position: center top;` enfoca la parte SUPERIOR de la imagen.
-
-   2. transform: scale([valor]);
-      - Hace zoom a la imagen.
-      - `scale(1)` es el tamaño normal.
-      - `scale(1.5)` es un zoom de acercamiento del 50%.
-*/
-
-/* Imagen 1 del slider */
-.rifp-gallery-slider li:nth-child(1) img {
-        /* Perfectamente centrada, sin zoom */
-    object-position: center center; 
-    transform: scale(1);
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transform: none;
+  transition: transform .3s ease;
 }
 
-/* Imagen 2 del slider */
-.rifp-gallery-slider li:nth-child(2) img {
-    /* Enfoca la parte inferior de la imagen (center 80%) y aplica un zoom */
-    object-position: center 80%; 
-    transform: scale(1);
-}
-
-/* Imagen 3 del slider */
-.rifp-gallery-slider li:nth-child(3) img {
-    /* Enfoca el lado derecho de la imagen */
-    object-position: right center; 
-    transform: scale(1);
-}
-
-/* Imagen 4 del slider */
-.rifp-gallery-slider li:nth-child(4) img {
-    /* Enfoca la esquina superior izquierda de la imagen */
-    object-position: left 90%; 
-    transform: scale(1);
-}
-
-/* Imagen 5 del slider */
-.rifp-gallery-slider li:nth-child(5) img {
-    /* Mueve la imagen para centrarla horizontalmente (center) y un poco hacia arriba (40%) */
-    object-position: center 68%; 
-    transform: scale(1);
-}
-
-/* Imagen 6 del slider */
-.rifp-gallery-slider li:nth-child(6) img {
-    /* Enfoca el lado izquierdo de la imagen */
-    object-position: left center; 
-    transform: scale(1);
-}
-
+/* Encadres por slide (opcional) */
+.rifp-gallery-slider li:nth-child(1) img { object-position: center center; }
+.rifp-gallery-slider li:nth-child(2) img { object-position: center 80%; }
+.rifp-gallery-slider li:nth-child(3) img { object-position: right center; }
+.rifp-gallery-slider li:nth-child(4) img { object-position: left 90%; }
+.rifp-gallery-slider li:nth-child(5) img { object-position: center 68%; }
 
 .rifp-gallery-slider .slider-button {
-    position: absolute; /* Posiciona los botones sobre el slider. */
-    top: 50%; /* Los coloca verticalmente en el medio. */
-    transform: translateY(-50%); /* Ajuste fino para centrarlos perfectamente en el eje vertical. */
-    background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente. */
-    border: none; /* Sin borde. */
-    font-size: 2rem; /* Tamaño del ícono (flecha). */
-    cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable. */
-    z-index: 10; /* Asegura que los botones estén por encima de las imágenes. */
-    border-radius: 50%; /* Botones circulares. */
-    width: 50px; /* Ancho del botón. */
-    height: 50px; /* Alto del botón. */
-    display: flex; /* Facilita el centrado del contenido (la flecha). */
-    place-items: center; /* Centra el contenido horizontal y verticalmente. */
-    transition: background-color 0.3s ease; /* Animación suave para el cambio de color de fondo. */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,.7);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  transition: background-color .3s ease;
 }
-/* Efecto al pasar el ratón sobre los botones */
-.rifp-gallery-slider .slider-button:hover { 
-    background-color: rgba(255, 255, 255, 1); /* El fondo se vuelve opaco. */
+.rifp-gallery-slider .slider-button:hover {
+  background-color: rgba(255,255,255,1);
 }
-/* Posición del botón 'anterior' */
-.rifp-gallery-slider .slider-button.prev { 
-    left: 15px; /* A 15px del borde izquierdo. */
-}
-/* Posición del botón 'siguiente' */
-.rifp-gallery-slider .slider-button.next { 
-    right: 15px; /* A 15px del borde derecho. */
-}
+.rifp-gallery-slider .slider-button.prev { left: 15px; }
+.rifp-gallery-slider .slider-button.next { right: 15px; }
 
-/* --- SECCIÓN DE PONENTES --- */
+/* PONENTES */
 .ponentes-seccion {
-    padding: 2rem; /* Relleno interior. */
+  padding: 2rem;
 }
 .ponentes-seccion h2 {
-    font-size: 2.5rem; /* Tamaño del título. */
-    color: var(--color1); /* Color del título. */
-    text-align: center; /* Alineación. */
-    margin-bottom: 3rem; /* Espacio inferior. */
+  font-size: 2.5rem;
+  color: var(--color1);
+  text-align: center;
+  margin-bottom: 3rem;
 }
-
-/* Rejilla (grid) que contiene las tarjetas de los ponentes */
 .ponentes-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -242,8 +161,6 @@ header {
   width: 100%;
   box-sizing: border-box;
 }
-
-/* Tarjeta individual de cada ponente */
 .ponente-card {
   perspective: 1000px;
   width: 100%;
@@ -253,26 +170,21 @@ header {
   background: none;
   box-shadow: 0 10px 40px rgba(0,0,0,0.28);
   cursor: pointer;
-  transition: box-shadow 0.3s;
+  transition: box-shadow .3s;
   margin-bottom: 2rem;
   display: flex;
+  outline: none;
 }
-
-.ponente-card:hover {
-  box-shadow: 0 18px 56px rgba(0,0,0,0.38);
-}
+.ponente-card:hover { box-shadow: 0 18px 56px rgba(0,0,0,0.38); }
 
 .ponente-flip {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s cubic-bezier(.25,.8,.25,1);
+  transition: transform .6s cubic-bezier(.25,.8,.25,1);
   transform-style: preserve-3d;
 }
-
-.ponente-card.flipped .ponente-flip {
-  transform: rotateY(180deg);
-}
+.ponente-card.flipped .ponente-flip { transform: rotateY(180deg); }
 
 .ponente-front, .ponente-back {
   position: absolute;
@@ -284,7 +196,6 @@ header {
   flex-direction: column;
   box-sizing: border-box;
 }
-
 .ponente-front {
   background: #2b2940;
   color: #fff;
@@ -295,42 +206,50 @@ header {
   text-align: center;
 }
 
-/* --- ESTILOS PARA EL TEXTO DE LA PARTE FRONTAL (RESTAURADOS) --- */
-.ponente-nombre {
-  font-size: 2.6rem;
-  font-weight: 800;
-  margin-bottom: 1.5rem;
-  line-height: 1.1;
+/* Avatar redondo */
+.ponente-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 9999px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .ponente-avatar { width: 200px; height: 200px; }
 }
 
+/* Tipografías del frente */
+.ponente-nombre {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
 .ponente-afiliacion {
-  font-size: 1.35rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
   font-weight: 600;
   line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
 .ponente-charla {
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   font-style: italic;
-  margin-bottom: 0.7rem;
+  margin-bottom: .5rem;
   font-weight: 500;
   line-height: 1.3;
 }
 
-/* Parte trasera de la tarjeta del ponente (flip) */
 .ponente-back {
-  background: #2b2940; /* Añadido para que tenga un fondo sólido */
-  transform: rotateY(180deg); /* ¡CLAVE! Rota la parte trasera para que esté oculta al inicio */
+  background: #2b2940;
+  transform: rotateY(180deg);
   padding: 0;
   text-align: left;
   align-items: stretch;
   justify-content: stretch;
 }
-
-/* Contenedor del contenido trasero para un mejor control */
 .ponente-back .back-content {
   width: 100%;
   height: 100%;
@@ -338,147 +257,93 @@ header {
   flex-direction: column;
   padding: 2.5rem;
   box-sizing: border-box;
-  overflow-y: auto; /* Permite scroll si el texto es muy largo */
+  overflow-y: auto;
 }
-
-/* --- Scrollbar personalizado para un look profesional --- */
-.ponente-back .back-content::-webkit-scrollbar {
-  width: 6px;
-}
-.ponente-back .back-content::-webkit-scrollbar-track {
-  background: transparent;
-}
+/* Scrollbar back */
+.ponente-back .back-content::-webkit-scrollbar { width: 6px; }
+.ponente-back .back-content::-webkit-scrollbar-track { background: transparent; }
 .ponente-back .back-content::-webkit-scrollbar-thumb {
   background-color: #4d4a6a;
   border-radius: 20px;
 }
-
 .ponente-back .back-title {
-  font-size: 1.5rem; /* Ligeramente más pequeño para dar espacio */
+  font-size: 1.3rem;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
+  margin-bottom: .75rem;
+  padding-bottom: .5rem;
   border-bottom: 2px solid #4d4a6a;
-  flex-shrink: 0; /* Evita que el título se encoja */
+  flex-shrink: 0;
 }
-
 .ponente-back .back-text {
-  font-size: 1.05rem; /* Tamaño óptimo para lectura en el espacio dado */
+  font-size: 1rem;
   font-weight: 400;
   color: #d1d1d1;
-  line-height: 1.65; /* Mejora la legibilidad */
-  margin-top: 1rem;
-  margin-bottom: 0; /* Sin margen inferior para usar todo el espacio */
+  line-height: 1.65;
+  margin-top: .5rem;
+  margin-bottom: 0;
 }
 
-/* Elimina los estilos del enlace que ya no existe */
-.ponente-back .back-link,
-.ponente-back .back-link:hover {
-  display: none;
-}
-
-/* --- AJUSTES GENERALES Y LÍNEAS DEBAJO DE TÍTULOS --- */
-
-/* Ajuste para que la línea decorativa bajo los títulos ocupe solo el ancho del texto */
+/* Línea decorativa bajo títulos (ocupa solo el ancho del texto) */
 .evento-intro h2.after,
 .ponentes-seccion h2.after {
-  display: inline-block; /* Hace que el contenedor del título se ajuste al ancho del texto. */
+  display: inline-block;
 }
-
-/* La pseudo-clase '::after' que crea la línea decorativa */
 .evento-intro h2.after::after,
 .ponentes-seccion h2.after::after {
-  width: 100%; /* La línea ahora ocupa el 100% del ancho del título (que ahora es 'inline-block'). */
+  width: 100%;
 }
 
-/* ==========================================================================
-   ESTILOS RESPONSIVE (PARA PANTALLAS PEQUEÑAS)
-   ========================================================================== */
-
-@media (max-width: 1100px) {
-  .ponentes-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
+/* Menú móvil: abrir/cerrar */
 @media (max-width: 768px) {
-  /* --- HERO --- */
+  .enlaces { display: none; }
+  .enlaces.is-open { display: block; }
+}
+
+/* Responsive general */
+@media (max-width: 1100px) {
+  .ponentes-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
   .noticias-hero-titulo {
-    font-size: 2rem; /* Tamaño de fuente reducido para móviles */
+    font-size: 2rem;
     bottom: 20px;
     width: 95%;
   }
   .noticias-hero-titulo .subtitulo-evento {
-    font-size: 1.6rem; /* Subtítulo también reducido */
-    margin-top: 0.3rem;
+    font-size: 1.6rem;
+    margin-top: .3rem;
   }
 
-  /* --- SECCIONES GENERALES --- */
-  .evento-intro,
-  .evento-galeria,
-  .ponentes-seccion {
-    padding: 3rem 1rem; /* Menos padding lateral en móviles */
-  }
-
-  .evento-intro h2,
-  .evento-galeria h2,
-  .ponentes-seccion h2 {
-    font-size: 2.1rem; /* Títulos de sección más pequeños */
+  .evento-intro, .evento-galeria, .ponentes-seccion { padding: 3rem 1rem; }
+  .evento-intro h2, .evento-galeria h2, .ponentes-seccion h2 {
+    font-size: 2.1rem;
     margin-bottom: 2rem;
   }
+  .evento-intro p { font-size: 1rem; }
 
-  .evento-intro p {
-    font-size: 1rem;
-  }
-
-  /* --- GALERÍA --- */
-  .rifp-gallery-slider {
-    aspect-ratio: 4 / 3; /* Proporción más cuadrada, mejor para móviles */
-  }
-
+  .rifp-gallery-slider { aspect-ratio: 4 / 3; }
   .rifp-gallery-slider .slider-button {
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
+    width: 40px; height: 40px; font-size: 1.5rem;
   }
+  .rifp-gallery-slider .slider-button.prev { left: 10px; }
+  .rifp-gallery-slider .slider-button.next { right: 10px; }
 
-  .rifp-gallery-slider .slider-button.prev { 
-    left: 10px;
-  }
-  .rifp-gallery-slider .slider-button.next { 
-    right: 10px;
-  }
-
-  /* --- PONENTES --- */
-  .ponentes-grid {
-    grid-template-columns: 1fr; /* Una columna para los ponentes */
-    gap: 1.5rem;
-  }
-
+  .ponentes-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .ponente-card {
-    min-height: auto; /* Altura automática para adaptarse al contenido */
-    max-width: 350px; /* Ancho máximo en móvil */
-    margin: 0 auto; /* Centrar la tarjeta */
+    min-height: auto;
+    max-width: 350px;
+    margin: 0 auto;
   }
+  .ponente-front { padding: 2.5rem 1.5rem; }
+  .ponente-nombre { font-size: 2rem; }
+  .ponente-afiliacion { font-size: 1rem; }
+  .ponente-charla { font-size: 1rem; }
+  .ponente-back .back-content { padding: 2rem 1.5rem; }
+}
 
-  .ponente-front {
-    padding: 2.5rem 1.5rem;
-  }
-
-  .ponente-nombre {
-    font-size: 2.2rem;
-  }
-
-  .ponente-afiliacion {
-    font-size: 1.2rem;
-  }
-
-  .ponente-charla {
-    font-size: 1.1rem;
-  }
-
-  .ponente-back .back-content {
-    padding: 2rem 1.5rem;
-  }
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .rifp-gallery-slider ul { transition: none; }
+  .ponente-flip { transition: none; }
 }
