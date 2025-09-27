@@ -578,4 +578,35 @@ footer p{
   height: auto;
   border-radius: 10px;
 }
+/* Flechas del carrusel de novedades */
+.novedades-btn {
+  position: absolute;
+  top: 50%; /* centrado vertical */
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.novedades-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.novedades-btn.prev {
+  left: 15px; /* a la izquierda */
+}
+
+.novedades-btn.next {
+  right: 15px; /* a la derecha */
+}
+
 
