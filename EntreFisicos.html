@@ -2,433 +2,247 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Entre Físicos 2025 | DERIVATE.STEAM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>DERIVATE | RIFP 2024</title>
+  <meta name="description" content="Reunión Internacional de Físicos en Posgrado (RIFP 2024): ponencias, galería y detalles del evento." />
+  <!-- Estilos global y de página -->
   <link rel="stylesheet" href="index2.css" />
-  <script src="https://kit.fontawesome.com/45430dc581.js" crossorigin="anonymous"></script>
-
-  <!-- 🎨 Estilos específicos para el main claro -->
-  <style>
-    .entre-main {
-      background-color: #f9f9f9;
-      color: #333;
-      font-family: 'Segoe UI', Roboto, sans-serif;
-      padding: 2rem;
-    }
-
-    .entre-main .hero {
-      background: linear-gradient(to right, #e0f7fa, #ffffff);
-      padding: 4rem 2rem;
-      text-align: center;
-      border-radius: 8px;
-    }
-
-    .entre-main .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #0077cc;
-    }
-
-    .entre-main .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: #555;
-    }
-
-    .entre-main .btn-primary {
-      background-color: #0077cc;
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-
-    .entre-main .btn-primary:hover {
-      background-color: #005fa3;
-    }
-
-    .entre-main .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin: 3rem 0;
-    }
-
-    .entre-main .feature-item {
-      background-color: #fff;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .entre-main .feature-item h2 {
-      margin-bottom: 0.5rem;
-      color: #0077cc;
-    }
-
-    .entre-main .feature-item p {
-      color: #444;
-    }
-
-    .entre-main .testimonios {
-      background-color: #eef2f3;
-      padding: 3rem 2rem;
-      text-align: center;
-      border-radius: 8px;
-    }
-
-    .entre-main .testimonios h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #0077cc;
-    }
-
-    .entre-main blockquote {
-      font-style: italic;
-      margin-bottom: 1rem;
-      color: #333;
-    }
-
-    .entre-main footer {
-      font-weight: bold;
-      color: #555;
-    }
-
-    .entre-main .cta-final {
-      background-color: #0077cc;
-      color: #fff;
-      padding: 3rem 2rem;
-      text-align: center;
-      border-radius: 8px;
-      margin-top: 2rem;
-    }
-
-    .entre-main .cta-final h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .entre-main .btn-secondary {
-      background-color: #fff;
-      color: #0077cc;
-      padding: 0.75rem 1.5rem;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-
-    .entre-main .btn-secondary:hover {
-      background-color: #e0f7fa;
-    }
-    .testimonios {
-      background-color: #eef2f3;
-      padding: 3rem 2rem;
-      border-radius: 8px;
-    }
-
-    .testimonios h2 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      color: #0077cc;
-      text-align: center;
-    }
-
-    .testimonios-slider {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      gap: 1.5rem;
-      padding-bottom: 1rem;
-    }
-
-    .testimonio {
-      flex: 0 0 300px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      display: flex;
-      align-items: center;
-      padding: 1rem;
-      scroll-snap-align: start;
-    }
-
-    .testimonio img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-right: 1rem;
-    }
-
-    .testimonio .texto p {
-      font-size: 0.95rem;
-      color: #333;
-      margin-bottom: 0.5rem;
-    }
-
-    .testimonio .texto span {
-      font-size: 0.85rem;
-      color: #555;
-      font-style: italic;
-    }
-    .speaker-section {
-      display: flex;
-      flex-direction: column;
-      gap: 4rem;
-      padding: 2rem;
-    }
-
-    .speaker-block {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-    }
-
-    .speaker-block.reverse {
-      flex-direction: row-reverse;
-    }
-
-    .speaker-text {
-      flex: 1;
-      max-width: 500px;
-    }
-
-    .speaker-text h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .speaker-text p {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    .speaker-text a {
-      display: inline-block;
-      margin-top: 1rem;
-      color: #0078D4;
-      text-decoration: none;
-    }
-
-    .speaker-image img {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 8px;
-      object-fit: cover;
-    }
-      /* Animación */
-    @keyframes fadeSlideUp {
-      0% {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Aplicar animación a los bloques */
-    .speaker-block {
-      opacity: 0;
-      animation: fadeSlideUp 0.8s ease-out forwards;
-    }
-
-    /* Para que aparezcan escalonados */
-    .speaker-block:nth-child(1) {
-      animation-delay: 0.2s;
-    }
-    .speaker-block:nth-child(2) {
-      animation-delay: 0.4s;
-    }
-    /* Puedes seguir con más bloques si los agregas */
-    /* Estado inicial */
-    .speaker-block {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    /* Cuando entra en pantalla */
-    .speaker-block.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-
-  </style>
+  <link rel="stylesheet" href="RIFP.css" />
+  <!-- Iconos -->
+  <script src="https://kit.fontawesome.com/45430dc581.js" crossorigin="anonymous" defer></script>
 </head>
-<body>
-
-  <!-- 🔷 Header reutilizado -->
+<body class="rifp-page">
   <header>
-    <nav id="nav" class="nav1">
+    <nav id="nav" class="nav1" aria-label="Navegación principal">
       <div class="contenedor-nav">
         <div class="logo">
-          <a href="index.html">
-            <img src="MEDIA/logo_long.webp" alt="LogoDerivate">
+          <a href="index.html" aria-label="Inicio DERIVATE">
+            <img src="MEDIA/logo_long.webp" alt="Logo Derivate" />
           </a>
         </div>
         <ul class="enlaces" id="enlaces">
           <li><a href="index.html" class="btn-header">Inicio</a></li>
           <li><a href="equipo.html" class="btn-header">Equipo</a></li>
           <li><a href="conocenos.html" class="btn-header">Conócenos</a></li>
-          <li><a href="#Eventos" class="btn-header">Eventos</a></li>
+          <li><a href="#galeria" class="btn-header">Eventos</a></li>
           <li><a href="#Contacto" class="btn-header">Contacto</a></li>
         </ul>
-        <div class="icono" id="open">
-          <span>&#9776;</span>
-        </div>
+        <button class="icono" id="open" aria-label="Abrir menú" aria-expanded="false" aria-controls="enlaces">
+          <span aria-hidden="true">&#9776;</span>
+        </button>
       </div>
     </nav>
-    <div class="logo-central">
-      <img src="MEDIA/logo-blanco.webp" alt="Logo Central">
+
+    <div class="noticias-hero-img">
+      <img src="MEDIA/RIFP 2.jpg" alt="Portada de la Reunión Internacional de Físicos en Posgrado 2024" />
+      <div class="noticias-hero-titulo">
+        REUNIÓN INTERNACIONAL DE FÍSICOS EN POSGRADO
+        <span class="subtitulo-evento">RIFP 2024</span>
+      </div>
     </div>
   </header>
 
-  <!-- 🎓 Main claro para Entre Físicos -->
-  <main class="entre-main">
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Entre Físicos 2025</h1>
-        <p>Evento académico para estudiantes de física.</p>
+  <main>
+    <!-- Intro -->
+    <section class="evento-intro contenedor">
+      <h2 class="after">Un Encuentro para la Ciencia y el Futuro</h2>
+      <p>
+        La Reunión Internacional de Físicos en Posgrado (RIFP) es el principal punto de encuentro para la comunidad científica peruana. Conectamos a estudiantes, académicos e investigadores de todo el mundo para compartir los últimos avances, fomentar la colaboración e inspirar a las nuevas generaciones de físicos.
+      </p>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="evento-galeria contenedor">
+      <h2 class="after">Galería del Evento</h2>
+      <div class="slider-box rifp-gallery-slider">
+        <button class="slider-button prev" aria-label="Anterior">❮</button>
+        <button class="slider-button next" aria-label="Siguiente">❯</button>
+        <ul>
+          <li><img src="MEDIA/Adrian RIFP 2.jpg" alt="Ponencia de Adrian Díaz en RIFP" loading="lazy" decoding="async" /></li>
+          <li><img src="MEDIA/Andres Argandoña 1.jpg" alt="Ponente Andrés Argandoña en RIFP" loading="lazy" decoding="async" /></li>
+          <li><img src="MEDIA/Fernando Temoche 1.jpg" alt="Ponente Fernando Temoche en RIFP" loading="lazy" decoding="async" /></li>
+          <li><img src="MEDIA/David Cespedes 1.jpg" alt="Ponente David Céspedes en RIFP" loading="lazy" decoding="async" /></li>
+          <li><img src="MEDIA/RIFP-2.jpg" alt="Vista general del evento RIFP" loading="lazy" decoding="async" /></li>
+          <!-- Nuevas (rutas relativas) -->
+          <li><img src="fotos_EntreFisicos/Adrian_diaz.jpg" alt="Adrian Diaz durante su ponencia" loading="lazy" decoding="async" /></li>
+          <li><img src="fotos_EntreFisicos/david_hinostroza.jpg" alt="David Hinostroza respondiendo preguntas" loading="lazy" decoding="async" /></li>
+          <li><img src="fotos_EntreFisicos/Fernando_temoche.jpg" alt="Fernando Temoche en el auditorio" loading="lazy" decoding="async" /></li>
+          <li><img src="fotos_EntreFisicos/Lizhet_gonzales.jpg" alt="Lisseth Gonzales presentando resultados" loading="lazy" decoding="async" /></li>
+          <li><img src="fotos_EntreFisicos/lucia_coll.jpg" alt="Lucia Coll durante su charla" loading="lazy" decoding="async" /></li>
+          <li><img src="fotos_EntreFisicos/renzo_franco.jpg" alt="Renzo Franco exponiendo" loading="lazy" decoding="async" /></li>
+        </ul>
       </div>
     </section>
 
-    <section class="features">
-      <div class="feature-item">
-        <h2>Experimentos</h2>
-        <p>Conferencias impartidas por físicos destacados en áreas como neutrinos, astropartículas y física teórica.</p>
-      </div>
-      <div class="feature-item">
-        <h2>Mesas Redondas</h2>
-        <p>Espacios colaborativos para debatir sobre el futuro de la investigación científica en Latinoamérica.</p>
-      </div>
-      <div class="feature-item">
-        <h2>Algo más</h2>
-        <p>Participa como expositor y comparte tus avances con la comunidad académica.</p>
-      </div>
-    </section>
-    <section class="speaker-section">
-      <div class="speaker-block">
-        <div class="speaker-text">
-          <h3>Dr. Ana Rodríguez</h3>
-          <p>Exploró los desafíos actuales en la detección de neutrinos de alta energía, destacando avances en instrumentación y análisis de datos.</p>
-          <a href="#">Ver más detalles</a>
-        </div>
-        <div class="speaker-image">
-          <img src="ana-rodriguez.jpg" alt="Foto de la Dra. Ana Rodríguez">
-        </div>
-      </div>
+    <!-- Ponentes (frente: texto | atrás: SOLO foto a pantalla completa) -->
+    <section class="ponentes-seccion contenedor">
+      <h2 class="after">Nuestros Ponentes</h2>
 
-      <div class="speaker-block reverse">
-        <div class="speaker-text">
-          <h3>Dr. Carlos Méndez</h3>
-          <p>Presentó un enfoque innovador para el modelado de rayos gamma en entornos astrofísicos extremos, con simulaciones de alta precisión.</p>
-          <a href="#">Ver más detalles</a>
-        </div>        
-        <div class="speaker-image">
-          <img src="carlos-mendez.jpg" alt="Foto del Dr. Carlos Méndez">
-        </div>
-
-      </div>
-    </section>
-
-
-      <section class="testimonios">
-        <h2>Lo que dicen los asistentes</h2>
-        <div class="testimonios-slider">
-          <div class="testimonio">
-            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=100&q=80" alt="Estudiante 1">
-            <div class="texto">
-              <p>“Entre Físicos fue una experiencia enriquecedora. Pude presentar mi trabajo y conectarme con investigadores de todo el país.”</p>
-              <span>— Sergio, UNMSM</span>
+      <div class="ponentes-grid">
+        <!-- David Céspedes (sin foto) -->
+        <article class="ponente-card" tabindex="0" aria-label="Tarjeta de ponente: David Céspedes">
+          <div class="ponente-flip">
+            <div class="ponente-front">
+              <span class="ponente-nombre">David Céspedes</span>
+              <span class="ponente-afiliacion">ESTUDIANTE DE DOCTORADO, UNIVERSITY OF HOUSTON</span>
+              <span class="ponente-charla">"Introducción a ETH (Eigenstate Thermalization Hypothesis)"</span>
+            </div>
+            <div class="ponente-back">
+              <img class="ponente-foto placeholder" src="" alt="Foto no disponible" />
             </div>
           </div>
-          <div class="testimonio">
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Estudiante 2">
-            <div class="texto">
-              <p>“Me motivó a postular a un posgrado en el extranjero. Escuchar a físicos peruanos en el extranjero fue inspirador.”</p>
-              <span>— Carla, PUCP</span>
-            </div>
-          </div>
-          <div class="testimonio">
-            <img src="https://images.unsplash.com/photo-1502767089025-6572583495b4?auto=format&fit=crop&w=100&q=80" alt="Estudiante 3">
-            <div class="texto">
-              <p>“La calidad de las presentaciones fue excelente. Aprendí sobre física de partículas y astrofísica.”</p>
-              <span>— Luis, UNI</span>
-            </div>
-          </div>
-          <div class="testimonio">
-            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=100&q=80" alt="Estudiante 4">
-            <div class="texto">
-              <p>“Nunca había asistido a un evento tan bien organizado. Me encantó la interacción con los ponentes.”</p>
-              <span>— Andrea, UNAC</span>
-            </div>
-          </div>
-          <div class="testimonio">
-            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=100&q=80" alt="Estudiante 5">
-            <div class="texto">
-              <p>“Espero que haya una edición cada año. Es una oportunidad única para aprender y conectar.”</p>
-              <span>— Diego, UNMSM</span>
-            </div>
-          </div>
-        </div>
-      </section>
+        </article>
 
+        <!-- Fernando Temoche -->
+        <article class="ponente-card" tabindex="0" aria-label="Tarjeta de ponente: Fernando Temoche">
+          <div class="ponente-flip">
+            <div class="ponente-front">
+              <span class="ponente-nombre">Fernando Temoche</span>
+              <span class="ponente-afiliacion">ESTUDIANTE DE DOCTORADO, UTAH STATE UNIVERSITY</span>
+              <span class="ponente-charla">"Love Numbers y Agujeros Negros en 5 Dimensiones"</span>
+            </div>
+            <div class="ponente-back">
+              <img class="ponente-foto" src="fotos_EntreFisicos/Fernando_temoche.jpg" alt="Fernando Temoche en RIFP 2024" loading="lazy" decoding="async" />
+            </div>
+          </div>
+        </article>
 
-    <section class="cta-final">
-      <h2>¿Quieres ser parte de la próxima edición?</h2>
-      <a href="#Contacto" class="btn-secondary">Contáctanos</a>
+        <!-- Adrian Diaz -->
+        <article class="ponente-card" tabindex="0" aria-label="Tarjeta de ponente: Adrian Diaz">
+          <div class="ponente-flip">
+            <div class="ponente-front">
+              <span class="ponente-nombre">Adrian Diaz</span>
+              <span class="ponente-afiliacion">ESTUDIANTE DE DOCTORADO, UNIVERSITY OF WISCONSIN</span>
+              <span class="ponente-charla">"¿De verdad conocemos el Universo Lejano? Redefiniendo Nuestra Comprensión de las Galaxias desde el Infrarrojo"</span>
+            </div>
+            <div class="ponente-back">
+              <img class="ponente-foto" src="fotos_EntreFisicos/Adrian_diaz.jpg" alt="Adrian Diaz en RIFP 2024" loading="lazy" decoding="async" />
+            </div>
+          </div>
+        </article>
+
+        <!-- Andrés Argandoña (sin foto) -->
+        <article class="ponente-card" tabindex="0" aria-label="Tarjeta de ponente: Andrés Argandoña">
+          <div class="ponente-flip">
+            <div class="ponente-front">
+              <span class="ponente-nombre">Andrés Argandoña</span>
+              <span class="ponente-afiliacion">ESTUDIANTE DE DOCTORADO, UNIVERSIDAD AUTÓNOMA DE MÉXICO</span>
+              <span class="ponente-charla">"Entropía de Entrelazamiento Holográfico para Branas de Prueba: Un ejemplo concreto"</span>
+            </div>
+            <div class="ponente-back">
+              <img class="ponente-foto placeholder" src="" alt="Foto no disponible" />
+            </div>
+          </div>
+        </article>
+
+        <!-- Renzo Franco -->
+        <article class="ponente-card" tabindex="0" aria-label="Tarjeta de ponente: Renzo Franco">
+          <div class="ponente-flip">
+            <div class="ponente-front">
+              <span class="ponente-nombre">Renzo Franco</span>
+              <span class="ponente-afiliacion">ESTUDIANTE DE MAESTRÍA, UNIVERSIDAD DE SAO PAULO</span>
+              <span class="ponente-charla">"Entre Aislantes y Conductores: El Papel de la Topología en la Física de la Materia Condensada"</span>
+            </div>
+            <div class="ponente-back">
+              <img class="ponente-foto" src="fotos_EntreFisicos/renzo_franco.jpg" alt="Renzo Franco en RIFP 2024" loading="lazy" decoding="async" />
+            </div>
+          </div>
+        </article>
+
+        <!-- David Hinostroza -->
+        <article class="ponente-card" tabindex="0" aria-label="Tarjeta de ponente: David Hinostroza">
+          <div class="ponente-flip">
+            <div class="ponente-front">
+              <span class="ponente-nombre">David Hinostroza</span>
+              <span class="ponente-afiliacion">ESTUDIANTE DE MAESTRÍA, UNIVERSIDAD DE SAO PAULO</span>
+              <span class="ponente-charla">"Defectos y el Transporte en Materiales Topológicos"</span>
+            </div>
+            <div class="ponente-back">
+              <img class="ponente-foto" src="fotos_EntreFisicos/david_hinostroza.jpg" alt="David Hinostroza en RIFP 2024" loading="lazy" decoding="async" />
+            </div>
+          </div>
+        </article>
+
+        <!-- Lisseth/Lizhet Gonzales -->
+        <article class="ponente-card" tabindex="0" aria-label="Tarjeta de ponente: Lisseth Gonzales">
+          <div class="ponente-flip">
+            <div class="ponente-front">
+              <span class="ponente-nombre">Lisseth Gonzales</span>
+              <span class="ponente-afiliacion">ESTUDIANTE DE MAESTRÍA, WESLEYAN UNIVERSITY</span>
+              <span class="ponente-charla">"Búsqueda de la Línea de Absorción de Hα en la Atmósfera Extendida de TOI 1288b"</span>
+            </div>
+            <div class="ponente-back">
+              <img class="ponente-foto" src="fotos_EntreFisicos/Lizhet_gonzales.jpg" alt="Lisseth Gonzales en RIFP 2024" loading="lazy" decoding="async" />
+            </div>
+          </div>
+        </article>
+
+        <!-- Lucia Coll -->
+        <article class="ponente-card" tabindex="0" aria-label="Tarjeta de ponente: Lucia Coll">
+          <div class="ponente-flip">
+            <div class="ponente-front">
+              <span class="ponente-nombre">Lucia Coll</span>
+              <span class="ponente-afiliacion">ESTUDIANTE DE DOCTORADO, DESY UNI HAMBURG</span>
+              <span class="ponente-charla">"Búsqueda de Partículas de Larga Vida en el LHC"</span>
+            </div>
+            <div class="ponente-back">
+              <img class="ponente-foto" src="fotos_EntreFisicos/lucia_coll.jpg" alt="Lucia Coll en RIFP 2024" loading="lazy" decoding="async" />
+            </div>
+          </div>
+        </article>
+
+        <!-- Mario Solis -->
+        <article class="ponente-card" tabindex="0" aria-label="Tarjeta de ponente: Mario Solis">
+          <div class="ponente-flip">
+            <div class="ponente-front">
+              <span class="ponente-nombre">Mario Solis</span>
+              <span class="ponente-afiliacion">ESTUDIANTE DE DOCTORADO, INSTITUTO BALSEIRO</span>
+              <span class="ponente-charla">"Los Non-Fermi Liquids y la Superconductividad: Persiguiendo a los Superconductores de altas temperaturas"</span>
+            </div>
+            <div class="ponente-back">
+              <img class="ponente-foto placeholder" src="" alt="Foto no disponible" />
+            </div>
+          </div>
+        </article>
+
+        <!-- Rivaldo Duran -->
+        <article class="ponente-card" tabindex="0" aria-label="Tarjeta de ponente: Rivaldo Duran">
+          <div class="ponente-flip">
+            <div class="ponente-front">
+              <span class="ponente-nombre">Rivaldo Duran</span>
+              <span class="ponente-afiliacion">ASTRONAUTA ANÁLOGO, INSTITUTO POLITÉCNICO NACIONAL</span>
+              <span class="ponente-charla">"Vámonos a Marte para salvar la Tierra: Un enfoque desde la Dinámica de Fluidos Computacionales"</span>
+            </div>
+            <div class="ponente-back">
+              <img class="ponente-foto placeholder" src="" alt="Foto no disponible" />
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 
-  <!-- 🔻 Footer reutilizado -->
+  <!-- Footer -->
   <footer id="Contacto">
     <div class="footer-contenedor">
-      <hr class="footer-line">
+      <hr class="footer-line" />
       <div class="marca-logo">
-        <img src="MEDIA/logo-blanco.webp" alt="logo">
+        <img src="MEDIA/logo-blanco.webp" alt="Logo Derivate blanco" />
       </div>
       <p>Síguenos para más información</p>
-      <div class="iconos">    
-        <a href="https://www.instagram.com/derivate.stem/" target="_blank">
-          <i class="fa-brands fa-square-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/derivatestem" target="_blank">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61555020923912" target="_blank">
-          <i class="fa-brands fa-facebook"></i>
-        </a>    
+      <div class="iconos">
+        <a href="https://www.instagram.com/derivate.stem/" target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/derivatestem" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61555020923912" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
-  <script>
-    // document.addEventListener("DOMContentLoaded", () => {
-    //   const blocks = document.querySelectorAll(".speaker-block");
-
-    //   const observer = new IntersectionObserver((entries) => {
-    //     entries.forEach(entry => {
-    //       if (entry.isIntersecting) {
-    //         entry.target.classList.add("visible");
-    //         observer.unobserve(entry.target); // Evita que se repita
-    //       }
-    //     });
-    //   }, {
-    //       threshold: 0.2 // Ajusta según cuándo quieres que se active
-    //     });
-
-    //     blocks.forEach(block => observer.observe(block));
-    // });
-  </script>
+  <!-- Script de la página -->
+  <script src="RIFP.js" defer></script>
 </body>
 </html>
+
+
 
