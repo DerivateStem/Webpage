@@ -566,4 +566,46 @@ footer p{
 .conocenos a{ color: var(--azul); text-decoration: none; }
 .conocenos a:hover{ text-decoration: underline; }
 
+ /* Para el carrusel de novedades */
+.novedades-slider {
+    position: relative;
+    width: 300px;   /* ajusta el ancho del carrusel */
+    margin: auto;
+    overflow: hidden;  /* oculta lo que se sale */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.novedades-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.novedad-img-box {
+    min-width: 100%;   /* cada imagen ocupa el 100% del carrusel */
+    box-sizing: border-box;
+}
+
+.novedad-img-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Botones de navegación */
+.novedades-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.novedades-btn.prev { left: 10px; }
+.novedades-btn.next { right: 10px; }
 
