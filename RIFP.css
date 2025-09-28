@@ -148,3 +148,8 @@ header{height:auto!important;background:none!important}
 }
 
 
+/* Asegura que el click llegue al contenedor de la tarjeta */
+.ponente-card { cursor: pointer; pointer-events: auto; position: relative; }
+.ponente-front, .ponente-back { pointer-events: none; }  /* las caras no “roban” el click */
+
+
