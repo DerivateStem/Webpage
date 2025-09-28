@@ -214,4 +214,26 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  // elimina cualquier flipped que haya quedado por error
+  document.querySelectorAll('.ponente-card.flipped').forEach(c => c.classList.remove('flipped'));
+
+  // click y teclado para girar
+  document.querySelectorAll('.ponente-card').forEach(card => {
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+
+    card.addEventListener('click', () => {
+      card.classList.toggle('flipped');
+    });
+
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        card.classList.toggle('flipped');
+      }
+    });
+  });
+});
+
 
