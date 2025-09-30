@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Navbar Derivate</title>
+<style>
+/* ===== Vars (tema claro por defecto) ===== */
+:root{
+  --nav-bg:#ffffff;
+  --nav-fg:#0a2a60;  
+  --nav-muted:#4163C3;
+  --border:rgba(10,42,96,.08);
+  --cta-bg:#F4B400; --cta-bg-h:#FFD766; --cta-fg:#112;
+  --ring:rgba(10,42,96,.25);
+}
+
+/* ===== Tema azul: agregar .nav--dark al header ===== */
+.nav--dark{
+  --nav-bg:#07285F;
+  --nav-fg:#E9F0FF;
+  --nav-muted:#7EA0FF;
+  --border:rgba(255,255,255,.12);
+  --cta-bg:#F4B400; --cta-bg-h:#FFD766; --cta-fg:#1C1300;
+  --ring:rgba(255,255,255,.28);
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+
+/* ===== Navbar ===== */
+.nav{ background:var(--nav-bg); color:var(--nav-fg); border-bottom:1px solid var(--border) }
+.nav__wrap{
+  max-width:1200px; margin-inline:auto;
+  padding:10px 16px; display:flex; align-items:center; justify-content:space-between; gap:12px;
+}
+
+/* Brand */
+.brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.04em; text-decoration:none; color:var(--nav-fg)}
+.brand img{
+    max-height: 30px;
+}
+
+/* CTA */
+.cta{
+  background:var(--cta-bg); color:var(--cta-fg);
+  padding:8px 14px; border-radius:999px; font-weight:800; text-decoration:none; display:inline-block;
+}
+.cta:hover{ background:var(--cta-bg-h) }
+.cta:focus-visible{ outline:none; box-shadow:0 0 0 4px var(--ring) }
+
+/* Burger */
+.burger{
+  background:transparent; border:0; width:36px; height:30px; position:relative; cursor:pointer;
+}
+.burger span,.burger::before,.burger::after{
+  content:""; position:absolute; left:6px; right:6px; height:3px; border-radius:2px; background:var(--nav-fg); transition:.25s ease;
+}
+.burger span{ top:13.5px }
+.burger::before{ top:7px }
+.burger::after{ bottom:7px }
+
+/* Menú (mobile colapsable) */
+.menu{
+  position:absolute; left:0; right:0; top:56px;
+  background:var(--nav-bg); border-top:1px solid var(--border);
+  display:grid; gap:6px; padding:10px 16px;
+  grid-auto-rows:0fr;
+  transition:grid-auto-rows .25s ease;
+  overflow:hidden;
+}
+.menu__inner{ min-height:0 }
+.menu a{
+  display:block; padding:10px 8px; border-radius:8px; text-decoration:none; color:var(--nav-fg); font-weight:600;
+}
+.menu a:hover{ background:rgba(65,99,195,.10) }
+.menu a.active{ position:relative; font-weight:800 }
+.menu a.active::after{
+  content:""; position:absolute; left:8px; bottom:6px; width:44px; height:4px; border-radius:3px; background:var(--nav-muted);
+}
+
+/* Estado abierto */
+.nav.is-open .menu{ grid-auto-rows:1fr; z-index: 20; }
+.nav.is-open .burger::before{ transform:translateY(6.5px) rotate(45deg) }
+.nav.is-open .burger::after{ transform:translateY(-6.5px) rotate(-45deg) }
+.nav.is-open .burger span{ transform:scaleX(0) }
+
+/* ===== Desktop / Tablet ===== */
+@media (min-width: 768px){
+  .nav__wrap{ padding:14px 24px; display:grid; grid-template-columns:1fr auto 1fr; align-items:center }
+  .brand{ grid-column:1 }
+  .right{ grid-column:3; justify-self:end; display:flex; align-items:center; gap:14px }
+  .burger{ display:none }
+  .menu{
+    position:static; border:0; padding:0; grid-auto-rows:1fr; overflow:visible; background:transparent;
+  }
+  .menu__inner{ display:flex; gap:28px }
+  .menu a{ padding:10px 2px }
+  .menu a.active::after{ left:0; right:0; bottom:-8px; margin-inline:auto }
+}
+</style>
+</head>
+<body>
+
+<header class="nav nav--dark" id="siteNav">
+  <div class="nav__wrap">
+
+    <a class="brand" href="#">
+      <img src="assets/img/logo_long.webp" alt="Logo Central">
+    </a>
+
+    <nav class="menu" id="menu">
+      <div class="menu__inner">
+        <a class="active" href="/">Inicio</a>
+        <a href="/equipo.html">Equipo</a>
+        <a href="/conocenos.html">Conócenos</a>
+        <a href="/#Eventos">Eventos</a>
+        <a href="#Contacto">Contacto</a>
+      </div>
+    </nav>
+
+    <div class="right">
+      <a class="cta" href="#">Únete</a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-controls="menu" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+</body>
+</html>

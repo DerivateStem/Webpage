@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Footer Derivate</title>
+  <style>
+    /* ====== Base (mobile‑first) ====== */
+    :root{
+      --bg:#07285F;            /* fondo principal */
+      --bg-2:#052154;          /* leve contraste */
+      --text:#E9F0FF;          /* texto primario */
+      --muted:#BFD0FF;         /* texto tenue */
+      --link:#FFFFFF;          /* links */
+      --chip:#4163C3;          /* chips/iconos */
+      --chip-hover:#5877CE;    /* hover chips */
+      --accent:#F4B400;        /* amarillo botón */
+      --accent-2:#FFD766;      /* hover botón */
+      --ring: rgba(255,255,255,.35);
+      --radius: 14px;
+      --radius-lg: 22px;
+      --maxw: 1200px;
+    }
+
+    *{ box-sizing:border-box }
+    html,body{ height:100% }
+    body{ margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; color:var(--text); background:#0b1c44 }
+    a{ color:var(--link); text-decoration:none }
+    a:hover{ text-decoration:underline }
+
+    .footer{
+      background: var(--bg);
+      color: var(--text);
+    }
+    .container{
+      width: min(100%, var(--maxw));
+      margin-inline: auto;
+      padding: 28px 20px;
+    }
+
+    /* Top area */
+    .top{
+      display: grid;
+      gap: 28px;
+    }
+
+    /* Brand & socials */
+    .brand{
+      display: grid;
+      gap: 14px;
+    }
+    .logo{
+      display:flex; align-items:center; gap:10px;
+      font-weight:700; font-size: 1.4rem;
+    }
+    .logo img{
+        max-height: 45px;
+    }
+    .tagline{ color:var(--muted); font-weight:500 }
+
+    .socials{ display:flex; gap:12px; }
+    .socials a{ width:38px; height:38px; display:grid; place-items:center; background:var(--chip); border-radius:999px; transition: transform .15s ease, background .15s ease; border:1px solid rgba(255,255,255,.08) }
+    .socials a:hover{ background:var(--chip-hover); transform: translateY(-2px) }
+    .socials svg{ width:20px; height:20px; fill:#fff }
+
+    /* Link columns */
+    .links{ display:grid; gap:22px }
+    .col h3{ margin:0 0 10px; font-size:1.05rem }
+    .col ul{ margin:0; padding:0; list-style:none; }
+    .col li{ margin:8px 0 }
+    .col a{ color:var(--text); opacity:.9 }
+    .col a:hover{ opacity:1 }
+
+    /* Subscribe */
+    .subscribe{
+      display:grid; gap:10px; align-content:start;
+    }
+    .inputwrap{
+      display:flex; align-items:stretch; background:#fff; border-radius: var(--radius-lg); overflow:hidden; border:1.5px solid #fff0; box-shadow: 0 1px 0 rgba(0,0,0,.15);
+    }
+    .inputwrap:focus-within{ box-shadow: 0 0 0 4px var(--ring) }
+    .inputwrap input{
+      flex:1; padding:12px 14px; border:0; outline:0; font-size:.95rem; width: 70%;
+    }
+    .inputwrap button{
+      border:0; padding:0 16px; background: var(--accent); color:#1C1300; font-weight:700; cursor:pointer; white-space:nowrap; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; transition: background .15s ease, transform .05s ease;
+    }
+    .inputwrap button:hover{ background: var(--accent-2) }
+    .inputwrap button:active{ transform: translateY(1px) }
+
+    .subscribe small{ color:var(--muted) }
+
+    /* Divider */
+    .divider{ height:1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent); margin: 22px 0 }
+
+    /* Bottom bar */
+    .bottom{ display:flex; flex-direction:column; gap:12px; color:var(--muted); font-size:.95rem }
+    .legal{ display:flex; gap:10px; flex-wrap:wrap }
+    .legal a{ color:var(--muted) }
+
+    /* ====== Layout (mobile‑first → desktop) ====== */
+    /* Mobile: stack naturally */
+
+    /* >= 520px */
+    @media (min-width: 520px){
+      .top{ grid-template-columns: 1fr 1fr; }
+      .links{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+
+    /* >= 768px */
+    @media (min-width: 768px){
+      .top{ grid-template-columns: 1.2fr 1.6fr 1.2fr; align-items:start }
+      .links{ grid-template-columns: repeat(3, minmax(0,1fr)); }
+    }
+
+    /* >= 1024px */
+    @media (min-width: 1024px){
+      .container{ padding: 40px 32px }
+      .logo{ font-size:1.6rem }
+      .links{ grid-template-columns: repeat(3, 1fr); column-gap: 36px }
+      .subscribe{ justify-items:end }
+      .bottom{ flex-direction:row; align-items:center; justify-content:space-between }
+    }
+
+    /* Accessibility: reduce motion */
+    @media (prefers-reduced-motion: reduce){
+      .socials a, .inputwrap button{ transition:none }
+    }
+  </style>
+</head>
+<body>
+  <footer class="footer" id="Contacto">
+    <div class="container">
+      <!-- Top -->
+      <div class="top">
+        <!-- Brand & socials -->
+        <div class="brand">
+          <div class="logo" aria-label="Derivate">
+            <img src="assets/img/logo_long.webp" alt="Logo Central">
+          </div>
+          <p class="tagline">Rompiendo mitos, creando futuros</p>
+          <div class="socials" aria-label="Redes sociales">
+            <a href="https://www.instagram.com/derivate.pe/" aria-label="Instagram" target="_blank">
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3a5 5 0 110 10 5 5 0 010-10zm0 2.2A2.8 2.8 0 1014.8 12 2.8 2.8 0 0012 9.2zm5.4-.9a1 1 0 110 2 1 1 0 010-2z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61555020923912" target="_blank" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                <path d="M22 12a10 10 0 10-11.6 9.9v-7h-2.3v-2.9h2.3V9.4c0-2.3 1.3-3.5 3.3-3.5.9 0 1.8.2 1.8.2v2h-1c-1 0-1.4.6-1.4 1.3v1.6h2.6l-.4 2.9h-2.2v7A10 10 0 0022 12z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/derivatestem" target="_blank" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                <path d="M20.45 20.45h-3.6v-5.6c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9v5.7h-3.6v-11h3.5v1.5h.1c.5-.9 1.7-1.9 3.5-1.9 3.7 0 4.4 2.4 4.4 5.5v5.9zM5.34 7.93a2.1 2.1 0 110-4.2 2.1 2.1 0 010 4.2zM7.15 20.45h-3.6v-11h3.6v11zM22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.2.8 24 1.77 24h20.46c.97 0 1.77-.8 1.77-1.72V1.72C24 .77 23.2 0 22.23 0z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="links">
+          <div class="col">
+            <h3>Conócenos</h3>
+            <ul>
+              <li><a href="#">Quiénes somos</a></li>
+              <li><a href="#">Misión y valores</a></li>
+              <li><a href="#">Alianzas</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Equipo</h3>
+            <ul>
+              <li><a href="#">Mentores</a></li>
+              <li><a href="#">Voluntariado</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Eventos</h3>
+            <ul>
+              <li><a href="#">Calendario</a></li>
+              <li><a href="#">Talleres</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Contacto</h3>
+            <ul>
+              <li style="overflow: hidden;"><a href="mailto:derivatesanmarcos@gmail.com">derivatesanmarcos@gmail.com</a></li>
+              <li>Lima, Perú</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Subscribe -->
+        <form class="subscribe" action="#" method="post" onsubmit="event.preventDefault()" aria-label="Suscribirse al boletín">
+          <label for="email" class="sr-only">Correo electrónico</label>
+          <div class="inputwrap">
+            <input id="email" name="email" type="email" placeholder="Tu correo electrónico" required>
+            <button type="submit">Suscribirme</button>
+          </div>
+          <small>Prometemos enviarte solo cosas útiles ✨</small>
+        </form>
+      </div>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <!-- Bottom -->
+      <div class="bottom">
+        <div>© 2025 Derivate. Todos los derechos reservados.</div>
+        <div class="legal" aria-label="Legal">
+          <a href="#">Privacidad</a>
+          <span>·</span>
+          <a href="#">Términos</a>
+          <span>·</span>
+          <a href="#">Código de conducta</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Ayudas de accesibilidad para lectores de pantalla -->
+  <style>
+    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0 }
+  </style>
+</body>
+</html>

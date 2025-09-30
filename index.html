@@ -1,132 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DERIVATE</title>
-    <link rel="stylesheet" href="index2.css">
+    <link rel="icon" href="/assets/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#07285F"><!-- opcional -->
+    <meta name="theme-color" content="#07285F">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/eventos.css">
+    <link rel="stylesheet" href="css/novedades.css">
     <script src="https://kit.fontawesome.com/45430dc581.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header>
-        <nav id="nav" class="nav1">
-            <div class="contenedor-nav">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="MEDIA/logo_long.webp" alt="LogoDerivate">
-                    </a>
-                </div>
-                <ul class="enlaces" id="enlaces">
-                    <li><a href="index.html" class="btn-header">Inicio</a></li>
-                    <li><a href="equipo.html" class="btn-header">Equipo</a></li>
-                    <li><a href="conocenos.html" class="btn-header">Conócenos</a></li>
-                    <li><a href="#Eventos" class="btn-header">Eventos</a></li>
-                    <li><a href="#Contacto" class="btn-header">Contacto</a></li>
-                </ul>
-                <div class="icono" id="open">
-                    <span>&#9776;</span>
-                </div>
-            </div>
-        </nav>
+    <div id="navbar"></div>
+    <div class="head">
         <div class="logo-central">
-            <img src="MEDIA/logo-blanco.webp" alt="Logo Central">
+            <img src="assets/img/logo-blanco.webp" alt="Logo Central">
         </div>
-    </header>
-
-    <main>
-
-        <section id="Eventos">
-            <div class="Frame">
-                <h3 class="after">Eventos pasados</h3>
-            </div>  
-                <div class="slider-box">
-                    <button class="slider-button prev">❮</button>
-                    <button class="slider-button next">❯</button>
-                    <ul>
-                        <li>
-                            <img src="MEDIA/entre-físicos-2025.webp" alt="EntreFísicos 2025"> 
-                            <div class="slider-textos">  
-                                <h1 class="evento-link">
-                                    <a href="EntreFisicos.html">Entre Físicos</a>
-                                </h1>
-                                <h2> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nostrum nesciunt sunt unde iste assumenda, esse veniam! Fuga aperiam exercitationem, est nemo, distinctio obcaecati, non delectus asperiores assumenda numquam hic!</h2>
-                            </div>        
-                        </li>
-                        <li>
-                            <img src="MEDIA/RIFP.webp" alt="RIFP 2024">
-                            <div class="slider-textos">
-
-                                <h1 class="evento-link">
-                                   <a href="RIFP.html">RIFP</a>
-                                </h1>
-                                <h2> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nostrum nesciunt sunt unde iste assumenda, esse veniam! Fuga aperiam exercitationem, est nemo, distinctio obcaecati, non delectus asperiores assumenda numquam hic!</h2>
-         
-
-                            </div>
-                    
-                        </li>
-                    </ul>
-                </div>
-        </section>
-<section id="novedades">
-  <div class="novedades-slider">
-    <div class="novedades-track">
-      <div class="novedad-img-box"><img src="MEDIA/novedad1.jpg" alt=""></div>
-      <div class="novedad-img-box"><img src="MEDIA/novedad2.jpg" alt=""></div>
-      <div class="novedad-img-box"><img src="MEDIA/novedad3.jpg" alt=""></div>
     </div>
+    <main>
+        <!-- Eventos pasados -->
+        <section class="events-framed" id="Eventos">
+            <div class="Frame" style="margin-top: 20px;">
+                <h2 class="news__title">Eventos pasados</h2>
+            </div>
+            <div class="carousel" role="region" aria-label="Eventos pasados">
+                <!-- Botones -->
+                <button class="carousel__btn prev" aria-label="Anterior">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button class="carousel__btn next" aria-label="Siguiente">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
 
-    <!-- Botones -->
-    <button class="novedades-btn prev">&#10094;</button>
-    <button class="novedades-btn next">&#10095;</button>
-  </div>
-</section>
+                <!-- Viewport -->
+                <ul class="carousel__viewport">
+                    <li class="slide" style="--img:url('assets/img/entre-físicos-2025.webp')">
+                        <div class="slide__bg" aria-hidden="true"></div>
+                        <div class="slide__inner">
+                            <figure class="poster">
+                                <img src="assets/img/entre-físicos-2025.webp" alt="Entre Físicos 2025 — Derivate">
+                            </figure>
+                            <div class="caption">
+                                <h3><a href="EntreFisicos.html">Entre Físicos</a></h3>
+                                <p>Encuentro anual con charlas y mentoría entre pares.</p>
+                            </div>
+                        </div>
+                    </li>
 
+                    <li class="slide" style="--img:url('assets/img/RIFP.webp')">
+                        <div class="slide__bg" aria-hidden="true"></div>
+                        <div class="slide__inner">
+                            <figure class="poster">
+                                <img src="assets/img/RIFP.webp" alt="RIFP 2024 — Derivate">
+                            </figure>
+                            <div class="caption">
+                                <h3><a href="RIFP.html">RIFP</a></h3>
+                                <p>Reunión Internacional de Físicos en Posgrado.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
 
-
+                <div class="carousel__dots" aria-label="Paginación"></div>
+            </div>
+        </section>
+        <section class="news" id="Novedades">
+            <div class="news__wrap">
+                <h2 class="news__title">Novedades</h2>
+                <ul class="news__list">
+                    <li class="news__item">
+                        <img src="assets/img/F1.png" alt="Felicitaciones David — Derivate">
+                    </li>
+                    <li class="news__item">
+                        <img src="assets/img/F2.png" alt="Felicitaciones Hipólito, Sergio y Mariano — Derivate">
+                    </li>
+                    <li class="news__item">
+                        <img src="assets/img/F3.png" alt="Copa Derivate — Torneo FC24">
+                    </li>
+                    <li class="news__item">
+                        <img src="assets/img/F4.png" alt="Felicitaciones Juan — Derivate">
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
-    
 
-    <footer id="Contacto">
-        <div class="footer-contenedor">
-            <hr class="footer-line">
-            <div class="marca-logo">
+    <div id="footer"></div>
 
-                <img src="MEDIA/logo-blanco.webp" alt="logo">
-
-            </div>
-            <p> Síguenos para más información</p>
-            <div class="iconos">    
-                <a href="https://www.instagram.com/derivate.stem/" target="_blank">
-                    <i class="fa-brands fa-square-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/derivatestem" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61555020923912" target="_blank">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>    
-            </div>
-        
-
-        </div>
-
-    </footer>
     <script src="script.js"></script>
+    <script src="js/eventos.js"></script>
+
+    <script type="module">
+        import { initNavbar } from './js/header.js';
+        const navbarMount = document.getElementById('navbar');
+        fetch('components/header.html')
+            .then(r => r.text())
+            .then(html => {
+                navbarMount.innerHTML = html;
+                initNavbar(navbarMount);
+            });
+        fetch("components/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            })
+            .catch(error => console.error("Error al cargar el footer:", error));
+    </script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

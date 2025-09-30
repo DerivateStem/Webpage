@@ -4,85 +4,68 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>DERÍVATE • Conócenos</title>
-  <link rel="stylesheet" href="index2.css" />
+  <title>Conócenos — Derivate</title>
+  <link rel="icon" href="/assets/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#07285F"><!-- opcional -->
+  <meta name="theme-color" content="#07285F">
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/conocenos.css">
   <script src="https://kit.fontawesome.com/45430dc581.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header class="site-header">
-    <nav id="nav" class="nav1">
-      <div class="contenedor-nav">
-        <div class="logo">
-          <a href="index.html"><img src="MEDIA/logo_long.webp" alt="Logo Derívate" /></a>
-        </div>
-        <button class="icono" id="open" aria-label="Abrir menú" aria-expanded="false" aria-controls="enlaces">
-          <span>&#9776;</span>
-        </button>
-        <ul class="enlaces" id="enlaces">
-          <li><a href="index.html" class="btn-header">Inicio</a></li>
-          <li><a href="equipo.html" class="btn-header">Equipo</a></li>
-          <li><a href="conocenos.html" class="btn-header activo">Conócenos</a></li>
-          <li><a href="index.html#Eventos" class="btn-header">Eventos</a></li>
-          <li><a href="index.html#Contacto" class="btn-header">Contacto</a></li>
-        </ul>
+  <div id="navbar"></div>
+  <div class="head">
+      <div class="logo-central">
+          <img src="assets/img/logo-blanco.webp" alt="Logo Central">
       </div>
-    </nav>
-  </header>
-
-  <main class="conocenos">
-    <h1 class="page-title">Conócenos</h1>
-
-    <section class="panel" style="margin-top:10px">
-      <h2 class="section-title">Quiénes somos</h2>
-      <p>
-        <strong>Derívate</strong> es la asociación de estudiantes de física en Perú que se apoya, se forma y crece unida.
-        Un espacio donde nadie avanza solo y el talento encuentra red, oportunidades y acompañamiento real.
-      </p>
-    </section>
-
-    <section style="margin-top:22px">
-      <div class="grid-2">
-        <article class="panel">
-          <h2 class="section-title">Nuestra Misión</h2>
-          <p>
-            Acompañar y potenciar a los futuros físicos del Perú a través de apoyo mutuo, mentoría entre pares
-            y formación aplicada, construyendo una cultura académica más colaborativa y global.
-          </p>
+  </div>
+  <section class="about" id="conocenos">
+    <div class="about__wrap">
+      <h2 class="about__title">Conócenos</h2>
+      <div class="about__grid">
+        <article class="card card--span-2">
+          <h3 class="card__title">Quiénes somos</h3>
+          <p><strong>Derivate</strong> es la asociación de estudiantes de física en Perú que se apoya, se forma y crece unida. Un espacio donde nadie avanza solo y el talento encuentra red, oportunidades y acompañamiento real.</p>
         </article>
 
-        <article class="panel">
-          <h2 class="section-title">Nuestra Visión</h2>
-          <p>
-            Ser la comunidad de referencia en física peruana, capaz de transformar la manera en que los estudiantes
-            se forman y conectan, para que el talento científico peruano tenga impacto en el mundo.
-          </p>
+        <article class="card">
+          <h3 class="card__title">Nuestra Misión</h3>
+          <p>Acompañar y potenciar a los futuros físicos del Perú a través de apoyo mutuo, mentoría entre pares y formación aplicada, construyendo una cultura académica más colaborativa y global.</p>
+        </article>
+
+        <article class="card">
+          <h3 class="card__title">Nuestra Visión</h3>
+          <p>Ser la comunidad de referencia en física peruana, capaz de transformar la manera en que los estudiantes se forman y conectan, para que el talento científico peruano tenga impacto en el mundo.</p>
+        </article>
+
+        <article class="card card--span-2">
+          <h3 class="card__title">Qué hacemos</h3>
+          <p>Mentorías entre pares, talleres aplicados, círculos de estudio, charlas con investigadoras/es y una red de apoyo para conectar oportunidades académicas dentro y fuera del Perú.</p>
         </article>
       </div>
-    </section>
-
-    <section class="panel" style="margin-top:22px">
-      <h2 class="section-title">Qué hacemos</h2>
-      <p>
-        Mentorías entre pares, talleres aplicados, círculos de estudio, charlas con investigadoras/es y
-        una red de apoyo para conectar oportunidades académicas dentro y fuera del Perú.
-      </p>
-    </section>
-  </main>
-
-  <footer id="Contacto" class="site-footer">
-    <div class="footer-contenedor">
-      <div class="marca-logo">
-        <img src="MEDIA/logo-blanco.webp" alt="Logo" />
-      </div>
-      <div class="iconos">
-        <a href="https://www.instagram.com/derivate.stem/" target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/derivatestem" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=61555020923912" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
-      </div>
-      <p>Síguenos para más información</p>
     </div>
-  </footer>
-
-  <script src="script.js"></script>
+  </section>
+  <div id="footer"></div>
+  <script type="module">
+    import { initNavbar } from './js/header.js';
+    const navbarMount = document.getElementById('navbar');
+    fetch('components/header.html')
+    .then(r => r.text())
+    .then(html => {
+        navbarMount.innerHTML = html;
+        initNavbar(navbarMount);
+    });
+    fetch("components/footer.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("footer").innerHTML = data;
+    })
+    .catch(error => console.error("Error al cargar el footer:", error));
+  </script>
 </body>
 </html>

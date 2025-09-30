@@ -1,36 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DERIVATE.STEAM | Equipo</title>
-  <link rel="stylesheet" href="equipo.css" />
+  <link rel="icon" href="/assets/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#07285F"><!-- opcional -->
+  <meta name="theme-color" content="#07285F">
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/equipo.css" />
   <script src="https://kit.fontawesome.com/45430dc581.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-
-  <header>
-    <nav id="nav" class="nav1">
-      <div class="contenedor-nav">
-        <div class="logo">
-          <a href="index.html"><img src="MEDIA/logo_long.webp" alt="Logo Derivate" /></a>
-        </div>
-        <ul class="enlaces" id="enlaces">
-          <li><a href="index.html" class="btn-header">Inicio</a></li>
-          <li><a href="equipo.html" class="btn-header activo">Equipo</a></li>
-          <li><a href="conócenos.html" class="btn-header">Conócenos</a></li>
-          <li><a href="eventos.html" class="btn-header">Eventos</a></li>
-          <li><a href="#Contacto" class="btn-header">Contacto</a></li>
-        </ul>
-        <div class="icono" id="open"><span>&#9776;</span></div>
-      </div>
-    </nav>
-  </header>
-
+  <div id="navbar"></div>
+  <div class="head">
+    <div class="logo-central">
+      <img src="assets/img/logo-blanco.webp" alt="Logo Central">
+    </div>
+  </div>
   <main>
     <section class="hoja-blanca">
-      
-
       <section id="filtros">
         <div class="filtro-contenedor">
 
@@ -42,80 +38,73 @@
             </div>
           </div>
 
-         <div class="filtro-bloque">
-           <label for="carrera">Carrera de estudio:</label>
-           <select id="carrera">
-             <option value="" selected>Todas</option>
-             <option value="fisica">Física</option>
-             <option value="mecanica">Ing. Mecánica de Fluidos</option>
-           </select>
+          <div class="filtro-bloque">
+            <label for="carrera">Carrera de estudio:</label>
+            <select id="carrera">
+              <option value="" selected>Todas</option>
+              <option value="fisica">Física</option>
+              <option value="mecanica">Ing. Mecánica de Fluidos</option>
+            </select>
+          </div>
+
+          <div class="filtro-bloque">
+            <label for="area">Área del equipo:</label>
+            <select id="area">
+              <option value="" selected>Todas</option>
+              <option value="logistica">Logística</option>
+              <option value="recaudacion">Recaudación</option>
+              <option value="formacion">Formación</option>
+              <option value="comunicacion">Comunicación</option>
+              <option value="directiva">Directiva</option>
+            </select>
+          </div>
+
+          <div class="filtro-bloque">
+            <label for="tipo">Tipo de integrante:</label>
+            <select id="tipo">
+              <option value="" selected>Todos</option>
+              <option value="pregrado">Estudiante de pregrado</option>
+              <option value="bachiller">Bachiller</option>
+              <option value="licenciado">Licenciado</option>
+              <option value="asesor">Asesor(a) académico</option>
+            </select>
+          </div>
+
+          <div class="filtro-bloque">
+            <label for="universidad">Universidad:</label>
+            <select id="universidad">
+              <option value="" selected>Todas</option>
+              <option value="sanmarcos">UNMSM</option>
+              <option value="pucp">PUCP</option>
+              <option value="uni">UNI</option>
+              <option value="wisconsi">UW-MADISON</option>
+            </select>
+          </div>
         </div>
+      </section>
 
-        <div class="filtro-bloque">
-          <label for="area">Área del equipo:</label>
-          <select id="area">
-            <option value="" selected>Todas</option>
-            <option value="logistica">Logística</option>
-            <option value="recaudacion">Recaudación</option>
-            <option value="formacion">Formación</option>
-            <option value="comunicacion">Comunicación</option>
-            <option value="directiva">Directiva</option>
-          </select>
-        </div>
 
-        <div class="filtro-bloque">
-           <label for="tipo">Tipo de integrante:</label>
-           <select id="tipo">
-            <option value="" selected>Todos</option>
-            <option value="pregrado">Estudiante de pregrado</option>
-            <option value="bachiller">Bachiller</option>
-            <option value="licenciado">Licenciado</option>
-            <option value="asesor">Asesor(a) académico</option>
-           </select>
-       </div>
-
-        <div class="filtro-bloque">
-          <label for="universidad">Universidad:</label>
-          <select id="universidad">
-            <option value="" selected>Todas</option>
-            <option value="sanmarcos">UNMSM</option>
-            <option value="pucp">PUCP</option>
-            <option value="uni">UNI</option>
-            <option value="wisconsi">UW-MADISON</option>
-         </select>
-       </div>    
-    </div>
-    </section>
-
-      
       <section id="perfiles">
         <h2>Nosotros</h2>
         <div class="grid-perfiles">
-          <div class="tarjeta" 
-               data-nombre="Leonardo Huaira Lopez"
-               data-carrera="fisica"
-               data-area="directiva"
-               data-tipo="pregrado"
-               data-universidad="sanmarcos"
-               data-info="Presidente de DERIVATE, estudiante de Física en la Universidad Nacional Mayor de San Marcos">
-            <img src="MEDIA/foto-leo.jpg" alt="Leonardo Huaira Lopez">
+          <div class="tarjeta" data-nombre="Leonardo Huaira Lopez" data-carrera="fisica" data-area="directiva"
+            data-tipo="pregrado" data-universidad="sanmarcos"
+            data-info="Presidente de DERIVATE, estudiante de Física en la Universidad Nacional Mayor de San Marcos">
+            <img src="assets/img/foto-leo.jpg" alt="Leonardo Huaira Lopez">
             <h3>Leonardo Huaira Lopez</h3>
             <p>Presidente de DERIVATE</p>
             <p>UNMSM</p>
 
-            <a href="https://www.linkedin.com/in/isaac-leonardo-huaira-lopez-7066ab257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_black" class="linkedin-btn">
+            <a href="https://www.linkedin.com/in/isaac-leonardo-huaira-lopez-7066ab257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_black" class="linkedin-btn">
               <i class="fab fa-linkedin"></i>
             </a>
           </div>
 
-          <div class="tarjeta" 
-               data-nombre="Paul Reyna Muñoz"
-               data-carrera="fisica"
-               data-area="logistica"
-               data-tipo="pregrado"
-               data-universidad="uni"
-               data-info="Miembro activo de DERIVATE, parte del equipo de Logística. Estudiante de Física">
-            <img src="MEDIA/Reya Muñoz.jpg" alt="Paul Reyna Muñoz">
+          <div class="tarjeta" data-nombre="Paul Reyna Muñoz" data-carrera="fisica" data-area="logistica"
+            data-tipo="pregrado" data-universidad="uni"
+            data-info="Miembro activo de DERIVATE, parte del equipo de Logística. Estudiante de Física">
+            <img src="assets/img/Reya Muñoz.jpg" alt="Paul Reyna Muñoz">
             <h3>Paul Reyna Muñoz</h3>
             <p>Logística</p>
             <p>UNI</p>
@@ -125,14 +114,10 @@
             </a>
           </div>
 
-          <div class="tarjeta"
-               data-nombre="Mariano Effio Cueva"
-               data-carrera="fisica"
-               data-area="formacion"
-               data-tipo="bachiller"
-               data-universidad="uni"
-               data-info="Miembro activo de DERIVATE, parte del equipo de Formación. Bachiller en Física en la Univerisdad Nacional de Ingeniería">
-            <img src="MEDIA/mariano-effio.jpg" alt="Mariano Effio Cueva">
+          <div class="tarjeta" data-nombre="Mariano Effio Cueva" data-carrera="fisica" data-area="formacion"
+            data-tipo="bachiller" data-universidad="uni"
+            data-info="Miembro activo de DERIVATE, parte del equipo de Formación. Bachiller en Física en la Univerisdad Nacional de Ingeniería">
+            <img src="assets/img/mariano-effio.jpg" alt="Mariano Effio Cueva">
             <h3>Mariano Effio Cueva</h3>
             <p>Formación</p>
             <p>UNI</p>
@@ -142,146 +127,102 @@
             </a>
           </div>
 
-          <div class="tarjeta"   
-               data-nombre="Daniel Navarro Ramirez"
-               data-carrera="fisica"
-               data-area="directiva"
-               data-tipo="pregrado"
-               data-universidad="pucp"
-               data-info="Miembro activo de DERIVATE, lider del equipo de Logística. Estudiante de Física en la Pontificia Universidad Católica del Perú">
-             <img src="MEDIA/daniel-navarro.jpg" alt="Daniel Navarro Ramirez">
-             <h3>Daniel Navarro Ramirez</h3>
-             <p>Lider de Logística</p>
-             <p>Estudiante de Física<br>PUCP</p>
+          <div class="tarjeta" data-nombre="Daniel Navarro Ramirez" data-carrera="fisica" data-area="directiva"
+            data-tipo="pregrado" data-universidad="pucp"
+            data-info="Miembro activo de DERIVATE, lider del equipo de Logística. Estudiante de Física en la Pontificia Universidad Católica del Perú">
+            <img src="assets/img/daniel-navarro.jpg" alt="Daniel Navarro Ramirez">
+            <h3>Daniel Navarro Ramirez</h3>
+            <p>Lider de Logística</p>
+            <p>Estudiante de Física<br>PUCP</p>
 
             <a href="" target="_black" class="linkedin-btn">
               <i class="fab fa-linkedin"></i>
             </a>
           </div>
 
-          <div class="tarjeta"           
-               data-nombre="Juan Diego Mendoza Huillca"
-               data-carrera="mecanica"
-               data-area="directiva"
-               data-tipo="pregrado"
-               data-universidad="sanmarcos"
-               data-info="Miembro activo y Vicepresidente de DERIVATE. Parte del equipo de Comunicación. Estudiante de Ingeniería Mecánica de Fluidos en la Universidad Nacional Mayor de San Marcos">
-             <img src="MEDIA/juan-diego.jpg" alt="Juan Diego Mendoza Huillca">
-             <h3>Juan Diego Mendoza Huillca</h3>
-             <p>Vicepresidente de Derivate</p>
-             <p>UNMSM</p>
-
-            <a href="" target="_black" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div> 
-
-          <div class="tarjeta"            
-               data-nombre="Gretta Oros Bravo"
-               data-carrera="fisica"
-               data-area="directiva"
-               data-tipo="pregrado"
-               data-universidad="sanmarcos"
-               data-info="Miembro activo de DERIVATE, Lider de Recaudación. Estudiante de Física en la Universidad Nacional Mayor de San Marcos">
-             <img src="MEDIA/gretta-foto-derivate.jpg" alt="Gretta Oros Bravo">
-             <h3>Gretta Oros Bravo</h3>
-             <p>Lider de Recaudación</p>
-             <p>UNMSM</p>
-
-            <a href="" target="_black" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-          
-          <div class="tarjeta"         
-               data-nombre="Adrian Diaz Espinoza"
-               data-carrera="fisica"
-               data-area=""
-               data-tipo="asesor"
-               data-universidad="wisconsi"
-               data-info="Miembro activo y asesor de DERIVATE. Estudiante de Doctora. Licenciado en Física en la Universidad Nacional Mayor de San Marcos">
-             <img srs="MEDIA/Adrian-diaz.jpg" alt="Adrian Diaz Espinoza">
-             <h3>Adrian Diaz Espinoza</h3>
-             <p>Asesor</p>
-             <p>>UW-Madison</p>
+          <div class="tarjeta" data-nombre="Juan Diego Mendoza Huillca" data-carrera="mecanica" data-area="directiva"
+            data-tipo="pregrado" data-universidad="sanmarcos"
+            data-info="Miembro activo y Vicepresidente de DERIVATE. Parte del equipo de Comunicación. Estudiante de Ingeniería Mecánica de Fluidos en la Universidad Nacional Mayor de San Marcos">
+            <img src="assets/img/juan-diego.jpg" alt="Juan Diego Mendoza Huillca">
+            <h3>Juan Diego Mendoza Huillca</h3>
+            <p>Vicepresidente de Derivate</p>
+            <p>UNMSM</p>
 
             <a href="" target="_black" class="linkedin-btn">
               <i class="fab fa-linkedin"></i>
             </a>
           </div>
 
-         <div class="tarjeta"      
-               data-nombre="Enrique Huaira Lopez"
-               data-carrera="fisica"
-               data-area="logistica"
-               data-tipo="pregrado"
-               data-universidad="uni"
-              data-info="Miembro activo de DERIVATE. Parte del equipo de Logística. Estudiante de Física en la Universidad Nacional de Ingeniería">
-            <img src="MEDIA/enrique.jpg" alt="Enrique Huaira Lopez">
+          <div class="tarjeta" data-nombre="Gretta Oros Bravo" data-carrera="fisica" data-area="directiva"
+            data-tipo="pregrado" data-universidad="sanmarcos"
+            data-info="Miembro activo de DERIVATE, Lider de Recaudación. Estudiante de Física en la Universidad Nacional Mayor de San Marcos">
+            <img src="assets/img/gretta-foto-derivate.jpg" alt="Gretta Oros Bravo">
+            <h3>Gretta Oros Bravo</h3>
+            <p>Lider de Recaudación</p>
+            <p>UNMSM</p>
+
+            <a href="" target="_black" class="linkedin-btn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+
+          <div class="tarjeta" data-nombre="Adrian Diaz Espinoza" data-carrera="fisica" data-area="" data-tipo="asesor"
+            data-universidad="wisconsi"
+            data-info="Miembro activo y asesor de DERIVATE. Estudiante de Doctora. Licenciado en Física en la Universidad Nacional Mayor de San Marcos">
+            <img srs="assets/img/Adrian-diaz.jpg" alt="Adrian Diaz Espinoza">
+            <h3>Adrian Diaz Espinoza</h3>
+            <p>Asesor</p>
+            <p>>UW-Madison</p>
+
+            <a href="" target="_black" class="linkedin-btn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+
+          <div class="tarjeta" data-nombre="Enrique Huaira Lopez" data-carrera="fisica" data-area="logistica"
+            data-tipo="pregrado" data-universidad="uni"
+            data-info="Miembro activo de DERIVATE. Parte del equipo de Logística. Estudiante de Física en la Universidad Nacional de Ingeniería">
+            <img src="assets/img/enrique.jpg" alt="Enrique Huaira Lopez">
             <h3>Enrique Huaira Lopez</h3>
             <p>Logística</p>
             <p>UNI</p>
 
-           <a href="" target="_black" class="linkedin-btn">
+            <a href="" target="_black" class="linkedin-btn">
               <i class="fab fa-linkedin"></i>
             </a>
-         </div>
+          </div>
 
-        <div class="tarjeta"         
-             data-nombre="Diego Haro Rosales"
-             data-carrera="fisica"
-             data-area="formacion"
-             data-tipo="pregrado"
-             data-universidad="uni"
-             data-info="Miembro activo de DERIVATE. Parte del equipo de Formación. Estudiante de Física en la Univerisdad Nacional de Ingeniería">
-          <img src="MEDIA/diego-haro.jpg" alt="Diego Haro Rosales">
-          <h3>Diego Haro Rosales</h3>
-          <p>Formación</p>
-          <p>UNI</p>
+          <div class="tarjeta" data-nombre="Diego Haro Rosales" data-carrera="fisica" data-area="formacion"
+            data-tipo="pregrado" data-universidad="uni"
+            data-info="Miembro activo de DERIVATE. Parte del equipo de Formación. Estudiante de Física en la Univerisdad Nacional de Ingeniería">
+            <img src="assets/img/diego-haro.jpg" alt="Diego Haro Rosales">
+            <h3>Diego Haro Rosales</h3>
+            <p>Formación</p>
+            <p>UNI</p>
 
-          <a href="" target="_black" class="linkedin-btn">
+            <a href="" target="_black" class="linkedin-btn">
               <i class="fab fa-linkedin"></i>
             </a>
-        </div>
+          </div>
 
-        <div class="tarjeta"         
-             data-nombre="Hipolito Riveros Guevara"
-             data-carrera="fisica"
-             data-area="formacion"
-             data-tipo="pregrado"
-             data-universidad="uni"
-             data-info="Miembro activo de DERIVATE. Parte del equipo de Formación. Estudiante de Física en la Universidad Nacional de Ingeniería">
-           <img src="MEDIA/hipolito.jpg" alt="Hipolito Riveros Guevara">
-           <h3>Hipolito Riveros Guevara</h3>
-           <p>Formación</p>
-           <p>UNI</p>
+          <div class="tarjeta" data-nombre="Hipolito Riveros Guevara" data-carrera="fisica" data-area="formacion"
+            data-tipo="pregrado" data-universidad="uni"
+            data-info="Miembro activo de DERIVATE. Parte del equipo de Formación. Estudiante de Física en la Universidad Nacional de Ingeniería">
+            <img src="assets/img/hipolito.jpg" alt="Hipolito Riveros Guevara">
+            <h3>Hipolito Riveros Guevara</h3>
+            <p>Formación</p>
+            <p>UNI</p>
 
-          <a href="" target="_black" class="linkedin-btn">
+            <a href="" target="_black" class="linkedin-btn">
               <i class="fab fa-linkedin"></i>
             </a>
-        </div>
-           
+          </div>
+
         </div>
       </section>
     </section>
   </main>
 
-
-  <footer id="Contacto">
-    <div class="footer-contenedor">
-      <div class="marca-logo">
-        <img src="MEDIA/logo-blanco.webp" alt="Logo" />
-      </div>
-      <div class="iconos">
-        <a href="https://www.instagram.com/derivate.stem/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/derivatestem" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=61555020923912" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-      </div>
-      <p>Síguenos para más información</p>
-    </div>
-  </footer>
-
-  
   <div id="modal" class="modal">
     <div class="modal-contenido">
       <span class="cerrar">&times;</span>
@@ -290,16 +231,25 @@
       <p id="modal-info"></p>
     </div>
   </div>
+  <div id="footer"></div>
 
-  <script src="equipo.js"></script>
+  <script src="js/equipo.js"></script>
+  <script type="module">
+    import { initNavbar } from './js/header.js';
+    const navbarMount = document.getElementById('navbar');
+    fetch('components/header.html')
+      .then(r => r.text())
+      .then(html => {
+        navbarMount.innerHTML = html;
+        initNavbar(navbarMount);
+      });
+    fetch("components/footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      })
+      .catch(error => console.error("Error al cargar el footer:", error));
+  </script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
