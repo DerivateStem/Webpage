@@ -1,611 +1,103 @@
-:root{
-    --color1: #f2f2f2;
-    --color2: rgba(255, 255, 255, 0.7);
-    --color3: rgba(70, 43, 226, .664);
-    --fondo:  #1f1d31;
-    --titulos: 40px;
-    --subtitulos: 25px;
-    --margenes: 30px;
-    --espacios: 4px;
-    --espacios-contenido: 10px;
-}
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html{
-    scroll-behavior: smooth;
-}
-
-
-body{
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    background-color: var(--fondo);
-}
-img{
-    vertical-align: top;
-}
-
-
-button{
-    font-size: 40px;
-    font-weight: bold;
-    padding: 10px 30px;
-    border-radius: 5px;
-    border: 1px solid rgba(96, 95, 95, 0.3);
-    box-shadow: 2px 2px 10px rgba(53, 53, 53, 0.5);
-    color: #3665ef;
-    background-color: #ffff
-}
-
-
-
-/* Header */
-
-/* 🔹 Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-header {
+/* --- Cabecera con Fondo Animado "Conexión Cósmica" --- */
+.head {
     width: 100%;
     height: 600px;
-    background: url("assets/img/Fondo oscuro.webp.png");
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Clave para que el fondo no se desborde */
+    background-color: #EAF0FF; /* Fondo azulado claro */
 }
 
-.logo-central {
+/* Capa 1: Nebulosa de color y estrellas lentas */
+.head::before {
+    content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.logo-central img {
-    max-width: 600px;
-    height: auto;
-}
-
-/* 🔹 Barra de navegación */
-nav {
-    width: 100%;
-    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
-    color: #fff;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-}
-
-/* 🔹 Estilos de nav1 y nav2 */
-.nav1 {
-    display: flex;
-    background: rgba(245, 245, 245, 0.8);
-    height: 80px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-
-.nav2 {
-    background: var(--fondo);
-    height: 100px;
-    color: #000;
-}
-
-.contenedor-nav {
-    display: flex;
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* 🔹 Estilos del logo */
-.logo img {
-    height: 65px;
-}
-
-/* 🔹 Estilos de los enlaces */
-nav .enlaces {
-    display: flex;
-    gap: 40px;
-}
-
-nav .enlaces a {
-    text-decoration: none;
-    font-size: 23px;
-    font-weight: bold;
-    padding: 5px 0;
-    border-bottom: 3px solid transparent;
-    color: #3665ef;
-    transition: border-bottom 0.6s;
-}
-
-nav .enlaces a:hover {
-    border-bottom: 3px solid #000;
-}
-
-.enlaces h1:hover{
-    border-bottom: 3px solid #000;
-}
-
-nav .enlaces li {
-    list-style: none; /* Asegura que los puntos desaparecen */
-}
-
-/* 🔹 Icono del menú para móviles */
-.icono {
-    display: none;
-    font-size: 24px;
-    padding: 23.5px 20px;
-}
-
-/* 🔹 Estilos responsive */
-@media screen and (max-width: 768px) {
-    .enlaces {
-        display: none; /* Ocultar enlaces en pantallas pequeñas */
-    }
-
-    .icono {
-        display: block; /* Mostrar icono del menú */
-        cursor: pointer;
-    }
-}
-
-
-.textos{
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
+    background: 
+        /* Nebulosa */
+        radial-gradient(ellipse at 70% 80%, #3665EF1A, transparent 50%),
+        radial-gradient(ellipse at 30% 20%, #00236515, transparent 50%),
+        /* Estrellas lentas */
+        radial-gradient(1px 1px at 20% 30%, #002365, transparent),
+        radial-gradient(1px 1px at 80% 60%, #002365, transparent),
+        radial-gradient(2px 2px at 50% 50%, #3665EF, transparent);
+    background-size: 100% 100%;
+    animation: rotateNebula 40s linear infinite alternate;
+    z-index: 0;
 }
 
-.textos>h1{
-    font-size: 80px; 
-    color: #FFc30e;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+/* Capa 2: Estrellas rápidas */
+.head::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(1px 1px at 10% 80%, #002365, transparent),
+        radial-gradient(1px 1px at 70% 10%, #3665EF, transparent),
+        radial-gradient(1px 1px at 40% 90%, #002365, transparent),
+        radial-gradient(2px 2px at 90% 30%, #3665EF, transparent);
+    animation: moveStars 25s linear infinite;
+    z-index: 0;
 }
-.textos>h2{
+
+@keyframes rotateNebula {
+    from { transform: rotate(0deg) scale(1); }
+    to { transform: rotate(360deg) scale(1.3); }
+}
+
+@keyframes moveStars {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-50%, -50%); }
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    color: #002365; /* Color de texto principal oscuro para contraste */
+}
+
+.header-content h1 {
+    font-size: 80px; 
+    color: #FFC30E; /* Título principal en amarillo */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+.header-content h2 {
     font-size: 30px;
     font-weight: 500;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    color: #002365; /* Subtítulo en azul oscuro */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Main */
-.contenedor{
-    margin: auto;
-    padding: 0 0;
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
-} 
-
-.contenedor h3{
-    font-size: var(--titulos);
-    color: var(--color1);
-    margin-bottom: var(--margenes);
-}
-.contenedor p{
-    font-size: var(--subtitulos);  
-    font-weight: 300;
-    color: var(--color2);   
-}
-
-.after::after{
-    content: '';
-    display: block;
-    margin: auto;
-    margin-top: var(--espacios) ;
-    width: 200px;
-    height: 3px;
-    background: var(--color1);
-    margin-bottom: var(--espacios-contenido);
-}
-.Frame{
-    margin: auto;
-    padding: 10px 0;
-    width: 100%;
-    height: 80px;
-    max-width: 2000px;
-    text-align: center;
-    overflow: hidden;
-} 
-
-.Frame h3{
-    font-size: var(--titulos);
-    color: var(--color1);
-    margin-bottom: 0 0;
-}
-
-.slider-box {
-    width: 100%;
-    height: auto;
-    margin: 10px 0px 0px 0;
-    overflow: hidden;
-    position: relative; /* Importante para posicionar los botones */
-}
-
-.slider-box ul {
-    display: flex;
-    padding: 0;
-    width: 200%;
-    transition: transform 0.5s ease;
-    animation: none !important; /* Aseguramos que no haya animación automática */
-    transform: translateX(0); /* Posición inicial */
-}
-
-.slider-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 16px;
-    cursor: pointer;
-    font-size: 24px;
-    z-index: 100;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.slider-button:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-.prev {
-    left: 20px;
-}
-
-.next {
-    right: 20px;
-}
-
-.slider-box li{
-    width: 100%;
-    height: 600px;
-    list-style: none;
-    /*position: relative;*/ 
-    overflow: hidden;
-}
-.slider-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  filter: brightness(60%); /* Oscurece para mejor contraste con texto */
-  transition: transform 0.5s ease;
-}
-.slider-box li:hover img {
-  transform: scale(1.05);
-}
-
-.slider-textos {
-  position: absolute;
-  bottom: 70px;
-  width: 45%;
-  height: 180px; /* Altura fija para que sea una franja */
-  padding: 20px 40px;
-  background: rgba(0, 0, 0, 0.6); /* Oscuro pero no completamente opaco */
-  color: var(--color1);
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.slider-textos h1 {
-  font-size: 2.5rem;
-  height: 180px;
-  margin-bottom: 1rem;
-  color: #FFc30e;   
-  text-shadow: 2px 2px 5px black;
-}
-.slider-textos a {
-    text-decoration: none;
-    color: inherit;
-    transition: border-bottom 0.6s;
-}
-.evento-link a::after {
-  content: '';
-  position: absolute;
-  width: 30%;
-  height: 2px;
-  background-color: #fff; 
-  bottom: 110px;
-  left: 40px;
-  transform: scaleX(0);
-  transition: transform 0.4s ease;
-  transform-origin: right;
-}
-.evento-link a:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-
-.slider-textos h2 {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  color: var(--color1);
-  white-space: normal;
-  overflow-wrap: break-word;
-  max-width: 100%   ;
-}
-
-
-
-.slider-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
-    background-color: var(--fondo);
-}
-
-.slider-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slider-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.slider-textos h1 {
-    color: #FFc30e;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-}
-
-.slider-textos h2 {
-    color: var(--color1);
-    font-size: 1.2rem;
-    line-height: 1.6;
-    font-weight: normal;
-}
-
-
-
-button:hover{
-    background-color: rgb(255, 217, 0);
-    cursor: pointer;
-}
-
-
-
-#News{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    height: 90vh;
-    background-image: linear-gradient(to bottom,
-        rgba(54,101,239, 0.4),
-        rgba(20, 20, 21, 0.4)
-    )
-    ,url("assets/img/portada.webp");
-    background-repeat: no-repeat;   
-    background-size: cover;
-    background-position: center center;
-}
-footer {
-    overflow: hidden;
-    height: 300px;
-}
-
-.marca-logo {
-    width: 40%;
-    margin: 30px auto ;
-    margin-bottom: var(--espacios, 20px); /* Usa 20px como valor por defecto */
-}
-
-.marca-logo img {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.iconos {
-    display: flex;
-    margin: auto;
-    justify-content: space-around;
-    width: 20%;
-}
-.iconos a {
-    text-decoration: none; /* Quita el subrayado del enlace */
-    margin: 0 1px; /* Espaciado entre iconos */
-}
-
-.iconos i {
-    transition: color 0.3s ease, transform 0.3s ease; /* Suaviza la animación */
-}
-
-.iconos a:hover i {
-    color: rgb(255, 217, 0); /* Cambia de color al pasar el mouse */
-    transform: scale(1.2); /* Aumenta ligeramente el tamaño */
-}
-
-.fa-brands {
-    font-size: 60px;
-    color: #fff;
-    margin-bottom: var(--espacios, 20px); /* Usa 20px como valor por defecto */
+/* Botón "Conoce más" profesional */
+.btn-header {
     display: inline-block;
-}
-footer p{
-    color: var(--color1);
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-.footer-line {
-  border: none;
-  height: 1px;
-  background-color: white;
-  margin: 5px 0;
-}
-
-
-/* ===== Conócenos (estilo UW adaptado azul/amarillo) ===== */
-:root{
-  --azul:#3665ef;        /* azul de tu navbar */
-  --amarillo:#FFC30E;    /* amarillo de “Eventos pasados” */
-  --blanco:#ffffff;
+    margin-top: 25px;
+    padding: 12px 30px;
+    border: 2px solid #FFC30E;
+    border-radius: 50px;
+    color: #FFC30E;
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
-/* contenedor de la página conocenos */
-.conocenos{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 16px 80px;
+.btn-header:hover {
+    background-color: #FFC30E;
+    color: #002365;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(255, 195, 14, 0.3);
 }
-
-/* título principal centrado */
-.page-title{
-  color: var(--blanco);
-  font-size: clamp(34px, 5vw, 48px);
-  text-align: center;
-  font-weight: 800;
-  letter-spacing:.3px;
-  margin: 24px 0 28px;
-}
-.page-title::after{
-  content:"";
-  display:block;
-  width: 140px;
-  height: 4px;
-  background: var(--azul);
-  margin: 12px auto 0;
-  border-radius: 2px;
-}
-
-/* bloques/secciones */
-.panel{
-  background: rgba(255,255,255,.03);
-  border: 1px solid rgba(255,255,255,.06);
-  border-radius: 14px;
-  padding: 22px 22px;
-}
-
-/* subtítulos en amarillo + subrayado azul (estilo UW) */
-.section-title{
-  color: var(--amarillo);
-  font-size: clamp(22px, 3.2vw, 30px);
-  font-weight: 800;
-  margin-bottom: 10px;
-}
-.section-title::after{
-  content:"";
-  display:block;
-  width: 120px;
-  height: 3px;
-  background: var(--azul);
-  margin-top: 8px;
-  border-radius: 2px;
-}
-
-/* párrafos en blanco (oraciones) */
-.conocenos p{
-  color: var(--blanco);
-  line-height: 1.7;
-  font-size: 1.05rem;
-  opacity: .95;
-}
-
-/* grid Misión / Visión */
-.grid-2{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 20px;
-}
-@media (max-width: 900px){
-  .grid-2{ grid-template-columns: 1fr; }
-}
-
-/* Opcional: enlaces dentro del texto */
-.conocenos a{ color: var(--azul); text-decoration: none; }
-.conocenos a:hover{ text-decoration: underline; }
-
- /* Para el carrusel de novedades */
-.novedades-slider {
-  position: relative;
-  width: 100%;
-  max-width: 800px; /* ajusta el tamaño que quieras */
-  margin: auto;
-  overflow: hidden; /* oculta imágenes que no entren */
-}
-
-.novedades-track {
-  display: flex; /* las pone en fila */
-  transition: transform 0.5s ease-in-out;
-}
-
-.novedad-img-box {
-  flex: 0 0 100%; /* cada imagen ocupa 100% del ancho del slider */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.novedad-img-box img {
-  width: 100%; /* la imagen ocupa todo el ancho */
-  height: auto;
-  border-radius: 10px;
-}
-/* Flechas del carrusel de novedades */
-.novedades-btn {
-  position: absolute;
-  top: 50%; /* centrado vertical */
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 12px;
-  cursor: pointer;
-  font-size: 24px;
-  border-radius: 50%;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s;
-}
-
-.novedades-btn:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.novedades-btn.prev {
-  left: 15px; /* a la izquierda */
-}
-
-.novedades-btn.next {
-  right: 15px; /* a la derecha */
-}
-
