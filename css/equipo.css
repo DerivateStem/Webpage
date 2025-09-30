@@ -30,20 +30,6 @@ img{
     vertical-align: top;
 }
 
-
-button{
-    font-size: 40px;
-    font-weight: bold;
-    padding: 10px 30px;
-    border-radius: 5px;
-    border: 1px solid rgba(96, 95, 95, 0.3);
-    box-shadow: 2px 2px 10px rgba(53, 53, 53, 0.5);
-    color: #3665ef;
-    background-color: #ffff
-}
-
-
-
 /* Header */
 
 /* Reset básico */

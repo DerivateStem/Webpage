@@ -4,27 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DERIVATE | RIFP 2024</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>DERIVATE</title>
-  <link rel="stylesheet" href="index2.css">
-  <link rel="stylesheet" href="css/RIFP.css">
-  <script src="https://kit.fontawesome.com/45430dc581.js" crossorigin="anonymous"></script>
-  <style>
-    .contenedor > h2.after::after {
-        /* Asegura que la línea de subrayado ocupe el 100% del ancho del título. */
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-  </style>
+
+  <!-- Hojas de estilo -->
+  <link rel="stylesheet" href="index2.css" />
+  <link rel="stylesheet" href="css/RIFP.css" />
+
+  <!-- Iconos -->
+  <script src="https://kit.fontawesome.com/45430dc581.js" crossorigin="anonymous" defer></script>
 </head>
 <body class="rifp-page">
   <header>
-    <div id="navbar"></div>
+    <nav id="nav" class="nav1" aria-label="Navegación principal">
+      <div class="contenedor-nav">
+        <div class="logo">
+          <a href="index.html"><img src="assets/img/logo_long.webp" alt="Logo Derivate" /></a>
+        </div>
+        <ul class="enlaces" id="enlaces">
+          <li><a href="index.html" class="btn-header">Inicio</a></li>
+          <li><a href="equipo.html" class="btn-header">Equipo</a></li>
+          <li><a href="conocenos.html" class="btn-header">Conócenos</a></li>
+          <li><a href="#galeria" class="btn-header">Eventos</a></li>
+          <li><a href="#Contacto" class="btn-header">Contacto</a></li>
+        </ul>
+        <button class="icono" id="open" aria-label="Abrir menú" aria-expanded="false" aria-controls="enlaces">
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+      </div>
+    </nav>
+
     <div class="noticias-hero-img">
-      <img src="MEDIA/RIFP 2.jpg" alt="Portada RIFP 2024" />
+      <img src="assets/img/RIFP 2.jpg" alt="Portada RIFP 2024" />
       <div class="noticias-hero-titulo">
         REUNIÓN INTERNACIONAL DE FÍSICOS EN POSGRADO
         <span class="subtitulo-evento">RIFP 2024</span>
@@ -45,10 +54,10 @@
         <button class="slider-button prev" aria-label="Anterior">❮</button>
         <button class="slider-button next" aria-label="Siguiente">❯</button>
         <ul>
-          <li><img src="MEDIA/RIFP-2.jpg" alt="RIFP 2024" loading="lazy" decoding="async" /></li>
-          <li><img src="MEDIA/Andres Argandoña 1.jpg" alt="Andrés Argandoña" loading="lazy" decoding="async" /></li>
-          <li><img src="MEDIA/Fernando Temoche 1.jpg" alt="Fernando Temoche" loading="lazy" decoding="async" /></li>
-          <li><img src="MEDIA/David Cespedes 1.jpg" alt="David Céspedes" loading="lazy" decoding="async" /></li>
+          <li><img src="assets/img/RIFP-2.jpg" alt="RIFP 2024" loading="lazy" decoding="async" /></li>
+          <li><img src="assets/img/Andres Argandoña 1.jpg" alt="Andrés Argandoña" loading="lazy" decoding="async" /></li>
+          <li><img src="assets/img/Fernando Temoche 1.jpg" alt="Fernando Temoche" loading="lazy" decoding="async" /></li>
+          <li><img src="assets/img/David Cespedes 1.jpg" alt="David Céspedes" loading="lazy" decoding="async" /></li>
         </ul>
       </div>
     </section>
@@ -184,7 +193,7 @@
     <div class="footer-contenedor">
       <hr class="footer-line" />
       <div class="marca-logo">
-        <img src="MEDIA/logo-blanco.webp" alt="Logo Derivate blanco" />
+        <img src="assets/img/logo-blanco.webp" alt="Logo Derivate blanco" />
       </div>
       <p>Síguenos para más información</p>
       <div class="iconos">
@@ -195,7 +204,7 @@
     </div>
   </footer>
 
-    </footer>
-    <script src="js/RIFP.js"></script>
+  <!-- Un único JS para evitar duplicados de listeners -->
+  <script src="js/RIFP.js" defer></script>
 </body>
 </html>
