@@ -7,33 +7,14 @@
   <title>DERIVATE | RIFP 2024</title>
   <meta name="description" content="Reunión Internacional de Físicos en Posgrado (RIFP 2024): ponencias, galería y detalles del evento." />
   <!-- Estilos global y de página -->
-  <link rel="stylesheet" href="index2.css" />
+  <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/RIFP.css" />
   <!-- Iconos -->
   <script src="https://kit.fontawesome.com/45430dc581.js" crossorigin="anonymous" defer></script>
 </head>
 <body class="rifp-page">
-  <header>
-    <nav id="nav" class="nav1" aria-label="Navegación principal">
-      <div class="contenedor-nav">
-        <div class="logo">
-          <a href="index.html" aria-label="Inicio DERIVATE">
-            <img src="assets/img/logo_long.webp" alt="Logo Derivate" />
-          </a>
-        </div>
-        <ul class="enlaces" id="enlaces">
-          <li><a href="index.html" class="btn-header">Inicio</a></li>
-          <li><a href="equipo.html" class="btn-header">Equipo</a></li>
-          <li><a href="conocenos.html" class="btn-header">Conócenos</a></li>
-          <li><a href="#galeria" class="btn-header">Eventos</a></li>
-          <li><a href="#Contacto" class="btn-header">Contacto</a></li>
-        </ul>
-        <button class="icono" id="open" aria-label="Abrir menú" aria-expanded="false" aria-controls="enlaces">
-          <span aria-hidden="true">&#9776;</span>
-        </button>
-      </div>
-    </nav>
-
+  <div id="navbar"></div>
+  <header class="evento-header">
     <div class="noticias-hero-img">
       <img src="assets/img/RIFP 2.jpg" alt="Portada de la Reunión Internacional de Físicos en Posgrado 2024" />
       <div class="noticias-hero-titulo">
@@ -41,7 +22,7 @@
         <span class="subtitulo-evento">RIFP 2024</span>
       </div>
     </div>
-  </header>
+  </header> 
 
   <main>
     <!-- Intro -->
@@ -224,22 +205,23 @@
   </main>
 
   <!-- Footer -->
-  <footer id="Contacto">
-    <div class="footer-contenedor">
-      <hr class="footer-line" />
-      <div class="marca-logo">
-        <img src="assets/img/logo-blanco.webp" alt="Logo Derivate blanco" />
-      </div>
-      <p>Síguenos para más información</p>
-      <div class="iconos">
-        <a href="https://www.instagram.com/derivate.stem/" target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/derivatestem" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=61555020923912" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
-      </div>
-    </div>
-  </footer>
+  <div id="footer"></div>
 
   <!-- Script de la página -->
   <script src="js/RIFP.js" defer></script>
+  <script type="module">
+    import { initNavbar } from './js/header.js';
+    const navbarMount = document.getElementById('navbar');
+    fetch('components/header.html')
+        .then(r => r.text())
+        .then(html => {
+            navbarMount.innerHTML = html;
+            initNavbar(navbarMount);
+        });
+    fetch("components/footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer").innerHTML = data)
+        .catch(error => console.error("Error al cargar el footer:", error));
+  </script>
 </body>
 </html>
