@@ -205,3 +205,45 @@ header{height:auto!important;background:none!important}
   .rifp-gallery-slider ul{transition:none}
   .ponente-flip{transition:none}
 }
+
+/* ====== PATCH: Reverso con fondo azul, texto blanco centrado y sin caja negra ====== */
+
+/* Fondo del reverso (ajusta los colores si tu paleta usa otros tonos) */
+.ponente-back{
+  background: linear-gradient(180deg, #1b2440, #222b4d); /* azul oscuro */
+  color: #ffffff;
+  align-items: center;      /* centra verticalmente el contenido */
+  justify-content: center;  /* centra horizontalmente el contenido */
+  padding: 2rem 1.5rem;
+}
+
+/* Contenedor del texto del reverso */
+.ponente-descripcion{
+  max-width: 85%;
+  text-align: center;       /* texto centrado */
+  color: #ffffff;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  letter-spacing: .2px;
+
+  /* aseguramos que no tenga fondo ni caja */
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Y por si algún párrafo trae fondo de otra hoja (global.css) */
+.ponente-descripcion p{
+  background: transparent !important;
+  color: inherit;
+  margin: 0 0 .9rem;
+  padding: 0;
+  border: 0;
+  box-shadow: none !important;
+  border-radius: 0;
+}
+.ponente-descripcion p:last-child{ margin-bottom: 0; }
+
