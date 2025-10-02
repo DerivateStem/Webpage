@@ -1,202 +1,173 @@
-/* =========================================================
-   RIFP.css — Estilos para RIFP.html (flip cards OK + click OK)
-   ========================================================= */
-
-/* ----- Header local ----- */
-header{height:auto!important;background:none!important}
-
-/* ----- HERO ----- */
-.noticias-hero-img{position:relative;background:#111}
-.noticias-hero-img img{
-  width:100%;max-height:650px;display:block;
-  object-fit:cover;object-position:center 65%;
-}
-.noticias-hero-img::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.35));
-  pointer-events:none;
-}
-.noticias-hero-titulo{
-  position:absolute;bottom:50px;left:50%;transform:translateX(-50%);
-  width:90%;color:#fff;font-size:3.2rem;font-weight:800;text-align:center;
-  letter-spacing:1px;line-height:1.3;text-shadow:0 4px 15px rgba(0,0,0,.6);
-}
-.noticias-hero-titulo .subtitulo-evento{
-  display:block;font-size:2.2rem;font-weight:600;color:#FFC30E;margin-top:.5rem;
-  letter-spacing:1.5px;text-shadow:0 2px 10px rgba(0,0,0,.5);
+header {
+  height: auto !important; /* Anula la altura fija del header general */
+  background: none !important; /* Elimina la imagen de fondo general */
 }
 
-/* ----- Intro ----- */
-.evento-intro{padding:4rem 2rem;text-align:center;max-width:900px;margin:0 auto}
-.evento-intro h2{font-size:2.5rem;color:var(--color1);margin-bottom:1.5rem}
-.evento-intro p{font-size:1.1rem;line-height:1.7;color:var(--color2)}
-
-/* ----- Galería ----- */
-.evento-galeria{padding:4rem 2rem;text-align:center}
-.evento-galeria h2{font-size:2.5rem;color:var(--color1);margin-bottom:3rem}
-
-.rifp-gallery-slider{
-  position:relative;max-width:1400px;aspect-ratio:2/1;margin:0 auto;
-  overflow:hidden;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,.15);
-}
-.rifp-gallery-slider ul{
-  display:flex;height:100%;padding:0;margin:0;list-style:none;
-  transition:transform .5s ease-in-out;
-}
-.rifp-gallery-slider li{min-width:100%;height:100%;flex-shrink:0}
-.rifp-gallery-slider img{width:100%;height:100%;display:block;object-fit:cover}
-
-.rifp-gallery-slider .slider-button{
-  position:absolute;top:50%;transform:translateY(-50%);
-  background:rgba(255,255,255,.7);border:none;font-size:2rem;cursor:pointer;
-  z-index:10;border-radius:50%;width:50px;height:50px;display:grid;place-items:center;
-  transition:background .3s ease;
-}
-.rifp-gallery-slider .slider-button:hover{background:#fff}
-.rifp-gallery-slider .slider-button.prev{left:15px}
-.rifp-gallery-slider .slider-button.next{right:15px}
-
-/* =========================================================
-   Ponentes (flip cards)
-   ========================================================= */
-.ponentes-seccion{padding:2rem}
-.ponentes-seccion h2{font-size:2.5rem;color:var(--color1);text-align:center;margin-bottom:3rem}
-
-.ponentes-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;justify-items:center;
-  padding:2rem 0;width:100%;box-sizing:border-box;
-}
-
-.ponente-card{
-  perspective:1000px;width:100%;max-width:370px;height:520px;border-radius:32px;
-  background:none;box-shadow:0 10px 40px rgba(0,0,0,.28);
-  transition:box-shadow .3s;margin-bottom:2rem;display:flex;outline:none;
-  cursor:pointer;pointer-events:auto;position:relative;
-}
-.ponente-card:hover{box-shadow:0 18px 56px rgba(0,0,0,.38)}
-
-.ponente-flip{
-  position:relative;width:100%;height:100%;
-  transform-style:preserve-3d;
-  transition:transform .6s cubic-bezier(.25,.8,.25,1);
-}
-.ponente-card.flipped .ponente-flip{transform:rotateY(180deg)}
-
-/* Caras */
-.ponente-front,.ponente-back{
-  position:absolute;inset:0;border-radius:32px;
-  display:flex;flex-direction:column;box-sizing:border-box;
-  backface-visibility:hidden;-webkit-backface-visibility:hidden;
-  pointer-events:none; /* para que el click llegue a .ponente-card */
-}
-
-/* Frente (texto) */
-.ponente-front{
-  transform:rotateY(0deg);z-index:2;
-  background:#2b2940;color:#fff;font-family:'Montserrat',Arial,sans-serif;
-  align-items:center;justify-content:center;padding:3rem 2rem;text-align:center;
-}
-.ponente-nombre{font-size:2.2rem;font-weight:800;margin-bottom:1rem;line-height:1.1}
-.ponente-afiliacion{
-  font-size:1.1rem;margin-bottom:1rem;font-weight:600;line-height:1.2;
-  text-transform:uppercase;letter-spacing:1px;text-align:center;
-}
-.ponente-charla{font-size:1.05rem;font-style:italic;margin-bottom:.5rem;font-weight:500;line-height:1.3}
-
-/* Reverso (foto full) */
-.ponente-back{
-  transform:rotateY(180deg);z-index:1;background:#000;overflow:hidden;position:relative;
-}
-.ponente-back .ponente-foto{
-  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;border-radius:32px;
-}
-.ponente-back .ponente-foto.placeholder{background:#3b3854}
-
-/* Línea decorativa bajo títulos que se ajusta al ancho del texto */
-.evento-intro h2.after,.ponentes-seccion h2.after{display:inline-block}
-.evento-intro h2.after::after,.ponentes-seccion h2.after::after{width:100%}
-
-/* ----- Menú móvil helper (si lo usas) ----- */
-@media (max-width:768px){
-  .enlaces{display:none}
-  .enlaces.is-open{display:block}
-}
-
-/* ----- Responsive ----- */
-@media (max-width:1100px){
-  .ponentes-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media (max-width:768px){
-  .noticias-hero-titulo{font-size:2rem;bottom:20px;width:95%}
-  .noticias-hero-titulo .subtitulo-evento{font-size:1.6rem;margin-top:.3rem}
-
-  .evento-intro,.evento-galeria,.ponentes-seccion{padding:3rem 1rem}
-  .evento-intro h2,.evento-galeria h2,.ponentes-seccion h2{font-size:2.1rem;margin-bottom:2rem}
-  .evento-intro p{font-size:1rem}
-
-  .rifp-gallery-slider{aspect-ratio:4/3}
-  .rifp-gallery-slider .slider-button{width:40px;height:40px;font-size:1.5rem}
-  .rifp-gallery-slider .slider-button.prev{left:10px}
-  .rifp-gallery-slider .slider-button.next{right:10px}
-
-  .ponentes-grid{grid-template-columns:1fr;gap:1.5rem}
-  .ponente-card{height:520px;max-width:350px;margin:0 auto 1.5rem}
-}
-
-/* ----- Reduced motion ----- */
-@media (prefers-reduced-motion:reduce){
-  .rifp-gallery-slider ul{transition:none}
-  .ponente-flip{transition:none}
-}
-
-/* ============== Reverso: imagen con width:100% y height:auto ============== */
-
-/* el reverso actúa como un contenedor que centra la imagen */
-.ponente-back{
-  transform: rotateY(180deg) translateZ(1px); /* evita z-fighting */
-  background: #000;
-  overflow: hidden;
+.noticias-hero-img {
   position: relative;
-
-  /* CENTRADO por si la imagen no ocupa todo */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  background-color: #111; /* Color de fondo por si la imagen no carga */
 }
 
-/* la imagen ya NO es absoluta: respeta su proporción */
-.ponente-back .ponente-foto{
-  position: static;          /* antes: absolute */
+.noticias-hero-img img {
   width: 100%;
-  height: auto;              /* << lo que pediste */
-  max-height: 100%;          /* no se sale de la tarjeta */
-  object-fit: contain;       /* encaja sin recortar */
+  max-height: 650px; /* Aumentado para que la imagen sea más grande verticalmente */
+  object-fit: cover;
+  object-position: center 65%; /* Imagen deslizada mucho más hacia arriba */
+  opacity: 0.7; /* Un poco más claro para que se vean mejor los detalles */
+}
+
+.noticias-hero-titulo {
+  position: absolute;
+  bottom: 50px; /* Movido a la parte inferior */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  color: #fff;
+  font-size: 3.2rem; /* Ligeramente más pequeño para dar espacio */
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 0px 4px 15px rgba(0,0,0,0.6);
+  line-height: 1.3;
+}
+
+.noticias-hero-titulo .subtitulo-evento {
   display: block;
-  margin: 0 auto;
-  border-radius: 0;          /* sin redondeo para que no “coma” píxeles */
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #FFc30e; /* Color de acento */
+  margin-top: 0.5rem;
+  letter-spacing: 1.5px;
+  text-shadow: 0px 2px 10px rgba(0,0,0,0.5);
 }
 
-/* ============== Flip: asegúrate de que las caras se vean ============== */
-.ponente-card{
-  perspective: 1200px;
-  will-change: transform;
+/* Sección de Introducción */
+.evento-intro {
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.evento-intro h2 {
+    font-size: 2.5rem;
+    color: var(--color1);
+    margin-bottom: 1.5rem;
+}
+.evento-intro p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color2);
 }
 
-.ponente-flip{
-  transform-style: preserve-3d;
-  transition: transform .6s cubic-bezier(.25,.8,.25,1);
+/* Sección Galería de Evento */
+.evento-galeria {
+    padding: 4rem 2rem;
+    text-align: center;
 }
 
-.ponente-front,
-.ponente-back{
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+.evento-galeria h2 {
+    font-size: 2.5rem;
+    color: var(--color1);
+    margin-bottom: 3rem;
 }
 
-.ponente-front{
-  transform: rotateY(0deg) translateZ(1px);  /* sube una “micra” para evitar parpadeos */
-  z-index: 2;
+.rifp-gallery-slider {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 600px; /* Altura fija para la galería */
+}
+
+.rifp-gallery-slider ul {
+    height: 100%;
+}
+
+.rifp-gallery-slider li
+/* Sección de Ponentes */
+.ponentes-seccion {
+    padding: 2rem;
+}
+.ponentes-seccion h2 {
+    font-size: 2.5rem;
+    color: var(--color1);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.ponentes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+.ponente-card {
+    background: #2a2841;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.ponente-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 32px rgba(255, 195, 14, 0.2);
+}
+.ponente-img-container {
+    width: 100%;
+    height: 280px;
+}
+.ponente-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+.ponente-info {
+    padding: 1.5rem;
+    color: var(--color1);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.ponente-nombre {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #FFc30e;
+    margin-bottom: 0.5rem;
+}
+.ponente-afiliacion {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--color2);
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem; /* Valor añadido para completar la regla */
+}
+.ponente-charla {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color1);
+    flex-grow: 1;
+}
+
+/* Ajuste para que la línea bajo los títulos ocupe todo el ancho del texto */
+.evento-intro h2.after,
+.ponentes-seccion h2.after {
+  display: inline-block; /* Hace que el contenedor del título se ajuste al texto */
+}
+
+.evento-intro h2.after::after,
+.ponentes-seccion h2.after::after {
+  width: 100%; /* La línea ahora ocupa el 100% del ancho del título */
+}
+
+@media (max-width: 768px) {
+  .noticias-hero-titulo {
+    font-size: 2.2rem;
+    bottom: 30px; /* Ajustado para la nueva posición inferior */
+  }
+  .ponentes-grid {
+    grid-template-columns: 1fr;
+  }
+  .noticias-hero-titulo .subtitulo-evento {
+    font-size: 1.8rem;
+    margin-top: 0.2rem;
+  }
 }
