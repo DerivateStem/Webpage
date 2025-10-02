@@ -160,12 +160,16 @@ header{height:auto!important;background:none!important}
 /* Contenedor del texto del reverso */
 .ponente-descripcion{
   max-width: 85%;
-  text-align: center;       /* texto centrado */
+  text-align: center;
   color: #ffffff;
   margin: 0 auto;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  letter-spacing: .2px;
+
+  /* ↓ más compacto */
+  font-size: 0.95rem;     /* antes 1.05rem */
+  line-height: 1.55;      /* antes 1.7 */
+  letter-spacing: .1px;   /* antes .2px */
+}
+
 
   /* aseguramos que no tenga fondo ni caja */
   background: transparent !important;
