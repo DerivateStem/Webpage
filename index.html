@@ -83,25 +83,50 @@
                 <div class="carousel__dots" aria-label="Paginación"></div>
             </div>
         </section>
-        <section class="news" id="Novedades">
-            <div class="news__wrap">
-                <h2 class="news__title">Novedades</h2>
-                <ul class="news__list">
-                    <li class="news__item">
-                        <img src="assets/img/F1.png" alt="Felicitaciones David — Derivate">
-                    </li>
-                    <li class="news__item">
-                        <img src="assets/img/F2.png" alt="Felicitaciones Hipólito, Sergio y Mariano — Derivate">
-                    </li>
-                    <li class="news__item">
-                        <img src="assets/img/F3.png" alt="Copa Derivate — Torneo FC24">
-                    </li>
-                    <li class="news__item">
-                        <img src="assets/img/F4.png" alt="Felicitaciones Juan — Derivate">
-                    </li>
-                </ul>
-            </div>
-        </section>
+<section class="news" id="Novedades">
+            <div class="news__wrap">
+                <h2 class="news__title">Novedades</h2>
+                
+                                <div class="carousel" role="region" aria-label="Novedades">
+                                        <button class="carousel__btn prev" aria-label="Anterior">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button class="carousel__btn next" aria-label="Siguiente">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+
+                                        <ul class="carousel__viewport">
+                                                <li class="slide">
+                            <img src="assets/img/F1.png" alt="Felicitaciones David — Derivate">
+                        </li>
+                        <li class="slide">
+                            <img src="assets/img/F2.png" alt="Felicitaciones Hipólito, Sergio y Mariano — Derivate">
+                          </li>
+                        <li class="slide">
+                            <img src="assets/img/F3.png" alt="Copa Derivate — Torneo FC24">
+                        </li>
+                        <li class="slide">
+                            <img src="assets/img/F4.png" alt="Felicitaciones Juan — Derivate">
+                        </li>
+                        
+                                                <li class="slide">
+                            <img src="assets/img/NUEVA-IMAGEN-1.png" alt="Descripción de la nueva imagen">
+                        </li>
+                        <li class="slide">
+                            <img src="assets/img/NUEVA-IMAGEN-2.jpg" alt="Descripción de la otra nueva imagen">
+                        </li>
+                    </ul>
+
+                    <div class="carousel__dots" aria-label="Paginación"></div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <div id="footer"></div>
@@ -128,3 +153,4 @@
 </body>
 
 </html>
+
