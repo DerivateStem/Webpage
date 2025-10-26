@@ -135,3 +135,73 @@
         transition: none
     }
 }
+
+
+/* para el carrusel */
+
+/* Oculta las partes del carrusel que no se ven */
+#Novedades .carousel {
+  position: relative;
+  overflow: hidden; 
+}
+
+/* Este es el "riel" que se moverá con JS */
+#Novedades .carousel__viewport {
+    display: flex;
+    transform: translateX(0); 
+    transition: transform 0.3s ease-in-out;
+}
+
+/* ★ ESTO ARREGLA LA IMAGEN GIGANTE ★ */
+#Novedades .slide {
+    flex-basis: 100%;  /* Cada slide ocupa el 100% del contenedor */
+    flex-shrink: 0;   /* Evita que se encojan */
+    padding: 0 10px;    /* Espacio entre slides */
+    box-sizing: border-box; 
+}
+
+#Novedades .slide img {
+    width: 100%; 
+    height: 400px; /* altura fija  */
+    object-fit: cover; /* Rellena sin deformar */
+    border-radius: var(--radius); /* Reutiliza tu variable de borde */
+}
+
+/* ★ ESTO ARREGLA LAS FLECHAS OSCURAS ★ */
+#Novedades .carousel__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; 
+    
+    /* Fondo blanco semitransparente para que se vea */
+    background: rgba(255, 255, 255, 0.2); 
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+#Novedades .carousel__btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Color blanco para el SVG de la flecha */
+#Novedades .carousel__btn svg {
+    color: white; 
+    width: 24px;
+    height: 24px;
+}
+
+#Novedades .carousel__btn.prev {
+  left: 20px;
+}
+
+#Novedades .carousel__btn.next {
+  right: 20px;
+}
