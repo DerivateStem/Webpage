@@ -205,3 +205,28 @@
 #Novedades .carousel__btn.next {
   right: 20px;
 }
+
+/* (Arreglo para Desktop y Tablet) */
+
+
+/* En pantallas de TABLET (640px de ancho o más) */
+@media (min-width: 640px) {
+    #Novedades .slide {
+        /* Muestra 2 slides a la vez */
+        flex-basis: calc(100% / 2); 
+    }
+}
+
+/* En pantallas de DESKTOP (960px de ancho o más) */
+@media (min-width: 960px) {
+    #Novedades .slide {
+        /* Muestra 4 slides a la vez */
+        flex-basis: calc(100% / 4); 
+    }
+
+    /* Opcional: ajusta la altura de la imagen en desktop 
+       para que no sean tan altas */
+    #Novedades .slide img {
+        height: 300px; 
+    }
+}
