@@ -163,7 +163,7 @@
 #Novedades .slide img {
     width: 100%; 
     height: 400px; /* altura fija  */
-    object-fit: cover; /* Rellena sin deformar */
+    object-fit: contain; /* Rellena sin deformar */
     border-radius: var(--radius); /* Reutiliza tu variable de borde */
 }
 
