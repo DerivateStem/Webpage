@@ -68,9 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* =======================
      Flip de tarjetas
-     (con soporte teclado)
+     (con soporte teclado + scroll en reverso)
   ======================= */
   const cards = document.querySelectorAll('.ponente-card');
+
   // Estado limpio al cargar
   document.querySelectorAll('.ponente-card.flipped').forEach(c => c.classList.remove('flipped'));
 
@@ -79,14 +80,24 @@ document.addEventListener('DOMContentLoaded', () => {
     card.setAttribute('role', 'button');
     card.setAttribute('tabindex', '0');
 
-    // click/tap
-    card.addEventListener('click', () => {
+    // Hacer el reverso enfocable para permitir scroll con teclado (Space, PageDown, flechas)
+    const back = card.querySelector('.ponente-back');
+    if (back) back.setAttribute('tabindex', '0');
+
+    // Click: evita flip si el click viene desde el reverso (queremos poder scrollear/clicar adentro)
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('.ponente-back')) return;
       card.classList.toggle('flipped');
     });
 
-    // teclado
+    // Teclado: Enter o Space voltean SOLO si no estamos interactuando dentro del reverso
     card.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
+      const insideBack =
+        document.activeElement &&
+        card.contains(document.activeElement) &&
+        document.activeElement.closest('.ponente-back');
+
+      if ((e.key === 'Enter' || e.key === ' ') && !insideBack) {
         e.preventDefault();
         card.classList.toggle('flipped');
       }
@@ -94,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* =======================
-     Manejo de errores en imágenes del reverso
+     Manejo de errores en imágenes
      (si falla carga, mostramos placeholder limpio)
   ======================= */
   document.querySelectorAll('.ponente-foto').forEach((img) => {
