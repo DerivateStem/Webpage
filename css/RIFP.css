@@ -1,5 +1,5 @@
 /* =========================================================
-   RIFP.css — Estilos para RIFP.html (flip cards OK + click OK)
+   RIFP.css — Estilos para RIFP.html (flip cards OK + scroll en reverso)
    ========================================================= */
 
 /* ----- Header local ----- */
@@ -85,17 +85,17 @@ header{height:auto!important;background:none!important}
 .ponente-card.flipped .ponente-flip{transform:rotateY(180deg)}
 
 /* Caras */
-.ponente-front,.ponente-back{
+.ponente-front,
+.ponente-back{
   position:absolute;inset:0;border-radius:32px;
   display:flex;flex-direction:column;box-sizing:border-box;
   backface-visibility:hidden;-webkit-backface-visibility:hidden;
-  pointer-events:none; /* deja pasar el click al contenedor .ponente-card */
+  /* IMPORTANTE: NO bloquear eventos aquí; manejamos el flip por JS */
 }
 
 /* =========================================================
-   FRENTE (AHORA: miniatura + nombre + charla)
+   FRENTE (miniatura + nombre + charla)
    ========================================================= */
-/* CAMBIO: el frente ahora es la cara "visual" con miniatura + textos */
 .ponente-front{
   transform:rotateY(0deg) translateZ(1px); /* evita parpadeos */
   z-index:2;
@@ -107,9 +107,8 @@ header{height:auto!important;background:none!important}
 
 /* Contenedor de la miniatura */
 .ponente-thumb{
-  /* CAMBIO: definimos un tamaño reducido, proporcional y centrado */
   width:min(68%,230px);
-  aspect-ratio:1/1;                 /* mantiene cuadrado para recortar */
+  aspect-ratio:1/1;
   border-radius:18px;
   overflow:hidden;
   box-shadow:0 8px 24px rgba(0,0,0,.35);
@@ -140,16 +139,19 @@ header{height:auto!important;background:none!important}
 }
 
 /* =========================================================
-   REVERSO (AHORA: texto descriptivo)
+   REVERSO (texto descriptivo con scroll)
    ========================================================= */
-/* CAMBIO: el reverso deja de ser foto y pasa a ser bloque de texto */
 .ponente-back{
   transform:rotateY(180deg) translateZ(1px);
   background:linear-gradient(180deg,#141226,#1c1a33);
   color:#eae8ff;
   padding:2rem 1.5rem 1.75rem;
   align-items:flex-start;justify-content:flex-start;
+
+  /* CLAVE para poder hacer scroll e interactuar */
+  pointer-events:auto;
   overflow:auto;
+  -webkit-overflow-scrolling:touch; /* suaviza scroll en iOS */
 }
 
 /* Contenido de la descripción */
