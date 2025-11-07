@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DERIVATE | ENTRE FISICOS 2026</title>
+
+  <!-- Hojas de estilo -->
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/EntreFisicos2026.css" />
+
+  <!-- Iconos -->
+  <script src="https://kit.fontawesome.com/45430dc581.js" crossorigin="anonymous" defer></script>
+</head>
+<body class="rifp-page">
+  <div id="navbar"></div>
+
+  <!-- ================= HERO ================= -->
+  <header class="evento-header">
+    <div class="noticias-hero-img">
+      <img src="" alt="" />
+      <div class="noticias-hero-titulo">
+        ENTRE FISICOS 2026
+        <span class="subtitulo-evento">ENTRE FISICOS 2026</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+  </main>
+
+  <footer id="Contacto">
+    <div class="footer-contenedor">
+      <hr class="footer-line" />
+      <div class="marca-logo">
+        <img src="assets/img/logo-blanco.webp" alt="Logo Derivate blanco" />
+      </div>
+      <p>Síguenos para más información</p>
+      <div class="iconos">
+        <a href="https://www.instagram.com/derivate.stem/" target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/derivatestem" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61555020923912" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS principal de la página -->
+  <script src="js/RIFP.js" defer></script>
+
+  <!-- Carga de header/footer remotos -->
+  <script type="module">
+    import { initNavbar } from './js/header.js';
+    const navbarMount = document.getElementById('navbar');
+    fetch('components/header.html')
+      .then(r => r.text())
+      .then(html => {
+        navbarMount.innerHTML = html;
+        initNavbar(navbarMount);
+      });
+
+    fetch("components/footer.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("Contacto").innerHTML = data)
+      .catch(error => console.error("Error al cargar el footer:", error));
+  </script>
+</body>
+</html>
+
