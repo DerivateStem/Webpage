@@ -82,16 +82,16 @@
 .btn-header {
     display: inline-block;
     margin-top: 25px;
-    padding: 12px 30px;
-    border: 2px solid #FFC30E;
+    padding: 15px 40px;  /* Padding aumentado */
+    border: 3px solid #FFC30E;  /* Borde más grueso */
     border-radius: 50px;
     color: #FFC30E;
     background-color: transparent;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;  /* Tamaño de letra más grande */
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
     transition: all 0.3s ease;
 }
 
@@ -99,5 +99,5 @@
     background-color: #FFC30E;
     color: #002365;
     transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(255, 195, 14, 0.3);
+    box-shadow: 0 5px 12px rgba(255, 195, 14, 0.3);
 }
