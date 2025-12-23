@@ -18,7 +18,7 @@
         color: white;
         padding: 60px 20px 30px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin-top: auto; /* Empuja el footer al fondo si hay poco contenido */
+        margin-top: auto; 
     }
 
     .footer-container {
@@ -34,14 +34,8 @@
         gap: 30px;
     }
 
-    /* Ajuste de anchos */
-    .footer-brand {
-        flex: 1 1 280px; 
-    }
-
-    .footer-col {
-        flex: 1 1 140px; 
-    }
+    .footer-brand { flex: 1 1 280px; }
+    .footer-col { flex: 1 1 140px; }
 
     /* --- Estilos de la Marca (Logo) --- */
     .logo-text {
@@ -86,10 +80,7 @@
         border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    /* Importante: esto arregla los iconos gigantes */
-    .social-icons a i {
-        font-size: 18px; 
-    }
+    .social-icons a i { font-size: 18px; }
 
     .social-icons a:hover {
         background-color: #ffc107; 
@@ -113,9 +104,7 @@
         margin: 0;
     }
 
-    .footer-col ul li {
-        margin-bottom: 12px;
-    }
+    .footer-col ul li { margin-bottom: 12px; }
 
     .footer-col ul li a {
         color: #b0b0b0;
@@ -180,33 +169,15 @@
         transition: color 0.3s;
     }
 
-    .footer-legal a:hover {
-        color: #fff;
-    }
+    .footer-legal a:hover { color: #fff; }
 
     /* --- Responsive --- */
     @media (max-width: 768px) {
-        .footer-top {
-            flex-direction: column;
-            text-align: center;
-        }
-        .social-icons {
-            justify-content: center;
-            margin-top: 15px;
-        }
-        .footer-cta-center {
-            margin: 30px 0;
-        }
-        .btn-inscribete {
-            width: 80%;
-            text-align: center;
-            font-size: 18px;
-            padding: 15px 20px;
-        }
-        .footer-bottom {
-            flex-direction: column;
-            text-align: center;
-        }
+        .footer-top { flex-direction: column; text-align: center; }
+        .social-icons { justify-content: center; margin-top: 15px; }
+        .footer-cta-center { margin: 30px 0; }
+        .btn-inscribete { width: 80%; text-align: center; font-size: 18px; padding: 15px 20px; }
+        .footer-bottom { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
@@ -287,7 +258,7 @@
         </div>
 
         <div class="footer-cta-center">
-            <a href="#" class="btn-inscribete">
+            <a href="https://harvard-neutrinos.rc.fas.harvard.edu/event/31/overview" class="btn-inscribete" target="_blank">
                 Inscríbete ahora!!
             </a>
         </div>
@@ -311,14 +282,13 @@
     import { initNavbar } from './js/header.js';
     const navbarMount = document.getElementById('navbar');
     
-    // Solo cargamos el header
     fetch('components/header.html')
       .then(r => r.text())
       .then(html => {
         navbarMount.innerHTML = html;
         initNavbar(navbarMount);
       })
-      .catch(err => console.log("Header no encontrado (no importa si estás probando local)", err));
+      .catch(err => console.log("Header no encontrado", err));
   </script>
 </body>
 </html>
