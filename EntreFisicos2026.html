@@ -11,14 +11,16 @@
 
   <style>
     /* ========================================= */
-    /* ESTILOS DEL FOOTER DERIVATE COMPLETO */
+    /* ESTILOS DEL FOOTER */
     /* ========================================= */
     .footer-derivate {
-        background-color: #001A49; /* Azul oscuro corporativo */
+        background-color: #001A49; 
         color: white;
         padding: 60px 20px 30px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin-top: auto; 
+        position: relative; /* Necesario para las capas */
+        z-index: 10;
     }
 
     .footer-container {
@@ -26,7 +28,7 @@
         margin: 0 auto;
     }
 
-    /* --- Distribución de columnas --- */
+    /* --- Distribución --- */
     .footer-top {
         display: flex;
         flex-wrap: wrap;
@@ -37,7 +39,7 @@
     .footer-brand { flex: 1 1 280px; }
     .footer-col { flex: 1 1 140px; }
 
-    /* --- Estilos de la Marca (Logo) --- */
+    /* --- Logo --- */
     .logo-text {
         font-size: 26px;
         font-weight: 700;
@@ -48,83 +50,44 @@
         margin-bottom: 10px;
     }
 
-    .logo-icon {
-        font-size: 28px;
-        color: #ffc107; 
-    }
-
-    .slogan {
-        font-size: 14px;
-        color: #d1d1d1;
-        margin-bottom: 20px;
-        font-style: italic;
-    }
+    .logo-icon { font-size: 28px; color: #ffc107; }
+    .slogan { font-size: 14px; color: #d1d1d1; margin-bottom: 20px; font-style: italic; }
 
     /* --- Redes Sociales --- */
-    .social-icons {
-        display: flex;
-        gap: 12px;
-    }
+    .social-icons { display: flex; gap: 12px; }
 
     .social-icons a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 38px;
-        height: 38px;
+        display: flex; justify-content: center; align-items: center;
+        width: 38px; height: 38px;
         background-color: rgba(255, 255, 255, 0.1); 
-        color: white;
-        border-radius: 50%; 
-        text-decoration: none;
-        transition: all 0.3s ease;
+        color: white; border-radius: 50%; 
+        text-decoration: none; transition: all 0.3s ease;
         border: 1px solid rgba(255, 255, 255, 0.2);
     }
-
     .social-icons a i { font-size: 18px; }
-
     .social-icons a:hover {
-        background-color: #ffc107; 
-        color: #001A49; 
-        transform: translateY(-3px);
-        border-color: #ffc107;
+        background-color: #ffc107; color: #001A49; 
+        transform: translateY(-3px); border-color: #ffc107;
     }
 
-    /* --- Listas de enlaces --- */
-    .footer-col h4 {
-        font-size: 18px;
-        margin-bottom: 20px;
-        color: #fff;
-        font-weight: 600;
-        margin-top: 0;
-    }
-
-    .footer-col ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
+    /* --- Listas --- */
+    .footer-col h4 { font-size: 18px; margin-bottom: 20px; color: #fff; font-weight: 600; margin-top: 0;}
+    .footer-col ul { list-style: none; padding: 0; margin: 0; }
     .footer-col ul li { margin-bottom: 12px; }
-
     .footer-col ul li a {
-        color: #b0b0b0;
-        text-decoration: none;
-        font-size: 15px;
-        transition: color 0.2s;
+        color: #b0b0b0; text-decoration: none; font-size: 15px; transition: color 0.2s;
     }
+    .footer-col ul li a:hover { color: #ffc107; text-decoration: underline; }
 
-    .footer-col ul li a:hover {
-        color: #ffc107;
-        text-decoration: underline;
-    }
-
-    /* --- Botón Central Grande --- */
+    /* --- BOTÓN CENTRAL (CORREGIDO PARA QUE FUNCIONE SIEMPRE) --- */
     .footer-cta-center {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 50px 0 60px 0; 
+        margin: 50px 0 60px 0;
+        position: relative; /* Asegura que el contenedor respete capas */
+        z-index: 100;
     }
 
     .btn-inscribete {
@@ -141,6 +104,11 @@
         letter-spacing: 1px;
         transition: all 0.3s ease;
         border: 2px solid #ffc107;
+        
+        /* FUERZA BRUTA DE CSS: */
+        position: relative; 
+        z-index: 9999; /* Esto lo pone encima de TODO */
+        cursor: pointer; /* Asegura que aparezca la manito */
     }
 
     .btn-inscribete:hover {
@@ -154,21 +122,11 @@
     .footer-bottom {
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         padding-top: 25px;
-        font-size: 13px;
-        color: #888;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 15px;
+        font-size: 13px; color: #888;
+        display: flex; justify-content: space-between;
+        flex-wrap: wrap; gap: 15px;
     }
-
-    .footer-legal a {
-        color: #888;
-        text-decoration: none;
-        margin-left: 15px;
-        transition: color 0.3s;
-    }
-
+    .footer-legal a { color: #888; text-decoration: none; margin-left: 15px; transition: color 0.3s; }
     .footer-legal a:hover { color: #fff; }
 
     /* --- Responsive --- */
@@ -207,19 +165,13 @@
         <div class="footer-top">
             
             <div class="footer-brand">
-                <div class="logo-text">
-                    <span class="logo-icon">🌗</span> erivate
-                </div>
+                <div class="logo-text"><span class="logo-icon">🌗</span> erivate</div>
                 <p class="slogan">Rompiendo mitos, creando futuros</p>
-                
                 <div class="social-icons">
                     <a href="https://www.instagram.com/derivate.stem/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.facebook.com/profile.php?id=61555020923912" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://www.linkedin.com/company/derivatestem" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                    
-                    <a href="https://harvard-neutrinos.rc.fas.harvard.edu/event/31/" target="_blank" title="Evento Harvard Neutrinos">
-                        <i class="fa-solid fa-globe"></i>
-                    </a>
+                    <a href="https://harvard-neutrinos.rc.fas.harvard.edu/event/31/" target="_blank"><i class="fa-solid fa-globe"></i></a>
                 </div>
             </div>
 
@@ -258,7 +210,10 @@
         </div>
 
         <div class="footer-cta-center">
-            <a href="https://harvard-neutrinos.rc.fas.harvard.edu/event/31/overview" class="btn-inscribete" target="_blank">
+            <a href="https://harvard-neutrinos.rc.fas.harvard.edu/event/31/overview" 
+               class="btn-inscribete" 
+               target="_blank"
+               onclick="window.open('https://harvard-neutrinos.rc.fas.harvard.edu/event/31/overview', '_blank'); return false;">
                 Inscríbete ahora!!
             </a>
         </div>
@@ -277,11 +232,9 @@
   </footer>
 
   <script src="js/RIFP.js" defer></script>
-
   <script type="module">
     import { initNavbar } from './js/header.js';
     const navbarMount = document.getElementById('navbar');
-    
     fetch('components/header.html')
       .then(r => r.text())
       .then(html => {
