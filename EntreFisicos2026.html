@@ -11,16 +11,75 @@
 
   <style>
     /* ========================================= */
-    /* ESTILOS DEL FOOTER */
+    /* 1. ESTILOS GENERALES Y DEL CUERPO */
+    /* ========================================= */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Asegura que el footer se vaya al fondo */
+    }
+
+    /* ========================================= */
+    /* 2. SECCIÓN PRINCIPAL (DONDE ESTÁ EL BOTÓN) */
+    /* ========================================= */
+    .hero-section {
+        flex: 1; /* Ocupa todo el espacio libre entre header y footer */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra verticalmente */
+        align-items: center; /* Centra horizontalmente */
+        padding: 60px 20px;
+        text-align: center;
+        background-color: #f4f4f4; /* Un gris muy suave de fondo */
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        color: #001A49;
+        margin-bottom: 10px;
+        font-weight: 800;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 40px;
+        max-width: 600px;
+    }
+
+    /* ESTILO DEL BOTÓN GRANDE */
+    .btn-inscribete-main {
+        display: inline-block;
+        background-color: #ffc107; 
+        color: #001A49; 
+        font-size: 24px;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 25px 60px; 
+        border-radius: 8px; 
+        box-shadow: 0 10px 25px rgba(0, 26, 73, 0.2);
+        transition: all 0.3s ease;
+        border: 2px solid #ffc107;
+        cursor: pointer;
+    }
+
+    .btn-inscribete-main:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 26, 73, 0.3);
+        background-color: #ffca2c;
+    }
+
+    /* ========================================= */
+    /* 3. ESTILOS DEL FOOTER (LIMPIO) */
     /* ========================================= */
     .footer-derivate {
         background-color: #001A49; 
         color: white;
-        padding: 60px 20px 30px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin-top: auto; 
-        position: relative; /* Necesario para las capas */
-        z-index: 10;
+        padding: 50px 20px 20px;
     }
 
     .footer-container {
@@ -28,114 +87,57 @@
         margin: 0 auto;
     }
 
-    /* --- Distribución --- */
     .footer-top {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 30px;
+        margin-bottom: 40px;
     }
 
-    .footer-brand { flex: 1 1 280px; }
+    .footer-brand { flex: 1 1 250px; }
     .footer-col { flex: 1 1 140px; }
 
-    /* --- Logo --- */
-    .logo-text {
-        font-size: 26px;
-        font-weight: 700;
-        color: #4da6ff;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 10px;
-    }
+    /* Logo y Texto */
+    .logo-text { font-size: 24px; font-weight: 700; color: #4da6ff; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;}
+    .logo-icon { font-size: 24px; color: #ffc107; }
+    .slogan { font-size: 13px; color: #ccc; margin-bottom: 15px; font-style: italic; }
 
-    .logo-icon { font-size: 28px; color: #ffc107; }
-    .slogan { font-size: 14px; color: #d1d1d1; margin-bottom: 20px; font-style: italic; }
-
-    /* --- Redes Sociales --- */
-    .social-icons { display: flex; gap: 12px; }
-
+    /* Redes Sociales */
+    .social-icons { display: flex; gap: 10px; }
     .social-icons a {
         display: flex; justify-content: center; align-items: center;
-        width: 38px; height: 38px;
-        background-color: rgba(255, 255, 255, 0.1); 
-        color: white; border-radius: 50%; 
-        text-decoration: none; transition: all 0.3s ease;
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        width: 35px; height: 35px;
+        background-color: rgba(255,255,255,0.1); 
+        color: white; border-radius: 50%; text-decoration: none;
+        transition: 0.3s;
     }
-    .social-icons a i { font-size: 18px; }
-    .social-icons a:hover {
-        background-color: #ffc107; color: #001A49; 
-        transform: translateY(-3px); border-color: #ffc107;
-    }
+    .social-icons a:hover { background-color: #ffc107; color: #001A49; }
 
-    /* --- Listas --- */
-    .footer-col h4 { font-size: 18px; margin-bottom: 20px; color: #fff; font-weight: 600; margin-top: 0;}
+    /* Listas del footer */
+    .footer-col h4 { color: white; margin-bottom: 15px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px;}
     .footer-col ul { list-style: none; padding: 0; margin: 0; }
-    .footer-col ul li { margin-bottom: 12px; }
-    .footer-col ul li a {
-        color: #b0b0b0; text-decoration: none; font-size: 15px; transition: color 0.2s;
-    }
-    .footer-col ul li a:hover { color: #ffc107; text-decoration: underline; }
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col ul li a { color: #aaa; text-decoration: none; font-size: 14px; transition: 0.3s; }
+    .footer-col ul li a:hover { color: #ffc107; }
 
-    /* --- BOTÓN CENTRAL (CORREGIDO PARA QUE FUNCIONE SIEMPRE) --- */
-    .footer-cta-center {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 50px 0 60px 0;
-        position: relative; /* Asegura que el contenedor respete capas */
-        z-index: 100;
-    }
-
-    .btn-inscribete {
-        display: inline-block;
-        background-color: #ffc107; 
-        color: #001A49; 
-        font-size: 22px;
-        font-weight: 800;
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 20px 50px; 
-        border-radius: 4px; 
-        box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
-        letter-spacing: 1px;
-        transition: all 0.3s ease;
-        border: 2px solid #ffc107;
-        
-        /* FUERZA BRUTA DE CSS: */
-        position: relative; 
-        z-index: 9999; /* Esto lo pone encima de TODO */
-        cursor: pointer; /* Asegura que aparezca la manito */
-    }
-
-    .btn-inscribete:hover {
-        background-color: transparent; 
-        color: #ffc107; 
-        box-shadow: 0 6px 20px rgba(255, 193, 7, 0.2);
-        transform: scale(1.05); 
-    }
-
-    /* --- Copyright --- */
+    /* Copyright */
     .footer-bottom {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 25px;
-        font-size: 13px; color: #888;
-        display: flex; justify-content: space-between;
-        flex-wrap: wrap; gap: 15px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #777;
     }
-    .footer-legal a { color: #888; text-decoration: none; margin-left: 15px; transition: color 0.3s; }
-    .footer-legal a:hover { color: #fff; }
-
-    /* --- Responsive --- */
+    .footer-legal a { color: #777; margin-left: 10px; text-decoration: none; }
+    
+    /* Responsive */
     @media (max-width: 768px) {
         .footer-top { flex-direction: column; text-align: center; }
-        .social-icons { justify-content: center; margin-top: 15px; }
-        .footer-cta-center { margin: 30px 0; }
-        .btn-inscribete { width: 80%; text-align: center; font-size: 18px; padding: 15px 20px; }
-        .footer-bottom { flex-direction: column; text-align: center; }
+        .social-icons { justify-content: center; }
+        .footer-bottom { flex-direction: column; text-align: center; gap: 10px; }
+        .hero-title { font-size: 2rem; }
     }
   </style>
 </head>
@@ -145,25 +147,32 @@
   <div id="navbar"></div>
 
   <header class="evento-header">
-    <div class="noticias-hero-img">
-      <img src="" alt="" style="display:none;" /> 
-      <div class="noticias-hero-titulo" style="text-align:center; padding: 50px; background:#eee; color:#333;">
-        ENTRE FISICOS 2026
-        <br>
-        <span class="subtitulo-evento" style="font-size:0.6em;">Rompiendo mitos, creando futuros</span>
-      </div>
+    <div style="background: #001A49; color: white; padding: 20px; text-align: center;">
+        <h2 style="margin:0;">ENTRE FISICOS 2026</h2>
+        <span style="font-size: 0.8rem; color: #ffc107;">Rompiendo mitos, creando futuros</span>
     </div>
   </header>
 
-  <main style="min-height: 200px; padding: 20px;">
-     <p style="text-align:center;">Contenido de la página...</p>
+  <main class="hero-section">
+      
+      <h1 class="hero-title">¡Sé parte del cambio!</h1>
+      <p class="hero-subtitle">
+          Participa en el evento más esperado del año. Conecta, aprende y descubre el futuro de la física.
+      </p>
+
+      <a href="https://harvard-neutrinos.rc.fas.harvard.edu/event/31/overview" 
+         class="btn-inscribete-main" 
+         target="_blank"
+         onclick="window.open('https://harvard-neutrinos.rc.fas.harvard.edu/event/31/overview', '_blank'); return false;">
+          INCRÍBETE AHORA!!
+      </a>
+
   </main>
 
   <footer id="Contacto" class="footer-derivate">
     <div class="footer-container">
         
         <div class="footer-top">
-            
             <div class="footer-brand">
                 <div class="logo-text"><span class="logo-icon">🌗</span> erivate</div>
                 <p class="slogan">Rompiendo mitos, creando futuros</p>
@@ -209,19 +218,8 @@
             </div>
         </div>
 
-        <div class="footer-cta-center">
-            <a href="https://harvard-neutrinos.rc.fas.harvard.edu/event/31/overview" 
-               class="btn-inscribete" 
-               target="_blank"
-               onclick="window.open('https://harvard-neutrinos.rc.fas.harvard.edu/event/31/overview', '_blank'); return false;">
-                Inscríbete ahora!!
-            </a>
-        </div>
-
         <div class="footer-bottom">
-            <div class="copyright-text">
-                <p>© 2025 Derivate. Todos los derechos reservados.</p>
-            </div>
+            <div>© 2025 Derivate. Todos los derechos reservados.</div>
             <div class="footer-legal">
                 <a href="#">Privacidad</a> • 
                 <a href="#">Términos</a> • 
