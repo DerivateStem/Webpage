@@ -123,13 +123,13 @@
         initNavbar(navbarMount);
       });
 
-    fetch("components/footer.html")
       .then(response => response.text())
       .then(data => document.getElementById("Contacto").innerHTML = data)
       .catch(error => console.error("Error al cargar el footer:", error));
   </script>
 </body>
 </html>
+
 
 
 
