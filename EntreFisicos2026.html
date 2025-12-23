@@ -11,7 +11,7 @@
 
   <style>
     /* ========================================= */
-    /* 1. ESTILOS GENERALES Y DEL CUERPO */
+    /* 1. ESTILOS GENERALES */
     /* ========================================= */
     body {
         margin: 0;
@@ -19,54 +19,38 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         display: flex;
         flex-direction: column;
-        min-height: 100vh; /* Asegura que el footer se vaya al fondo */
+        min-height: 100vh;
     }
 
     /* ========================================= */
-    /* 2. SECCIÓN PRINCIPAL (DONDE ESTÁ EL BOTÓN) */
+    /* 2. SECCIÓN PRINCIPAL (HERO CON BOTÓN) */
     /* ========================================= */
     .hero-section {
-        flex: 1; /* Ocupa todo el espacio libre entre header y footer */
+        flex: 1;
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Centra verticalmente */
-        align-items: center; /* Centra horizontalmente */
+        justify-content: center;
+        align-items: center;
         padding: 60px 20px;
         text-align: center;
-        background-color: #f4f4f4; /* Un gris muy suave de fondo */
+        background-color: #f9f9f9; /* Fondo claro */
     }
 
-    .hero-title {
-        font-size: 3rem;
-        color: #001A49;
-        margin-bottom: 10px;
-        font-weight: 800;
-    }
+    .hero-title { font-size: 3rem; color: #001A49; margin-bottom: 10px; font-weight: 800; }
+    .hero-subtitle { font-size: 1.2rem; color: #555; margin-bottom: 40px; max-width: 600px; }
 
-    .hero-subtitle {
-        font-size: 1.2rem;
-        color: #555;
-        margin-bottom: 40px;
-        max-width: 600px;
-    }
-
-    /* ESTILO DEL BOTÓN GRANDE */
+    /* ESTILO DEL BOTÓN GRANDE AMARILLO */
     .btn-inscribete-main {
         display: inline-block;
         background-color: #ffc107; 
         color: #001A49; 
-        font-size: 24px;
-        font-weight: 900;
-        text-transform: uppercase;
-        text-decoration: none;
+        font-size: 24px; font-weight: 900;
+        text-transform: uppercase; text-decoration: none;
         padding: 25px 60px; 
         border-radius: 8px; 
         box-shadow: 0 10px 25px rgba(0, 26, 73, 0.2);
-        transition: all 0.3s ease;
-        border: 2px solid #ffc107;
-        cursor: pointer;
+        transition: all 0.3s ease; border: 2px solid #ffc107; cursor: pointer;
     }
-
     .btn-inscribete-main:hover {
         transform: translateY(-5px);
         box-shadow: 0 15px 35px rgba(0, 26, 73, 0.3);
@@ -74,69 +58,76 @@
     }
 
     /* ========================================= */
-    /* 3. ESTILOS DEL FOOTER (LIMPIO) */
+    /* 3. ESTILOS DEL FOOTER */
     /* ========================================= */
     .footer-derivate {
         background-color: #001A49; 
         color: white;
-        padding: 50px 20px 20px;
+        padding: 60px 20px 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .footer-container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
+    .footer-container { max-width: 1200px; margin: 0 auto; }
 
     .footer-top {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 30px;
-        margin-bottom: 40px;
+        display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; margin-bottom: 40px;
     }
-
-    .footer-brand { flex: 1 1 250px; }
-    .footer-col { flex: 1 1 140px; }
+    .footer-brand { flex: 2 1 300px; }
+    .footer-col { flex: 1 1 150px; }
 
     /* Logo y Texto */
-    .logo-text { font-size: 24px; font-weight: 700; color: #4da6ff; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;}
-    .logo-icon { font-size: 24px; color: #ffc107; }
-    .slogan { font-size: 13px; color: #ccc; margin-bottom: 15px; font-style: italic; }
+    .logo-text { font-size: 28px; font-weight: 700; color: #4da6ff; display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+    .logo-icon { font-size: 30px; color: #ffc107; }
+    .slogan { font-size: 15px; color: #d1d1d1; margin-bottom: 25px; font-style: italic; }
 
-    /* Redes Sociales */
-    .social-icons { display: flex; gap: 10px; }
-    .social-icons a {
-        display: flex; justify-content: center; align-items: center;
-        width: 35px; height: 35px;
-        background-color: rgba(255,255,255,0.1); 
-        color: white; border-radius: 50%; text-decoration: none;
-        transition: 0.3s;
+    /* --- AQUÍ ESTÁ EL ARREGLO DE LOS ICONOS DE REDES SOCIALES --- */
+    .social-icons { 
+        display: flex; 
+        gap: 20px; /* Más espacio entre ellos */
+        align-items: center;
     }
-    .social-icons a:hover { background-color: #ffc107; color: #001A49; }
 
-    /* Listas del footer */
-    .footer-col h4 { color: white; margin-bottom: 15px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px;}
+    .social-icons a {
+        /* Quitamos el círculo y el fondo */
+        display: inline-block;
+        width: auto; height: auto;
+        background-color: transparent; 
+        border: none; border-radius: 0;
+        color: white; /* Color inicial blanco */
+        text-decoration: none; transition: all 0.3s ease;
+    }
+    
+    /* HACEMOS LOS ICONOS GRANDES */
+    .social-icons a i { font-size: 38px; } 
+
+    .social-icons a:hover {
+        color: #ffc107; /* Amarillo al pasar el mouse */
+        transform: translateY(-3px);
+        background-color: transparent;
+    }
+    /* --------------------------------------------------------- */
+
+    /* Listas */
+    .footer-col h4 { font-size: 16px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; color: #fff; font-weight: 700; margin-top: 0;}
     .footer-col ul { list-style: none; padding: 0; margin: 0; }
-    .footer-col ul li { margin-bottom: 8px; }
-    .footer-col ul li a { color: #aaa; text-decoration: none; font-size: 14px; transition: 0.3s; }
-    .footer-col ul li a:hover { color: #ffc107; }
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col ul li a { color: #b0b0b0; text-decoration: none; font-size: 15px; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: #ffc107; text-decoration: underline; }
 
     /* Copyright */
     .footer-bottom {
-        border-top: 1px solid rgba(255,255,255,0.1);
-        padding-top: 20px;
-        display: flex;
-        justify-content: space-between;
-        font-size: 12px;
-        color: #777;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 25px; font-size: 13px; color: #888;
+        display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px;
     }
-    .footer-legal a { color: #777; margin-left: 10px; text-decoration: none; }
-    
+    .footer-legal a { color: #888; text-decoration: none; margin-left: 15px; transition: color 0.3s; }
+    .footer-legal a:hover { color: #fff; }
+
     /* Responsive */
     @media (max-width: 768px) {
-        .footer-top { flex-direction: column; text-align: center; }
+        .footer-top { flex-direction: column; gap: 30px; text-align: center;}
         .social-icons { justify-content: center; }
-        .footer-bottom { flex-direction: column; text-align: center; gap: 10px; }
+        .footer-bottom { flex-direction: column; text-align: center; }
         .hero-title { font-size: 2rem; }
     }
   </style>
@@ -149,16 +140,12 @@
   <header class="evento-header">
     <div style="background: #001A49; color: white; padding: 20px; text-align: center;">
         <h2 style="margin:0;">ENTRE FISICOS 2026</h2>
-        <span style="font-size: 0.8rem; color: #ffc107;">Rompiendo mitos, creando futuros</span>
     </div>
   </header>
 
   <main class="hero-section">
-      
       <h1 class="hero-title">¡Sé parte del cambio!</h1>
-      <p class="hero-subtitle">
-          Participa en el evento más esperado del año. Conecta, aprende y descubre el futuro de la física.
-      </p>
+      <p class="hero-subtitle">Participa en el evento más esperado del año. Conecta, aprende y descubre el futuro de la física.</p>
 
       <a href="https://harvard-neutrinos.rc.fas.harvard.edu/event/31/overview" 
          class="btn-inscribete-main" 
@@ -166,7 +153,6 @@
          onclick="window.open('https://harvard-neutrinos.rc.fas.harvard.edu/event/31/overview', '_blank'); return false;">
           INCRÍBETE AHORA!!
       </a>
-
   </main>
 
   <footer id="Contacto" class="footer-derivate">
@@ -176,6 +162,7 @@
             <div class="footer-brand">
                 <div class="logo-text"><span class="logo-icon">🌗</span> erivate</div>
                 <p class="slogan">Rompiendo mitos, creando futuros</p>
+                
                 <div class="social-icons">
                     <a href="https://www.instagram.com/derivate.stem/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.facebook.com/profile.php?id=61555020923912" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
@@ -192,7 +179,6 @@
                     <li><a href="#">Alianzas</a></li>
                 </ul>
             </div>
-
             <div class="footer-col">
                 <h4>Equipo</h4>
                 <ul>
@@ -200,7 +186,6 @@
                     <li><a href="#">Voluntariado</a></li>
                 </ul>
             </div>
-
             <div class="footer-col">
                 <h4>Eventos</h4>
                 <ul>
@@ -208,7 +193,6 @@
                     <li><a href="#">Talleres</a></li>
                 </ul>
             </div>
-
             <div class="footer-col">
                 <h4>Contacto</h4>
                 <ul>
@@ -219,11 +203,9 @@
         </div>
 
         <div class="footer-bottom">
-            <div>© 2025 Derivate. Todos los derechos reservados.</div>
+            <div class="copyright-text"><p>© 2025 Derivate. Todos los derechos reservados.</p></div>
             <div class="footer-legal">
-                <a href="#">Privacidad</a> • 
-                <a href="#">Términos</a> • 
-                <a href="#">Código de conducta</a>
+                <a href="#">Privacidad</a> • <a href="#">Términos</a> • <a href="#">Código de conducta</a>
             </div>
         </div>
     </div>
@@ -233,13 +215,7 @@
   <script type="module">
     import { initNavbar } from './js/header.js';
     const navbarMount = document.getElementById('navbar');
-    fetch('components/header.html')
-      .then(r => r.text())
-      .then(html => {
-        navbarMount.innerHTML = html;
-        initNavbar(navbarMount);
-      })
-      .catch(err => console.log("Header no encontrado", err));
+    fetch('components/header.html').then(r => r.text()).then(html => { navbarMount.innerHTML = html; initNavbar(navbarMount); }).catch(err => console.log("Header no encontrado", err));
   </script>
 </body>
 </html>
