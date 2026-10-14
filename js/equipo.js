@@ -1,105 +1,41 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // ====== SLIDER ======
-  const slider = document.querySelector(".slider-box ul");
-  const prevButton = document.querySelector(".slider-button.prev");
-  const nextButton = document.querySelector(".slider-button.next");
-  let currentSlide = 0;
+const filters = document.getElementById('team-filters');
 
-  if (slider && prevButton && nextButton) {
-    prevButton.addEventListener("click", () => {
-      if (currentSlide > 0) {
-        currentSlide--;
-        slider.style.transform = `translateX(-${currentSlide * 50}%)`;
-      }
-    });
+if (filters) {
+  const search = document.getElementById('busqueda');
+  const cards = [...document.querySelectorAll('.team-card')];
+  const count = document.getElementById('team-results');
+  const empty = document.getElementById('team-empty');
+  const fields = ['carrera', 'area', 'tipo', 'universidad'];
+  const normalize = (value) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
 
-    nextButton.addEventListener("click", () => {
-      if (currentSlide < 1) {
-        currentSlide++;
-        slider.style.transform = `translateX(-${currentSlide * 50}%)`;
-      }
+  function updateResults() {
+    const words = normalize(search.value).split(/\s+/).filter(Boolean);
+    let visible = 0;
+    cards.forEach((card) => {
+      const name = normalize(card.dataset.nombre);
+      const matchesName = words.every((word) => name.includes(word));
+      const matchesFields = fields.every((field) => {
+        const value = document.getElementById(field).value;
+        return !value || (card.dataset[field] || '').split(' ').includes(value);
+      });
+      card.hidden = !(matchesName && matchesFields);
+      if (card.hidden) card.querySelector('details').open = false;
+      else visible += 1;
     });
+    count.textContent = `${visible} de ${cards.length} perfiles`;
+    empty.hidden = visible > 0;
   }
 
-  // ====== MENÚ MÓVIL ======
-  const icono = document.getElementById("open");
-  const enlaces = document.getElementById("enlaces");
-  if (icono && enlaces) {
-    icono.addEventListener("click", () => {
-      enlaces.classList.toggle("activo");
-    });
-  }
-
-  // ====== FILTROS ======
-  const busquedaInput = document.getElementById("busqueda");
-  const selectCarrera = document.getElementById("carrera");
-  const selectArea = document.getElementById("area");
-  const selectIntegrantes = document.getElementById("integrantes");
-  const selectUniversidad = document.getElementById("universidad");
-  const tarjetas = document.querySelectorAll(".tarjeta");
-
-  function filtrarTarjetas() {
-    const texto = busquedaInput ? busquedaInput.value.toLowerCase() : "";
-    const carrera = selectCarrera ? selectCarrera.value : "";
-    const area = selectArea ? selectArea.value : "";
-    const tipo = selectIntegrantes ? selectIntegrantes.value : "";
-    const universidad = selectUniversidad ? selectUniversidad.value : "";
-
-    tarjetas.forEach((tarjeta) => {
-      const nombre = tarjeta.dataset.nombre.toLowerCase();
-      const carreraTarjeta = tarjeta.dataset.carrera || "";
-      const areaTarjeta = tarjeta.dataset.area || "";
-      const tipoTarjeta = tarjeta.dataset.tipo || "";
-      const universidadTarjeta = tarjeta.dataset.universidad || "";
-
-      const coincideNombre = nombre.includes(texto);
-      const coincideCarrera = carrera === "" || carreraTarjeta === carrera;
-      const coincideArea = area === "" || areaTarjeta === area;
-      const coincideTipo = tipo === "" || tipoTarjeta === tipo;
-      const coincideUniversidad = universidad === "" || universidadTarjeta === universidad;
-
-      if (coincideNombre && coincideCarrera && coincideArea && coincideTipo && coincideUniversidad) {
-        tarjeta.style.display = "block";
-      } else {
-        tarjeta.style.display = "none";
-      }
-    });
-  }
-
-  if (busquedaInput) busquedaInput.addEventListener("input", filtrarTarjetas);
-  if (selectCarrera) selectCarrera.addEventListener("change", filtrarTarjetas);
-  if (selectArea) selectArea.addEventListener("change", filtrarTarjetas);
-  if (selectIntegrantes) selectIntegrantes.addEventListener("change", filtrarTarjetas);
-  if (selectUniversidad) selectUniversidad.addEventListener("change", filtrarTarjetas);
-
-  // ====== MODAL DINÁMICO ======
-  const modal = document.getElementById("modal");
-  const modalFoto = document.getElementById("modal-foto");
-  const modalNombre = document.getElementById("modal-nombre");
-  const modalInfo = document.getElementById("modal-info");
-  const cerrarModal = document.querySelector(".cerrar");
-
-  tarjetas.forEach((tarjeta) => {
-    tarjeta.addEventListener("click", () => {
-      const foto = tarjeta.getAttribute("data-foto");
-      const nombre = tarjeta.getAttribute("data-nombre");
-      const info = tarjeta.getAttribute("data-info");
-
-      modalFoto.src = foto || tarjeta.querySelector("img").src;
-      modalNombre.textContent = nombre || tarjeta.querySelector("h3").textContent;
-      modalInfo.textContent = info || tarjeta.querySelector("p").textContent;
-
-      modal.style.display = "flex";
+  filters.addEventListener('input', updateResults);
+  filters.addEventListener('change', updateResults);
+  filters.addEventListener('submit', (event) => event.preventDefault());
+  filters.addEventListener('reset', () => {
+    // Run after the browser restores the controls' default values.
+    queueMicrotask(() => {
+      updateResults();
+      search.focus();
     });
   });
-
-  cerrarModal.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-  });
-});
+  document.getElementById('empty-reset').addEventListener('click', () => filters.reset());
+  updateResults();
+}
