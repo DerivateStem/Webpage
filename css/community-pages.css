@@ -1,0 +1,112 @@
+/* Community and public team pages. */
+.community-hero { background: #101010; color: #f7f5f0; padding: 90px 0 88px; }
+.community-hero .eyebrow { color: #a5a39d; }
+.community-hero__grid { display: grid; grid-template-columns: 1.65fr 1fr; gap: 72px; align-items: end; margin-top: 44px; }
+.community-hero h1 { font-family: "Barlow Condensed", sans-serif; font-size: clamp(4.25rem, 8.6vw, 8.5rem); font-weight: 800; line-height: .94; letter-spacing: -.025em; margin: 0; text-transform: uppercase; }
+.community-hero h1 span { color: #ffc907; }
+.community-hero__intro { max-width: 350px; padding-bottom: 8px; }
+.community-hero__intro p { color: #d2d0ca; font-size: 1.12rem; line-height: 1.75; margin: 28px 0; }
+.community-hero__intro .text-link { color: #f7f5f0; }
+.community-mark { color: #ffc907; font: 4rem/1 "Inter", sans-serif; }
+.community-statement { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; }
+.community-statement h2, .community-section-intro h2, .team-heading h2 { font: 800 clamp(2.8rem, 5vw, 4.6rem)/1 "Barlow Condensed", sans-serif; letter-spacing: -.02em; text-transform: uppercase; margin: 0 0 30px; }
+.community-statement p:not(.eyebrow) { color: #575752; max-width: 680px; font-size: 1.06rem; line-height: 1.85; }
+.community-photo { margin: 68px 0 0; }
+.community-photo img { width: 100%; height: auto; max-height: 540px; object-fit: cover; display: block; }
+.community-photo figcaption { display: flex; justify-content: space-between; gap: 16px; padding-top: 16px; font: 400 .7rem/1.6 "IBM Plex Mono", monospace; color: #5e5e58; text-transform: uppercase; letter-spacing: .06em; }
+.community-practice { background: #101010; color: #f7f5f0; }
+.community-section-intro { max-width: 650px; }
+.community-section-intro > p:last-child { color: #b5b3ad; line-height: 1.75; max-width: 530px; }
+.community-section-intro .eyebrow { margin-bottom: 26px; }
+.community-principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 38px; margin-top: 64px; }
+.community-principles article { border-top: 1px solid #44443f; padding-top: 24px; }
+.community-index { font: .82rem/1.5 "IBM Plex Mono", monospace; color: #ffc907; }
+.community-principles h3 { font: 800 2rem/1.06 "Barlow Condensed", sans-serif; text-transform: uppercase; max-width: 280px; margin: 30px 0 18px; }
+.community-principles p { color: #b5b3ad; font-size: .96rem; line-height: 1.8; }
+.community-paths { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 48px; }
+.community-path { color: #101010; text-decoration: none; display: flex; flex-direction: column; padding: 38px; border: 1px solid #d9d7cf; transition: background-color .2s, border-color .2s; }
+.community-path:hover { background-color: #efece2; border-color: #88877e; }
+.community-path .eyebrow { color: #62615a; }
+.community-path h3 { font: 800 clamp(2.15rem, 3vw, 3rem)/1.05 "Barlow Condensed", sans-serif; text-transform: uppercase; margin: 38px 0 16px; }
+.community-path p { color: #62615a; line-height: 1.75; max-width: 420px; margin: 0 0 32px; }
+.community-path__link { margin-top: auto; font-weight: 600; font-size: .88rem; display: flex; justify-content: space-between; align-items: center; }
+.community-path__link > span { font-size: 1.4rem; }
+.community-hero--team .community-hero__grid { grid-template-columns: 1.3fr 1fr; }
+.community-hero--team .community-hero__intro { max-width: 430px; }
+.team-directory { background: #f7f5f0; color: #101010; }
+.team-heading { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+.team-heading h2 { margin: 0; }
+.team-results { color: #65645d; font: .75rem/1.6 "IBM Plex Mono", monospace; }
+.team-filters { margin: 38px 0 44px; padding: 26px; background: #eeece5; border: 1px solid #dedbd2; }
+.team-filters__top { display: flex; align-items: end; gap: 24px; margin-bottom: 22px; }
+.team-filters__search { flex: 1; }
+.team-filters__fields { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.team-filters label { display: block; color: #515149; font-size: .75rem; font-weight: 600; margin-bottom: 9px; }
+.team-filters input, .team-filters select { width: 100%; min-height: 48px; border: 1px solid #cfcdc4; border-radius: 0; background: #f7f5f0; color: #101010; padding: 12px 14px; font: .9rem/1.5 "Inter", sans-serif; }
+.team-filters select { padding-right: 28px; }
+.team-reset { min-height: 48px; border: 0; background: transparent; padding: 12px 0; color: #101010; text-decoration: underline; text-underline-offset: 5px; font: 600 .85rem/1.5 "Inter", sans-serif; cursor: pointer; }
+.team-filters :is(input, select, button):focus-visible, .team-card :is(a, summary):focus-visible, .community-path:focus-visible { outline: 3px solid #2e9df7; outline-offset: 4px; }
+.team-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 42px 24px; align-items: start; }
+.team-card { min-width: 0; }
+.team-card[hidden] { display: none; }
+.team-card__portrait { aspect-ratio: 4 / 4.5; background: #e3e0d6; position: relative; overflow: hidden; }
+.team-card__portrait img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; filter: grayscale(1); transition: filter .25s; }
+.team-card:hover .team-card__portrait img { filter: grayscale(0); }
+.team-card__initials { width: 100%; height: 100%; display: grid; place-items: center; font: 800 4.4rem/1 "Barlow Condensed", sans-serif; color: #68665d; }
+.team-card__portrait--placeholder::after { content: ""; position: absolute; right: 20px; bottom: 20px; width: 26px; height: 26px; border-top: 1px solid #b3afa2; border-right: 1px solid #b3afa2; }
+.team-card__university { display: inline-block; margin: 21px 0 8px; color: #66655c; font: .68rem/1.4 "IBM Plex Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
+.team-card h3 { font: 800 1.75rem/1.07 "Barlow Condensed", sans-serif; letter-spacing: -.015em; text-transform: uppercase; margin: 0 0 10px; }
+.team-card__role { color: #64635c; font-size: .85rem; line-height: 1.6; margin: 0; }
+.team-card details { border-top: 1px solid #d9d6cc; margin-top: 20px; padding-top: 15px; }
+.team-card summary { font-size: .8rem; font-weight: 600; cursor: pointer; width: fit-content; min-height: 28px; }
+.team-card details p { color: #64635c; font-size: .84rem; line-height: 1.75; }
+.team-card__linkedin { display: inline-block; color: #101010; font-size: .8rem; font-weight: 600; margin-top: 12px; text-decoration: underline; text-underline-offset: 4px; }
+.team-empty { text-align: center; border: 1px solid #d9d6cc; padding: 60px 24px; }
+.team-empty h3 { margin-top: 0; font: 800 2rem/1.1 "Barlow Condensed", sans-serif; text-transform: uppercase; }
+.team-empty p { color: #64635c; line-height: 1.7; }
+.team-empty[hidden] { display: none; }
+@media (max-width: 1000px) {
+  .community-hero__grid { gap: 36px; }
+  .community-statement { grid-template-columns: 1fr 2.5fr; gap: 36px; }
+  .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .team-filters__fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .community-hero { padding: 60px 0; }
+  .community-hero__grid, .community-hero--team .community-hero__grid { grid-template-columns: 1fr; gap: 32px; margin-top: 32px; }
+  .community-hero h1 { font-size: clamp(3.55rem, 12vw, 5.7rem); }
+  .community-hero__intro { max-width: 470px; }
+  .community-mark { display: none; }
+  .community-hero__intro p { margin-top: 0; font-size: 1rem; }
+  .community-statement { grid-template-columns: 1fr; gap: 20px; }
+  .community-statement h2, .community-section-intro h2 { font-size: 2.7rem; }
+  .community-photo { margin-top: 36px; }
+  .community-photo figcaption { font-size: .6rem; }
+  .community-principles { grid-template-columns: 1fr; gap: 30px; margin-top: 40px; }
+  .community-principles h3 { max-width: none; margin-top: 18px; }
+  .community-principles p { max-width: 530px; }
+  .community-paths { grid-template-columns: 1fr; gap: 18px; margin-top: 30px; }
+  .community-path { padding: 28px; }
+  .community-path h3 { margin-top: 26px; }
+  .team-heading { display: block; }
+  .team-results { margin-bottom: 0; }
+  .team-filters { padding: 20px; margin-top: 26px; }
+  .team-filters__top { gap: 12px; }
+  .team-reset { font-size: .76rem; }
+  .team-filters__fields { gap: 18px 12px; }
+  .team-filters select { font-size: .8rem; padding-left: 10px; }
+  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 16px; }
+  .team-card h3 { font-size: 1.45rem; }
+  .team-card__role { font-size: .78rem; }
+  .team-card__initials { font-size: 3.6rem; }
+}
+@media (max-width: 380px) {
+  .community-hero h1 { font-size: 3.25rem; }
+  .team-filters__top { display: block; }
+  .team-reset { margin-top: 8px; }
+  .team-filters__fields { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .community-path, .team-card__portrait img { transition: none; }
+}
