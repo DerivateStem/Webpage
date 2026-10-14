@@ -1,341 +1,226 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DERIVATE.STEAM | Equipo</title>
-  <link rel="icon" href="/assets/favicons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
-  <link rel="manifest" href="/assets/favicons/site.webmanifest">
-  <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#07285F"><!-- opcional -->
-  <meta name="theme-color" content="#07285F">
-
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/equipo.css" />
-  <script src="https://kit.fontawesome.com/45430dc581.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipo — Derívate</title>
+  <meta name="description" content="Conoce a las personas que forman Derívate: estudiantes, equipos y asesores que acompañan a nuestra comunidad de Física en Perú.">
+  <meta name="theme-color" content="#101010">
+  <link rel="icon" href="assets/brand/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/community-pages.css">
 </head>
-
-<body>
+<body id="top">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <div id="navbar"></div>
-  <div class="head">
-    <div class="logo-central">
-      <img src="assets/img/logo-blanco.webp" alt="Logo Central">
-    </div>
-  </div>
-  <main>
-    <section class="hoja-blanca">
-      <section id="filtros">
-        <div class="filtro-contenedor">
-
-          <div class="filtro-bloque input-busqueda">
-            <label for="busqueda">Buscar por nombre:</label>
-            <div class="busqueda-con-icono">
-              <input type="text" id="busqueda" placeholder="Escribe un nombre..." />
-              <i class="fa fa-search"></i>
+  <main id="contenido">
+    <section class="community-hero community-hero--team">
+      <div class="container">
+        <p class="eyebrow">Equipo / Las personas detrás</p>
+        <div class="community-hero__grid">
+          <h1 class="display">Compartimos<br>la curiosidad.<br><span>Y el camino.</span></h1>
+          <div class="community-hero__intro">
+            <p>Estudiantes y asesores que hacen posible Derívate. Nos organizamos para aprender, acompañarnos y abrir espacios de encuentro alrededor de la Física.</p>
+            <a class="text-link" href="conocenos.html">Conoce nuestra comunidad <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section team-directory" aria-labelledby="equipo-heading">
+      <div class="container">
+        <div class="team-heading">
+          <h2 id="equipo-heading">Nuestro equipo</h2>
+          <p class="team-results" id="team-results" role="status" aria-live="polite" aria-atomic="true">16 de 16 perfiles</p>
+        </div>
+        <form class="team-filters" id="team-filters" role="search" aria-label="Buscar integrantes del equipo">
+          <div class="team-filters__top">
+            <div class="team-filters__search">
+              <label for="busqueda">Buscar por nombre</label>
+              <input type="search" id="busqueda" name="nombre" placeholder="Escribe un nombre…" autocomplete="off" aria-controls="team-profiles">
+            </div>
+            <button class="team-reset" type="reset">Limpiar filtros</button>
+          </div>
+          <div class="team-filters__fields">
+            <div>
+              <label for="carrera">Carrera</label>
+              <select id="carrera" name="carrera" aria-controls="team-profiles">
+                <option value="">Todas las carreras</option>
+                <option value="fisica">Física</option>
+                <option value="mecanica">Ing. Mecánica de Fluidos</option>
+              </select>
+            </div>
+            <div>
+              <label for="area">Área del equipo</label>
+              <select id="area" name="area" aria-controls="team-profiles">
+                <option value="">Todas las áreas</option>
+                <option value="directiva">Directiva</option>
+                <option value="formacion">Formación</option>
+                <option value="comunicacion">Comunicación</option>
+                <option value="logistica">Logística</option>
+                <option value="recaudacion">Recaudación</option>
+              </select>
+            </div>
+            <div>
+              <label for="tipo">Tipo de integrante</label>
+              <select id="tipo" name="tipo" aria-controls="team-profiles">
+                <option value="">Todos los integrantes</option>
+                <option value="pregrado">Estudiante de pregrado</option>
+                <option value="bachiller">Bachiller</option>
+                <option value="asesor">Asesor(a) académico</option>
+              </select>
+            </div>
+            <div>
+              <label for="universidad">Universidad</label>
+              <select id="universidad" name="universidad" aria-controls="team-profiles">
+                <option value="">Todas las universidades</option>
+                <option value="unmsm">UNMSM</option>
+                <option value="pucp">PUCP</option>
+                <option value="uni">UNI</option>
+                <option value="uw-madison">UW-Madison</option>
+              </select>
             </div>
           </div>
-
-          <div class="filtro-bloque">
-            <label for="carrera">Carrera de estudio:</label>
-            <select id="carrera">
-              <option value="" selected>Todas</option>
-              <option value="fisica">Física</option>
-              <option value="mecanica">Ing. Mecánica de Fluidos</option>
-            </select>
-          </div>
-
-          <div class="filtro-bloque">
-            <label for="area">Área del equipo:</label>
-            <select id="area">
-              <option value="" selected>Todas</option>
-              <option value="logistica">Logística</option>
-              <option value="recaudacion">Recaudación</option>
-              <option value="formacion">Formación</option>
-              <option value="comunicacion">Comunicación</option>
-              <option value="directiva">Directiva</option>
-            </select>
-          </div>
-
-          <div class="filtro-bloque">
-            <label for="tipo">Tipo de integrante:</label>
-            <select id="tipo">
-              <option value="" selected>Todos</option>
-              <option value="pregrado">Estudiante de pregrado</option>
-              <option value="bachiller">Bachiller</option>
-              <option value="licenciado">Licenciado</option>
-              <option value="asesor">Asesor(a) académico</option>
-            </select>
-          </div>
-
-          <div class="filtro-bloque">
-            <label for="universidad">Universidad:</label>
-            <select id="universidad">
-              <option value="" selected>Todas</option>
-              <option value="sanmarcos">UNMSM</option>
-              <option value="pucp">PUCP</option>
-              <option value="uni">UNI</option>
-              <option value="wisconsi">UW-MADISON</option>
-            </select>
-          </div>
-        </div>
-      </section>
-
-
-      <section id="perfiles">
-        <h2>Nosotros</h2>
-        <div class="grid-perfiles">
-          <div class="tarjeta" data-nombre="Leonardo Huaira Lopez" data-carrera="fisica" data-area="directiva"
-            data-tipo="pregrado" data-universidad="sanmarcos"
-            data-info="Presidente de DERIVATE, estudiante de Física en la Universidad Nacional Mayor de San Marcos">
-            <img src="assets/img/foto-leo.jpg" alt="Leonardo Huaira Lopez">
+        </form>
+        <div class="team-grid" id="team-profiles">
+          <article class="team-card" data-nombre="Leonardo Huaira Lopez" data-carrera="fisica" data-area="directiva" data-tipo="pregrado" data-universidad="unmsm">
+            <div class="team-card__portrait"><img src="assets/media/profiles/foto-leo.webp" alt="Leonardo Huaira Lopez" width="400" height="450" loading="lazy"></div>
+            <span class="team-card__university">UNMSM</span>
             <h3>Leonardo Huaira Lopez</h3>
-            <p>Presidente de DERIVATE</p>
-            <p>UNMSM</p>
-
-            <a href="https://www.linkedin.com/in/isaac-leonardo-huaira-lopez-7066ab257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              target="_black" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-
-          <div class="tarjeta" data-nombre="Paul Reyna Muñoz" data-carrera="fisica" data-area="logistica"
-            data-tipo="pregrado" data-universidad="uni"
-            data-info="Miembro activo de DERIVATE, parte del equipo de Logística. Estudiante de Física">
-            <img src="assets/img/Reya Muñoz.jpg" alt="Paul Reyna Muñoz">
+            <p class="team-card__role">Presidente de Derívate</p>
+            <details><summary>Ver perfil</summary><p>Presidente de Derívate, estudiante de Física en la Universidad Nacional Mayor de San Marcos</p></details>
+            <a class="team-card__linkedin" href="https://www.linkedin.com/in/isaac-leonardo-huaira-lopez-7066ab257?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Leonardo Huaira Lopez (abre en otra pestaña)">LinkedIn <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Paul Reyna Muñoz" data-carrera="fisica" data-area="logistica" data-tipo="pregrado" data-universidad="uni">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">PR</span></div>
+            <span class="team-card__university">UNI</span>
             <h3>Paul Reyna Muñoz</h3>
-            <p>Logística</p>
-            <p>UNI</p>
-
-            <a href="https://pe.linkedin.com/in/paul-reyna-mu%C3%B1oz-394028204" target="_black" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-
-          <div class="tarjeta" data-nombre="Mariano Effio Cueva" data-carrera="fisica" data-area="formacion"
-            data-tipo="bachiller" data-universidad="uni"
-            data-info="Miembro activo de DERIVATE, parte del equipo de Formación. Bachiller en Física en la Univerisdad Nacional de Ingeniería">
-            <img src="assets/img/mariano-effio.jpg" alt="Mariano Effio Cueva">
+            <p class="team-card__role">Logística</p>
+            <details><summary>Ver perfil</summary><p>Miembro activo de Derívate, parte del equipo de Logística. Estudiante de Física</p></details>
+            <a class="team-card__linkedin" href="https://pe.linkedin.com/in/paul-reyna-mu%C3%B1oz-394028204" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Paul Reyna Muñoz (abre en otra pestaña)">LinkedIn <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Mariano Effio Cueva" data-carrera="fisica" data-area="formacion" data-tipo="bachiller" data-universidad="uni">
+            <div class="team-card__portrait"><img src="assets/media/profiles/mariano-effio.webp" alt="Mariano Effio Cueva" width="400" height="450" loading="lazy"></div>
+            <span class="team-card__university">UNI</span>
             <h3>Mariano Effio Cueva</h3>
-            <p>Formación</p>
-            <p>UNI</p>
-
-            <a href="" target="_black" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-
-          <div class="tarjeta" data-nombre="Daniel Navarro Ramirez" data-carrera="fisica" data-area="directiva"
-            data-tipo="pregrado" data-universidad="pucp"
-            data-info="Miembro activo de DERIVATE, lider del equipo de Logística. Estudiante de Física en la Pontificia Universidad Católica del Perú">
-            <img src="assets/img/daniel-navarro.jpg" alt="Daniel Navarro Ramirez">
+            <p class="team-card__role">Formación</p>
+            <details><summary>Ver perfil</summary><p>Miembro activo de Derívate, parte del equipo de Formación. Bachiller en Física en la Universidad Nacional de Ingeniería</p></details>
+          </article>
+          <article class="team-card" data-nombre="Daniel Navarro Ramirez" data-carrera="fisica" data-area="directiva logistica" data-tipo="pregrado" data-universidad="pucp">
+            <div class="team-card__portrait"><img src="assets/media/profiles/daniel-navarro.webp" alt="Daniel Navarro Ramirez" width="400" height="450" loading="lazy"></div>
+            <span class="team-card__university">PUCP</span>
             <h3>Daniel Navarro Ramirez</h3>
-            <p>Lider de Logística</p>
-            <p>PUCP</p>
-
-            <a href="https://www.linkedin.com/in/daniel-navarro-ramirez-15254a332" target="_black" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-
-          <div class="tarjeta" data-nombre="Juan Diego Mendoza Huillca" data-carrera="mecanica" data-area="directiva"
-            data-tipo="pregrado" data-universidad="sanmarcos"
-            data-info="Miembro activo y Vicepresidente de DERIVATE. Parte del equipo de Comunicación. Estudiante de Ingeniería Mecánica de Fluidos en la Universidad Nacional Mayor de San Marcos">
-            <img src="assets/img/juan-diego.jpg" alt="Juan Diego Mendoza Huillca">
+            <p class="team-card__role">Líder de Logística</p>
+            <details><summary>Ver perfil</summary><p>Miembro activo de Derívate, líder del equipo de Logística. Estudiante de Física en la Pontificia Universidad Católica del Perú</p></details>
+            <a class="team-card__linkedin" href="https://www.linkedin.com/in/daniel-navarro-ramirez-15254a332" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Daniel Navarro Ramirez (abre en otra pestaña)">LinkedIn <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Juan Diego Mendoza Huillca" data-carrera="mecanica" data-area="directiva comunicacion" data-tipo="pregrado" data-universidad="unmsm">
+            <div class="team-card__portrait"><img src="assets/media/profiles/juan-diego.webp" alt="Juan Diego Mendoza Huillca" width="400" height="450" loading="lazy"></div>
+            <span class="team-card__university">UNMSM</span>
             <h3>Juan Diego Mendoza Huillca</h3>
-            <p>Vicepresidente de Derivate</p>
-            <p>UNMSM</p>
-
-            <a href="https://www.linkedin.com/in/juan-diego-mendoza-huillca-6b91b1365/?skipRedirect=true" target="_black" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-
-          <div class="tarjeta" data-nombre="Gretta Oros Bravo" data-carrera="fisica" data-area="directiva"
-            data-tipo="pregrado" data-universidad="sanmarcos"
-            data-info="Miembro activo de DERIVATE, Lider de Recaudación. Estudiante de Física en la Universidad Nacional Mayor de San Marcos">
-            <img src="assets/img/gretta-foto-derivate.jpg" alt="Gretta Oros Bravo">
+            <p class="team-card__role">Vicepresidente de Derívate</p>
+            <details><summary>Ver perfil</summary><p>Miembro activo y Vicepresidente de Derívate. Parte del equipo de Comunicación. Estudiante de Ingeniería Mecánica de Fluidos en la Universidad Nacional Mayor de San Marcos</p></details>
+            <a class="team-card__linkedin" href="https://www.linkedin.com/in/juan-diego-mendoza-huillca-6b91b1365/?skipRedirect=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Juan Diego Mendoza Huillca (abre en otra pestaña)">LinkedIn <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Gretta Oros Bravo" data-carrera="fisica" data-area="directiva recaudacion" data-tipo="pregrado" data-universidad="unmsm">
+            <div class="team-card__portrait"><img src="assets/media/profiles/gretta-foto-derivate.webp" alt="Gretta Oros Bravo" width="400" height="450" loading="lazy"></div>
+            <span class="team-card__university">UNMSM</span>
             <h3>Gretta Oros Bravo</h3>
-            <p>Lider de Recaudación</p>
-            <p>UNMSM</p>
-
-            <a href="https://www.linkedin.com/in/gretta-milagros-oros-bravo-aa93a4234/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_black" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-
-          <div class="tarjeta" data-nombre="Adrian Diaz Espinoza" data-carrera="fisica" data-area="" data-tipo="asesor"
-            data-universidad="wisconsi"
-            data-info="Miembro activo y asesor de DERIVATE. Estudiante de Doctora. Licenciado en Física en la Universidad Nacional Mayor de San Marcos">
-            <img srs="assets/img/adrian-equipo.jpg" alt="Adrian Diaz Espinoza">
+            <p class="team-card__role">Líder de Recaudación</p>
+            <details><summary>Ver perfil</summary><p>Miembro activo de Derívate, líder de Recaudación. Estudiante de Física en la Universidad Nacional Mayor de San Marcos</p></details>
+            <a class="team-card__linkedin" href="https://www.linkedin.com/in/gretta-milagros-oros-bravo-aa93a4234/?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Gretta Oros Bravo (abre en otra pestaña)">LinkedIn <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Adrian Diaz Espinoza" data-carrera="fisica" data-area="" data-tipo="asesor" data-universidad="uw-madison">
+            <div class="team-card__portrait"><img src="assets/media/profiles/adrian-equipo.webp" alt="Adrian Diaz Espinoza" width="400" height="450" loading="lazy"></div>
+            <span class="team-card__university">UW-Madison</span>
             <h3>Adrian Diaz Espinoza</h3>
-            <p>Asesor</p>
-            <p>>UW-Madison</p>
-
-            <a href="https://www.linkedin.com/in/adrianciencia/" target="_black" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-          
-
-          <div class="tarjeta" data-nombre="Diego Haro Rosales" data-carrera="fisica" data-area="formacion"
-            data-tipo="pregrado" data-universidad="uni"
-            data-info="Miembro activo de DERIVATE. Parte del equipo de Formación. Estudiante de Física en la Univerisdad Nacional de Ingeniería">
-            <img src="assets/img/diego-haro.jpg" alt="Diego Haro Rosales">
+            <p class="team-card__role">Asesor</p>
+            <details><summary>Ver perfil</summary><p>Miembro activo y asesor de Derívate. Estudiante de doctorado. Licenciado en Física en la Universidad Nacional Mayor de San Marcos</p></details>
+            <a class="team-card__linkedin" href="https://www.linkedin.com/in/adrianciencia/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Adrian Diaz Espinoza (abre en otra pestaña)">LinkedIn <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Diego Haro Rosales" data-carrera="fisica" data-area="formacion" data-tipo="pregrado" data-universidad="uni">
+            <div class="team-card__portrait"><img src="assets/media/profiles/diego-haro.webp" alt="Diego Haro Rosales" width="400" height="450" loading="lazy"></div>
+            <span class="team-card__university">UNI</span>
             <h3>Diego Haro Rosales</h3>
-            <p>Formación</p>
-            <p>UNI</p>
-
-            <a href="https://www.linkedin.com/in/diego-haro-rosales-4b2007386/" target="_black" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-
-          <div class="tarjeta" data-nombre="Hipolito Riveros Guevara" data-carrera="fisica" data-area="formacion"
-            data-tipo="pregrado" data-universidad="uni"
-            data-info="Miembro activo de DERIVATE. Parte del equipo de Formación. Estudiante de Física en la Universidad Nacional de Ingeniería">
-            <img src="assets/img/hipolito.jpg" alt="Hipolito Riveros Guevara">
+            <p class="team-card__role">Formación</p>
+            <details><summary>Ver perfil</summary><p>Miembro activo de Derívate. Parte del equipo de Formación. Estudiante de Física en la Universidad Nacional de Ingeniería</p></details>
+            <a class="team-card__linkedin" href="https://www.linkedin.com/in/diego-haro-rosales-4b2007386/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Diego Haro Rosales (abre en otra pestaña)">LinkedIn <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Hipolito Riveros Guevara" data-carrera="fisica" data-area="formacion" data-tipo="pregrado" data-universidad="uni">
+            <div class="team-card__portrait"><img src="assets/media/profiles/hipolito.webp" alt="Hipolito Riveros Guevara" width="400" height="450" loading="lazy"></div>
+            <span class="team-card__university">UNI</span>
             <h3>Hipolito Riveros Guevara</h3>
-            <p>Formación</p>
-            <p>UNI</p>
-
-            <a href="https://www.linkedin.com/in/hipolito-arturo-riveros-guevara/" target="_black" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            
-          </div>
-
-          <div class="tarjeta" data-nombre="Fiorella Effio Saldivar" data-carrera="fisica" data-area="losgistica" 
-            data-tipo="pregrado" data-universidad="unmsm"
-            data-info="Miembro activo de DERIVATE. Parte del equipo de Logísitica. Estudiante de física en la Universidad Nacional Mayor de San Marcos">
-            <img src="assets/img/fiorella.jpg" alt="Fiorella Effio Saldivar">
+            <p class="team-card__role">Formación</p>
+            <details><summary>Ver perfil</summary><p>Miembro activo de Derívate. Parte del equipo de Formación. Estudiante de Física en la Universidad Nacional de Ingeniería</p></details>
+            <a class="team-card__linkedin" href="https://www.linkedin.com/in/hipolito-arturo-riveros-guevara/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Hipolito Riveros Guevara (abre en otra pestaña)">LinkedIn <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Fiorella Effio Saldivar" data-carrera="fisica" data-area="logistica" data-tipo="pregrado" data-universidad="unmsm">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">FE</span></div>
+            <span class="team-card__university">UNMSM</span>
             <h3>Fiorella Effio Saldivar</h3>
-            <p>Logística</p>
-            <p>UNMSM</p>
-
-            <a href="https://www.linkedin.com/in/fiorella-effio-saldivar/" target="_black" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-
-          <div class="tarjeta" data-nombre="Liuba Llantirhuay Ramos" data-carrera="fisica" data-area="directiva" 
-            data-tipo="pregrado" data-universidad="unmsm"
-            data-info="Miembro activo de DERIVATE. Lider del equipo de Comunicación. Estudiante de física en la Universidad Nacional Mayor de San Marcos">
-            <img src="assets/img/liuba.jpg" alt="Liuba Llantirhuay Ramos">
+            <p class="team-card__role">Logística</p>
+            <details><summary>Ver perfil</summary><p>Miembro activo de Derívate. Parte del equipo de Logística. Estudiante de Física en la Universidad Nacional Mayor de San Marcos</p></details>
+            <a class="team-card__linkedin" href="https://www.linkedin.com/in/fiorella-effio-saldivar/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Fiorella Effio Saldivar (abre en otra pestaña)">LinkedIn <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Liuba Llantirhuay Ramos" data-carrera="fisica" data-area="directiva comunicacion" data-tipo="pregrado" data-universidad="unmsm">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">LL</span></div>
+            <span class="team-card__university">UNMSM</span>
             <h3>Liuba Llantirhuay Ramos</h3>
-            <p>Lider de Comunicación</p>
-            <p>UNMSM</p>
-
-            <a href="https://www.linkedin.com/in/liuba-llantirhuay-553378236" target="_black" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-
-          <div class="tarjeta" data-nombre="Kevin Condori Atauje" data-carrera="fisica" data-area="logistica"
-            data-tipo="pregrado" data-universidad="unmsm"
-            data-info="Miembro activo de DERIVATE. Integrante del equipo de logística. Estudiante de física de la universidad Nacional Mayor de San Marcos">
-            <img src="assets/img/kevin.jpg" alt="Kevin Condori Atauje">
+            <p class="team-card__role">Líder de Comunicación</p>
+            <details><summary>Ver perfil</summary><p>Miembro activo de Derívate. líder del equipo de Comunicación. Estudiante de Física en la Universidad Nacional Mayor de San Marcos</p></details>
+            <a class="team-card__linkedin" href="https://www.linkedin.com/in/liuba-llantirhuay-553378236" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Liuba Llantirhuay Ramos (abre en otra pestaña)">LinkedIn <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Kevin Condori Atauje" data-carrera="fisica" data-area="logistica" data-tipo="pregrado" data-universidad="unmsm">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">KC</span></div>
+            <span class="team-card__university">UNMSM</span>
             <h3>Kevin Condori Atauje</h3>
-            <p>Logística</p>
-            <p>UNMSM</p>
-
-            <a href="https://www.linkedin.com/in/kevin-hilario-condori-atauje-777080385/" target="_black" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-
-          <div class="tarjeta" data-nombre="Enrique Isaac Huaira Lopez" data-carrera="fisica" data-area="logistica"
-            data-tipo="pregrado" data-universidad="uni"
-            data-info="Miembro activo de DERIVATE. Parte del equipo de Logística. Estudiante de física en la Universidad Nacional de Ingeniería">
-            <img src="assets/img/enrique.jpg" alt="Enrique Isaac Huaira Lopez">
+            <p class="team-card__role">Logística</p>
+            <details><summary>Ver perfil</summary><p>Miembro activo de Derívate. Integrante del equipo de logística. Estudiante de Física de la Universidad Nacional Mayor de San Marcos</p></details>
+            <a class="team-card__linkedin" href="https://www.linkedin.com/in/kevin-hilario-condori-atauje-777080385/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Kevin Condori Atauje (abre en otra pestaña)">LinkedIn <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Enrique Isaac Huaira Lopez" data-carrera="fisica" data-area="logistica" data-tipo="pregrado" data-universidad="uni">
+            <div class="team-card__portrait"><img src="assets/media/profiles/enrique.webp" alt="Enrique Isaac Huaira Lopez" width="400" height="450" loading="lazy"></div>
+            <span class="team-card__university">UNI</span>
             <h3>Enrique Huaira Lopez</h3>
-            <p>Logística</p>
-            <p>UNI</p>
-
-            <a href="https://www.linkedin.com/in/enrique-huaira-lopez-87566b385/" target="_black" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-
-          <div class="tarjeta" data-nombre="Carlos Daniel Valdivia Astete" data-carrera="fisica" data-area="recaudacion"
-            data-tipo="pregrado" data-universidad="unmsm"
-            data-info="Miembro activo de DERIVATE. Parte del equipo de Recaudación. Estudiante de física en la Universidad Nacional Mayor de San Marcos">
-            <img src="assets/img/" alt="Carlos Daniel Valdivia Astete">
+            <p class="team-card__role">Logística</p>
+            <details><summary>Ver perfil</summary><p>Miembro activo de Derívate. Parte del equipo de Logística. Estudiante de Física en la Universidad Nacional de Ingeniería</p></details>
+            <a class="team-card__linkedin" href="https://www.linkedin.com/in/enrique-huaira-lopez-87566b385/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Enrique Isaac Huaira Lopez (abre en otra pestaña)">LinkedIn <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Carlos Daniel Valdivia Astete" data-carrera="fisica" data-area="recaudacion" data-tipo="pregrado" data-universidad="unmsm">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">CD</span></div>
+            <span class="team-card__university">UNMSM</span>
             <h3>Carlos Daniel Valdivia Astete</h3>
-            <p>Recaudación</p>
-            <p>UNMSM</p>
-
-            <a href="https://www.linkedin.com/in/daniel-valdivia-96b5b8346/" target="_black" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-
-           <div class="tarjeta" data-nombre="Julio César Jara Ricapa" data-carrera="fisica" data-area="recaudacion"
-            data-tipo="pregrado" data-universidad="pucp"
-            data-info="Miembro activo de DERIVATE. Parte del equipo de Recaudación. Estudiante de física en la Pontificia Universidad Católica del Perú">
-            <img src="assets/img/" alt="Julio César Jara Ricapa">
+            <p class="team-card__role">Recaudación</p>
+            <details><summary>Ver perfil</summary><p>Miembro activo de Derívate. Parte del equipo de Recaudación. Estudiante de Física en la Universidad Nacional Mayor de San Marcos</p></details>
+            <a class="team-card__linkedin" href="https://www.linkedin.com/in/daniel-valdivia-96b5b8346/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Carlos Daniel Valdivia Astete (abre en otra pestaña)">LinkedIn <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Julio César Jara Ricapa" data-carrera="fisica" data-area="recaudacion" data-tipo="pregrado" data-universidad="pucp">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">JC</span></div>
+            <span class="team-card__university">PUCP</span>
             <h3>Julio César Jara Ricapa</h3>
-            <p>Recaudación</p>
-            <p>PUCP</p>
-
-            <a href="https://www.linkedin.com/in/julio-c%C3%A9sar-jara-ricapa-b19684385/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_black" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-
-          
-          <div class="tarjeta" data-nombre="Luis Carlos Vera Saravia" data-carrera="fisica" data-area="recaudacion"
-            data-tipo="pregrado" data-universidad="uni"
-            data-info="Miembro activo de DERIVATE. Parte del equipo de Recaudación. Estudiante de física en la Universidad Nacional de Ingeniería">
-            <img src="assets/img/" alt="Luis Carlos Vera Saravia ">
-            <h3>Luis Carlos Vera Saravia </h3>
-            <p>Recaudación</p>
-            <p>UNI</p>
-
-            <a href="https://www.linkedin.com/in/luis-carlos-vera-saravia-b1637b27a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_black" class="linkedin-btn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-          
+            <p class="team-card__role">Recaudación</p>
+            <details><summary>Ver perfil</summary><p>Miembro activo de Derívate. Parte del equipo de Recaudación. Estudiante de Física en la Pontificia Universidad Católica del Perú</p></details>
+            <a class="team-card__linkedin" href="https://www.linkedin.com/in/julio-c%C3%A9sar-jara-ricapa-b19684385/?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Julio César Jara Ricapa (abre en otra pestaña)">LinkedIn <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Luis Carlos Vera Saravia" data-carrera="fisica" data-area="recaudacion" data-tipo="pregrado" data-universidad="uni">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">LC</span></div>
+            <span class="team-card__university">UNI</span>
+            <h3>Luis Carlos Vera Saravia</h3>
+            <p class="team-card__role">Recaudación</p>
+            <details><summary>Ver perfil</summary><p>Miembro activo de Derívate. Parte del equipo de Recaudación. Estudiante de Física en la Universidad Nacional de Ingeniería</p></details>
+            <a class="team-card__linkedin" href="https://www.linkedin.com/in/luis-carlos-vera-saravia-b1637b27a/?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Luis Carlos Vera Saravia (abre en otra pestaña)">LinkedIn <span aria-hidden="true">↗</span></a>
+          </article>
         </div>
-      </section>
+        <div class="team-empty" id="team-empty" hidden>
+          <h3>No encontramos coincidencias</h3>
+          <p>Prueba con otro nombre o cambia los filtros.</p>
+          <button class="team-reset" type="button" id="empty-reset">Ver todo el equipo</button>
+        </div>
+      </div>
     </section>
   </main>
-
-  <div id="modal" class="modal">
-    <div class="modal-contenido">
-      <span class="cerrar">&times;</span>
-      <img id="modal-foto" src="" alt="Foto integrante" />
-      <h3 id="modal-nombre"></h3>
-      <p id="modal-info"></p>
-    </div>
-  </div>
   <div id="footer"></div>
-
-  <script src="js/equipo.js"></script>
-  <script type="module">
-    import { initNavbar } from './js/header.js';
-    const navbarMount = document.getElementById('navbar');
-    fetch('components/header.html')
-      .then(r => r.text())
-      .then(html => {
-        navbarMount.innerHTML = html;
-        initNavbar(navbarMount);
-      });
-    fetch("components/footer.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("footer").innerHTML = data;
-      })
-      .catch(error => console.error("Error al cargar el footer:", error));
-  </script>
+  <script type="module" src="js/site.js"></script>
+  <script src="js/equipo.js" defer></script>
 </body>
-
-
 </html>
-
-
-
-
