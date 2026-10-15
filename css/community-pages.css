@@ -65,6 +65,30 @@
 .team-empty h3 { margin-top: 0; font: 800 2rem/1.1 "Barlow Condensed", sans-serif; text-transform: uppercase; }
 .team-empty p { color: #64635c; line-height: 1.7; }
 .team-empty[hidden] { display: none; }
+/* Mentor groups can be repeated when another edition's profiles are confirmed. */
+.mentor-network-copy { max-width: 650px; }
+.mentors-intro .mentor-network-note { margin-top: 20px; padding-left: 18px; border-left: 2px solid #ffc907; color: #f7f5f0; font-size: .9rem; }
+.mentor-edition + .mentor-edition { border-top: 1px solid #d9d7cf; }
+.mentor-edition .section-heading { align-items: end; }
+.mentor-edition .section-heading > p { max-width: 380px; }
+.mentor-edition-nav { display: flex; flex-wrap: wrap; gap: 12px 24px; flex-shrink: 0; max-width: 330px; }
+.mentor-directory { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 48px; list-style: none; padding: 0; margin: 0; }
+.mentor-directory-row { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 20px; padding: 30px 0; border-top: 1px solid #10101038; }
+.mentor-directory-row .mentor-initials { width: 48px; height: 48px; font-size: 23px; }
+.mentor-directory-row h3 { font-size: 21px; line-height: 1.2; font-weight: 600; letter-spacing: -.02em; margin-bottom: 12px; }
+.mentor-directory-area { font-size: 14px; line-height: 1.6; }
+.mentor-directory-affiliation { color: #625f57; font-size: 12px; line-height: 1.7; margin-top: 8px; }
+.mentor-directory-row .mentor-reference-date { font-family: var(--font-mono); color: #625f57; font-size: 9px; line-height: 1.6; margin-top: 8px; }
+.mentor-directory-row .text-link { font-size: 11px; gap: 16px; margin-top: 15px; }
+.mentor-directory-row .text-link:hover { color: #075b98; }
+@media (max-width: 700px) {
+  .mentor-edition-nav { max-width: none; margin-top: 22px; }
+  .mentors-intro .mentor-edition-nav .text-link { margin-top: 0; }
+  .mentor-directory { grid-template-columns: 1fr; }
+  .mentor-directory-row { grid-template-columns: 42px minmax(0, 1fr); gap: 16px; padding: 26px 0; }
+  .mentor-directory-row .mentor-initials { width: 42px; height: 42px; font-size: 21px; }
+  .mentor-directory-row h3 { font-size: 20px; }
+}
 @media (max-width: 1000px) {
   .community-hero__grid { gap: 36px; }
   .community-statement { grid-template-columns: 1fr 2.5fr; gap: 36px; }

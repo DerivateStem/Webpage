@@ -6,6 +6,15 @@
 .ev-title span { color: #ffc907; }
 .ev-lead { font-size: clamp(1.15rem, 1.8vw, 1.4rem); line-height: 1.5; max-width: 34ch; }
 .ev-description { color: #b9b8b2; font-size: 1rem; line-height: 1.8; max-width: 47ch; margin: 16px 0 30px; }
+.ev-hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 26px; }
+.ev-upcoming { background: var(--blue); color: var(--ink); }
+.ev-upcoming-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 72px; align-items: center; }
+.ev-upcoming-title { margin-top: 20px; font-size: clamp(3.6rem, 6.6vw, 6.4rem); line-height: .94; letter-spacing: -.025em; }
+.ev-upcoming-copy > p { max-width: 36ch; font-size: 1.2rem; line-height: 1.65; }
+.ev-upcoming-status { margin-top: 30px; border-top: 1px solid #10101060; padding-top: 22px; }
+.ev-upcoming-status .eyebrow { margin-bottom: 10px; }
+.ev-upcoming-status p { font-weight: 600; font-size: 1rem; line-height: 1.6; }
+.ev-upcoming-status p + p { margin-top: 10px; max-width: 40ch; font-weight: 400; font-size: .9rem; }
 .ev-hero-photo { margin: 0; position: relative; align-self: stretch; min-height: 500px; display: flex; flex-direction: column; }
 .ev-hero-photo::before { content: ''; width: 62px; height: 62px; background: #ffc907; position: absolute; left: -18px; top: 22px; z-index: 1; mix-blend-mode: screen; }
 .ev-hero-photo img { display: block; width: 100%; height: 100%; flex: 1; min-height: 0; object-fit: cover; object-position: 80% center; }
@@ -14,6 +23,11 @@
 .ev-section-title { font-size: clamp(2.7rem, 4.4vw, 4.5rem); line-height: .98; letter-spacing: -.025em; margin: 18px 0 0; }
 .ev-section-note { max-width: 27ch; color: #575751; line-height: 1.7; margin: 0 0 4px; }
 .ev-editions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.ev-editions--archive { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.ev-editions--archive .ev-edition-photo { height: 268px; }
+.ev-editions--archive .ev-edition-year { min-height: 268px; font-size: 8rem; }
+.ev-editions--archive .ev-edition-body { padding: 26px; }
+.ev-editions--archive .ev-edition-body .eyebrow { font-size: .6rem; }
 .ev-edition { background: #eeece5; border: 1px solid #d9d7cf; display: flex; flex-direction: column; }
 .ev-edition-year { position: relative; min-height: 315px; padding: 26px 30px; background: #ffc907; color: #101010; font-family: 'Barlow Condensed', sans-serif; font-size: 9.5rem; font-weight: 800; letter-spacing: -.065em; line-height: .82; }
 .ev-edition-year > span { position: absolute; bottom: 22px; right: 28px; font-family: 'Inter', sans-serif; font-size: 4rem; font-weight: 400; }
@@ -71,6 +85,8 @@
   .ev-hero { gap: 36px; }
   .ev-title { font-size: clamp(4.4rem, 10vw, 7.5rem); }
   .ev-hero-photo { min-height: 460px; }
+  .ev-upcoming-layout { gap: 40px; }
+  .ev-editions--archive { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ev-related-layout, .ev-archive-grid { gap: 40px; }
   .ev-speaker-header { grid-template-columns: 80px minmax(0, 1fr); gap: 18px; padding: 24px 22px 20px; }
   .ev-speaker-header img { width: 80px; height: 106px; }
@@ -81,6 +97,10 @@
 @media (max-width: 700px) {
   .ev-hero { grid-template-columns: 1fr; padding-top: 35px; padding-bottom: 52px; gap: 34px; }
   .ev-hero-copy { padding: 0; }
+  .ev-upcoming-layout { grid-template-columns: 1fr; gap: 28px; }
+  .ev-upcoming-title { font-size: clamp(3.3rem, 14vw, 5.2rem); }
+  .ev-upcoming-copy > p { font-size: 1rem; }
+  .ev-upcoming-status { margin-top: 24px; }
   .ev-title, .ev-archive-grid .ev-title { font-size: clamp(4.5rem, 16vw, 7rem); }
   .ev-hero-photo { min-height: 0; }
   .ev-hero-photo img { height: auto; max-height: 430px; aspect-ratio: 4 / 3; flex: auto; }
@@ -90,6 +110,7 @@
   .ev-editions, .ev-related-layout, .ev-archive-grid, .ev-rifp-heading, .ev-speakers { grid-template-columns: 1fr; }
   .ev-editions { gap: 26px; }
   .ev-edition-photo { height: auto; aspect-ratio: 4 / 3; }
+  .ev-editions--archive .ev-edition-photo { height: auto; aspect-ratio: 4 / 3; }
   .ev-edition-year { min-height: 280px; font-size: 8.5rem; }
   .ev-edition-body { padding: 26px; }
   .ev-related-layout { gap: 28px; }
