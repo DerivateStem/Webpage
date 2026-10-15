@@ -1,6 +1,6 @@
 /* Event pages share the editorial typography and brand tokens in site.css. */
 .events-page { background: #101010; color: #f7f5f0; }
-.ev-hero { display: grid; grid-template-columns: 1.08fr 1fr; gap: 64px; align-items: center; padding-top: 78px; padding-bottom: 88px; }
+.ev-hero { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 64px); align-items: center; padding-top: clamp(48px, 6vw, 78px); padding-bottom: clamp(60px, 7vw, 88px); }
 .ev-hero-copy { padding: 20px 0; }
 .ev-title { margin: 24px 0 30px; font-size: clamp(5rem, 8.6vw, 8.5rem); line-height: .88; letter-spacing: -.035em; }
 .ev-title span { color: #ffc907; }
@@ -8,7 +8,7 @@
 .ev-description { color: #b9b8b2; font-size: 1rem; line-height: 1.8; max-width: 47ch; margin: 16px 0 30px; }
 .ev-hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 26px; }
 .ev-upcoming { background: var(--blue); color: var(--ink); }
-.ev-upcoming-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 72px; align-items: center; }
+.ev-upcoming-layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(32px, 5.5vw, 72px); align-items: center; }
 .ev-upcoming-title { margin-top: 20px; font-size: clamp(3.6rem, 6.6vw, 6.4rem); line-height: .94; letter-spacing: -.025em; }
 .ev-upcoming-copy > p { max-width: 36ch; font-size: 1.2rem; line-height: 1.65; }
 .ev-upcoming-status { margin-top: 30px; border-top: 1px solid #10101060; padding-top: 22px; }
@@ -19,7 +19,7 @@
 .ev-hero-photo::before { content: ''; width: 62px; height: 62px; background: #ffc907; position: absolute; left: -18px; top: 22px; z-index: 1; mix-blend-mode: screen; }
 .ev-hero-photo img { display: block; width: 100%; height: 100%; flex: 1; min-height: 0; object-fit: cover; object-position: 80% center; }
 .ev-hero-photo figcaption { padding: 14px 0 0; display: flex; justify-content: space-between; gap: 20px; font-family: 'IBM Plex Mono', monospace; font-size: .67rem; letter-spacing: .06em; text-transform: uppercase; color: #aaa9a3; }
-.ev-section-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 48px; margin-bottom: 48px; }
+.ev-section-top { display: flex; align-items: flex-end; justify-content: space-between; gap: clamp(24px, 4vw, 48px); margin-bottom: clamp(32px, 4vw, 48px); }
 .ev-section-title { font-size: clamp(2.7rem, 4.4vw, 4.5rem); line-height: .98; letter-spacing: -.025em; margin: 18px 0 0; }
 .ev-section-note { max-width: 27ch; color: #575751; line-height: 1.7; margin: 0 0 4px; }
 .ev-editions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
@@ -28,22 +28,22 @@
 .ev-editions--archive .ev-edition-year { min-height: 268px; font-size: 8rem; }
 .ev-editions--archive .ev-edition-body { padding: 26px; }
 .ev-editions--archive .ev-edition-body .eyebrow { font-size: .6rem; }
-.ev-edition { background: #eeece5; border: 1px solid #d9d7cf; display: flex; flex-direction: column; }
+.ev-edition { min-width: 0; background: #eeece5; border: 1px solid #d9d7cf; display: flex; flex-direction: column; }
 .ev-edition-year { position: relative; min-height: 315px; padding: 26px 30px; background: #ffc907; color: #101010; font-family: 'Barlow Condensed', sans-serif; font-size: 9.5rem; font-weight: 800; letter-spacing: -.065em; line-height: .82; }
 .ev-edition-year > span { position: absolute; bottom: 22px; right: 28px; font-family: 'Inter', sans-serif; font-size: 4rem; font-weight: 400; }
 .ev-edition-photo { width: 100%; height: 315px; object-fit: cover; display: block; }
-.ev-edition-body { padding: 30px; display: flex; flex-direction: column; flex: 1; }
-.ev-edition-body h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 2.3rem; line-height: 1.05; margin: 18px 0; text-transform: uppercase; }
+.ev-edition-body { padding: clamp(22px, 2.4vw, 30px); display: flex; flex-direction: column; flex: 1; }
+.ev-edition-body h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 2.3rem; line-height: 1.08; margin: 18px 0; text-transform: uppercase; text-wrap: balance; }
 .ev-edition-body p:not(.eyebrow) { color: #54544f; line-height: 1.75; margin: 0 0 26px; }
-.ev-edition-body .text-link { align-self: flex-start; margin-top: auto; }
+.ev-edition-body .text-link { align-self: flex-start; margin-top: auto; min-height: 44px; max-width: 100%; gap: 16px; }
 .ev-related { border-top: 1px solid #343431; }
-.ev-related-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: center; }
+.ev-related-layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(36px, 6vw, 80px); align-items: center; }
 .ev-related-layout > div > p:not(.eyebrow) { max-width: 45ch; font-size: 1.05rem; line-height: 1.8; margin-top: 0; margin-bottom: 26px; }
 .ev-related .ev-related-layout > div > p:not(.eyebrow) { color: #b9b8b2; }
 .ev-back { display: inline-flex; align-items: center; gap: 12px; font-size: .8rem; color: #b9b8b2; text-decoration: none; margin-bottom: 50px; }
 .ev-back:hover { color: #ffc907; }
-.ev-archive-hero { padding-top: 38px; padding-bottom: 88px; }
-.ev-archive-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 70px; align-items: center; }
+.ev-archive-hero { padding-top: 38px; padding-bottom: clamp(56px, 7vw, 88px); }
+.ev-archive-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(32px, 5.5vw, 70px); align-items: center; }
 .ev-archive-grid .ev-title { font-size: clamp(4.5rem, 8vw, 8rem); }
 .ev-calendar { background: #ffc907; color: #101010; padding: 28px; position: relative; }
 .ev-calendar-top { display: block; font-family: 'IBM Plex Mono', monospace; font-size: .75rem; padding-bottom: 20px; border-bottom: 1px solid #101010; }
@@ -55,7 +55,7 @@
 .ev-status > span { width: 7px; height: 7px; flex-shrink: 0; background: #54544f; border-radius: 50%; }
 .ev-archive-note { border-left: 2px solid #101010; padding-left: 32px; }
 .ev-rifp-hero { padding-top: 64px; padding-bottom: 66px; }
-.ev-rifp-heading { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: end; padding-bottom: 48px; }
+.ev-rifp-heading { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 64px); align-items: end; padding-bottom: clamp(32px, 4vw, 48px); }
 .ev-rifp-heading .ev-title { margin: 22px 0 0; }
 .ev-rifp-heading h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(1.8rem, 3vw, 3rem); line-height: 1.06; margin: 0 0 18px; text-transform: uppercase; }
 .ev-rifp-heading p:not(.eyebrow) { color: #b9b8b2; line-height: 1.75; margin-bottom: 0; }
@@ -63,17 +63,16 @@
 .ev-rifp-photo img { width: 100%; max-height: 520px; object-fit: cover; display: block; }
 .ev-rifp-photo figcaption { font-family: 'IBM Plex Mono', monospace; font-size: .7rem; color: #aaa9a3; padding-top: 14px; text-transform: uppercase; letter-spacing: .04em; }
 .ev-speakers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start; }
-.ev-speaker { border: 1px solid #d6d4cc; background: #f7f5f0; }
+.ev-speaker { min-width: 0; border: 1px solid #d6d4cc; background: #f7f5f0; }
 .ev-speaker-header { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 24px; padding: 28px 28px 20px; }
 .ev-speaker-header img { width: 112px; height: 138px; object-fit: cover; object-position: center 30%; }
 .ev-speaker-initials { width: 100%; aspect-ratio: 112 / 138; display: grid; place-items: center; background: #e3e0d6; color: #68665d; font: 800 2.7rem/1 'Barlow Condensed', sans-serif; }
-.ev-speaker-header h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.95rem; line-height: 1.05; margin: 4px 0 12px; text-transform: uppercase; overflow-wrap: anywhere; }
+.ev-speaker-header h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.95rem; line-height: 1.12; margin: 4px 0 12px; text-transform: uppercase; overflow-wrap: anywhere; text-wrap: balance; }
 .ev-speaker-affiliation { font-family: 'IBM Plex Mono', monospace; color: #62625c; font-size: .65rem; line-height: 1.65; text-transform: uppercase; margin: 0; }
 .ev-speaker-talk { font-size: 1.02rem; line-height: 1.6; margin: 0; padding: 0 28px 24px; }
 .ev-speaker details { border-top: 1px solid #d6d4cc; }
-.ev-speaker summary { cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: .71rem; padding: 17px 28px; list-style-position: inside; }
-.ev-speaker summary:hover { background: #ffc907; }
-.ev-speaker summary:focus-visible { outline: 3px solid #2e9df7; outline-offset: -3px; }
+.ev-speaker summary { cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: .75rem; min-height: 48px; padding: 17px 28px; list-style-position: inside; transition: background-color .18s ease; }
+.ev-speaker summary:focus-visible { outline: 3px solid #075b98; outline-offset: -3px; }
 .ev-speaker details[open] summary { background: #eeeae0; }
 .ev-speaker details p { padding: 4px 28px 24px; margin: 0; color: #54544f; font-size: .92rem; line-height: 1.8; }
 .ev-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 42px; }
@@ -81,6 +80,14 @@
 .ev-gallery img { width: 100%; height: 270px; object-fit: cover; display: block; }
 .ev-gallery figcaption { font-family: 'IBM Plex Mono', monospace; color: #aaa9a3; font-size: .7rem; line-height: 1.6; margin-top: 14px; }
 .ev-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.events-page .light-section :focus-visible { outline-color: #075b98; }
+.ev-upcoming :focus-visible, .ev-calendar :focus-visible { outline-color: var(--ink); }
+.ev-edition-body .text-link span, .ev-hero-actions .text-link span { flex-shrink: 0; }
+.ev-speaker-affiliation, .ev-speaker-talk, .ev-edition-body p { overflow-wrap: break-word; }
+@media (hover: hover) and (pointer: fine) {
+  .ev-speaker summary:hover { background: #eeeae0; }
+  .events-page .light-section .text-link:hover { color: #075b98; }
+}
 @media (max-width: 950px) {
   .ev-hero { gap: 36px; }
   .ev-title { font-size: clamp(4.4rem, 10vw, 7.5rem); }
@@ -127,4 +134,15 @@
   .ev-gallery { grid-template-columns: 1fr; gap: 32px; margin-top: 30px; }
   .ev-gallery img { height: auto; aspect-ratio: 4 / 3; }
 }
-@media (max-width: 380px) { .ev-section-title { font-size: 2.5rem; } .ev-speaker-header { grid-template-columns: 76px minmax(0, 1fr); gap: 14px; padding-inline: 18px; } .ev-speaker-header img, .ev-speaker-initials { width: 76px; height: 98px; } }
+@media (max-width: 480px) {
+  .ev-hero-photo figcaption { flex-wrap: wrap; gap: 6px 16px; }
+  .ev-hero-actions { align-items: stretch; }
+  .ev-hero-actions .button { width: 100%; }
+  .ev-edition-body, .ev-editions--archive .ev-edition-body { padding: 22px; }
+  .ev-calendar { padding: 22px; }
+  .ev-calendar-bottom { gap: 16px; font-size: .7rem; }
+  .ev-speaker-header { grid-template-columns: 76px minmax(0, 1fr); gap: 16px; padding-inline: 20px; }
+  .ev-speaker-header img, .ev-speaker-initials { width: 76px; height: 98px; }
+  .ev-speaker-talk, .ev-speaker summary, .ev-speaker details p { padding-inline: 20px; }
+}
+@media (max-width: 380px) { .ev-section-title { font-size: 2.5rem; } .ev-speaker-header { gap: 14px; padding-inline: 18px; } }

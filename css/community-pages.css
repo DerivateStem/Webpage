@@ -1,5 +1,5 @@
 /* Community and public team pages. */
-.community-hero { background: #101010; color: #f7f5f0; padding: 90px 0 88px; }
+.community-hero { background: #101010; color: #f7f5f0; padding: clamp(56px, 6.5vw, 88px) 0; }
 .community-hero .eyebrow { color: #a5a39d; }
 .community-hero__grid { display: grid; grid-template-columns: 1.65fr 1fr; gap: 72px; align-items: end; margin-top: 44px; }
 .community-hero h1 { font-family: "Barlow Condensed", sans-serif; font-size: clamp(4.25rem, 8.6vw, 8.5rem); font-weight: 800; line-height: .94; letter-spacing: -.025em; margin: 0; text-transform: uppercase; }
@@ -37,30 +37,37 @@
 .team-heading { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
 .team-heading h2 { margin: 0; }
 .team-results { color: #65645d; font: .75rem/1.6 "IBM Plex Mono", monospace; }
-.team-filters { margin: 38px 0 44px; padding: 26px; background: #eeece5; border: 1px solid #dedbd2; }
+.team-filters { margin: 34px 0 40px; padding: 26px; background: #eeece5; border: 1px solid #dedbd2; border-radius: 4px; }
 .team-filters__top { display: flex; align-items: end; gap: 24px; margin-bottom: 22px; }
 .team-filters__search { flex: 1; }
 .team-filters__fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .team-filters label { display: block; color: #515149; font-size: .75rem; font-weight: 600; margin-bottom: 9px; }
-.team-filters input, .team-filters select { width: 100%; min-height: 48px; border: 1px solid #cfcdc4; border-radius: 0; background: #f7f5f0; color: #101010; padding: 12px 14px; font: .9rem/1.5 "Inter", sans-serif; }
+.team-filters input, .team-filters select { width: 100%; min-height: 48px; border: 1px solid #cfcdc4; border-radius: 3px; background: #faf9f5; color: #101010; padding: 12px 14px; font: .9rem/1.5 "Inter", sans-serif; transition: border-color .18s, background-color .18s; }
 .team-filters select { padding-right: 28px; }
 .team-reset { min-height: 48px; border: 0; background: transparent; padding: 12px 0; color: #101010; text-decoration: underline; text-underline-offset: 5px; font: 600 .85rem/1.5 "Inter", sans-serif; cursor: pointer; }
-.team-filters :is(input, select, button):focus-visible, .team-card :is(a, summary):focus-visible, .community-path:focus-visible { outline: 3px solid #2e9df7; outline-offset: 4px; }
-.team-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 42px 24px; align-items: start; }
-.team-card { min-width: 0; }
+.team-filters :is(input, select, button):focus-visible, .team-card :is(a, summary):focus-visible, .community-path:focus-visible { outline: 3px solid var(--blue-on-paper); outline-offset: 4px; }
+.team-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 24px; align-items: stretch; }
+.team-card { min-width: 0; padding: 18px; background: #faf9f5; border: 1px solid #dedbd2; border-radius: 4px; transition: border-color .2s; }
+.team-card:focus-within { border-color: var(--blue-on-paper); }
 .team-card[hidden] { display: none; }
-.team-card__portrait { aspect-ratio: 4 / 4.5; background: #e3e0d6; position: relative; overflow: hidden; }
+.team-card__portrait { aspect-ratio: 1; background: #e3e0d6; position: relative; overflow: hidden; border-radius: 2px; }
 .team-card__portrait img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; filter: grayscale(1); transition: filter .25s; }
-.team-card:hover .team-card__portrait img { filter: grayscale(0); }
-.team-card__initials { width: 100%; height: 100%; display: grid; place-items: center; font: 800 4.4rem/1 "Barlow Condensed", sans-serif; color: #68665d; }
-.team-card__portrait--placeholder::after { content: ""; position: absolute; right: 20px; bottom: 20px; width: 26px; height: 26px; border-top: 1px solid #b3afa2; border-right: 1px solid #b3afa2; }
-.team-card__university { display: inline-block; margin: 21px 0 8px; color: #66655c; font: .68rem/1.4 "IBM Plex Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
-.team-card h3 { font: 800 1.75rem/1.07 "Barlow Condensed", sans-serif; letter-spacing: -.015em; text-transform: uppercase; margin: 0 0 10px; }
+.team-card:focus-within .team-card__portrait img { filter: grayscale(0); }
+.team-card__portrait--placeholder { background: #18232b; }
+.team-card__initials { width: 100%; height: 100%; display: grid; place-items: center; font: 800 4.4rem/1 "Barlow Condensed", sans-serif; color: var(--blue); }
+.team-card__portrait--placeholder::after { content: ""; position: absolute; right: 16px; bottom: 16px; width: 22px; height: 22px; border-top: 1px solid #2e9df766; border-right: 1px solid #2e9df766; }
+.team-card__university { display: inline-block; margin: 22px 0 10px; color: #66655c; font: .66rem/1.6 "IBM Plex Mono", monospace; letter-spacing: .06em; text-transform: uppercase; }
+.team-card h3 { font: 800 clamp(1.5rem, 2.1vw, 1.85rem)/1.12 "Barlow Condensed", sans-serif; letter-spacing: -.01em; text-transform: uppercase; margin: 0 0 12px; text-wrap: pretty; }
 .team-card__role { color: #64635c; font-size: .85rem; line-height: 1.6; margin: 0; }
-.team-card details { border-top: 1px solid #d9d6cc; margin-top: 20px; padding-top: 15px; }
-.team-card summary { font-size: .8rem; font-weight: 600; cursor: pointer; width: fit-content; min-height: 28px; }
+.team-card details { border-top: 1px solid #d9d6cc; margin-top: 22px; }
+.team-card summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: .8rem; font-weight: 600; cursor: pointer; min-height: 48px; list-style: none; transition: color .18s; }
+.team-card summary::-webkit-details-marker { display: none; }
+.team-card summary::after { content: '+'; flex-shrink: 0; color: var(--blue-on-paper); font: 400 1.15rem/1 var(--font-mono); }
+.team-card details[open] summary::after { content: '−'; }
+.team-card summary:hover, .team-card details[open] summary { color: var(--blue-on-paper); }
 .team-card details p { color: #64635c; font-size: .84rem; line-height: 1.75; }
-.team-card__linkedin { display: inline-block; color: #101010; font-size: .8rem; font-weight: 600; margin-top: 12px; text-decoration: underline; text-underline-offset: 4px; }
+.team-card__linkedin { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #101010; font-size: .76rem; font-weight: 500; margin-top: 2px; text-decoration: underline; text-underline-offset: 4px; }
+.team-card__linkedin:hover { color: var(--blue-on-paper); }
 .team-empty { text-align: center; border: 1px solid #d9d6cc; padding: 60px 24px; }
 .team-empty h3 { margin-top: 0; font: 800 2rem/1.1 "Barlow Condensed", sans-serif; text-transform: uppercase; }
 .team-empty p { color: #64635c; line-height: 1.7; }
@@ -73,9 +80,10 @@
 .mentor-edition .section-heading > p { max-width: 380px; }
 .mentor-edition-nav { display: flex; flex-wrap: wrap; gap: 12px 24px; flex-shrink: 0; max-width: 330px; }
 .mentor-directory { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 48px; list-style: none; padding: 0; margin: 0; }
-.mentor-directory-row { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 20px; padding: 30px 0; border-top: 1px solid #10101038; }
+.mentor-directory-row { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 20px; padding: 32px 0; border-top: 1px solid #10101038; transition: border-color .2s; }
+.mentor-directory-row:focus-within { border-top-color: var(--blue-on-paper); }
 .mentor-directory-row .mentor-initials { width: 48px; height: 48px; font-size: 23px; }
-.mentor-directory-row h3 { font-size: 21px; line-height: 1.2; font-weight: 600; letter-spacing: -.02em; margin-bottom: 12px; }
+.mentor-directory-row h3 { font-size: 21px; line-height: 1.3; font-weight: 600; letter-spacing: -.02em; margin-bottom: 12px; }
 .mentor-directory-area { font-size: 14px; line-height: 1.6; }
 .mentor-directory-affiliation { color: #625f57; font-size: 12px; line-height: 1.7; margin-top: 8px; }
 .mentor-directory-row .mentor-reference-date { font-family: var(--font-mono); color: #625f57; font-size: 9px; line-height: 1.6; margin-top: 8px; }
@@ -120,7 +128,7 @@
   .team-filters__fields { grid-template-columns: 1fr; gap: 18px 12px; }
   .team-filters select { font-size: .8rem; padding-left: 10px; }
   .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 16px; }
-  .team-card h3 { font-size: 1.45rem; }
+  .team-card h3 { font-size: 1.5rem; }
   .team-card__role { font-size: .78rem; }
   .team-card__initials { font-size: 3.6rem; }
 }
@@ -130,6 +138,34 @@
   .team-reset { margin-top: 8px; }
   .team-filters__fields { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
+}
+/* Compact horizontal profiles keep full names legible on phones. */
+@media (max-width: 540px) {
+  .team-grid { grid-template-columns: 1fr; gap: 16px; }
+  .team-card { display: grid; grid-template-columns: 88px minmax(0, 1fr); column-gap: 18px; row-gap: 5px; padding: 18px; }
+  .team-card__portrait { grid-column: 1; grid-row: 1 / span 3; align-self: start; }
+  .team-card__initials { font-size: 2.5rem; }
+  .team-card__portrait--placeholder::after { right: 10px; bottom: 10px; width: 14px; height: 14px; }
+  .team-card__university, .team-card h3, .team-card__role { grid-column: 2; margin: 0; }
+  .team-card__university { font-size: .6rem; }
+  .team-card h3 { font-size: 1.5rem; line-height: 1.15; }
+  .team-card__role { font-size: .77rem; }
+  .team-card details { grid-column: 1 / -1; margin-top: 12px; }
+  .team-card__linkedin { grid-column: 1 / -1; justify-self: start; }
+  .team-filters { padding: 18px; }
+  .team-filters__top { display: block; margin-bottom: 14px; }
+  .team-reset { min-height: 44px; margin-top: 4px; }
+  .team-filters input, .team-filters select { font-size: 1rem; }
+  .team-filters select { padding-left: 12px; }
+  .team-results { margin-top: 12px; }
+}
+@media (max-width: 380px) {
+  .team-card { grid-template-columns: 68px minmax(0, 1fr); gap: 6px 14px; padding: 16px; }
+  .team-card h3 { font-size: 1.4rem; }
+}
+@media (hover: hover) and (pointer: fine) {
+  .team-card:hover { border-color: #aaa89f; }
+  .team-card:hover .team-card__portrait img { filter: grayscale(0); }
 }
 @media (prefers-reduced-motion: reduce) {
   .community-path, .team-card__portrait img { transition: none; }
