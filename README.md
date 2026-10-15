@@ -31,7 +31,7 @@ El comprobador usa la biblioteca estándar de Python y revisa las páginas, los 
 | --- | --- |
 | `index.html` | Inicio, comunidad, programas, encuentros y novedades. |
 | `conocenos.html` | Propósito y forma de trabajo de Derívate. |
-| `equipo.html` | Equipo de la comunidad. |
+| `equipo.html` | Miembros de la comunidad y asesores académicos; búsqueda por nombre y filtros de tipo e institución. |
 | `mentores.html` | Mentores de Derívate, agrupados en Summer Sprint 2027 y Research Sprint 2026, con referencias académicas. |
 | `summer-sprint.html` | Convocatoria, proyectos y orientación para postular. |
 | `EntreFisicos.html` | Anuncio de Entre Físicos 2027 y archivo de Entre Físicos 2026, Entre Físicos 2025 y RIFP 2024. |
@@ -49,6 +49,14 @@ El comprobador usa la biblioteca estándar de Python y revisa las páginas, los 
 - `assets/fonts/fonts.css`: fuentes WOFF2 autoalojadas con `font-display: swap`; sus licencias están en el mismo directorio.
 
 Las páginas montan los componentes en `#navbar` y `#footer` e importan `js/site.js` como módulo. Al crear una página, conservar el enlace «Saltar al contenido», el contenido principal con `id="contenido"` y `id="top"` en el `body`.
+
+## Directorio del equipo
+
+La actualización del 15 de octubre de 2026 incorpora los 42 nombres y universidades de la hoja de miembros facilitada por el organizador, junto con Adrian Diaz Espinoza y los asesores académicos añadidos por indicación del organizador: Enrique Rojas Villalba y Pablo Palacios-Avila. La hoja es una fuente interna: no publicar su contenido completo, DNI, correos, becas ni otros datos personales ajenos a las fichas del equipo.
+
+El directorio no usa carreras ni áreas organizativas. Mantiene las fotos y enlaces profesionales ya publicados de quienes continúan; las fichas sin fotografía muestran iniciales. Los nombres, instituciones y roles se escriben en el HTML, y `js/equipo.js` aplica los filtros de tipo e institución.
+
+El perfil institucional de MIT Haystack confirma la afiliación de Enrique Rojas Villalba. La referencia de Waterloo de Pablo Palacios-Avila es de 2022: se enlaza con esa fecha, sin atribuirle una afiliación ni un grado actuales.
 
 ## Identidad visual y recursos
 
