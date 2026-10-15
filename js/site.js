@@ -36,7 +36,7 @@ document.addEventListener('keydown', event => {
     else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); toggle.focus(); }
   }
 });
-const desktop = window.matchMedia('(min-width: 1241px)');
+const desktop = window.matchMedia('(min-width: 1001px)');
 desktop.addEventListener('change', event => { if (event.matches) setMenu(false); });
 const page = location.pathname.split('/').pop() || 'index.html';
 const activePage = page === 'EntreFisicos2026.html' ? 'EntreFisicos.html' : page;
