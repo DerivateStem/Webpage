@@ -40,7 +40,7 @@
 .team-filters { margin: 38px 0 44px; padding: 26px; background: #eeece5; border: 1px solid #dedbd2; }
 .team-filters__top { display: flex; align-items: end; gap: 24px; margin-bottom: 22px; }
 .team-filters__search { flex: 1; }
-.team-filters__fields { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.team-filters__fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .team-filters label { display: block; color: #515149; font-size: .75rem; font-weight: 600; margin-bottom: 9px; }
 .team-filters input, .team-filters select { width: 100%; min-height: 48px; border: 1px solid #cfcdc4; border-radius: 0; background: #f7f5f0; color: #101010; padding: 12px 14px; font: .9rem/1.5 "Inter", sans-serif; }
 .team-filters select { padding-right: 28px; }
@@ -117,7 +117,7 @@
   .team-filters { padding: 20px; margin-top: 26px; }
   .team-filters__top { gap: 12px; }
   .team-reset { font-size: .76rem; }
-  .team-filters__fields { gap: 18px 12px; }
+  .team-filters__fields { grid-template-columns: 1fr; gap: 18px 12px; }
   .team-filters select { font-size: .8rem; padding-left: 10px; }
   .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 16px; }
   .team-card h3 { font-size: 1.45rem; }
