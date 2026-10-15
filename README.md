@@ -82,6 +82,12 @@ Entre Físicos 2027 se anuncia con «Inscripciones próximamente». La inscripci
 
 Los mentores siguen formando parte de Derívate entre ediciones. El directorio incluye los seis perfiles de Summer Sprint 2027 y los 23 participantes de Research Sprint 2026 de la tabla 2 del registro entregado por la organización. Algunas personas participaron en ambas ediciones. Se contrastaron nombres, áreas y afiliaciones con fuentes públicas el 14–15 de octubre de 2026; cada perfil de 2026 enlaza una referencia académica. Las afiliaciones históricas se presentan con su año cuando se conoce. No se publican grados o candidaturas que no pudieron corroborarse. La lista no incluye datos de mentees, correos ni teléfonos personales.
 
+### Testimonios de Research Sprint 2026
+
+`summer-sprint.html#testimonios` reserva dos tarjetas entre los proyectos y «Cómo postular». Ambas se muestran como «Próximamente» hasta recibir material real. Los bloques gráficos son decorativos; no representan a participantes ni contienen citas ficticias.
+
+Para completar cada tarjeta, incorporar la foto autorizada dentro de `.testimonial-portrait`, con `alt` descriptivo y dimensiones explícitas. Sustituir el contenido pendiente por la cita en un `blockquote.testimonial-quote` y la atribución en `.testimonial-person`, con `.testimonial-name` y, si se confirma, `.testimonial-meta`. Retirar la clase `sprint-testimonial--pending`, el estado «Próximamente» y el `aria-label` provisional. No reutilizar datos de mentees del PDF para identificar a quienes darán su testimonio. Los estilos de esta sección están en `css/sprint-testimonials.css`.
+
 ### Actualizar una futura edición
 
 1. Confirmar con la organización las fechas, el cierre, los proyectos, las vacantes, las modalidades, los requisitos, los mentores y los enlaces de catálogo y formulario.
