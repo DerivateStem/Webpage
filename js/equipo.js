@@ -5,7 +5,7 @@ if (filters) {
   const cards = [...document.querySelectorAll('.team-card')];
   const count = document.getElementById('team-results');
   const empty = document.getElementById('team-empty');
-  const fields = ['carrera', 'area', 'tipo', 'universidad'];
+  const fields = ['tipo', 'universidad'];
   const normalize = (value) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
 
   function updateResults() {
@@ -29,12 +29,12 @@ if (filters) {
   filters.addEventListener('input', updateResults);
   filters.addEventListener('change', updateResults);
   filters.addEventListener('submit', (event) => event.preventDefault());
-  filters.addEventListener('reset', () => {
-    // Run after the browser restores the controls' default values.
-    queueMicrotask(() => {
-      updateResults();
-      search.focus();
-    });
+  filters.addEventListener('reset', (event) => {
+    event.preventDefault();
+    search.value = '';
+    fields.forEach((field) => { document.getElementById(field).value = ''; });
+    updateResults();
+    search.focus();
   });
   document.getElementById('empty-reset').addEventListener('click', () => filters.reset());
   updateResults();
