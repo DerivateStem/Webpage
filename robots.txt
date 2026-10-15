@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /Webpage/
+
+Sitemap: https://derivatestem.github.io/Webpage/sitemap.xml
