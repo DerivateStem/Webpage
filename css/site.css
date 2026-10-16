@@ -55,6 +55,10 @@
 
 
 /* Shared finishing details: stable layout, readable rhythm and quiet feedback. */
+.project-mentor{display:block;min-height:44px;padding:10px 0;margin-top:10px;color:var(--paper);font-size:12px;line-height:1.6;text-decoration:underline;text-underline-offset:4px}
+.project-mentor:hover{color:var(--blue)}
+.sprint-mentors .mentor-row{scroll-margin-top:calc(var(--header-height) + 24px)}
+.sprint-mentors .mentor-network-link{margin-top:28px}
 h1,h2,h3,h4{text-wrap:balance}
 .hero-description,.lede,.intro-copy>p,.section-heading p{text-wrap:pretty}
 .nav-fallback{min-height:var(--header-height)}

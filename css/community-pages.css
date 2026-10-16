@@ -59,6 +59,10 @@
 .team-card__university { display: inline-block; margin: 22px 0 10px; color: #66655c; font: .66rem/1.6 "IBM Plex Mono", monospace; letter-spacing: .06em; text-transform: uppercase; }
 .team-card h3 { font: 800 clamp(1.5rem, 2.1vw, 1.85rem)/1.12 "Barlow Condensed", sans-serif; letter-spacing: -.01em; text-transform: uppercase; margin: 0 0 12px; text-wrap: pretty; }
 .team-card__role { color: #64635c; font-size: .85rem; line-height: 1.6; margin: 0; }
+.team-card__area { color: #45453f; font-size: .8rem; line-height: 1.7; margin-top: 12px; }
+.team-filters__note { max-width: 780px; margin-top: 20px; font-size: .76rem; color: #64635c; line-height: 1.75; }
+.team-card details p + p { margin-top: 12px; }
+.team-card__program { color: var(--blue-on-paper); text-decoration: underline; text-underline-offset: 4px; }
 .team-card details { border-top: 1px solid #d9d6cc; margin-top: 22px; }
 .team-card summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: .8rem; font-weight: 600; cursor: pointer; min-height: 48px; list-style: none; transition: color .18s; }
 .team-card summary::-webkit-details-marker { display: none; }
@@ -150,6 +154,7 @@
   .team-card__university { font-size: .6rem; }
   .team-card h3 { font-size: 1.5rem; line-height: 1.15; }
   .team-card__role { font-size: .77rem; }
+  .team-card__area { grid-column: 1 / -1; margin-top: 12px; font-size: .8rem; }
   .team-card details { grid-column: 1 / -1; margin-top: 12px; }
   .team-card__linkedin { grid-column: 1 / -1; justify-self: start; }
   .team-filters { padding: 18px; }
