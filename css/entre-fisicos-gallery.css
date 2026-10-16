@@ -6,6 +6,7 @@
 .ef-gallery-item > a { display: block; position: relative; overflow: hidden; background: #252522; border-radius: 3px; }
 .ef-gallery-item > a::after { content: '↗'; position: absolute; right: 12px; bottom: 12px; display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid #ffffff60; border-radius: 2px; background: #101010cc; color: var(--paper); font-size: 19px; line-height: 1; transition: background-color .2s, color .2s; }
 .ef-gallery-item img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .35s var(--ease); }
+.ef-gallery-item--portrait img { object-position: 50% 25%; }
 .ef-gallery-item figcaption { margin-top: 12px; color: var(--muted); font-family: var(--font-mono); font-size: 10px; line-height: 1.7; letter-spacing: .025em; }
 .ef-gallery-note { margin-top: 28px; color: var(--muted); font-size: 12px; line-height: 1.8; }
 .ef-gallery-note a { text-decoration: underline; text-underline-offset: 4px; }
