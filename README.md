@@ -31,9 +31,9 @@ El comprobador usa la biblioteca estándar de Python y revisa las páginas, los 
 | --- | --- |
 | `index.html` | Inicio, comunidad, programas, encuentros y novedades. |
 | `conocenos.html` | Propósito y forma de trabajo de Derívate. |
-| `equipo.html` | Miembros de la comunidad y asesores académicos; búsqueda por nombre y filtros de tipo e institución. |
-| `mentores.html` | Mentores de Derívate, agrupados en Summer Sprint 2027 y Research Sprint 2026, con referencias académicas. |
-| `summer-sprint.html` | Convocatoria, proyectos y orientación para postular. |
+| `equipo.html` | Directorio único de miembros, mentores y asesores académicos; búsqueda por nombre y filtros de tipo e institución. |
+| `mentores.html` | Redirección de compatibilidad al filtro Mentores de Equipo; ya no es una sección independiente. |
+| `summer-sprint.html` | Convocatoria, proyectos, seis mentores de la edición y orientación para postular. |
 | `EntreFisicos.html` | Anuncio de Entre Físicos 2027 y archivo de Entre Físicos 2026, Entre Físicos 2025 y RIFP 2024. |
 | `EntreFisicos2026.html` | Archivo de la edición 2026. |
 | `RIFP.html` | Archivo de la Reunión Internacional de Físicos en Posgrado 2024. |
@@ -54,7 +54,11 @@ Las páginas montan los componentes en `#navbar` y `#footer` e importan `js/site
 
 La actualización del 15 de octubre de 2026 incorpora los 42 nombres y universidades de la hoja de miembros facilitada por el organizador, junto con Adrian Diaz Espinoza y los asesores académicos añadidos por indicación del organizador: Enrique Rojas Villalba y Pablo Palacios-Avila. La hoja es una fuente interna: no publicar su contenido completo, DNI, correos, becas ni otros datos personales ajenos a las fichas del equipo.
 
+La reorganización del 16 de octubre de 2026 integra los 25 mentores únicos de las ediciones 2026 y 2027 en Equipo. Hay 68 personas: 42 miembros, 3 asesores y 25 mentores; Enrique Rojas y Pablo Palacios cuentan en las dos últimas categorías, con una sola ficha por persona. El filtro admite roles superpuestos. `equipo.html?tipo=mentor#equipo-heading` abre directamente los mentores; también se conserva el filtro de institución en la URL.
+
 El directorio no usa carreras ni áreas organizativas. Mantiene las fotos y enlaces profesionales ya publicados de quienes continúan; las fichas sin fotografía muestran iniciales. Los nombres, instituciones y roles se escriben en el HTML, y `js/equipo.js` aplica los filtros de tipo e institución.
+
+En las fichas de mentores, las instituciones son las de las referencias académicas enlazadas, con sus años y límites. No interpretarlas como cargos o afiliaciones actuales.
 
 El perfil institucional de MIT Haystack confirma la afiliación de Enrique Rojas Villalba. La referencia de Waterloo de Pablo Palacios-Avila es de 2022: se enlaza con esa fecha, sin atribuirle una afiliación ni un grado actuales.
 
@@ -88,11 +92,11 @@ El catálogo establece cargas de 3–5, 6–9 y 10+ horas semanales según el pr
 
 Entre Físicos 2027 se anuncia con «Inscripciones próximamente». La inscripción se realizará en Indico; añadir únicamente el enlace oficial cuando lo proporcione la organización. No hay fechas ni enlace de inscripción publicados para 2027.
 
-Los mentores siguen formando parte de Derívate entre ediciones. El directorio incluye los seis perfiles de Summer Sprint 2027 y los 23 participantes de Research Sprint 2026 de la tabla 2 del registro entregado por la organización. Algunas personas participaron en ambas ediciones. Se contrastaron nombres, áreas y afiliaciones con fuentes públicas el 14–15 de octubre de 2026; cada perfil de 2026 enlaza una referencia académica. Las afiliaciones históricas se presentan con su año cuando se conoce. No se publican grados o candidaturas que no pudieron corroborarse. La lista no incluye datos de mentees, correos ni teléfonos personales.
+Los mentores siguen formando parte de Derívate entre ediciones. Equipo reúne los seis perfiles de Summer Sprint 2027 y los 23 participantes de Research Sprint 2026 de la tabla 2 del registro entregado por la organización. Cuatro personas participaron en ambas ediciones y se unifican en una sola ficha. Summer Sprint muestra únicamente los seis mentores de su edición, con enlaces entre cada persona y su proyecto. La navegación principal y el pie ya no incluyen una sección independiente de Mentores. Se contrastaron nombres, áreas y afiliaciones con fuentes públicas el 14–15 de octubre de 2026; cada perfil de 2026 enlaza una referencia académica. Las afiliaciones históricas se presentan con su año cuando se conoce. No se publican grados o candidaturas que no pudieron corroborarse. La lista no incluye datos de mentees, correos ni teléfonos personales.
 
 ### Testimonios de Research Sprint 2026
 
-`summer-sprint.html#testimonios` reserva dos tarjetas entre los proyectos y «Cómo postular». Ambas se muestran como «Próximamente» hasta recibir material real. Los bloques gráficos son decorativos; no representan a participantes ni contienen citas ficticias.
+`summer-sprint.html#testimonios` reserva dos tarjetas después de los mentores y antes de «Cómo postular». Ambas se muestran como «Próximamente» hasta recibir material real. Los bloques gráficos son decorativos; no representan a participantes ni contienen citas ficticias.
 
 Para completar cada tarjeta, incorporar la foto autorizada dentro de `.testimonial-portrait`, con `alt` descriptivo y dimensiones explícitas. Sustituir el contenido pendiente por la cita en un `blockquote.testimonial-quote` y la atribución en `.testimonial-person`, con `.testimonial-name` y, si se confirma, `.testimonial-meta`. Retirar la clase `sprint-testimonial--pending`, el estado «Próximamente» y el `aria-label` provisional. No reutilizar datos de mentees del PDF para identificar a quienes darán su testimonio. Los estilos de esta sección están en `css/sprint-testimonials.css`.
 
@@ -101,7 +105,7 @@ Para completar cada tarjeta, incorporar la foto autorizada dentro de `.testimoni
 1. Confirmar con la organización las fechas, el cierre, los proyectos, las vacantes, las modalidades, los requisitos, los mentores y los enlaces de catálogo y formulario.
 2. Actualizar **`index.html` y `summer-sprint.html`**: textos visibles, cifras, fechas, enlaces, títulos, metadescripciones y etiquetas sociales.
 3. Actualizar **`js/site.js`**: fecha de cierre y catálogo de destino. Actualmente el umbral es `2026-11-09T00:00:00-05:00`, al terminar el 8 de noviembre en Lima. Mantener explícito el desfase `-05:00`.
-4. Revisar `components/header.html`, `components/footer.html` y `mentores.html` para eliminar referencias o enlaces de la edición anterior.
+4. Revisar `components/header.html`, `components/footer.html`, `equipo.html` y la sección `summer-sprint.html#mentores` para eliminar referencias o enlaces de la edición anterior.
 5. Buscar en todo el sitio el año anterior, las fechas y los identificadores de los documentos antiguos para detectar referencias pendientes.
 6. Verificar por HTTP, en escritorio y móvil, el menú, los botones de postulación, las imágenes y los enlaces al catálogo. Comprobar también el comportamiento de la convocatoria después de su cierre.
 
@@ -117,7 +121,7 @@ El script cambia los textos con `data-sprint-status` y los enlaces con `data-spr
 
 ## Publicación y dominio
 
-GitHub Pages sirve la raíz del repositorio en [la dirección temporal](https://derivatestem.github.io/Webpage/). Los enlaces internos y los recursos usan rutas relativas para conservar el prefijo `/Webpage/`. Las nueve páginas incluyen `canonical`, `og:url` y `og:image` con esta base; `sitemap.xml` enumera sus URL y `robots.txt` incluye el enlace al sitemap. Revisar los cambios antes de incorporarlos a la rama utilizada por Pages.
+GitHub Pages sirve la raíz del repositorio en [la dirección temporal](https://derivatestem.github.io/Webpage/). Los enlaces internos y los recursos usan rutas relativas para conservar el prefijo `/Webpage/`. Las nueve páginas incluyen `canonical`, `og:url` y `og:image` con esta base; `sitemap.xml` enumera las ocho páginas de contenido y excluye la redirección `mentores.html` y `robots.txt` incluye el enlace al sitemap. Revisar los cambios antes de incorporarlos a la rama utilizada por Pages.
 
 ### Restaurar `derivate.org.pe`
 

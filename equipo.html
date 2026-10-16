@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Equipo — Derívate</title>
-  <meta name="description" content="Conoce a las personas que forman Derívate: miembros y asesores académicos que acompañan a nuestra comunidad de Física en Perú.">
+  <meta name="description" content="Conoce a las personas que forman Derívate: miembros, mentores y asesores académicos que acompañan a nuestra comunidad de Física en Perú.">
   <meta name="theme-color" content="#101010">
   <link rel="icon" href="assets/brand/favicon.png">
   <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png">
-  <link rel="stylesheet" href="css/site.css?v=16f90d0504">
-  <link rel="stylesheet" href="css/community-pages.css?v=7bea9a8605">
+  <link rel="stylesheet" href="css/site.css?v=a0f5c7bc18">
+  <link rel="stylesheet" href="css/community-pages.css?v=f225df2bf3">
   <link rel="canonical" href="https://derivatestem.github.io/Webpage/equipo.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Equipo — Derívate">
-  <meta property="og:description" content="Conoce a las personas que forman Derívate: miembros y asesores académicos que acompañan a nuestra comunidad de Física en Perú.">
+  <meta property="og:description" content="Conoce a las personas que forman Derívate: miembros, mentores y asesores académicos que acompañan a nuestra comunidad de Física en Perú.">
   <meta property="og:url" content="https://derivatestem.github.io/Webpage/equipo.html">
   <meta property="og:image" content="https://derivatestem.github.io/Webpage/assets/media/community.webp">
 </head>
@@ -27,7 +27,7 @@
         <div class="community-hero__grid">
           <h1 class="display">Compartimos<br>la curiosidad.<br><span>Y el camino.</span></h1>
           <div class="community-hero__intro">
-            <p>Somos una comunidad de Física. Miembros y asesores académicos trabajamos juntos para aprender, acompañarnos y abrir espacios de encuentro.</p>
+            <p>Somos una comunidad de Física. Miembros, mentores y asesores académicos trabajamos juntos para aprender, acompañarnos y abrir espacios de encuentro.</p>
             <a class="text-link" href="conocenos.html">Conoce nuestra comunidad <span aria-hidden="true">↗</span></a>
           </div>
         </div>
@@ -37,7 +37,7 @@
       <div class="container">
         <div class="team-heading">
           <h2 id="equipo-heading">Nuestro equipo</h2>
-          <p class="team-results" id="team-results" role="status" aria-live="polite" aria-atomic="true">45 de 45 perfiles</p>
+          <p class="team-results" id="team-results" role="status" aria-live="polite" aria-atomic="true">68 de 68 perfiles</p>
         </div>
         <form class="team-filters" id="team-filters" role="search" aria-label="Buscar integrantes del equipo">
           <div class="team-filters__top">
@@ -54,11 +54,12 @@
                 <option value="">Todos los integrantes</option>
                 <option value="miembro">Miembros</option>
                 <option value="asesor">Asesores académicos</option>
+                <option value="mentor">Mentores</option>
               </select>
             </div>
             <div>
               <label for="universidad">Universidad o institución</label>
-              <select id="universidad" name="universidad" aria-controls="team-profiles">
+              <select id="universidad" name="universidad" aria-controls="team-profiles" aria-describedby="team-institution-note">
                 <option value="">Todas las instituciones</option>
                 <option value="unmsm">UNMSM</option>
                 <option value="pucp">PUCP</option>
@@ -67,9 +68,26 @@
                 <option value="unsaac">UNSAAC</option>
                 <option value="uw-madison">UW-Madison</option>
                 <option value="mit">MIT Haystack Observatory</option>
+                <option value="desy">DESY</option>
+                <option value="mainz">Johannes Gutenberg-Universität Mainz</option>
+                <option value="morphodynamics">Morphodynamics / UNESCO UniTwin Complex Systems</option>
+                <option value="sissa">SISSA</option>
+                <option value="antofagasta">Universidad de Antofagasta</option>
+                <option value="bolonia">Universidad de Bolonia</option>
+                <option value="copenhague">Universidad de Copenhague / Niels Bohr Institute</option>
+                <option value="oslo">Universidad de Oslo</option>
+                <option value="usach">Universidad de Santiago de Chile</option>
+                <option value="tarapaca">Universidad de Tarapacá</option>
+                <option value="up">Universidad del Pacífico</option>
+                <option value="ucsd">University of California San Diego</option>
+                <option value="florida">University of Florida</option>
+                <option value="houston">University of Houston</option>
+                <option value="rochester">University of Rochester</option>
+                <option value="waterloo">University of Waterloo</option>
               </select>
             </div>
           </div>
+          <p class="team-filters__note" id="team-institution-note">En los perfiles de mentores, las instituciones corresponden a las referencias académicas enlazadas. Las referencias históricas conservan su año.</p>
         </form>
         <div class="team-grid" id="team-profiles">
           <article class="team-card" data-nombre="Isaac Leonardo Huaira Lopez" data-tipo="miembro" data-universidad="unmsm">
@@ -88,20 +106,20 @@
             <details><summary>Ver perfil</summary><p>Asesor académico de Derívate. Licenciado en Física en la Universidad Nacional Mayor de San Marcos.</p></details>
             <a class="team-card__linkedin" href="https://www.linkedin.com/in/adrianciencia/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Adrian Diaz Espinoza (abre en otra pestaña)">LinkedIn <span aria-hidden="true">↗</span></a>
           </article>
-          <article class="team-card" data-nombre="Enrique Rojas Villalba" data-tipo="asesor" data-universidad="mit">
+          <article class="team-card" data-nombre="Enrique Rojas Villalba" data-tipo="asesor mentor" data-universidad="mit">
             <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">ER</span></div>
             <span class="team-card__university">MIT Haystack Observatory</span>
             <h3>Enrique Rojas Villalba</h3>
-            <p class="team-card__role">Asesor académico de Derívate</p>
-            <details><summary>Ver perfil</summary><p>Asesor académico de Derívate e investigador en MIT Haystack Observatory.</p></details>
+            <p class="team-card__role">Asesor académico y mentor</p>
+            <details><summary>Ver perfil</summary><p>Asesor académico de Derívate e investigador en MIT Haystack Observatory.</p><p>Mentor de Derívate. Participación: Research Sprint 2026 y Summer Sprint 2027.</p><p>Área de investigación: Física espacial, plasmas e ionosfera.</p><p>Institución de la referencia académica: MIT Haystack Observatory · Estados Unidos.</p><p><a class="team-card__program" href="summer-sprint.html#mentor-1">Mentoría en Summer Sprint 2027 ↗</a></p></details>
             <a class="team-card__linkedin" href="https://www.haystack.mit.edu/researcher/villalba/" target="_blank" rel="noopener noreferrer" aria-label="Perfil institucional de Enrique Rojas Villalba">Perfil institucional <span aria-hidden="true">↗</span></a>
           </article>
-          <article class="team-card" data-nombre="Pablo Palacios-Avila" data-tipo="asesor" data-universidad="">
+          <article class="team-card" data-nombre="Pablo Palacios-Avila" data-tipo="asesor mentor" data-universidad="waterloo">
             <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">PP</span></div>
             <span class="team-card__university">Derívate</span>
             <h3>Pablo Palacios-Avila</h3>
-            <p class="team-card__role">Asesor académico de Derívate</p>
-            <details><summary>Ver perfil</summary><p>Forma parte de Derívate como asesor académico.</p></details>
+            <p class="team-card__role">Asesor académico y mentor</p>
+            <details><summary>Ver perfil</summary><p>Forma parte de Derívate como asesor académico.</p><p>Mentor de Derívate. Participación: Research Sprint 2026 y Summer Sprint 2027.</p><p>Área de investigación: Óptica e información cuánticas.</p><p>Institución de la referencia académica: University of Waterloo · Canadá. Referencia institucional de 2022.</p><p><a class="team-card__program" href="summer-sprint.html#mentor-2">Mentoría en Summer Sprint 2027 ↗</a></p></details>
             <a class="team-card__linkedin" href="https://uwaterloo.ca/institute-for-quantum-computing/news/iqc-phd-student-pablo-palacios-avila-honoured-excellence" target="_blank" rel="noopener noreferrer" aria-label="Referencia institucional de Pablo Palacios-Avila, publicada en 2022">Referencia institucional (2022) <span aria-hidden="true">↗</span></a>
           </article>
           <article class="team-card" data-nombre="Anthony Jesus Dolores Narciso" data-tipo="miembro" data-universidad="uni">
@@ -432,6 +450,213 @@
             <details><summary>Ver perfil</summary><p>Forma parte de la comunidad de Física de Derívate. Universidad Nacional de Ingeniería.</p></details>
 
           </article>
+          <article class="team-card" data-nombre="Angelo Isaac Ledesma Araujo" data-tipo="mentor" data-universidad="usach">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">AI</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Angelo Isaac Ledesma Araujo</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Física no lineal y dinámica de fluidos</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026 y Summer Sprint 2027.</p><p>Área de investigación: Física no lineal y dinámica de fluidos.</p><p>Institución de la referencia académica: Universidad de Santiago de Chile · Chile. Referencia institucional de 2025.</p><p><a class="team-card__program" href="summer-sprint.html#mentor-5">Mentoría en Summer Sprint 2027 ↗</a></p></details>
+            <a class="team-card__linkedin" href="https://fciencia.usach.cl/noticias/laboratorio-de-estructuras-delgadas-usach-fortalece-su-proyeccion-cientifica-en-fisica-no" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Angelo Isaac Ledesma Araujo">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Carlos Manuel Ramos Portalatino" data-tipo="mentor" data-universidad="florida">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">CM</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Carlos Manuel Ramos Portalatino</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Física de partículas, astropartículas y materia oscura</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026.</p><p>Área de investigación: Física de partículas, astropartículas y materia oscura.</p><p>Institución de la referencia académica: University of Florida · Estados Unidos.</p></details>
+            <a class="team-card__linkedin" href="https://sites.google.com/ufl.edu/carlos-r-portalatino/" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Carlos Manuel Ramos Portalatino">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Cristhian Calderon Cordova" data-tipo="mentor" data-universidad="mainz">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">CC</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Cristhian Calderon Cordova</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Física teórica de partículas</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026.</p><p>Área de investigación: Física teórica de partículas.</p><p>Institución de la referencia académica: Johannes Gutenberg-Universität Mainz · Alemania. Vínculo documentado: programa Excellence Track.</p></details>
+            <a class="team-card__linkedin" href="https://prisma.uni-mainz.de/en/excellence-track-programm/" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Cristhian Calderon Cordova">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Dario Gonzalo Escriba Quispe" data-tipo="mentor" data-universidad="unmsm">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">DG</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Dario Gonzalo Escriba Quispe</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Materia condensada y simulación de nanomateriales</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026.</p><p>Área de investigación: Materia condensada y simulación de nanomateriales.</p><p>Institución de la referencia académica: UNMSM · Perú. Referencia académica de 2024.</p></details>
+            <a class="team-card__linkedin" href="https://ciencialatitud0.github.io/EPIC_4/info/programme.html" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Dario Gonzalo Escriba Quispe">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="David Cespedes Gonzales" data-tipo="mentor" data-universidad="houston">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">DC</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>David Cespedes Gonzales</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Materia condensada teórica</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026.</p><p>Área de investigación: Materia condensada teórica.</p><p>Institución de la referencia académica: University of Houston · Estados Unidos.</p></details>
+            <a class="team-card__linkedin" href="https://www.uh.edu/nsm/physics/people/graduate-students/index.php" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de David Cespedes Gonzales">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Enver Miguel Oruro Puma" data-tipo="mentor" data-universidad="morphodynamics">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">EM</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Enver Miguel Oruro Puma</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Neurociencia e IA</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Summer Sprint 2027.</p><p>Área de investigación: Neurociencia e IA.</p><p>Institución de la referencia académica: Morphodynamics Neuroscience and Behavior Lab, UNESCO UniTwin Complex Systems Digital Campus. Según el catálogo oficial de Summer Sprint 2027.</p><p><a class="team-card__program" href="summer-sprint.html#mentor-4">Mentoría en Summer Sprint 2027 ↗</a></p></details>
+            <a class="team-card__linkedin" href="https://docs.google.com/document/d/1heCBebyJ8vFON8CL4-Q94H1xfDQxgXMiHpcv8akLAnU/edit" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Enver Miguel Oruro Puma">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Johann Sebastian Quenta Raygada" data-tipo="mentor" data-universidad="sissa">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">JS</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Johann Sebastian Quenta Raygada</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Teoría cuántica de campos</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026.</p><p>Área de investigación: Teoría cuántica de campos.</p><p>Institución de la referencia académica: SISSA · Italia.</p></details>
+            <a class="team-card__linkedin" href="https://www.sissa.it/tpp/people.php.html" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Johann Sebastian Quenta Raygada">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="José Jesús Ojeda García" data-tipo="mentor" data-universidad="uni">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">JJ</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>José Jesús Ojeda García</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Física matemática y computacional</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026 y Summer Sprint 2027.</p><p>Área de investigación: Física matemática y computacional.</p><p>Institución de la referencia académica: UNI · Perú. Referencia académica de 2025.</p><p><a class="team-card__program" href="summer-sprint.html#mentor-6">Mentoría en Summer Sprint 2027 ↗</a></p></details>
+            <a class="team-card__linkedin" href="https://indico.uni.edu.pe/event/179/contributions/1136/" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de José Jesús Ojeda García">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Joseph Cabello" data-tipo="mentor" data-universidad="unmsm">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">JC</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Joseph Cabello</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Cosmología cuántica</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026.</p><p>Área de investigación: Cosmología cuántica.</p><p>Institución de la referencia académica: UNMSM · Perú. Referencia académica de 2025.</p></details>
+            <a class="team-card__linkedin" href="https://indico.uni.edu.pe/event/179/contributions/1208/" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Joseph Cabello">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Joseph Panana Vera" data-tipo="mentor" data-universidad="oslo">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">JP</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Joseph Panana Vera</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Materiales y tecnologías cuánticas</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026.</p><p>Área de investigación: Materiales y tecnologías cuánticas.</p><p>Institución de la referencia académica: Universidad de Oslo · Noruega. Referencia académica de 2025.</p></details>
+            <a class="team-card__linkedin" href="https://indico.uni.edu.pe/event/179/contributions/1206/" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Joseph Panana Vera">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Lucía Coll Saravia" data-tipo="mentor" data-universidad="desy">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">LC</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Lucía Coll Saravia</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Física de partículas</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026.</p><p>Área de investigación: Física de partículas.</p><p>Institución de la referencia académica: DESY · Alemania.</p></details>
+            <a class="team-card__linkedin" href="https://cms.desy.de/cms_members/" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Lucía Coll Saravia">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Marcelo Job Matías Torrelio" data-tipo="mentor" data-universidad="unmsm">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">MJ</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Marcelo Job Matías Torrelio</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Relatividad general y agujeros negros</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026.</p><p>Área de investigación: Relatividad general y agujeros negros.</p><p>Institución de la referencia académica: UNMSM, Grupo de Física Teórica · Perú. Afiliación documentada en 2025.</p></details>
+            <a class="team-card__linkedin" href="https://indico.uni.edu.pe/event/184/contributions/1481/" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Marcelo Job Matías Torrelio">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Mauricio Bustamante" data-tipo="mentor" data-universidad="copenhague">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">MB</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Mauricio Bustamante</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Astropartículas y neutrinos astrofísicos</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026.</p><p>Área de investigación: Astropartículas y neutrinos astrofísicos.</p><p>Institución de la referencia académica: Niels Bohr Institute, Universidad de Copenhague · Dinamarca.</p></details>
+            <a class="team-card__linkedin" href="https://researchprofiles.ku.dk/en/persons/mauricio-bustamante/" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Mauricio Bustamante">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Miguel Agama" data-tipo="mentor" data-universidad="tarapaca">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">MA</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Miguel Agama</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Cosmología e inflación cosmológica</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026.</p><p>Área de investigación: Cosmología e inflación cosmológica.</p><p>Institución de la referencia académica: Universidad de Tarapacá · Chile. Referencia académica de 2026.</p></details>
+            <a class="team-card__linkedin" href="https://indico.global/event/17840/" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Miguel Agama">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Oscar Adán Acevedo Sánchez" data-tipo="mentor" data-universidad="unmsm">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">OA</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Oscar Adán Acevedo Sánchez</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Física teórica</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Summer Sprint 2027.</p><p>Área de investigación: Física teórica.</p><p>Institución de la referencia académica: Universidad Nacional Mayor de San Marcos, Facultad de Ciencias Físicas, Grupo de Física Teórica y Física de Altas Energías. Según el catálogo oficial de Summer Sprint 2027.</p><p><a class="team-card__program" href="summer-sprint.html#mentor-3">Mentoría en Summer Sprint 2027 ↗</a></p></details>
+            <a class="team-card__linkedin" href="https://docs.google.com/document/d/1heCBebyJ8vFON8CL4-Q94H1xfDQxgXMiHpcv8akLAnU/edit" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Oscar Adán Acevedo Sánchez">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Paola Aponte" data-tipo="mentor" data-universidad="florida">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">PA</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Paola Aponte</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Física de partículas y altas energías</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026.</p><p>Área de investigación: Física de partículas y altas energías.</p><p>Institución de la referencia académica: University of Florida · Estados Unidos.</p></details>
+            <a class="team-card__linkedin" href="https://sites.google.com/ufl.edu/alexandra-aponte-utani" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Paola Aponte">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Renzo Trujillo" data-tipo="mentor" data-universidad="antofagasta">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">RT</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Renzo Trujillo</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Astrofísica</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026.</p><p>Área de investigación: Astrofísica.</p><p>Institución de la referencia académica: Universidad de Antofagasta · Chile.</p></details>
+            <a class="team-card__linkedin" href="https://astro.uantof.cl/nosotros/equipo-de-trabajo/" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Renzo Trujillo">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Renzo Vizarreta" data-tipo="mentor" data-universidad="rochester">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">RV</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Renzo Vizarreta</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Física de partículas y neutrinos</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026.</p><p>Área de investigación: Física de partículas y neutrinos.</p><p>Institución de la referencia académica: University of Rochester · Estados Unidos. Referencia académica de 2026.</p></details>
+            <a class="team-card__linkedin" href="https://indico.fnal.gov/event/72820/contributions/341176/" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Renzo Vizarreta">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Ricardo Quispe-Mendizábal" data-tipo="mentor" data-universidad="usach">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">RQ</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Ricardo Quispe-Mendizábal</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Computación y control cuánticos</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026.</p><p>Área de investigación: Computación y control cuánticos.</p><p>Institución de la referencia académica: Universidad de Santiago de Chile · Chile.</p></details>
+            <a class="team-card__linkedin" href="https://qute.group/team/ricardo-quispe-mendizabal/" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Ricardo Quispe-Mendizábal">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Rolando Ramirez Camasca" data-tipo="mentor" data-universidad="ucsd">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">RR</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Rolando Ramirez Camasca</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Teoría cuántica de campos y entrelazamiento</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026.</p><p>Área de investigación: Teoría cuántica de campos y entrelazamiento.</p><p>Institución de la referencia académica: University of California San Diego · Estados Unidos.</p></details>
+            <a class="team-card__linkedin" href="https://het.ucsd.edu/students.html" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Rolando Ramirez Camasca">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Saneli Carbajal Vigo" data-tipo="mentor" data-universidad="up">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">SC</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Saneli Carbajal Vigo</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Cosmología</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026.</p><p>Área de investigación: Cosmología.</p><p>Institución de la referencia académica: Universidad del Pacífico · Perú.</p></details>
+            <a class="team-card__linkedin" href="https://investigacion.pucp.edu.pe/grupos/hep/acerca-del-grupo/former-members/" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Saneli Carbajal Vigo">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Sebastián Mauricio" data-tipo="mentor" data-universidad="copenhague">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">SM</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Sebastián Mauricio</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Computación cuántica y dinámica de cúbits</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026.</p><p>Área de investigación: Computación cuántica y dinámica de cúbits.</p><p>Institución de la referencia académica: Niels Bohr Institute, Universidad de Copenhague · Dinamarca. Referencia académica de 2026.</p></details>
+            <a class="team-card__linkedin" href="https://indico.uni.edu.pe/event/184/contributions/1468/" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Sebastián Mauricio">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="team-card" data-nombre="Sergio Oscar Nuñez Silva" data-tipo="mentor" data-universidad="bolonia">
+            <div class="team-card__portrait team-card__portrait--placeholder"><span class="team-card__initials" aria-hidden="true">SO</span></div>
+            <span class="team-card__university">Derívate / Mentoría</span>
+            <h3>Sergio Oscar Nuñez Silva</h3>
+            <p class="team-card__role">Mentor de Derívate</p>
+            <p class="team-card__area">Física teórica</p>
+            <details><summary>Ver perfil</summary><p>Mentor de Derívate. Participación: Research Sprint 2026.</p><p>Área de investigación: Física teórica.</p><p>Institución de la referencia académica: Universidad de Bolonia · Italia. Referencia institucional de 2025.</p></details>
+            <a class="team-card__linkedin" href="https://wlab.yale.edu/profile/sergio-nunez-silva" target="_blank" rel="noopener noreferrer" aria-label="Referencia académica de Sergio Oscar Nuñez Silva">Referencia académica <span aria-hidden="true">↗</span></a>
+          </article>
         </div>
         <div class="team-empty" id="team-empty" hidden>
           <h3>No encontramos coincidencias</h3>
@@ -443,6 +668,6 @@
   </main>
   <div id="footer"></div>
   <script type="module" src="js/site.js?v=d61075e888"></script>
-  <script src="js/equipo.js" defer></script>
+  <script src="js/equipo.js?v=6715064358" defer></script>
 </body>
 </html>
