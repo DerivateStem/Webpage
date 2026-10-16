@@ -33,9 +33,9 @@ El comprobador usa la biblioteca estándar de Python y revisa las páginas, los 
 | `conocenos.html` | Propósito y forma de trabajo de Derívate. |
 | `equipo.html` | Directorio único de miembros, mentores y asesores académicos; búsqueda por nombre y filtros de tipo e institución. |
 | `mentores.html` | Redirección de compatibilidad al filtro Mentores de Equipo; ya no es una sección independiente. |
-| `summer-sprint.html` | Convocatoria, proyectos, seis mentores de la edición, galería de Research Sprint 2026 y orientación para postular. |
+| `summer-sprint.html` | Convocatoria, proyectos, seis mentores de la edición, galería de seis fotografías de Research Sprint 2026 y orientación para postular. |
 | `proyecto-*.html` | Seis fichas completas de proyectos de Summer Sprint 2027, con requisitos, dedicación, tareas y materiales de postulación. Cada tarjeta abre únicamente la ficha correspondiente. |
-| `EntreFisicos.html` | Anuncio de Entre Físicos 2027, archivo de ediciones y galería de seis fotografías de 2025 con visor ampliado y enlace al álbum completo. |
+| `EntreFisicos.html` | Anuncio de Entre Físicos 2027, archivo de ediciones y galería de nueve fotografías de 2025 con visor ampliado. |
 | `EntreFisicos2026.html` | Archivo de la edición 2026. |
 | `RIFP.html` | Archivo de la Reunión Internacional de Físicos en Posgrado 2024. |
 | `novedades.html` | Archivo de publicaciones de la comunidad. |
@@ -51,19 +51,25 @@ El comprobador usa la biblioteca estándar de Python y revisa las páginas, los 
 - `css/project-details.css`: presentación compartida de las seis fichas de proyectos. Se sirven como HTML completo, sin depender de JavaScript para consultar los requisitos.
 - `assets/fonts/fonts.css`: fuentes WOFF2 autoalojadas con `font-display: swap`; sus licencias están en el mismo directorio.
 
+Las galerías reúnen escenas de exposiciones, intercambio y presentación de pósteres. No muestran enlaces a los álbumes completos de Drive; sus referencias se conservan únicamente en la documentación de recursos.
+
 Las páginas montan los componentes en `#navbar` y `#footer` e importan `js/site.js` como módulo. Al crear una página, conservar el enlace «Saltar al contenido», el contenido principal con `id="contenido"` y `id="top"` en el `body`.
 
 ## Directorio del equipo
 
 La actualización del 15 de octubre de 2026 incorpora los 42 nombres y universidades de la hoja de miembros facilitada por el organizador, junto con Adrian Diaz Espinoza y los asesores académicos añadidos por indicación del organizador: Enrique Rojas Villalba y Pablo Palacios-Avila. La hoja es una fuente interna: no publicar su contenido completo, DNI, correos, becas ni otros datos personales ajenos a las fichas del equipo.
 
-La reorganización del 16 de octubre de 2026 integra los 25 mentores únicos de las ediciones 2026 y 2027 en Equipo. Hay 68 personas: 42 miembros, 3 asesores y 25 mentores; Enrique Rojas y Pablo Palacios cuentan en las dos últimas categorías, con una sola ficha por persona. El filtro admite roles superpuestos. `equipo.html?tipo=mentor#equipo-heading` abre directamente los mentores; también se conserva el filtro de institución en la URL.
+La reorganización del 16 de octubre de 2026 integra los 25 mentores únicos de las ediciones 2026 y 2027 en Equipo. El directorio actualizado reúne 71 personas: 42 miembros, 6 asesores y 25 mentores; Enrique Rojas y Pablo Palacios cuentan en las dos últimas categorías, con una sola ficha por persona. El filtro admite roles superpuestos. `equipo.html?tipo=mentor#equipo-heading` abre directamente los mentores; también se conserva el filtro de institución en la URL.
 
 El directorio no usa carreras ni áreas organizativas. Mantiene las fotos y enlaces profesionales ya publicados de quienes continúan; las fichas sin fotografía muestran iniciales. Los nombres, instituciones y roles se escriben en el HTML, y `js/equipo.js` aplica los filtros de tipo e institución.
 
 En las fichas de mentores, las instituciones son las de las referencias académicas enlazadas, con sus años y límites. No interpretarlas como cargos o afiliaciones actuales.
 
 El perfil institucional de MIT Haystack confirma la afiliación de Enrique Rojas Villalba. La referencia de Waterloo de Pablo Palacios-Avila es de 2022: se enlaza con esa fecha, sin atribuirle una afiliación ni un grado actuales.
+
+La actualización de asesores añade a Carlos Argüelles-Delgado (Harvard), Franz Danylo Machado Pérez (Illinois Tech) y Katterine Patricia Taipe Huamani (INSA Lyon), con referencias académicas en cada ficha. Los roles publicados se contrastaron con el perfil departamental de Harvard, la web académica de Franz y la página de supervisión de CNRS. La licenciatura en Física de Katterine también figura en el boletín oficial de la UNMSM de 2022. Su participación como asesores fue confirmada por el organizador.
+
+Mariano Jesús Effio Cueva figura como estudiante de maestría en la Università di Padova según la actualización expresa del organizador. No se encontró una fuente pública que corrobore ese nuevo estado; no se publica una especialidad, fecha de ingreso ni grado obtenido. Se conserva su antecedente en Física en la UNI.
 
 ## Identidad visual y recursos
 
