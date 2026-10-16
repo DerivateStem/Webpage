@@ -27,20 +27,26 @@ Cada imagen tiene una copia para ampliación (`ef2025-*.webp`) y una miniatura (
 | `ef2025-preguntas` | `DSC04738aa.jpg` | martes | [Original](https://drive.google.com/file/d/122P2jLkYkkS2xc5_lauXPxDfz6Cgw3cP/view) |
 | `ef2025-libro` | `DSC03898aa.jpg` | lunes | [Original](https://drive.google.com/file/d/1TZ1zhT9TrxAb1GFBvxENl1NbEIWQToBq/view) |
 | `ef2025-conversatorio` | `DSC06247aa.jpg` | viernes | [Original](https://drive.google.com/file/d/1dmKLxUkshJ5elxu98_0FO4pZxRHSp3El/view) |
+| `ef2025-exposicion-martes` | `DSC04918aa.jpg` | martes | [Original](https://drive.google.com/file/d/1unHEB6oDF8F93gkYVvwUknHqXkYKhakt/view) |
+| `ef2025-exposicion-miercoles` | `DSC05165aa.jpg` | miercoles | [Original](https://drive.google.com/file/d/10WuxYvYnl-3x51YPqr1h4577tkzzBpCK/view) |
+| `ef2025-exposicion-viernes` | `DSC06116aa.jpg` | viernes | [Original](https://drive.google.com/file/d/1CF89cXysXFXDoxrHdjCx10g6VlTCcX18/view) |
 
-Los doce archivos suman 899 522 bytes; las seis miniaturas suman 146 630 bytes. Las imágenes grandes se solicitan al abrir el visor y las miniaturas usan carga diferida. Los JPEG originales no se incorporan al repositorio público.
+Las nueve fotografías y sus miniaturas suman 1 186 872 bytes en dieciocho archivos; las nueve miniaturas suman 191 462 bytes. La ampliación de la selección incorpora tres intervenciones con micrófono del mismo álbum. Las imágenes grandes se solicitan al abrir el visor y las miniaturas usan carga diferida. Los JPEG originales no se incorporan al repositorio público.
 
 ## Galería de Research Sprint 2026
 
-Tres fotografías de la sesión de pósteres tomadas del [álbum `sprint2026` proporcionado por la organización](https://drive.google.com/drive/folders/1oYer2tmZePcEWKhWXqNagy80TaCBJLHu) el 16 de octubre de 2026, para su incorporación a la web. Se muestran como recuerdos de la edición 2026, separados de la convocatoria 2027 y de los testimonios pendientes. No se infieren identidades ni créditos fotográficos.
+Seis fotografías de la sesión de pósteres tomadas del [álbum `sprint2026` proporcionado por la organización](https://drive.google.com/drive/folders/1oYer2tmZePcEWKhWXqNagy80TaCBJLHu) el 16 de octubre de 2026, para su incorporación a la web. Se muestran como recuerdos de la edición 2026, separados de la convocatoria 2027 y de los testimonios pendientes. No se infieren identidades ni créditos fotográficos.
 
 | Nombre base | Original en Drive | Referencia |
 | --- | --- | --- |
 | `sprint2026-intercambio` | `DSC07060.jpg` | [Original](https://drive.google.com/file/d/1m7Zjk1Mh7palrWzwPB1UuHEGciNOeTc-/view) |
 | `sprint2026-poster` | `DSC07075.jpg` | [Original](https://drive.google.com/file/d/1kAS0b6S5zzPbBdETzK8tuiiJ5ynhBPIy/view) |
 | `sprint2026-conversacion` | `DSC07100.jpg` | [Original](https://drive.google.com/file/d/1SzI3jtgQQAZCOQZaiRPYPxWrCYTnFaM1/view) |
+| `sprint2026-exposicion` | `DSC07114.jpg` | [Original](https://drive.google.com/file/d/1V5tZvWWepnAxtzMcccr79JcvdwMtJ7uV/view) |
+| `sprint2026-presentacion` | `DSC07128.jpg` | [Original](https://drive.google.com/file/d/1Xn5k4KaS49LBcziGVEboQKOFzG9Y99vC/view) |
+| `sprint2026-sesion` | `DSC07142.jpg` | [Original](https://drive.google.com/file/d/1kjo5vVci2Z2X9XydH1ia_T7DqtSaZKdK/view) |
 
-Se aplican los mismos parámetros de Pillow de la galería anterior: copias de hasta 1800 px en WebP calidad 82 y miniaturas `-thumb` de hasta 720 px en calidad 78; orientación respetada, encuadre completo y sin EXIF. Los seis archivos pesan 728 436 bytes; las miniaturas suman 72 640 bytes. Los originales permanecen en Drive y no se incorporan al repositorio público.
+Se aplican los mismos parámetros de Pillow de la galería anterior: copias de hasta 1800 px en WebP calidad 82 y miniaturas `-thumb` de hasta 720 px en calidad 78; orientación respetada, encuadre completo y sin EXIF. Los doce archivos pesan 1 283 334 bytes; las seis miniaturas suman 149 862 bytes. Los originales permanecen en Drive y no se incorporan al repositorio público.
 
 ## Recursos de Summer Sprint
 
