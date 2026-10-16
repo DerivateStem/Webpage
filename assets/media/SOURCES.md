@@ -64,9 +64,9 @@ Seis fotografías de la sesión de pósteres tomadas del [álbum `sprint2026` pr
 | `sprint2026-conversacion` | `DSC07100.jpg` | [Original](https://drive.google.com/file/d/1SzI3jtgQQAZCOQZaiRPYPxWrCYTnFaM1/view) |
 | `sprint2026-exposicion` | `DSC07114.jpg` | [Original](https://drive.google.com/file/d/1V5tZvWWepnAxtzMcccr79JcvdwMtJ7uV/view) |
 | `sprint2026-presentacion` | `DSC07128.jpg` | [Original](https://drive.google.com/file/d/1Xn5k4KaS49LBcziGVEboQKOFzG9Y99vC/view) |
-| `sprint2026-sesion` | `DSC07142.jpg` | [Original](https://drive.google.com/file/d/1kjo5vVci2Z2X9XydH1ia_T7DqtSaZKdK/view) |
+| `sprint2026-poster-cuantico` | `DSC07144.jpg` | [Original](https://drive.google.com/file/d/19chZK1oHQtntYPyxkCqwTo3e-fKyQdzt/view) |
 
-Se aplican los mismos parámetros de Pillow de la galería anterior: copias de hasta 1800 px en WebP calidad 82 y miniaturas `-thumb` de hasta 720 px en calidad 78; orientación respetada, encuadre completo y sin EXIF. Los doce archivos pesan 1 283 334 bytes; las seis miniaturas suman 149 862 bytes. Los originales permanecen en Drive y no se incorporan al repositorio público.
+Se aplican los mismos parámetros de Pillow de la galería anterior: copias de hasta 1800 px en WebP calidad 82 y miniaturas `-thumb` de hasta 720 px en calidad 78; orientación respetada, encuadre completo y sin EXIF. Los doce archivos de las seis fotografías activas pesan 1 242 988 bytes; las seis miniaturas suman 145 596 bytes. La última fotografía se sustituyó por `DSC07144.jpg`, elegida por el organizador; su miniatura usa un encuadre hacia la parte superior para conservar el rostro y el título del póster, mientras el visor muestra el cuadro completo. Los archivos anteriores `sprint2026-sesion*.webp` se conservan como recursos históricos, sin mostrarse en esta galería y fuera de los totales anteriores. Los originales permanecen en Drive y no se incorporan al repositorio público.
 
 ## Recursos de Summer Sprint
 
