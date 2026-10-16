@@ -1,0 +1,57 @@
+/* Photographic archives; links remain usable without the viewer. */
+.ef-gallery-section { border-top: 1px solid var(--line); }
+.ef-gallery-section .ev-section-note { color: var(--muted); }
+.ef-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 20px; }
+.ef-gallery-item { min-width: 0; margin: 0; }
+.ef-gallery-item > a { display: block; position: relative; overflow: hidden; background: #252522; border-radius: 3px; }
+.ef-gallery-item > a::after { content: '↗'; position: absolute; right: 12px; bottom: 12px; display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid #ffffff60; border-radius: 2px; background: #101010cc; color: var(--paper); font-size: 19px; line-height: 1; transition: background-color .2s, color .2s; }
+.ef-gallery-item img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .35s var(--ease); }
+.ef-gallery-item figcaption { margin-top: 12px; color: var(--muted); font-family: var(--font-mono); font-size: 10px; line-height: 1.7; letter-spacing: .025em; }
+.ef-gallery-note { margin-top: 28px; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.ef-gallery-note a { text-decoration: underline; text-underline-offset: 4px; }
+html.ef-viewer-open { overflow: hidden; }
+.ef-viewer { width: min(1120px, calc(100% - 48px)); max-width: none; max-height: calc(100dvh - 48px); margin: auto; padding: 0; overflow: auto; border: 1px solid #ffffff38; border-radius: 4px; background: var(--ink); color: var(--paper); overscroll-behavior: contain; }
+.ef-viewer::backdrop { background: #080808ed; }
+.ef-viewer-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 14px 20px; border-bottom: 1px solid var(--line); }
+.ef-viewer-title { font-family: var(--font-mono); font-size: 11px; font-weight: 400; line-height: 1.6; letter-spacing: .04em; text-transform: uppercase; }
+.ef-viewer-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-width: 44px; min-height: 44px; padding: 10px 14px; border: 1px solid #ffffff48; border-radius: 3px; background: transparent; color: var(--paper); font-size: 12px; line-height: 1.5; transition: background-color .18s, border-color .18s; }
+.ef-viewer-close { flex-shrink: 0; font-size: 23px; padding: 4px; }
+.ef-viewer-stage { position: relative; display: grid; place-items: center; min-height: 180px; height: min(65dvh, 740px); background: #080808; }
+.ef-viewer-stage img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; }
+.ef-viewer[data-loading='true'] .ef-viewer-stage img { visibility: hidden; }
+.ef-viewer-loading { position: absolute; margin: 24px; color: var(--muted); font-size: 13px; }
+.ef-viewer-error { max-width: 44ch; margin: 30px; color: var(--muted); text-align: center; font-size: 14px; line-height: 1.7; }
+.ef-viewer-caption { padding: 16px 20px 0; color: #cecbc2; font-size: 13px; line-height: 1.7; }
+.ef-viewer-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 20px 20px; }
+.ef-viewer-pagination { display: flex; align-items: center; gap: 12px; }
+.ef-viewer-count { min-width: 54px; color: var(--muted); text-align: center; font-family: var(--font-mono); font-size: 10px; }
+.ef-viewer-source { font-size: 11px; text-decoration: underline; text-underline-offset: 4px; min-height: 44px; display: inline-flex; align-items: center; }
+.ef-viewer-source:hover { color: var(--yellow); }
+@media (hover: hover) and (pointer: fine) {
+  .ef-gallery-item > a:hover img { transform: scale(1.025); }
+  .ef-gallery-item > a:hover::after { background: var(--blue); color: var(--ink); }
+  .ef-viewer-button:hover { background: #ffffff14; border-color: var(--blue); }
+}
+@media (max-width: 700px) {
+  .ef-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 14px; }
+  .sprint-memory .ef-gallery { grid-template-columns: 1fr; }
+  .ef-gallery-item figcaption { font-size: 9px; margin-top: 9px; }
+  .ef-gallery-item > a::after { right: 8px; bottom: 8px; width: 28px; height: 28px; font-size: 17px; }
+  .ef-viewer { width: calc(100% - 20px); max-height: calc(100dvh - 20px); }
+  .ef-viewer-header { padding: 10px 14px; }
+  .ef-viewer-stage { height: 52dvh; min-height: 160px; }
+  .ef-viewer-caption { padding: 14px 14px 0; font-size: 12px; }
+  .ef-viewer-controls { padding: 14px; gap: 10px; }
+  .ef-viewer-pagination { gap: 8px; }
+  .ef-viewer-button { padding-inline: 10px; }
+}
+@media (max-width: 380px) {
+  .ef-gallery { grid-template-columns: 1fr; }
+  .ef-gallery-item figcaption { font-size: 10px; }
+  .ef-viewer-controls { flex-direction: column; align-items: stretch; }
+  .ef-viewer-pagination { justify-content: space-between; }
+  .ef-viewer-source { align-self: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ef-gallery-item img, .ef-gallery-item > a::after, .ef-viewer-button { transition: none; }
+}
