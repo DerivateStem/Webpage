@@ -36,7 +36,7 @@ El comprobador usa la biblioteca estándar de Python y revisa las páginas, los 
 | `summer-sprint.html` | Convocatoria, proyectos, seis mentores de la edición, galería de seis fotografías de Research Sprint 2026 y orientación para postular. |
 | `proyecto-*.html` | Seis fichas completas de proyectos de Summer Sprint 2027, con requisitos, dedicación, tareas y materiales de postulación. Cada tarjeta abre únicamente la ficha correspondiente. |
 | `EntreFisicos.html` | Anuncio de Entre Físicos 2027, archivo de ediciones y galería de nueve fotografías de 2025 con visor ampliado. |
-| `EntreFisicos2026.html` | Archivo de la edición 2026. |
+| `EntreFisicos2026.html` | Programa y galería de nueve fotografías de la edición 2026, con visor ampliado. |
 | `RIFP.html` | Archivo de la Reunión Internacional de Físicos en Posgrado 2024. |
 | `novedades.html` | Archivo de publicaciones de la comunidad. |
 
@@ -80,6 +80,8 @@ La implementación usa `#FFC907` como amarillo, `#2E9DF7` como azul, `#101010` c
 El isotipo y la marca tipográfica están en `assets/brand/`. La composición compartida del logo está definida por `.brand-lockup` en CSS: mantener la proporción del conjunto al cambiar su tamaño. Véase [origen de la marca](assets/brand/SOURCES.md).
 
 Las fotografías históricas de `assets/img/`, los recursos de `assets/sprint/` y los favicons anteriores se conservan. Las páginas renovadas usan copias WebP de `assets/media/`; los originales no se sustituyen. Las copias conservan la imagen completa, aunque algunas vistas usan `object-fit` para adaptarla al contenedor. Véase [origen y optimización de imágenes](assets/media/SOURCES.md).
+
+Equipo incorpora las fotos proporcionadas por el organizador para Katterine Taipe, Lucía Coll y Franz Machado, con encuadres centrados mediante CSS. El retrato de Carlos Argüelles procede de Harvard Gazette y conserva el crédito publicado. Las copias completas y sus fuentes están documentadas en [retratos de 2026](assets/media/profiles/SOURCES-2026.md).
 
 ## Summer Sprint 2027: datos confirmados
 
