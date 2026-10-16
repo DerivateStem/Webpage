@@ -39,7 +39,7 @@ document.addEventListener('keydown', event => {
 const desktop = window.matchMedia('(min-width: 1001px)');
 desktop.addEventListener('change', event => { if (event.matches) setMenu(false); });
 const page = location.pathname.split('/').pop() || 'index.html';
-const activePage = page === 'EntreFisicos2026.html' ? 'EntreFisicos.html' : page;
+const activePage = page === 'EntreFisicos2026.html' ? 'EntreFisicos.html' : page.startsWith('proyecto-') ? 'summer-sprint.html' : page;
 nav?.querySelectorAll('a').forEach(link => {
   if (link.getAttribute('href') === activePage) link.setAttribute('aria-current', 'page');
 });
@@ -50,6 +50,7 @@ if (Date.now() > Date.parse('2026-11-09T00:00:00-05:00')) {
   document.querySelectorAll('[data-sprint-status]').forEach(node => { node.textContent = 'Convocatoria cerrada'; });
   document.querySelectorAll('[data-sprint-apply]').forEach(link => {
     link.textContent = 'Consultar convocatoria ↗';
-    link.href = 'https://docs.google.com/document/d/1heCBebyJ8vFON8CL4-Q94H1xfDQxgXMiHpcv8akLAnU/edit';
+    link.href = link.dataset.sprintClosedHref || 'summer-sprint.html#proyectos';
+    link.removeAttribute('target');
   });
 }
