@@ -7,6 +7,12 @@ if (filters) {
   const empty = document.getElementById('team-empty');
   const fields = ['tipo', 'universidad'];
   const normalize = (value) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+  const initialFilters = new URLSearchParams(location.search);
+  fields.forEach((field) => {
+    const select = document.getElementById(field);
+    const value = initialFilters.get(field);
+    if ([...select.options].some((option) => option.value === value)) select.value = value;
+  });
 
   function updateResults() {
     const words = normalize(search.value).split(/\s+/).filter(Boolean);
@@ -24,6 +30,13 @@ if (filters) {
     });
     count.textContent = `${visible} de ${cards.length} perfiles`;
     empty.hidden = visible > 0;
+    const url = new URL(location.href);
+    fields.forEach((field) => {
+      const value = document.getElementById(field).value;
+      if (value) url.searchParams.set(field, value);
+      else url.searchParams.delete(field);
+    });
+    if (url.href !== location.href) history.replaceState(null, '', url);
   }
 
   filters.addEventListener('input', updateResults);
