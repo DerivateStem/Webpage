@@ -33,6 +33,26 @@ Cada imagen tiene una copia para ampliación (`ef2025-*.webp`) y una miniatura (
 
 Las nueve fotografías y sus miniaturas suman 1 186 872 bytes en dieciocho archivos; las nueve miniaturas suman 191 462 bytes. La ampliación de la selección incorpora tres intervenciones con micrófono del mismo álbum. Las imágenes grandes se solicitan al abrir el visor y las miniaturas usan carga diferida. Los JPEG originales no se incorporan al repositorio público.
 
+## Galería de Entre Físicos 2026
+
+Nueve fotografías seleccionadas del [álbum de Entre Físicos 2026 proporcionado por la organización](https://drive.google.com/drive/folders/1GD5-fJElxFAcdh_2xQFTj3EsJI9zX5_l), autorizado para la web el 16 de octubre de 2026. La selección procede de la subcarpeta `jueves`, que contenía 23 fotografías al revisarse. No se infieren nombres de las personas retratadas ni se atribuyen créditos fotográficos no confirmados.
+
+Cada fotografía tiene una copia de ampliación (`ef2026-*.webp`) y una miniatura (`ef2026-*-thumb.webp`). Se conservó el encuadre completo y se respetó la orientación: lado mayor máximo de 1800 y 720 px, sin ampliar, WebP calidad 82 y 78, respectivamente. Conversión técnica con Pillow, método 6 y sin metadatos EXIF. La cuadrícula utiliza `object-fit: cover` y el visor muestra las imágenes completas con `contain`.
+
+| Nombre base | Original en Drive | Subcarpeta | Referencia |
+| --- | --- | --- | --- |
+| `ef2026-grupo` | `DSC04328.jpg` | jueves | [Original](https://drive.google.com/file/d/109ETDY1WT9XsO8MYVozKvUp3pa-9Z6Cr/view) |
+| `ef2026-charla-1` | `DSC03973.jpg` | jueves | [Original](https://drive.google.com/file/d/1JgqhTnyjiPUS4jX11KKehChGFbSnhQIg/view) |
+| `ef2026-charla-2` | `DSC04072.jpg` | jueves | [Original](https://drive.google.com/file/d/1AfxUx35Zbnq-A3xEJTv8Ugb-NbHB9t57/view) |
+| `ef2026-charla-3` | `DSC04148.jpg` | jueves | [Original](https://drive.google.com/file/d/1P9Ga1g3ErHeeCyeUttVes0d2lJA92jb8/view) |
+| `ef2026-charla-4` | `DSC04202.jpg` | jueves | [Original](https://drive.google.com/file/d/1A93-_eG_9ZZ5AVkeuGjM0uU785XK5Jji/view) |
+| `ef2026-publico` | `DSC04249.jpg` | jueves | [Original](https://drive.google.com/file/d/1OSnDu_G_9ZFA-GWjLZMO6DFjvwfyTQ_K/view) |
+| `ef2026-panel` | `DSC04417.jpg` | jueves | [Original](https://drive.google.com/file/d/1RF1JiYMQwPy9XKphMIt9yAohrWSCizNh/view) |
+| `ef2026-conversacion` | `DSC04370.jpg` | jueves | [Original](https://drive.google.com/file/d/1VLRY0lJ-twCNgHukjpSsg-qwAvlBMzTB/view) |
+| `ef2026-recepcion` | `DSC04438.jpg` | jueves | [Original](https://drive.google.com/file/d/1qxp4Sv6-3iAT-Ue7JECUFLte_1jhKWXR/view) |
+
+Las nueve fotografías y sus miniaturas suman 1 408 952 bytes en dieciocho archivos; las nueve miniaturas suman 256 574 bytes. Las ampliaciones se solicitan al abrir el visor y las miniaturas usan carga diferida. Los originales JPEG permanecen fuera del repositorio público. Esta galería no incorpora enlaces visibles al álbum de Drive en la página del evento.
+
 ## Galería de Research Sprint 2026
 
 Seis fotografías de la sesión de pósteres tomadas del [álbum `sprint2026` proporcionado por la organización](https://drive.google.com/drive/folders/1oYer2tmZePcEWKhWXqNagy80TaCBJLHu) el 16 de octubre de 2026, para su incorporación a la web. Se muestran como recuerdos de la edición 2026, separados de la convocatoria 2027 y de los testimonios pendientes. No se infieren identidades ni créditos fotográficos.
@@ -66,7 +86,9 @@ Todas estas copias usan WebP calidad 82. Las imágenes de proyectos son recursos
 
 ## Fotos de equipo y ponentes
 
-Las copias de `profiles/` derivan de las fotos históricas del repositorio. Se generaron con lado mayor máximo 600 px, sin ampliación, conservando la proporción y el encuadre, en WebP calidad 82. Los nombres siguientes identifican archivos de origen, no incorporan datos nuevos sobre las personas retratadas.
+Las copias históricas de `profiles/` derivan de las fotos del repositorio. Se generaron con lado mayor máximo 600 px, sin ampliación, conservando la proporción y el encuadre, en WebP calidad 82. Los nombres siguientes identifican archivos de origen, no incorporan datos nuevos sobre las personas retratadas.
+
+Las cuatro fotografías añadidas en octubre de 2026 tienen sus fuentes, dimensiones y créditos documentados en [`profiles/SOURCES-2026.md`](profiles/SOURCES-2026.md).
 
 | Copia en `profiles/` | Original |
 | --- | --- |
