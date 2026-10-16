@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Criptografía cuántica · Summer Sprint 2027 — Derívate</title>
+  <meta name="description" content="Información y requisitos del proyecto de criptografía cuántica, con Pablo Palacios-Avila. Summer Sprint 2027: 1 vacante y 6–9 horas semanales.">
+  <meta name="theme-color" content="#101010">
+  <link rel="canonical" href="https://derivatestem.github.io/Webpage/proyecto-criptografia.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Criptografía cuántica · Summer Sprint 2027 — Derívate">
+  <meta property="og:description" content="Información y requisitos del proyecto de criptografía cuántica, con Pablo Palacios-Avila. Summer Sprint 2027: 1 vacante y 6–9 horas semanales.">
+  <meta property="og:url" content="https://derivatestem.github.io/Webpage/proyecto-criptografia.html">
+  <meta property="og:image" content="https://derivatestem.github.io/Webpage/assets/media/quantum.webp">
+  <link rel="icon" type="image/png" href="assets/brand/favicon.png">
+  <link rel="preload" as="font" href="assets/fonts/barlow-condensed-800-latin.woff2" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/site.css?v=a0f5c7bc18">
+  <link rel="stylesheet" href="css/project-details.css?v=ac47f2eaff">
+</head>
+<body id="top">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<div id="navbar"><div class="container nav-fallback"><a href="index.html">Derívate · Inicio</a><a href="summer-sprint.html">Summer Sprint 2027</a><a href="equipo.html">Equipo</a></div></div>
+<main id="contenido">
+  <header class="pd-hero">
+    <div class="container">
+      <nav class="pd-breadcrumb" aria-label="Ruta de navegación"><a href="summer-sprint.html">Summer Sprint 2027</a><span aria-hidden="true">/</span><a href="summer-sprint.html#proyectos">Proyectos</a><span aria-hidden="true">/</span><span aria-current="page">Proyecto 02</span></nav>
+      <div class="pd-hero-grid">
+        <div>
+          <span class="eyebrow">Proyecto 02 · óptica cuántica, estadística de fotones y criptografía cuántica</span>
+          <h1 class="display">¿Qué tan cuántica debe ser una fuente para hacer criptografía segura?</h1>
+          <p class="pd-hero-summary">Compara fuentes de luz y estudia cómo sus estadísticas de fotones afectan la seguridad y la generación de claves en el protocolo BB84.</p>
+          <div class="button-row"><a class="button button--yellow" href="#requisitos">Información y requisitos <span class="arrow" aria-hidden="true">↓</span></a><a class="button button--outline" href="https://docs.google.com/forms/d/e/1FAIpQLSer-O7AxwhFLxkZRVWFDWsnfdM93cY9s3JdS6_UGH-F5nHD9g/viewform?usp=send_form" data-sprint-apply target="_blank" rel="noopener noreferrer">Postular <span class="arrow" aria-hidden="true">↗</span></a></div>
+        </div>
+        <figure class="pd-hero-image" aria-hidden="true"><img src="assets/media/quantum.webp" width="900" height="500" alt="" fetchpriority="high"><span class="pd-hero-number">02</span></figure>
+      </div>
+      <nav class="pd-local-nav" aria-label="Contenido del proyecto"><a href="#investigacion">La investigación</a><a href="#trabajo">Qué harás</a><a href="#aprendizaje">Qué aprenderás</a><a href="#requisitos">Requisitos</a><a href="#mentor">Mentor y acompañamiento</a></nav>
+    </div>
+  </header>
+  <div class="light-section pd-body">
+    <div class="container pd-layout">
+      <article class="pd-article" aria-label="Información completa del proyecto 02">
+        <section class="pd-section" id="investigacion" aria-labelledby="investigacion-title">
+  <span class="eyebrow">01 / El proyecto</span>
+  <h2 id="investigacion-title">Pregunta de investigación</h2>
+  <p>Dos fuentes de luz con el mismo brillo promedio pueden emitir fotones de maneras muy distintas: al azar, como un láser; agrupados, como una fuente térmica; o de uno en uno, como un emisor individual. Esa diferencia se mide con la función de correlación g²(0) y tiene consecuencias en comunicación cuántica. En BB84, cada pulso debería idealmente contener un solo fotón; si una fuente emite pulsos multifotónicos, parte de la información puede quedar expuesta. La pregunta central es: ¿cómo cambia la tasa de generación de clave del BB84 según el g²(0) de la fuente y el número medio de fotones por pulso?</p>
+</section>
+<section class="pd-section" id="trabajo" aria-labelledby="trabajo-title">
+  <span class="eyebrow">02 / El proyecto</span>
+  <h2 id="trabajo-title">Qué harás</h2>
+  <ul>
+<li>Generar en Python el número de fotones por pulso de tres fuentes —coherente, térmica y emisor individual— con el mismo promedio, y comparar histogramas, factor de Fano y g²(0) con los valores teóricos.</li>
+<li>Simular un experimento de Hanbury Brown–Twiss con detectores imperfectos y estimar g²(0) a partir de coincidencias.</li>
+<li>Programar BB84 con pérdidas, cuentas oscuras y un espía de intercepción-reenvío, comprobando que el error sea cero sin espía y cercano a 25 % con él.</li>
+<li>Conectar las fuentes con BB84 y calcular la fuga asociada a pulsos multifotónicos y la tasa de clave según el número medio de fotones.</li>
+<li>Producir como resultado mínimo una figura de tasa de clave frente al número medio de fotones para cada fuente, con interpretación escrita, y un póster o charla breve.</li>
+</ul>
+</section>
+<section class="pd-section" id="aprendizaje" aria-labelledby="aprendizaje-title">
+  <span class="eyebrow">03 / El proyecto</span>
+  <h2 id="aprendizaje-title">Qué podrías aprender</h2>
+  <ul>
+<li>Distribuciones de probabilidad discretas —Poisson, Bose–Einstein/geométrica y binomial—, media, varianza e interpretación física.</li>
+<li>Diferencias entre luz coherente, térmica y de fotón individual: bunching, antibunching y g²(0) &lt; 1 como indicador de no clasicidad.</li>
+<li>Qubits como vectores 2D, bases de medición y por qué medir perturba.</li>
+<li>BB84: elección de bases, QBER, intercepción-reenvío y ataque de división de número de fotones (PNS).</li>
+<li>Práctica científica: simular, validar contra resultados analíticos, graficar con incertidumbre y comunicar resultados.</li>
+</ul>
+</section>
+<section class="pd-section" id="requisitos" aria-labelledby="requisitos-title">
+  <span class="eyebrow">04 / El proyecto</span>
+  <h2 id="requisitos-title">Antes de postular</h2>
+  <h3>Requisitos necesarios</h3><p>Programación básica e inglés básico.</p><h3>Conocimientos deseables</h3><p>Python con NumPy y Matplotlib; Jupyter o Google Colab; nociones de estadística y probabilidad.</p><p class="pd-desirable-note">Los conocimientos deseables son un plus; revisa primero los requisitos necesarios.</p><p class="pd-tools-label">Herramientas y canales mencionados en la propuesta</p><ul class="pd-tools"><li>Python</li><li>NumPy y Matplotlib (deseables)</li><li>Jupyter o Google Colab (deseables)</li></ul><div class="pd-material"><h3>Solicitud adicional para postular</h3><p>Relata un fenómeno o una idea de física que te haya dejado pensando, dentro o fuera de clase. Puede ser algo cotidiano o algo que hayas leído o visto. Explica qué te llamó la atención, qué preguntas te hiciste, qué hiciste para intentar entenderlo y hasta dónde llegaste. Puedes enviar un ensayo breve o un video de al menos 5 minutos.</p></div>
+</section>
+<section class="pd-section" id="mentor" aria-labelledby="mentor-title">
+  <span class="eyebrow">05 / El proyecto</span>
+  <h2 id="mentor-title">Tu mentor y el acompañamiento</h2>
+  <p class="pd-mentor-name">Pablo Palacios-Avila</p><p class="pd-tools-label">Afiliación y rol declarados en la ficha</p><p>Doctorando</p><p class="pd-profile">Perfil público: <a href="https://orcid.org/0000-0001-5339-6756" target="_blank" rel="noopener noreferrer">ORCID <span aria-hidden="true">↗</span></a></p><h3>Acompañamiento</h3><p>Entre 1 y 2 horas semanales, según la necesidad del estudiante.</p>
+</section>
+      </article>
+      <aside class="pd-aside" aria-label="Datos para postular">
+        <span class="eyebrow">Summer Sprint 2027 / 02</span>
+        <dl class="pd-facts">
+          <div><dt>Vacante</dt><dd class="pd-fact-number">01</dd></div>
+          <div><dt>Dedicación estimada</dt><dd>6–9 horas por semana</dd></div>
+          <div><dt>Período del programa</dt><dd><time datetime="2027-01-11">11 ene</time> — <time datetime="2027-04-04">04 abr 2027</time><br>12 semanas</dd></div>
+          <div><dt>Cierre de postulaciones</dt><dd><time datetime="2026-11-08">08 de noviembre de 2026</time></dd></div>
+          <div><dt>Convocatoria dirigida a</dt><dd>Estudiantes de Física</dd></div>
+        </dl>
+        <a class="button button--yellow" href="https://docs.google.com/forms/d/e/1FAIpQLSer-O7AxwhFLxkZRVWFDWsnfdM93cY9s3JdS6_UGH-F5nHD9g/viewform?usp=send_form" data-sprint-apply target="_blank" rel="noopener noreferrer">Ir al formulario <span class="arrow" aria-hidden="true">↗</span></a>
+        <p class="pd-aside-note">Puedes elegir hasta tres proyectos y ordenarlos por preferencia en el formulario.</p>
+        <a class="pd-aside-back" href="summer-sprint.html#proyectos">← Ver todos los proyectos</a>
+      </aside>
+    </div>
+  </div>
+  <section class="pd-related" aria-label="Otros proyectos"><div class="container pd-related-grid">
+    <a href="proyecto-exosfera.html"><span class="eyebrow">← Proyecto 01</span><strong>Exosfera terrestre</strong></a>
+    <a href="proyecto-fisica-teorica.html"><span class="eyebrow">Proyecto 03 →</span><strong>Física teórica</strong></a>
+  </div></section>
+  <section class="closing-cta" aria-labelledby="postular-title"><div class="container"><div><span class="eyebrow">Summer Sprint 2027 · Cierre 08 nov 2026</span><h2 class="display" id="postular-title">Empieza por<br>una pregunta.</h2><p>Revisa los requisitos y prepara los materiales de tus proyectos de interés.</p><p class="pd-contact-note">Si tienes una consulta, escríbenos a <a href="mailto:derivatesanmarcos@gmail.com">derivatesanmarcos@gmail.com</a>.</p></div><a class="button button--dark" href="https://docs.google.com/forms/d/e/1FAIpQLSer-O7AxwhFLxkZRVWFDWsnfdM93cY9s3JdS6_UGH-F5nHD9g/viewform?usp=send_form" data-sprint-apply target="_blank" rel="noopener noreferrer">Enviar mi postulación <span class="arrow" aria-hidden="true">↗</span></a></div></section>
+</main>
+<div id="footer"><div class="container nav-fallback"><a href="mailto:derivatesanmarcos@gmail.com">Contacta con Derívate ↗</a></div></div>
+<script type="module" src="js/site.js?v=72e89ac9a3"></script>
+</body>
+</html>

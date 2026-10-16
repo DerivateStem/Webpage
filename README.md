@@ -33,8 +33,9 @@ El comprobador usa la biblioteca estándar de Python y revisa las páginas, los 
 | `conocenos.html` | Propósito y forma de trabajo de Derívate. |
 | `equipo.html` | Directorio único de miembros, mentores y asesores académicos; búsqueda por nombre y filtros de tipo e institución. |
 | `mentores.html` | Redirección de compatibilidad al filtro Mentores de Equipo; ya no es una sección independiente. |
-| `summer-sprint.html` | Convocatoria, proyectos, seis mentores de la edición y orientación para postular. |
-| `EntreFisicos.html` | Anuncio de Entre Físicos 2027 y archivo de Entre Físicos 2026, Entre Físicos 2025 y RIFP 2024. |
+| `summer-sprint.html` | Convocatoria, proyectos, seis mentores de la edición, galería de Research Sprint 2026 y orientación para postular. |
+| `proyecto-*.html` | Seis fichas completas de proyectos de Summer Sprint 2027, con requisitos, dedicación, tareas y materiales de postulación. Cada tarjeta abre únicamente la ficha correspondiente. |
+| `EntreFisicos.html` | Anuncio de Entre Físicos 2027, archivo de ediciones y galería de seis fotografías de 2025 con visor ampliado y enlace al álbum completo. |
 | `EntreFisicos2026.html` | Archivo de la edición 2026. |
 | `RIFP.html` | Archivo de la Reunión Internacional de Físicos en Posgrado 2024. |
 | `novedades.html` | Archivo de publicaciones de la comunidad. |
@@ -46,6 +47,8 @@ El comprobador usa la biblioteca estándar de Python y revisa las páginas, los 
 - `js/site.js`: carga ambos componentes, controla el menú móvil, marca la página activa, actualiza el año y cambia el estado de la convocatoria después del cierre.
 - `css/site.css`: estilos generales, variables de color, tipografías, marca y adaptación a distintos tamaños de pantalla.
 - `css/community-pages.css`, `css/event-pages.css` y `css/news-archive.css`: estilos de las páginas internas correspondientes.
+- `css/entre-fisicos-gallery.css` y `js/entre-fisicos-gallery.js`: galerías adaptables de Entre Físicos 2025 y Research Sprint 2026. El visor permite recorrer las fotos con botones y flechas del teclado; se cierra con Escape y devuelve el foco a la miniatura. Sin JavaScript, los enlaces abren las imágenes.
+- `css/project-details.css`: presentación compartida de las seis fichas de proyectos. Se sirven como HTML completo, sin depender de JavaScript para consultar los requisitos.
 - `assets/fonts/fonts.css`: fuentes WOFF2 autoalojadas con `font-display: swap`; sus licencias están en el mismo directorio.
 
 Las páginas montan los componentes en `#navbar` y `#footer` e importan `js/site.js` como módulo. Al crear una página, conservar el enlace «Saltar al contenido», el contenido principal con `id="contenido"` y `id="top"` en el `body`.
@@ -86,6 +89,8 @@ Las fotografías históricas de `assets/img/`, los recursos de `assets/sprint/` 
 
 Las fechas y el cierre fueron confirmados por el organizador para esta edición. Los proyectos, vacantes, dedicaciones, requisitos y nombres de mentores proceden del [catálogo oficial](https://docs.google.com/document/d/1heCBebyJ8vFON8CL4-Q94H1xfDQxgXMiHpcv8akLAnU/edit). La postulación enlaza al [formulario oficial proporcionado por el organizador](https://docs.google.com/forms/d/e/1FAIpQLSer-O7AxwhFLxkZRVWFDWsnfdM93cY9s3JdS6_UGH-F5nHD9g/viewform?usp=send_form).
 
+El 16 de octubre de 2026 se trasladó la información sustantiva del documento a seis páginas propias. Los enlaces públicos de la web llevan a esas fichas y ya no al documento de Google Docs; el documento se conserva como fuente de mantenimiento. No sustituir las fichas por resúmenes que omitan requisitos o solicitudes adicionales. Los enlaces profesionales y el video que exige un proyecto se mantienen en su ficha correspondiente.
+
 El catálogo establece cargas de 3–5, 6–9 y 10+ horas semanales según el proyecto. El proyecto de física teórica contempla reuniones preferentemente presenciales; por ello, la web no presenta una modalidad virtual ni una dedicación uniforme para todo el programa. Las afiliaciones de mentores describen su vínculo profesional y no constituyen anuncios de alianzas institucionales.
 
 ### Entre Físicos 2027 y mentores de otras ediciones
@@ -103,11 +108,11 @@ Para completar cada tarjeta, incorporar la foto autorizada dentro de `.testimoni
 ### Actualizar una futura edición
 
 1. Confirmar con la organización las fechas, el cierre, los proyectos, las vacantes, las modalidades, los requisitos, los mentores y los enlaces de catálogo y formulario.
-2. Actualizar **`index.html` y `summer-sprint.html`**: textos visibles, cifras, fechas, enlaces, títulos, metadescripciones y etiquetas sociales.
-3. Actualizar **`js/site.js`**: fecha de cierre y catálogo de destino. Actualmente el umbral es `2026-11-09T00:00:00-05:00`, al terminar el 8 de noviembre en Lima. Mantener explícito el desfase `-05:00`.
+2. Actualizar **`index.html`, `summer-sprint.html` y las seis fichas `proyecto-*.html`**: textos visibles, cifras, fechas, enlaces, títulos, metadescripciones y etiquetas sociales.
+3. Actualizar **`js/site.js`**: fecha de cierre y destino interno de la convocatoria cerrada. Actualmente el umbral es `2026-11-09T00:00:00-05:00`, al terminar el 8 de noviembre en Lima. Mantener explícito el desfase `-05:00`.
 4. Revisar `components/header.html`, `components/footer.html`, `equipo.html` y la sección `summer-sprint.html#mentores` para eliminar referencias o enlaces de la edición anterior.
 5. Buscar en todo el sitio el año anterior, las fechas y los identificadores de los documentos antiguos para detectar referencias pendientes.
-6. Verificar por HTTP, en escritorio y móvil, el menú, los botones de postulación, las imágenes y los enlaces al catálogo. Comprobar también el comportamiento de la convocatoria después de su cierre.
+6. Verificar por HTTP, en escritorio y móvil, el menú, los botones de postulación, las imágenes y los enlaces a cada ficha de proyecto. Comprobar también el comportamiento de la convocatoria después de su cierre.
 
 El script cambia los textos con `data-sprint-status` y los enlaces con `data-sprint-apply` cuando se carga la página después del umbral. Esta lógica usa el reloj del navegador y no cierra el formulario de Google ni reemplaza la actualización editorial de las fechas impresas.
 
@@ -121,11 +126,11 @@ El script cambia los textos con `data-sprint-status` y los enlaces con `data-spr
 
 ## Publicación y dominio
 
-GitHub Pages sirve la raíz del repositorio en [la dirección temporal](https://derivatestem.github.io/Webpage/). Los enlaces internos y los recursos usan rutas relativas para conservar el prefijo `/Webpage/`. Las nueve páginas incluyen `canonical`, `og:url` y `og:image` con esta base; `sitemap.xml` enumera las ocho páginas de contenido y excluye la redirección `mentores.html` y `robots.txt` incluye el enlace al sitemap. Revisar los cambios antes de incorporarlos a la rama utilizada por Pages.
+GitHub Pages sirve la raíz del repositorio en [la dirección temporal](https://derivatestem.github.io/Webpage/). Los enlaces internos y los recursos usan rutas relativas para conservar el prefijo `/Webpage/`. Las quince páginas incluyen `canonical`, `og:url` y `og:image` con esta base; `sitemap.xml` enumera las catorce páginas de contenido y excluye la redirección `mentores.html` y `robots.txt` incluye el enlace al sitemap. Revisar los cambios antes de incorporarlos a la rama utilizada por Pages.
 
 ### Restaurar `derivate.org.pe`
 
 1. Resolver el registro y la configuración DNS del dominio. Comprobar que el DNS sea válido y apunte a GitHub Pages según la [documentación oficial de dominios personalizados](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site). No restaurar el dominio personalizado mientras devuelva `NXDOMAIN`.
 2. Cuando el DNS sea válido, abrir el repositorio **DerivateStem/Webpage → Settings → Pages**. En **Custom domain**, introducir `derivate.org.pe` y guardar. Si Pages publica desde una rama, GitHub crea el archivo `CNAME`; sincronizar ese cambio con la copia local.
 3. Comprobar que Pages valide el DNS y que el certificado HTTPS esté disponible. Activar **Enforce HTTPS** cuando la opción esté habilitada y verificar que el sitio cargue en `https://derivate.org.pe/`.
-4. Cambiar la base temporal por `https://derivate.org.pe/` en los metadatos de las nueve páginas, en `sitemap.xml`, en la referencia al sitemap de `robots.txt` y en este README. Ajustar también `Allow` a `/`, ejecutar las verificaciones y publicar esos cambios junto con la restauración del dominio.
+4. Cambiar la base temporal por `https://derivate.org.pe/` en los metadatos de las quince páginas, en `sitemap.xml`, en la referencia al sitemap de `robots.txt` y en este README. Ajustar también `Allow` a `/`, ejecutar las verificaciones y publicar esos cambios junto con la restauración del dominio.
