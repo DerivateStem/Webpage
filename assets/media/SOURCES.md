@@ -114,3 +114,9 @@ Las cuatro fotografías añadidas en octubre de 2026 tienen sus fuentes, dimensi
 ## Parámetros de generación
 
 Las copias se generaron con Sharp: ajuste proporcional `fit: 'inside'`, `withoutEnlargement: true`, WebP `quality: 82` y `effort: 6`. Se respetó la orientación de las fotos. El conjunto inicial de 11 imágenes pesa 677 054 bytes; las 18 fotos optimizadas de `profiles/` pesan 573 690 bytes, frente a 10 813 530 bytes de sus originales únicos, una reducción del 94,69 %. Estas cifras corresponden a los archivos de esta renovación y deben recalcularse si se sustituyen.
+
+## Testimonio de Research Sprint 2026
+
+- `sprint2026-testimonio-01.webp`: original `DSC07153.jpg`, del [álbum de Research Sprint 2026 proporcionado por la organización](https://drive.google.com/file/d/15Ip0yKtzz8wZsfUbf96wCIZa1SGO_Am6/view). Fotografía seleccionada expresamente por el usuario para acompañar su cita.
+- Original JPEG 4672 × 7008; copia WebP 1200 × 1800, calidad 84, sin recorte ni ampliación; orientación EXIF aplicada y metadatos eliminados. La presentación se ajusta por CSS.
+- La cita se conserva literalmente como fue suministrada por la organización. La atribución solo incorpora datos confirmados por el usuario.
