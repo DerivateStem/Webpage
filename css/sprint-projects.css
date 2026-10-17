@@ -1,10 +1,10 @@
-/* Project cards: a clear surface and one native link for the whole card. */
+/* Translucent project cards; the whole surface remains one native link. */
 #proyectos .project-card {
-  background: #e7f2fc;
-  color: var(--ink);
-  border: 1px solid #2e9df780;
+  background: linear-gradient(135deg, #ffffff0e, #2e9df70c 60%, #ffffff06), #ffffff06;
+  color: var(--paper);
+  border: 1px solid #ffffff30;
   border-radius: 6px;
-  box-shadow: 0 8px 24px #0000001a;
+  box-shadow: inset 0 1px 0 #ffffff08, 0 8px 24px #0000001a;
   transition: transform .22s var(--ease), border-color .22s, box-shadow .22s;
 }
 
@@ -15,7 +15,7 @@
 
 #proyectos .project-image {
   background: var(--ink);
-  border-bottom: 4px solid var(--blue);
+  border-bottom: 1px solid #ffffff24;
 }
 
 #proyectos .project-image > img {
@@ -23,24 +23,27 @@
 }
 
 #proyectos .project-number {
-  background: var(--blue);
-  border: 0;
-  color: var(--ink);
+  background: #101010b8;
+  border: 1px solid #ffffff4d;
+  border-radius: 3px;
+  color: var(--paper);
   padding: 7px 11px;
   font-weight: 600;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 #proyectos .project-card h3 {
-  color: var(--ink);
+  color: var(--paper);
 }
 
 #proyectos .project-mentor,
 #proyectos .project-mentor:hover {
-  color: #344957;
+  color: #d5d9dc;
 }
 
 #proyectos .project-card p {
-  color: #344957;
+  color: #bcc3c8;
 }
 
 #proyectos .project-card-body > p {
@@ -48,16 +51,16 @@
 }
 
 #proyectos .project-facts {
-  border-top: 1px solid #10101026;
+  border-top: 1px solid #ffffff1f;
   padding-top: 18px;
   margin-top: auto;
   margin-bottom: 22px;
   font-size: 10px;
-  color: #344957;
+  color: #bcc3c8;
 }
 
 #proyectos .project-facts span:first-child {
-  color: var(--blue-on-paper);
+  color: var(--blue);
   font-weight: 600;
 }
 
@@ -68,12 +71,12 @@
   gap: 12px;
   min-height: 50px;
   padding: 11px 14px;
-  border: 0;
+  border: 1px solid #ffffff66;
   border-radius: 3px;
-  background: var(--blue);
-  color: var(--ink);
+  background: #ffffff05;
+  color: var(--paper);
   font-size: 12px;
-  transition: background-color .22s, color .22s;
+  transition: background-color .22s, border-color .22s;
 }
 
 #proyectos .text-link .arrow {
@@ -81,9 +84,11 @@
   place-items: center;
   width: 28px;
   height: 28px;
-  background: var(--ink);
+  border: 1px solid #ffffff38;
+  background: transparent;
   color: var(--paper);
-  border-radius: 2px;
+  border-radius: 50%;
+  transition: transform .22s var(--ease), border-color .22s, background-color .22s;
 }
 
 #proyectos .project-card:focus-within {
@@ -92,25 +97,26 @@
 }
 
 #proyectos .project-card__link:focus-visible {
-  outline: 3px solid var(--blue-on-paper);
+  outline: 2px solid var(--paper);
   outline-offset: -5px;
 }
 
 #proyectos .project-card__link:focus-visible .text-link {
-  background: var(--yellow);
+  background: #2e9df71f;
+  border-color: var(--blue);
 }
 
 @media (hover: hover) and (pointer: fine) {
   #proyectos .project-card:hover {
-    background: #e7f2fc;
-    border-color: var(--blue);
-    box-shadow: 0 16px 32px #00000040;
+    border-color: #2e9df799;
+    box-shadow: inset 0 1px 0 #ffffff12, 0 16px 32px #00000040;
     transform: translateY(-4px);
   }
 
   #proyectos .project-card__link:hover .text-link {
-    background: var(--yellow);
-    color: var(--ink);
+    background: #2e9df71f;
+    border-color: var(--blue);
+    color: var(--paper);
   }
 
   #proyectos .project-card__link:hover .project-image > img {
@@ -118,18 +124,23 @@
   }
 
   #proyectos .project-card__link:hover .arrow {
+    background: #2e9df71f;
+    border-color: var(--blue);
     transform: translate(2px, -2px);
   }
 }
 
 #proyectos .project-card__link:active .text-link {
-  background: var(--yellow);
+  background: #2e9df72e;
+  border-color: var(--blue);
 }
 
 @media (prefers-reduced-motion: reduce) {
   #proyectos .project-card,
   #proyectos .project-image > img,
+  #proyectos .project-card .text-link,
   #proyectos .text-link .arrow {
     transform: none !important;
+    transition: none !important;
   }
 }
