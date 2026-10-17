@@ -58,3 +58,7 @@ Estas fotos se incorporaron por indicación expresa del usuario. Las corresponde
 Pedro Pablo Vasquez Medina: `pedro-pablo-vasquez-medina-2026-10-17.jpg`, fotografía adjunta por el usuario para su testimonio y su perfil de Equipo. Se conserva el JPEG original de 240 × 288 px; el encuadre se ajusta con CSS. La atribución del testimonio usa «Pedro Vazquez», tal como fue proporcionada por el usuario; la afiliación procede de su perfil existente (Universidad Nacional de Trujillo).
 
 Miguel Agama: `miguel-agama-2026-10-17.webp`, fotografía adjunta por el usuario para su perfil de Equipo. Copia WebP de 882 × 900 px, sin recorte del archivo ni metadatos EXIF; el encuadre se ajusta con CSS.
+
+Karla Francesca Torres García: `karla-torres-2026-10-17.webp`, archivo «Karla_Torres.png» de la [carpeta facilitada por la organización](https://drive.google.com/file/d/1ltU9kujBCa0X2fbBNH_dWQkl4ByzxjD8/view). Conversión WebP sin pérdida de 715 × 798 px. Se muestra el encuadre completo y sus colores originales, sin ampliación ni recorte a la cara.
+
+Edward Criths Galindo Gutierrez: `edward-galindo-2026-10-17.webp`, archivo «Edward Galindo.jpg» de la [misma carpeta](https://drive.google.com/file/d/1nwBGWx2bSbXoRO7bKbq3-KjSafJMvbYK/view). Copia WebP de 900 × 900 px, sin recorte y sin metadatos EXIF. Correspondencias basadas en los nombres de archivo y la solicitud del usuario.
