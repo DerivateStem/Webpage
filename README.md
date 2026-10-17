@@ -112,9 +112,11 @@ Los mentores siguen formando parte de Derívate entre ediciones. Equipo reúne l
 
 ### Testimonios de Research Sprint 2026
 
-`summer-sprint.html#testimonios` presenta una tarjeta amplia con la cita literal suministrada por la organización y la fotografía original seleccionada de su álbum de Research Sprint 2026. La atribución muestra únicamente datos confirmados por la organización.
+`summer-sprint.html#testimonios` usa tarjetas compactas: tres columnas en escritorio, dos en pantallas intermedias y una en móvil. La foto de Anthony es un retrato circular de 64 px, con encuadre de rostro por CSS; su cita se conserva íntegra.
 
-El segundo espacio permanece oculto hasta recibir otra fotografía, cita y atribución autorizadas. Para mostrar dos tarjetas, retirar `hidden` de la segunda y la clase `testimonials-grid--single` del contenedor. No publicar los bloques provisionales como testimonios ni reutilizar datos de mentees para identificar a las personas. Los estilos están en `css/sprint-testimonials.css`.
+Hay tres espacios en el HTML. Solo la tarjeta con foto, cita y atribución confirmadas es visible; las otras dos permanecen ocultas hasta recibir su contenido autorizado. Para incorporar un testimonio, completar su estructura y retirar `hidden`. No publicar tarjetas provisionales como citas. Los estilos están en `css/sprint-testimonials.css`.
+
+La foto de Joseph Cabello fue sustituida por la adjunta por la organización el 17 de octubre de 2026. Se completaron las fotos de Ramiro Inti, Piero Romero, Marcelo Huarcaya y Luis Carlos Vera Saravia desde la carpeta facilitada; las fuentes quedan en `assets/media/profiles/SOURCES-2026.md`.
 
 ### Actualizar una futura edición
 
