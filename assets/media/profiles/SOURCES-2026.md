@@ -42,3 +42,15 @@ Fuentes nominales comprobadas para las fotografías solicitadas por la organizac
 | Joseph Cabello | `joseph-cabello-mentor.webp` | [Perfil o publicación nominal](https://www.linkedin.com/in/joseph-heli-cabello-alcarraz-890846188/) |
 
 Detalles de identidad y tratamiento se conservan en el registro de mantenimiento del proyecto.
+
+## Fotografías facilitadas por la organización — 17 de octubre de 2026
+
+Estas fotos se incorporaron por indicación expresa del usuario. Las correspondencias se basan en nombres de archivo y perfiles, y en la confirmación del usuario para Luis Carlos Vera Saravia. No se identificaron personas mediante reconocimiento facial. Las copias son WebP con lado mayor máximo de 900 px, sin ampliación ni recorte del archivo, orientación EXIF aplicada y sin metadatos EXIF. El encuadre de presentación se ajusta con CSS.
+
+| Perfil | Archivo | Procedencia |
+| --- | --- | --- |
+| Joseph Cabello | `joseph-cabello-2026-10-17.webp` | Foto adjunta por el usuario en este chat. Sustituye el retrato anterior de su perfil. |
+| Ramiro Inti Ruelas Villa | `ramiro-inti-ruelas-villa-2026-10-17.webp` | [Archivo de la carpeta facilitada](https://drive.google.com/file/d/1-6P-zVIS5ynPkbfeCsZjzkc_Y4YfnwJ3/view) |
+| Piero Rodrigo Romero Amado | `piero-rodrigo-romero-amado-2026-10-17.webp` | [Archivo de la carpeta facilitada](https://drive.google.com/file/d/1TDnsH9TMnbSLuwj4YyKeXtKwGUEfsG9A/view) |
+| Marcelo Gabriel Huarcaya Ladrón de Guevara | `marcelo-gabriel-huarcaya-2026-10-17.webp` | [Archivo de la carpeta facilitada](https://drive.google.com/file/d/1JTSNQ02Jcriu51zJ5IotYhGAM-9vVb-s/view) |
+| Luis Carlos Vera Saravia | `luis-carlos-vera-saravia-2026-10-17.webp` | [Archivo de la carpeta facilitada](https://drive.google.com/file/d/1xNqureM0D79HakheqDypNj0h6_V0ARNo/view) |
