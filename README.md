@@ -84,7 +84,7 @@ Las fotografías históricas de `assets/img/`, los recursos de `assets/sprint/` 
 
 Equipo incorpora las fotos proporcionadas por el organizador para Katterine Taipe, Lucía Coll y Franz Machado, con encuadres centrados mediante CSS. El retrato de Carlos Argüelles procede de Harvard Gazette. La ampliación del 16 de octubre añade 23 retratos nominales verificados de asesores y mentores; los seis mentores de Summer Sprint también usan esas fotos. Miguel Agama conserva sus iniciales porque no se encontró una fotografía nominal verificable. Las copias completas, fuentes y créditos se conservan en la documentación de mantenimiento [retratos de 2026](assets/media/profiles/SOURCES-2026.md), sin créditos fotográficos visibles en las tarjetas.
 
-La fotografía de Conócenos mantiene su proporción original y se muestra completa. Las seis tarjetas de proyectos de Summer Sprint son enlaces nativos completos a sus fichas de información y requisitos, con acceso por teclado. La sección de testimonios permanece oculta temporalmente.
+La fotografía de Conócenos mantiene su proporción original y se muestra completa. Las seis tarjetas de proyectos de Summer Sprint son enlaces nativos completos a sus fichas de información y requisitos, con acceso por teclado. La sección de testimonios muestra la cita y fotografía autorizadas de Research Sprint 2026.
 
 ## Summer Sprint 2027: datos confirmados
 
@@ -112,9 +112,9 @@ Los mentores siguen formando parte de Derívate entre ediciones. Equipo reúne l
 
 ### Testimonios de Research Sprint 2026
 
-`summer-sprint.html#testimonios` reserva dos tarjetas después de los mentores y antes de «Cómo postular». Ambas se muestran como «Próximamente» hasta recibir material real. Los bloques gráficos son decorativos; no representan a participantes ni contienen citas ficticias.
+`summer-sprint.html#testimonios` presenta una tarjeta amplia con la cita literal suministrada por la organización y la fotografía original seleccionada de su álbum de Research Sprint 2026. La atribución muestra únicamente datos confirmados por la organización.
 
-Para completar cada tarjeta, incorporar la foto autorizada dentro de `.testimonial-portrait`, con `alt` descriptivo y dimensiones explícitas. Sustituir el contenido pendiente por la cita en un `blockquote.testimonial-quote` y la atribución en `.testimonial-person`, con `.testimonial-name` y, si se confirma, `.testimonial-meta`. Retirar la clase `sprint-testimonial--pending`, el estado «Próximamente» y el `aria-label` provisional. No reutilizar datos de mentees del PDF para identificar a quienes darán su testimonio. Los estilos de esta sección están en `css/sprint-testimonials.css`.
+El segundo espacio permanece oculto hasta recibir otra fotografía, cita y atribución autorizadas. Para mostrar dos tarjetas, retirar `hidden` de la segunda y la clase `testimonials-grid--single` del contenedor. No publicar los bloques provisionales como testimonios ni reutilizar datos de mentees para identificar a las personas. Los estilos están en `css/sprint-testimonials.css`.
 
 ### Actualizar una futura edición
 
