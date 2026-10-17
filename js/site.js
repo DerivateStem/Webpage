@@ -39,7 +39,7 @@ document.addEventListener('keydown', event => {
 const desktop = window.matchMedia('(min-width: 1001px)');
 desktop.addEventListener('change', event => { if (event.matches) setMenu(false); });
 const page = location.pathname.split('/').pop() || 'index.html';
-const activePage = page === 'EntreFisicos2026.html' ? 'EntreFisicos.html' : page.startsWith('proyecto-') ? 'summer-sprint.html' : page;
+const activePage = /^EntreFisicos202[56]\.html$/.test(page) ? 'EntreFisicos.html' : page.startsWith('proyecto-') ? 'summer-sprint.html' : page;
 nav?.querySelectorAll('a').forEach(link => {
   if (link.getAttribute('href') === activePage) link.setAttribute('aria-current', 'page');
 });
