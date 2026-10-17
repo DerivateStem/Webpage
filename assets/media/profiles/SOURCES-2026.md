@@ -54,3 +54,5 @@ Estas fotos se incorporaron por indicación expresa del usuario. Las corresponde
 | Piero Rodrigo Romero Amado | `piero-rodrigo-romero-amado-2026-10-17.webp` | [Archivo de la carpeta facilitada](https://drive.google.com/file/d/1TDnsH9TMnbSLuwj4YyKeXtKwGUEfsG9A/view) |
 | Marcelo Gabriel Huarcaya Ladrón de Guevara | `marcelo-gabriel-huarcaya-2026-10-17.webp` | [Archivo de la carpeta facilitada](https://drive.google.com/file/d/1JTSNQ02Jcriu51zJ5IotYhGAM-9vVb-s/view) |
 | Luis Carlos Vera Saravia | `luis-carlos-vera-saravia-2026-10-17.webp` | [Archivo de la carpeta facilitada](https://drive.google.com/file/d/1xNqureM0D79HakheqDypNj0h6_V0ARNo/view) |
+
+Pedro Pablo Vasquez Medina: `pedro-pablo-vasquez-medina-2026-10-17.jpg`, fotografía adjunta por el usuario para su testimonio y su perfil de Equipo. Se conserva el JPEG original de 240 × 288 px; el encuadre se ajusta con CSS. La atribución del testimonio usa «Pedro Vazquez», tal como fue proporcionada por el usuario; la afiliación procede de su perfil existente (Universidad Nacional de Trujillo).
