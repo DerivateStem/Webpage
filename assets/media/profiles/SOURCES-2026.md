@@ -56,3 +56,5 @@ Estas fotos se incorporaron por indicación expresa del usuario. Las corresponde
 | Luis Carlos Vera Saravia | `luis-carlos-vera-saravia-2026-10-17.webp` | [Archivo de la carpeta facilitada](https://drive.google.com/file/d/1xNqureM0D79HakheqDypNj0h6_V0ARNo/view) |
 
 Pedro Pablo Vasquez Medina: `pedro-pablo-vasquez-medina-2026-10-17.jpg`, fotografía adjunta por el usuario para su testimonio y su perfil de Equipo. Se conserva el JPEG original de 240 × 288 px; el encuadre se ajusta con CSS. La atribución del testimonio usa «Pedro Vazquez», tal como fue proporcionada por el usuario; la afiliación procede de su perfil existente (Universidad Nacional de Trujillo).
+
+Miguel Agama: `miguel-agama-2026-10-17.webp`, fotografía adjunta por el usuario para su perfil de Equipo. Copia WebP de 882 × 900 px, sin recorte del archivo ni metadatos EXIF; el encuadre se ajusta con CSS.
