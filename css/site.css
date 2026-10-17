@@ -74,6 +74,10 @@ h1,h2,h3,h4{text-wrap:balance}
 :is(.closing-cta,.ev-upcoming,.sprint-testimonials) :focus-visible{outline-color:var(--ink)}
 .project-card{border-radius:4px;transition:border-color .2s,background-color .2s}
 .project-card:focus-within{border-color:var(--blue)}
+.project-card__link{display:flex;flex-direction:column;flex:1;min-width:0}
+.project-card__link:focus-visible{outline-offset:-4px}
+.project-card__link .project-mentor{text-decoration:none}
+.project-card__link:hover .text-link{color:var(--blue)}
 .project-card h3{line-height:1.08}
 .project-card .project-facts{flex-wrap:wrap;row-gap:8px;margin-bottom:18px}
 .project-card p{line-height:1.8}

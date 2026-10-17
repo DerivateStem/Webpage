@@ -29,6 +29,9 @@
 .ev-editions--archive .ev-edition-body { padding: 26px; }
 .ev-editions--archive .ev-edition-body .eyebrow { font-size: .6rem; }
 .ev-edition { min-width: 0; background: #eeece5; border: 1px solid #d9d7cf; display: flex; flex-direction: column; }
+.ev-edition--link { color: var(--ink); transition: background-color .2s, border-color .2s; }
+.ev-edition--link:focus-visible { outline: 3px solid var(--blue-on-paper); outline-offset: 5px; }
+.ev-edition--link .text-link { pointer-events: none; }
 .ev-edition-year { position: relative; min-height: 315px; padding: 26px 30px; background: #ffc907; color: #101010; font-family: 'Barlow Condensed', sans-serif; font-size: 9.5rem; font-weight: 800; letter-spacing: -.065em; line-height: .82; }
 .ev-edition-year > span { position: absolute; bottom: 22px; right: 28px; font-family: 'Inter', sans-serif; font-size: 4rem; font-weight: 400; }
 .ev-edition-photo { width: 100%; height: 315px; object-fit: cover; display: block; }
@@ -54,6 +57,15 @@
 .ev-status { display: flex; align-items: center; gap: 10px; font-size: .75rem !important; font-family: 'IBM Plex Mono', monospace; }
 .ev-status > span { width: 7px; height: 7px; flex-shrink: 0; background: #54544f; border-radius: 50%; }
 .ev-archive-note { border-left: 2px solid #101010; padding-left: 32px; }
+.ev-photo-archive-hero { padding-top: 32px; padding-bottom: 44px; }
+.ev-photo-archive-hero .ev-back { margin-bottom: 34px; }
+.ev-photo-archive-heading { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); align-items: end; gap: clamp(28px, 5vw, 64px); }
+.ev-photo-archive-heading .ev-title { font-size: clamp(4rem, 7.4vw, 7.2rem); margin: 22px 0 0; }
+.ev-photo-archive-intro { padding-bottom: 4px; }
+.ev-photo-archive-date { color: var(--blue); margin-bottom: 18px; }
+.ev-photo-archive-intro .ev-lead { font-size: clamp(1.05rem, 1.7vw, 1.25rem); }
+.ev-photo-archive-intro .ev-description { margin-bottom: 0; }
+.events-page .ev-photo-archive-gallery { border-top: 0; padding-top: 0; }
 .ev-rifp-hero { padding-top: 64px; padding-bottom: 66px; }
 .ev-rifp-heading { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 64px); align-items: end; padding-bottom: clamp(32px, 4vw, 48px); }
 .ev-rifp-heading .ev-title { margin: 22px 0 0; }
@@ -87,6 +99,8 @@
 @media (hover: hover) and (pointer: fine) {
   .ev-speaker summary:hover { background: #eeeae0; }
   .events-page .light-section .text-link:hover { color: #075b98; }
+  .ev-edition--link:hover { background: #e6e3da; border-color: var(--blue-on-paper); }
+  .ev-edition--link:hover .text-link { color: var(--blue-on-paper); }
 }
 @media (max-width: 950px) {
   .ev-hero { gap: 36px; }
@@ -124,6 +138,12 @@
   .ev-related-layout > div > p:not(.eyebrow) { max-width: none; }
   .ev-back { margin-bottom: 36px; }
   .ev-archive-hero { padding-top: 26px; padding-bottom: 56px; }
+  .ev-photo-archive-hero { padding-top: 26px; padding-bottom: 34px; }
+  .ev-photo-archive-hero .ev-back { margin-bottom: 28px; }
+  .ev-photo-archive-heading { grid-template-columns: 1fr; gap: 24px; }
+  .ev-photo-archive-heading .ev-title { font-size: clamp(3.5rem, 15vw, 6rem); }
+  .ev-photo-archive-intro .ev-description { margin-top: 12px; }
+  .ev-photo-archive-date { margin-bottom: 12px; }
   .ev-calendar { max-width: 460px; }
   .ev-calendar-days { font-size: clamp(8.5rem, 38vw, 13rem); }
   .ev-rifp-hero { padding-top: 38px; padding-bottom: 48px; }
@@ -146,3 +166,4 @@
   .ev-speaker-talk, .ev-speaker summary, .ev-speaker details p { padding-inline: 20px; }
 }
 @media (max-width: 380px) { .ev-section-title { font-size: 2.5rem; } .ev-speaker-header { gap: 14px; padding-inline: 18px; } }
+@media (prefers-reduced-motion: reduce) { .ev-edition--link { transition: none; } }
