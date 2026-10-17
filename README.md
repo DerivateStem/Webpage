@@ -35,8 +35,9 @@ El comprobador usa la biblioteca estándar de Python y revisa las páginas, los 
 | `mentores.html` | Redirección de compatibilidad al filtro Mentores de Equipo; ya no es una sección independiente. |
 | `summer-sprint.html` | Convocatoria, proyectos, seis mentores de la edición, galería de seis fotografías de Research Sprint 2026 y orientación para postular. |
 | `proyecto-*.html` | Seis fichas completas de proyectos de Summer Sprint 2027, con requisitos, dedicación, tareas y materiales de postulación. Cada tarjeta abre únicamente la ficha correspondiente. |
-| `EntreFisicos.html` | Anuncio de Entre Físicos 2027, archivo de ediciones y galería de nueve fotografías de 2025 con visor ampliado. |
-| `EntreFisicos2026.html` | Programa y galería de nueve fotografías de la edición 2026, con visor ampliado. |
+| `EntreFisicos.html` | Anuncio de Entre Físicos 2027 y tarjetas de ediciones anteriores que abren sus galerías. |
+| `EntreFisicos2025.html` | Galería independiente de nueve fotografías de 2025, con visor ampliado. |
+| `EntreFisicos2026.html` | Galería independiente de nueve fotografías de 2026, con visor ampliado. |
 | `RIFP.html` | Archivo de la Reunión Internacional de Físicos en Posgrado 2024. |
 | `novedades.html` | Archivo de publicaciones de la comunidad. |
 
@@ -47,7 +48,7 @@ El comprobador usa la biblioteca estándar de Python y revisa las páginas, los 
 - `js/site.js`: carga ambos componentes, controla el menú móvil, marca la página activa, actualiza el año y cambia el estado de la convocatoria después del cierre.
 - `css/site.css`: estilos generales, variables de color, tipografías, marca y adaptación a distintos tamaños de pantalla.
 - `css/community-pages.css`, `css/event-pages.css` y `css/news-archive.css`: estilos de las páginas internas correspondientes.
-- `css/entre-fisicos-gallery.css` y `js/entre-fisicos-gallery.js`: galerías adaptables de Entre Físicos 2025 y Research Sprint 2026. El visor permite recorrer las fotos con botones y flechas del teclado; se cierra con Escape y devuelve el foco a la miniatura. Sin JavaScript, los enlaces abren las imágenes.
+- `css/entre-fisicos-gallery.css` y `js/entre-fisicos-gallery.js`: galerías adaptables de Entre Físicos 2025, Entre Físicos 2026 y Research Sprint 2026. El visor permite recorrer las fotos con botones y flechas del teclado; se cierra con Escape y devuelve el foco a la miniatura. Sin JavaScript, los enlaces abren las imágenes.
 - `css/project-details.css`: presentación compartida de las seis fichas de proyectos. Se sirven como HTML completo, sin depender de JavaScript para consultar los requisitos.
 - `assets/fonts/fonts.css`: fuentes WOFF2 autoalojadas con `font-display: swap`; sus licencias están en el mismo directorio.
 
@@ -81,7 +82,9 @@ El isotipo y la marca tipográfica están en `assets/brand/`. La composición co
 
 Las fotografías históricas de `assets/img/`, los recursos de `assets/sprint/` y los favicons anteriores se conservan. Las páginas renovadas usan copias WebP de `assets/media/`; los originales no se sustituyen. Las copias conservan la imagen completa, aunque algunas vistas usan `object-fit` para adaptarla al contenedor. Véase [origen y optimización de imágenes](assets/media/SOURCES.md).
 
-Equipo incorpora las fotos proporcionadas por el organizador para Katterine Taipe, Lucía Coll y Franz Machado, con encuadres centrados mediante CSS. El retrato de Carlos Argüelles procede de Harvard Gazette y conserva el crédito publicado. Las copias completas y sus fuentes están documentadas en [retratos de 2026](assets/media/profiles/SOURCES-2026.md).
+Equipo incorpora las fotos proporcionadas por el organizador para Katterine Taipe, Lucía Coll y Franz Machado, con encuadres centrados mediante CSS. El retrato de Carlos Argüelles procede de Harvard Gazette. La ampliación del 16 de octubre añade 23 retratos nominales verificados de asesores y mentores; los seis mentores de Summer Sprint también usan esas fotos. Miguel Agama conserva sus iniciales porque no se encontró una fotografía nominal verificable. Las copias completas, fuentes y créditos se conservan en la documentación de mantenimiento [retratos de 2026](assets/media/profiles/SOURCES-2026.md), sin créditos fotográficos visibles en las tarjetas.
+
+La fotografía de Conócenos mantiene su proporción original y se muestra completa. Las seis tarjetas de proyectos de Summer Sprint son enlaces nativos completos a sus fichas de información y requisitos, con acceso por teclado. La sección de testimonios permanece oculta temporalmente.
 
 ## Summer Sprint 2027: datos confirmados
 
