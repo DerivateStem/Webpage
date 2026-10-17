@@ -59,6 +59,8 @@ Pedro Pablo Vasquez Medina: `pedro-pablo-vasquez-medina-2026-10-17.jpg`, fotogra
 
 Miguel Agama: `miguel-agama-2026-10-17.webp`, fotografía adjunta por el usuario para su perfil de Equipo. Copia WebP de 882 × 900 px, sin recorte del archivo ni metadatos EXIF; el encuadre se ajusta con CSS.
 
-Karla Francesca Torres García: `karla-torres-2026-10-17.webp`, archivo «Karla_Torres.png» de la [carpeta facilitada por la organización](https://drive.google.com/file/d/1ltU9kujBCa0X2fbBNH_dWQkl4ByzxjD8/view). Conversión WebP sin pérdida de 715 × 798 px. Se muestra el encuadre completo y sus colores originales, sin ampliación ni recorte a la cara.
+Karla Francesca Torres García: `karla-torres-2026-10-17.webp`, archivo «Karla_Torres.png» de la [carpeta facilitada por la organización](https://drive.google.com/file/d/1ltU9kujBCa0X2fbBNH_dWQkl4ByzxjD8/view). Conversión WebP sin pérdida de 715 × 798 px. El archivo conserva el encuadre y sus colores originales. El 17 de octubre se ajustó la presentación CSS para llenar el marco cuadrado, anclada abajo, retirando las franjas laterales y una parte del cielo sin acercamiento a la cara.
 
 Edward Criths Galindo Gutierrez: `edward-galindo-2026-10-17.webp`, archivo «Edward Galindo.jpg» de la [misma carpeta](https://drive.google.com/file/d/1nwBGWx2bSbXoRO7bKbq3-KjSafJMvbYK/view). Copia WebP de 900 × 900 px, sin recorte y sin metadatos EXIF. Correspondencias basadas en los nombres de archivo y la solicitud del usuario.
+
+Pedro Rojas Fernández: `pedro-rojas-fernandez-2026-10-17.webp`, fotografía adjunta por el usuario (`codex-clipboard-6eb5128f-ef04-46b9-9edd-c4c0a6fd7344.png`). Copia WebP de 640 × 640 px, sin recorte ni metadatos EXIF. El usuario confirmó su nombre, su rol como mentor y su afiliación a la UNMSM. No se asigna una edición del Sprint ni un área de investigación sin confirmación.
