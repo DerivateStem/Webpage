@@ -112,9 +112,9 @@ Los mentores siguen formando parte de Derívate entre ediciones. Equipo reúne l
 
 ### Testimonios de Research Sprint 2026
 
-`summer-sprint.html#testimonios` usa tarjetas compactas: tres columnas en escritorio, dos en pantallas intermedias y una en móvil. La foto de Anthony es un retrato circular de 64 px, con encuadre de rostro por CSS; su cita se conserva íntegra.
+`summer-sprint.html#testimonios` usa tarjetas compactas: tres columnas en escritorio, dos en pantallas intermedias y una en móvil. Las fotos son retratos circulares de 64 px, con encuadre de rostro por CSS; las citas se conservan íntegras.
 
-Hay tres espacios en el HTML. Solo la tarjeta con foto, cita y atribución confirmadas es visible; las otras dos permanecen ocultas hasta recibir su contenido autorizado. Para incorporar un testimonio, completar su estructura y retirar `hidden`. No publicar tarjetas provisionales como citas. Los estilos están en `css/sprint-testimonials.css`.
+Hay tres espacios en el HTML. Las tarjetas de Anthony Dolores y Pedro Vazquez tienen foto, cita y atribución confirmadas y son visibles; la tercera permanece oculta hasta recibir su contenido autorizado. El testimonio de Pedro incluye comillas visibles según lo solicitado por la organización, y su foto también se muestra en su perfil de Equipo. Para incorporar otro testimonio, completar su estructura y retirar `hidden`. No publicar tarjetas provisionales como citas. Los estilos están en `css/sprint-testimonials.css`.
 
 La foto de Joseph Cabello fue sustituida por la adjunta por la organización el 17 de octubre de 2026. Se completaron las fotos de Ramiro Inti, Piero Romero, Marcelo Huarcaya y Luis Carlos Vera Saravia desde la carpeta facilitada; las fuentes quedan en `assets/media/profiles/SOURCES-2026.md`.
 
