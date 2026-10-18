@@ -65,23 +65,20 @@ Edward Criths Galindo Gutierrez: `edward-galindo-2026-10-17.webp`, archivo «Edw
 
 Pedro Rojas Fernández: `pedro-rojas-fernandez-2026-10-17.webp`, fotografía adjunta por el usuario (`codex-clipboard-6eb5128f-ef04-46b9-9edd-c4c0a6fd7344.png`). Copia WebP de 640 × 640 px, sin recorte ni metadatos EXIF. El usuario confirmó su nombre, su rol como mentor y su afiliación a la UNMSM. No se asigna una edición del Sprint ni un área de investigación sin confirmación.
 
-## Tomas alternativas de Research Sprint para miembros — 17 de octubre de 2026
+## Fotografías de Research Sprint mirando a cámara — 17 de octubre de 2026
 
-El usuario indicó las correspondencias nominales mediante capturas y pidió seleccionar otras tomas originales del mismo álbum de Drive, con encuadres naturales. Las tomas se cotejaron por el póster, la ropa y la escena; no se añadieron datos biográficos. Las copias WebP mantienen el archivo completo, con orientación EXIF aplicada, sin EXIF y lado máximo de 1200 px. El encuadre de presentación y el efecto de blanco y negro a color se aplican mediante CSS. Las capturas no son los archivos publicados.
+El usuario indicó las correspondencias mediante capturas y confirmó que desea las fotos mirando a cámara. Se usan los originales de Drive correspondientes a esas referencias. Los archivos conservan el encuadre completo, con orientación EXIF aplicada, sin EXIF y lado máximo de 1200 px. La presentación en las tarjetas usa un encuadre abierto, sin ampliación mediante CSS, y conserva el efecto de blanco y negro a color del directorio. No se añaden datos biográficos ni se publican las capturas.
 
 | Perfil | Archivo | Original de Drive |
 | --- | --- | --- |
-| Julio César Jara Ricapa | `julio-cesar-jara-ricapa-sprint-2026-10-17.webp` | [DSC07073.jpg](https://drive.google.com/file/d/1s8Ex5dUc0VbOb7j8h8KctQLH0MluoEe7/view) |
-| Leo Anthony Rufino Robledo | `leo-anthony-rufino-robledo-sprint-2026-10-17.webp` | [DSC07131.jpg](https://drive.google.com/file/d/1qi343Qz2o3XqDWkf0EpdOP-v4bqlDImw/view) |
-| Thiago Marcelo Huaman Tito | `thiago-marcelo-huaman-tito-sprint-2026-10-17.webp` | [DSC07128.jpg](https://drive.google.com/file/d/1Xn5k4KaS49LBcziGVEboQKOFzG9Y99vC/view) |
-| Jesús Alexander Emmanuel Gálvez Cruz | `jesus-galvez-cruz-sprint-2026-10-17.webp` | [DSC07108.jpg](https://drive.google.com/file/d/1qd_8j6NZ92V69jcd_Abpa98EblU1HcsC/view) |
-| Rodrigo Adrian La Torre Castillo | `rodrigo-la-torre-castillo-sprint-2026-10-17.webp` | [DSC07110.jpg](https://drive.google.com/file/d/1EtP90CocBljFOS4Vro0sbWA7nTSm53zP/view) |
-| Uceda Garcia Jose Miguel | `jose-miguel-uceda-garcia-sprint-2026-10-17.webp` | [DSC07113.jpg](https://drive.google.com/file/d/1-YaAzKzm8RglIHoHam-M2mTwO72K_tEn/view) |
-| Nick Samuel Zegarra Chavez | `nick-samuel-zegarra-chavez-sprint-2026-10-17.webp` | [DSC07079.jpg](https://drive.google.com/file/d/1KCtPZ0BjRyfvHUcD0R_PqlqNVgjvbm9V/view) |
-| Jorge Alvaro Muñoz Laredo | `jorge-alvaro-munoz-laredo-sprint-2026-10-17.webp` | [DSC07100.jpg](https://drive.google.com/file/d/1SzI3jtgQQAZCOQZaiRPYPxWrCYTnFaM1/view) |
-| Daniela Yolanda Tapia Cancho | `daniela-yolanda-tapia-cancho-sprint-2026-10-17.webp` | [DSC07166.jpg](https://drive.google.com/file/d/1YUPcztp2NuqzvHVDeEHT7w7eDMyZVR-2/view) |
-
-Para Enrique Huaira y Castillón, el usuario autorizó expresamente utilizar los originales de sus referencias al no encontrarse otra toma clara. Se presentan con encuadres abiertos y sin ampliación por CSS.
-
-- Enrique Isaac Huaira Lopez: `enrique-huaira-lopez-sprint-2026-10-17.webp`, [DSC07171.jpg](https://drive.google.com/file/d/15bctDFjywFPvGSi7MFOLfWl1pgZuYeKS/view).
-- Castillon Azaña Leonardo Gonzalo: `leonardo-castillon-azana-sprint-2026-10-17.webp`, [DSC07144.jpg](https://drive.google.com/file/d/19chZK1oHQtntYPyxkCqwTo3e-fKyQdzt/view).
+| Enrique Isaac Huaira Lopez | `enrique-huaira-lopez-sprint-2026-10-17.webp` | [DSC07171.jpg](https://drive.google.com/file/d/15bctDFjywFPvGSi7MFOLfWl1pgZuYeKS/view) |
+| Julio César Jara Ricapa | `julio-cesar-jara-ricapa-camara-2026-10-17.webp` | [DSC07133.jpg](https://drive.google.com/file/d/1ywDIdFc6ZWi9U2YmNx908A9759kbc-lp/view) |
+| Leo Anthony Rufino Robledo | `leo-anthony-rufino-robledo-camara-2026-10-17.webp` | [DSC07150.jpg](https://drive.google.com/file/d/1ZKU2Z0QElC4x6OZSZz0YfKbuPgVfRyYB/view) |
+| Thiago Marcelo Huaman Tito | `thiago-marcelo-huaman-tito-camara-2026-10-17.webp` | [DSC07164.jpg](https://drive.google.com/file/d/1T7HK-P9AOWHl5ApTuMOTGTcNpYyzXhfz/view) |
+| Jesús Alexander Emmanuel Gálvez Cruz | `jesus-galvez-cruz-camara-2026-10-17.webp` | [DSC07138.jpg](https://drive.google.com/file/d/1_9ri4_7tYdNloXcLuD7JSuLgWLxj5rNb/view) |
+| Rodrigo Adrian La Torre Castillo | `rodrigo-la-torre-castillo-camara-2026-10-17.webp` | [DSC07140.jpg](https://drive.google.com/file/d/1DAO1P8KV3Z_ZsIlMvzLsBnW8O0StNDkE/view) |
+| Castillon Azaña Leonardo Gonzalo | `leonardo-castillon-azana-sprint-2026-10-17.webp` | [DSC07144.jpg](https://drive.google.com/file/d/19chZK1oHQtntYPyxkCqwTo3e-fKyQdzt/view) |
+| Uceda Garcia Jose Miguel | `jose-miguel-uceda-garcia-camara-2026-10-17.webp` | [DSC07147.jpg](https://drive.google.com/file/d/18IxRTV0IpbPPofpaTqymxdi4uZ4ritx-/view) |
+| Nick Samuel Zegarra Chavez | `nick-samuel-zegarra-chavez-camara-2026-10-17.webp` | [DSC07154.jpg](https://drive.google.com/file/d/1W-qEPXOlqKcxSYFmpLmfveRxs4Tz7Pnz/view) |
+| Jorge Alvaro Muñoz Laredo | `jorge-alvaro-munoz-laredo-camara-2026-10-17.webp` | [DSC07168.jpg](https://drive.google.com/file/d/1b2XvqV1T1WQP72FJhYLUL4MgtaYbmrei/view) |
+| Daniela Yolanda Tapia Cancho | `daniela-yolanda-tapia-cancho-camara-2026-10-17.webp` | [DSC07126.jpg](https://drive.google.com/file/d/1IHGeFu4xSrhOasuRF-Q0Hw3qPpuou5C7/view) |
