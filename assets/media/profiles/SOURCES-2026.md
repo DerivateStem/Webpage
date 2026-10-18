@@ -67,7 +67,7 @@ Pedro Rojas Fernández: `pedro-rojas-fernandez-2026-10-17.webp`, fotografía adj
 
 ## Fotografías de Research Sprint mirando a cámara — 17 de octubre de 2026
 
-El usuario indicó las correspondencias mediante capturas y confirmó que desea las fotos mirando a cámara. Se usan los originales de Drive correspondientes a esas referencias. Los archivos conservan el encuadre completo, con orientación EXIF aplicada, sin EXIF y lado máximo de 1200 px. La presentación en las tarjetas usa un encuadre abierto, sin ampliación mediante CSS, y conserva el efecto de blanco y negro a color del directorio. No se añaden datos biográficos ni se publican las capturas.
+El usuario indicó las correspondencias mediante capturas y confirmó que desea las fotos mirando a cámara. Se usan los originales de Drive correspondientes a esas referencias. Los archivos conservan el encuadre completo, con orientación EXIF aplicada, sin EXIF y lado máximo de 1200 px. A petición del usuario, la presentación en las tarjetas se ajusta individualmente mediante CSS para mostrar rostro y torso en una proporción similar al retrato de Franz. Se conserva el efecto de blanco y negro a color del directorio. No se añaden datos biográficos ni se publican las capturas.
 
 | Perfil | Archivo | Original de Drive |
 | --- | --- | --- |
