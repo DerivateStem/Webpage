@@ -1,8 +1,8 @@
 # Web de Derívate
 
-Sitio institucional estático de [Derívate](https://derivatestem.github.io/Webpage/), construido con HTML, CSS y JavaScript. No requiere instalación de paquetes ni compilación.
+Sitio institucional estático de [Derívate](https://derivate.org.pe/), construido con HTML, CSS y JavaScript. No requiere instalación de paquetes ni compilación.
 
-La dirección temporal es **https://derivatestem.github.io/Webpage/**. El dominio `derivate.org.pe` se retiró de GitHub Pages porque su DNS devuelve `NXDOMAIN`. El repositorio se publica sin `CNAME` mientras se resuelve esa configuración.
+La dirección configurada es **https://derivate.org.pe/**. GitHub Pages conserva `derivate.org.pe` en el archivo `CNAME`. La configuración del dominio y el despliegue son pasos distintos: antes de dar la conexión por completada, comprobar la delegación DNS pública, el certificado y la carga del sitio mediante HTTPS.
 
 ## Ejecutar localmente
 
@@ -139,11 +139,12 @@ El script cambia los textos con `data-sprint-status` y los enlaces con `data-spr
 
 ## Publicación y dominio
 
-GitHub Pages sirve la raíz del repositorio en [la dirección temporal](https://derivatestem.github.io/Webpage/). Los enlaces internos y los recursos usan rutas relativas para conservar el prefijo `/Webpage/`. Las quince páginas incluyen `canonical`, `og:url` y `og:image` con esta base; `sitemap.xml` enumera las catorce páginas de contenido y excluye la redirección `mentores.html` y `robots.txt` incluye el enlace al sitemap. Revisar los cambios antes de incorporarlos a la rama utilizada por Pages.
+GitHub Pages publica la raíz del repositorio en [el dominio configurado](https://derivate.org.pe/), sin el prefijo `/Webpage/`. Los enlaces internos, los recursos y la carga de componentes usan rutas relativas. Las dieciséis páginas incluyen `canonical`, `og:url` y `og:image` con la base `https://derivate.org.pe/`; `sitemap.xml` enumera las quince páginas de contenido y excluye la redirección `mentores.html`. `robots.txt` permite `/` y enlaza el sitemap del dominio. Revisar los cambios antes de incorporarlos a la rama utilizada por Pages.
 
-### Restaurar `derivate.org.pe`
+### Configurar y comprobar `derivate.org.pe`
 
-1. Resolver el registro y la configuración DNS del dominio. Comprobar que el DNS sea válido y apunte a GitHub Pages según la [documentación oficial de dominios personalizados](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site). No restaurar el dominio personalizado mientras devuelva `NXDOMAIN`.
-2. Cuando el DNS sea válido, abrir el repositorio **DerivateStem/Webpage → Settings → Pages**. En **Custom domain**, introducir `derivate.org.pe` y guardar. Si Pages publica desde una rama, GitHub crea el archivo `CNAME`; sincronizar ese cambio con la copia local.
-3. Comprobar que Pages valide el DNS y que el certificado HTTPS esté disponible. Activar **Enforce HTTPS** cuando la opción esté habilitada y verificar que el sitio cargue en `https://derivate.org.pe/`.
-4. Cambiar la base temporal por `https://derivate.org.pe/` en los metadatos de las quince páginas, en `sitemap.xml`, en la referencia al sitemap de `robots.txt` y en este README. Ajustar también `Allow` a `/`, ejecutar las verificaciones y publicar esos cambios junto con la restauración del dominio.
+1. Mantener en el proveedor DNS los cuatro registros A de GitHub Pages para la raíz y el CNAME de `www` a `derivatestem.github.io`. Comprobar también que la delegación en la zona `.pe` incluya los servidores DNS correctos; que un servidor responda directamente no demuestra que la delegación pública ya esté activa. Véase la [documentación oficial de dominios personalizados](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+2. En **DerivateStem/Webpage → Settings → Pages**, conservar **Custom domain: `derivate.org.pe`** y sincronizar el archivo `CNAME` con la copia local. La opción **Enforce HTTPS** debe quedar activada cuando el certificado esté disponible.
+3. Comprobar que los resolutores públicos devuelvan las direcciones esperadas y que `https://derivate.org.pe/` cargue con un certificado válido. Verificar también `https://www.derivate.org.pe/` y la redirección a la dirección principal.
+4. Publicar los metadatos, `sitemap.xml`, `robots.txt` y README con la nueva base únicamente después de confirmar DNS y HTTPS. Ejecutar `python scripts/check_site.py` y `git diff --check`; estos controles locales no validan la delegación, el certificado ni las URLs absolutas de metadatos.
+5. Tras el despliegue, comprobar la portada, Equipo, Summer Sprint, una ficha de proyecto, ambas galerías, las imágenes, los componentes, `robots.txt` y `sitemap.xml` en el dominio público. Confirmar en el código publicado que las URLs canónicas no contienen `/Webpage/`.

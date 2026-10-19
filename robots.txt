@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /Webpage/
+Allow: /
 
-Sitemap: https://derivatestem.github.io/Webpage/sitemap.xml
+Sitemap: https://derivate.org.pe/sitemap.xml
