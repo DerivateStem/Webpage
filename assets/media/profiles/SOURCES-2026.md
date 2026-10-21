@@ -82,3 +82,7 @@ El usuario indicó las correspondencias mediante capturas y confirmó que desea 
 | Nick Samuel Zegarra Chavez | `nick-samuel-zegarra-chavez-camara-2026-10-17.webp` | [DSC07154.jpg](https://drive.google.com/file/d/1W-qEPXOlqKcxSYFmpLmfveRxs4Tz7Pnz/view) |
 | Jorge Alvaro Muñoz Laredo | `jorge-alvaro-munoz-laredo-camara-2026-10-17.webp` | [DSC07168.jpg](https://drive.google.com/file/d/1b2XvqV1T1WQP72FJhYLUL4MgtaYbmrei/view) |
 | Daniela Yolanda Tapia Cancho | `daniela-yolanda-tapia-cancho-camara-2026-10-17.webp` | [DSC07126.jpg](https://drive.google.com/file/d/1IHGeFu4xSrhOasuRF-Q0Hw3qPpuou5C7/view) |
+
+## Rosario Aldava — 21 de octubre de 2026
+
+`rosario-aldava-2026-10-21.png`: fotografía adjunta por el usuario (`codex-clipboard-8f25363b-e377-4813-8a7a-be9b8bd65606.png`), incorporada por su solicitud expresa al perfil de Equipo. Se conserva el PNG original de 720 × 1280 px; el encuadre de presentación se ajusta mediante CSS y mantiene el efecto de blanco y negro a color del directorio. El usuario confirmó su nombre, su rol como mentora, su condición de egresada de la UNMSM y el área «Computación cuántica / HEP». No se le asigna una edición del Sprint ni información biográfica adicional.
