@@ -35,7 +35,7 @@ El comprobador usa la biblioteca estándar de Python y revisa las páginas, los 
 | `mentores.html` | Redirección de compatibilidad al filtro Mentores de Equipo; ya no es una sección independiente. |
 | `summer-sprint.html` | Convocatoria, proyectos, seis mentores de la edición, galería de seis fotografías de Research Sprint 2026 y orientación para postular. |
 | `proyecto-*.html` | Seis fichas completas de proyectos de Summer Sprint 2027, con requisitos, dedicación, tareas y materiales de postulación. Cada tarjeta abre únicamente la ficha correspondiente. |
-| `EntreFisicos.html` | Anuncio de Entre Físicos 2027 y tarjetas de ediciones anteriores que abren sus galerías. |
+| `EntreFisicos.html` | Entre Físicos 2027: inscripción gratuita, convocatoria de pósteres y programa en Indico; ediciones anteriores con sus galerías. |
 | `EntreFisicos2025.html` | Galería independiente de nueve fotografías de 2025, con visor ampliado. |
 | `EntreFisicos2026.html` | Galería independiente de nueve fotografías de 2026, con visor ampliado. |
 | `RIFP.html` | Archivo de la Reunión Internacional de Físicos en Posgrado 2024. |
@@ -106,7 +106,11 @@ El catálogo establece cargas de 3–5, 6–9 y 10+ horas semanales según el pr
 
 ### Entre Físicos 2027 y mentores de otras ediciones
 
-Entre Físicos 2027 se anuncia con «Inscripciones próximamente». La inscripción se realizará en Indico; añadir únicamente el enlace oficial cuando lo proporcione la organización. No hay fechas ni enlace de inscripción publicados para 2027.
+El 8 de noviembre de 2026 la organización proporcionó el [Indico oficial de Entre Físicos 2027](https://lppc-indico.fas.harvard.edu/event/36/). Se verificaron la vista general, el formulario público de inscripción y la convocatoria de resúmenes antes de publicar los accesos. El encuentro será del **7 al 9 de enero de 2027** en el **Auditorio de Ciencias e Ingeniería de la PUCP, Lima**. La inscripción como asistente es gratuita y está abierta; se completa en [Inscripción](https://lppc-indico.fas.harvard.edu/event/36/registrations/), donde Indico dirige al formulario activo y envía la confirmación por correo. No confundir el registro de asistentes con el [envío de resúmenes para pósteres](https://lppc-indico.fas.harvard.edu/event/36/abstracts/), que cierra el **4 de enero de 2027 a las 23:59, hora de Lima** y requiere revisión de la organización. El [programa](https://lppc-indico.fas.harvard.edu/event/36/timetable/) es preliminar.
+
+La portada destaca la inscripción en la franja superior, junto al mensaje inicial y en el bloque del encuentro. `EntreFisicos.html` conserva el ancla `#entre-fisicos-2027` y diferencia asistir de proponer un póster; las galerías históricas siguen disponibles. Los estilos de estos accesos están limitados a ambas páginas en `css/ef2027-registration.css`. Los enlaces son nativos y funcionan sin JavaScript. La inscripción se abre en otra pestaña para conservar la página de Derívate.
+
+Se tomaron como referencia la llamada de inscripción visible y las rutas diferenciadas para asistentes y presentadores de [AGU Annual Meeting](https://www.agu.org/annual-meeting) y el acceso directo al programa de Indico de [ICHEP 2026](https://ictp-saifr.org/ichep2026/), conservando la identidad visual de Derívate. Las fechas y condiciones publicadas proceden exclusivamente del Indico del encuentro, no de esas referencias.
 
 Los mentores siguen formando parte de Derívate entre ediciones. Equipo reúne los seis perfiles de Summer Sprint 2027 y los 23 participantes de Research Sprint 2026 de la tabla 2 del registro entregado por la organización. Cuatro personas participaron en ambas ediciones y se unifican en una sola ficha. Summer Sprint muestra únicamente los seis mentores de su edición, con enlaces entre cada persona y su proyecto. La navegación principal y el pie ya no incluyen una sección independiente de Mentores. Se contrastaron nombres, áreas y afiliaciones con fuentes públicas el 14–15 de octubre de 2026; cada perfil de 2026 enlaza una referencia académica. Las afiliaciones históricas se presentan con su año cuando se conoce. No se publican grados o candidaturas que no pudieron corroborarse. La lista no incluye datos de mentees, correos ni teléfonos personales.
 
