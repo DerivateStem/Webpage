@@ -1,0 +1,66 @@
+/* Entre Físicos 2027: shared registration calls on the home and event pages. */
+.ef-announcement a { min-height: 46px; }
+.ef-announcement a:hover { background: #ffdc5a; }
+.ef-announcement a:focus-visible { outline: 3px solid var(--ink); outline-offset: -5px; }
+.ef-announcement-action { display: inline-flex; align-items: center; gap: 14px; font-weight: 500; }
+.home-hero:has(.ef-home-invite) { padding-top: 32px; }
+.home-hero:has(.ef-home-invite) .hero-topline { margin-bottom: 24px; }
+.ef-home-invite { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 40px; padding: 24px 28px; border: 1px solid #ffc90755; border-left: 3px solid var(--yellow); border-radius: 4px; background: linear-gradient(110deg, #ffc9070d, #ffffff03); }
+.ef-home-invite h2 { color: var(--paper); font: 800 clamp(30px, 3vw, 42px)/1.1 var(--font-display); text-transform: uppercase; margin: 6px 0 8px; }
+.ef-home-invite > div > p:last-child { color: #c6c3bc; font-size: 12px; }
+.ef-home-invite .button-row { margin-top: 0; align-items: center; gap: 14px 22px; }
+.ef-registration-status { display: inline-flex; align-items: center; gap: 9px; color: var(--yellow); font: 400 11px/1.6 var(--font-mono); letter-spacing: .04em; text-transform: uppercase; }
+.ef-registration-status > span { width: 7px; height: 7px; flex-shrink: 0; background: currentColor; border-radius: 50%; }
+.ef-event-facts { display: grid; gap: 16px; margin: 0 0 28px; padding: 22px 0; border-block: 1px solid var(--line); }
+.ef-event-facts > div { display: grid; grid-template-columns: 75px 1fr; gap: 12px; }
+.ef-event-facts dt { color: var(--muted); font: 400 10px/1.7 var(--font-mono); text-transform: uppercase; letter-spacing: .06em; }
+.ef-event-facts dd { margin: 0; color: var(--paper); font-size: 14px; line-height: 1.65; }
+.ef-platform-note { color: var(--muted); font-size: 12px; line-height: 1.7; margin-top: 16px; max-width: 47ch; }
+.ef2027-hero { padding-top: 48px; padding-bottom: 56px; }
+.ef2027-hero .ev-hero-copy { padding: 0; }
+.ef2027-hero .ev-title { font-size: clamp(4.3rem, 7vw, 6rem); margin: 20px 0 22px; }
+.ef2027-hero .ev-description { margin-bottom: 24px; }
+.ef2027-hero .ef-event-facts { grid-template-columns: .9fr 1.1fr; gap: 18px; padding: 18px 0; margin-bottom: 22px; }
+.ef2027-hero .ef-event-facts > div { display: block; }
+.ef2027-hero .ef-event-facts dt { margin-bottom: 7px; }
+.ef2027-hero .ev-hero-photo { max-height: 680px; }
+.ef2027-participate { background: var(--paper); color: var(--ink); }
+.ef2027-participate .ev-upcoming-layout { align-items: start; }
+.ef2027-participate .ev-upcoming-title { font-size: clamp(3.5rem, 5.5vw, 5.7rem); }
+.ef-participate-intro { max-width: 39ch; color: #625f57; line-height: 1.8; margin: 26px 0 24px; font-size: 15px; }
+.ef-participation-options { border-top: 1px solid #10101035; }
+.ef-participation-option { padding: 28px 0; }
+.ef-participation-option + .ef-participation-option { border-top: 1px solid #10101035; }
+.ef-participation-option .eyebrow { color: #625f57; font-size: 10px; margin-bottom: 14px; }
+.ef-participation-option h3 { font-family: var(--font-display); font-size: 36px; font-weight: 800; text-transform: uppercase; margin-bottom: 14px; }
+.ef-participation-option > p:not(.eyebrow) { color: #54544f; font-size: 14px; line-height: 1.8; max-width: 49ch; }
+.ef-participation-option .button, .ef-participation-option .text-link { margin-top: 20px; }
+.ef-participation-option > .ef-abstract-deadline { color: var(--ink); font-size: 12px; font-weight: 600; margin-top: 14px; }
+.ef2027-participate :focus-visible { outline-color: var(--blue-on-paper); }
+.ef-home-event .ef-registration-status { color: var(--yellow); font-size: 10px; margin-bottom: 16px; }
+.ef-home-event .ef-event-facts { margin-top: 24px; }
+.ef-home-event .ef-event-facts dd { font-size: 13px; }
+.ef-home-event .ef-platform-note { font-size: 12px; margin-top: 14px; }
+.ef-home-event .event-links { margin-top: 18px; }
+.ef-home-event > figure { height: auto; align-self: stretch; display: flex; flex-direction: column; }
+.ef-home-event > figure img { min-height: 300px; flex: 1; }
+.ef-home-event figcaption { padding-top: 12px; color: var(--muted); font: 400 10px/1.6 var(--font-mono); text-transform: uppercase; letter-spacing: .04em; }
+@media (max-width: 1000px) {
+  .ef-announcement .announcement-date { display: none; }
+  .ef-home-invite .button-row { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 700px) {
+  .ef-announcement a { justify-content: space-between; text-align: left; gap: 14px; padding: 12px 20px; }
+  .ef-announcement-title { max-width: 230px; }
+  .ef-announcement-action { gap: 8px; white-space: nowrap; }
+  .ef-home-invite { flex-direction: column; align-items: stretch; gap: 20px; padding: 22px; margin-bottom: 30px; }
+  .ef-home-invite .button-row .button { width: 100%; flex: auto; }
+  .ef2027-hero .ev-title { font-size: clamp(4.3rem, 16vw, 7rem); }
+  .ef2027-hero .ef-event-facts { grid-template-columns: 1fr; gap: 14px; }
+  .ef2027-hero .ev-hero-photo { max-height: none; }
+  .ef-registration-status { font-size: 10px; }
+  .ef2027-participate .ev-upcoming-title { font-size: clamp(3.1rem, 13vw, 5rem); }
+  .ef-participation-option .button { width: 100%; gap: 16px; }
+  .ef-home-event > figure img { height: 300px; min-height: 0; flex: none; }
+  .ef-home-event .button-row .button { flex-basis: 100%; }
+}
