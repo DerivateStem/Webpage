@@ -5,12 +5,14 @@
 .ef-announcement-action { display: inline-flex; align-items: center; gap: 14px; font-weight: 500; }
 .home-hero:has(.ef-home-invite) { padding-top: 32px; }
 .home-hero:has(.ef-home-invite) .hero-topline { margin-bottom: 24px; }
-.ef-home-invite { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 40px; padding: 24px 28px; border: 1px solid #ffc90755; border-left: 3px solid var(--yellow); border-radius: 4px; background: linear-gradient(110deg, #ffc9070d, #ffffff03); }
+.ef-home-invite { margin-bottom: 40px; }
+.ef-home-invite-intro { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 20px; }
+.ef-home-invite-intro .eyebrow { color: var(--yellow); }
 .ef-home-invite h2 { color: var(--paper); font: 800 clamp(30px, 3vw, 42px)/1.1 var(--font-display); text-transform: uppercase; margin: 6px 0 8px; }
 .ef-home-invite > div > p:last-child { color: #c6c3bc; font-size: 12px; }
 .ef-home-invite .button-row { margin-top: 0; align-items: center; gap: 14px 22px; }
 .ef-registration-status { display: inline-flex; align-items: center; gap: 9px; color: var(--yellow); font: 400 11px/1.6 var(--font-mono); letter-spacing: .04em; text-transform: uppercase; }
-.ef-registration-status > span { width: 7px; height: 7px; flex-shrink: 0; background: currentColor; border-radius: 50%; }
+.ef-registration-status > span[aria-hidden] { width: 7px; height: 7px; flex-shrink: 0; background: currentColor; border-radius: 50%; }
 .ef-event-facts { display: grid; gap: 16px; margin: 0 0 28px; padding: 22px 0; border-block: 1px solid var(--line); }
 .ef-event-facts > div { display: grid; grid-template-columns: 75px 1fr; gap: 12px; }
 .ef-event-facts dt { color: var(--muted); font: 400 10px/1.7 var(--font-mono); text-transform: uppercase; letter-spacing: .06em; }
@@ -53,7 +55,8 @@
   .ef-announcement a { justify-content: space-between; text-align: left; gap: 14px; padding: 12px 20px; }
   .ef-announcement-title { max-width: 230px; }
   .ef-announcement-action { gap: 8px; white-space: nowrap; }
-  .ef-home-invite { flex-direction: column; align-items: stretch; gap: 20px; padding: 22px; margin-bottom: 30px; }
+  .ef-home-invite { margin-bottom: 30px; }
+  .ef-home-invite-intro { align-items: start; flex-direction: column; gap: 6px; }
   .ef-home-invite .button-row .button { width: 100%; flex: auto; }
   .ef2027-hero .ev-title { font-size: clamp(4.3rem, 16vw, 7rem); }
   .ef2027-hero .ef-event-facts { grid-template-columns: 1fr; gap: 14px; }
@@ -63,4 +66,50 @@
   .ef-participation-option .button { width: 100%; gap: 16px; }
   .ef-home-event > figure img { height: 300px; min-height: 0; flex: none; }
   .ef-home-event .button-row .button { flex-basis: 100%; }
+}
+
+/* The two deadline bars share the same layout on the home and event pages. */
+.ef-deadline-list { display: grid; gap: 16px; }
+.ef-deadline { display: grid; grid-template-columns: minmax(250px, 1fr) auto minmax(180px, auto); gap: 24px; align-items: center; min-width: 0; padding: 24px 28px; color: var(--ink); background: var(--paper); border: 1px solid #1010101c; border-radius: 8px; }
+.ef-deadline-info { display: flex; gap: 16px; align-items: center; min-width: 0; }
+.ef-deadline-icon { width: 38px; height: 44px; flex-shrink: 0; color: #54544f; }
+.ef-deadline-badge { display: inline-block; padding: 4px 8px; margin-bottom: 8px; border-radius: 4px; background: #fff0b3; color: #635000; font: 600 10px/1.4 var(--font-body); text-transform: uppercase; }
+.ef-deadline--abstracts .ef-deadline-badge { background: #dfedf9; color: #075b98; }
+.ef-deadline h3 { font: 800 clamp(24px, 2.1vw, 30px)/1.1 var(--font-display); text-transform: uppercase; margin: 0 0 7px; }
+.ef-deadline-date { color: #54544f; font-size: 11px; line-height: 1.65; }
+.ef-deadline-time { text-align: center; }
+.ef-deadline-time > p { color: #625f57; font: 400 9px/1.5 var(--font-mono); letter-spacing: .03em; text-transform: uppercase; margin-bottom: 8px; }
+.ef-countdown-clock { display: grid; grid-template-columns: repeat(4, 64px); gap: 10px; padding: 0; margin: 0; }
+.ef-countdown-clock > div { display: flex; flex-direction: column-reverse; align-items: center; justify-content: center; padding: 9px 5px; background: #e9e7e0; border-radius: 5px; }
+.ef-countdown-clock dt { font: 400 9px/1.5 var(--font-mono); color: #54544f; }
+.ef-countdown-clock dd { margin: 0; color: var(--ink); font: 800 34px/1 var(--font-display); font-variant-numeric: tabular-nums; min-width: 2ch; }
+.ef-deadline-button { gap: 18px; white-space: nowrap; }
+.ef-deadline--abstracts .ef-deadline-button { background: var(--ink); color: var(--paper); }
+.ef-deadline--abstracts .ef-deadline-button:hover { background: #333; }
+.ef-deadline :focus-visible { outline-color: var(--blue-on-paper); }
+.ef-deadline.is-closed .ef-deadline-badge { color: #54544f; background: #e5e2d9; }
+.ef-deadline.is-closed .ef-deadline-button { color: var(--paper); background: #54544f; }
+.ef-deadline.is-closed .ef-countdown-clock dd { color: #77746d; }
+.ef-countdown-more { margin-top: 18px; }
+.ef-participate-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 32px; }
+.ef-participate-heading h2 { font-size: clamp(40px, 4vw, 58px); margin-top: 18px; max-width: 650px; }
+.ef-participate-heading > p { max-width: 37ch; color: #625f57; font-size: 14px; line-height: 1.8; }
+.ef2027-participate .ef-deadline { background: #fff; }
+.ef-deadlines-footer { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-top: 24px; }
+.ef-deadlines-footer > p { color: #625f57; font-size: 12px; line-height: 1.8; max-width: 70ch; }
+.ef-deadlines-footer .text-link { flex-shrink: 0; }
+@media (max-width: 1100px) {
+  .ef-deadline { grid-template-columns: minmax(0, 1fr) auto; gap: 18px 24px; }
+  .ef-deadline-button { grid-column: 1 / -1; justify-self: end; }
+}
+@media (max-width: 700px) {
+  .ef-deadline { grid-template-columns: minmax(0, 1fr); gap: 20px; padding: 22px; }
+  .ef-deadline-info { gap: 12px; }
+  .ef-deadline-icon { width: 30px; height: 36px; }
+  .ef-deadline h3 { font-size: 28px; }
+  .ef-deadline-time { text-align: left; }
+  .ef-countdown-clock { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+  .ef-countdown-clock dd { font-size: 36px; }
+  .ef-deadline-button { width: 100%; justify-self: stretch; min-width: 0; white-space: normal; }
+  .ef-participate-heading, .ef-deadlines-footer { flex-direction: column; align-items: start; gap: 20px; }
 }
